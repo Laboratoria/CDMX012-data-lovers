@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+    background-image: url('./icon/forest.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+}
+
+.top-nav{
+
+    background: #040606;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.icon-ball{
+    margin-bottom: -65px;
+    width: 120px;
+    height: 120px;
+}
+.top-nav ul{
+    margin: 0 20px 0 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    align-items: center;
+    list-style: none;
+}
+
+.top-nav li{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-nav a{
+    text-decoration: none;
+    color: white;
+    font-size: 32px;
+}
+.top-nav li a:hover{
+    color: black;
+    background: rgb(24, 221, 40);
+}
