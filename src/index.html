@@ -19,9 +19,46 @@
       </nav>
     </header>
     <main>
+      <br>
       <div class="video">
-        <video autoplay="autoplay" loop="loop" src="./icon/¡Pokémon UNITE llega este verano!.webm"></video>
+        <video autoplay="autoplay" controls loop="loop" src="./icon/¡Pokémon UNITE llega este verano!.webm"></video>
       </div>
+      <div class="center-nav">
+        <div class="order-container">
+          <div class="orderOption">
+              <img src="./icon/pokebola gris.svg" alt="">
+              <select name="opciones-orden" id="orden">
+                <option value="ordenar" selected disabled>Ordenar por...</option>
+                <option value="A-Z">A-Z</option>
+                <option value="Z-A">Z-A</option>
+                <option value="menor-mayor">Menor al Mayor</option>
+                <option value="mayor-menor">Mayor al Menor</option>
+              </select>
+          </div>
+        </div>
+        <div class="filter-container">
+          <div class="filterOption">
+            <img src="./icon/filtrar.png" alt="">
+            <select name="opciones-filtrado" id="filtrado">
+              <option value="filtrar" selected disabled>Filtrar por...</option>
+              <option value="name">Nombre</option>
+              <option value="tipo">Tipo</option>
+              <option value="Debilidad">Debilidad</option>
+              <option value="Resistencia">Resistencia</option>
+              <option value="Ataque_especial">Ataque Especial</option>
+            </select>
+          </div>
+        </div>
+        <div class="search">
+          <div class="search-container">
+            <label for="">Nombre o ID</label>
+            
+            <input type="search" name="buscador" id="buscador" placeholder="Buscar">
+            <button type="submit"><img src="./icon/lupa.svg" class="lupa" alt=""></button>
+          </div>
+        </div>
+      </div>
+      
 
 
 
