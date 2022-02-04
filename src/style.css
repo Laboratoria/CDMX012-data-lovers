@@ -53,6 +53,7 @@ body{
     background: rgb(24, 221, 40);
 }
 .video{
+    padding-bottom: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,17 +68,22 @@ video{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    height: 85px;
+    padding: 0 10px 0 10px;
 }
 .order-container{
     background: black;
     border: 1px solid gray;
     border-radius: 10px;
-    width: 350px;
-    height: 60px;
+    width: 25%;
+    height: 60%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px;
+    align-content: center;
+
 }
 .orderOption{
     display: flex;
@@ -100,38 +106,43 @@ video{
     background: black;
     border: 1px solid gray;
     border-radius: 10px;
-    width: 350px;
-    height: 60px;
+    width: 50%;
+    height: 60%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px;
 }
 .filterOption{
+
     display: flex;
     align-items: center;
     justify-content: center;
 
 }
 .filterOption img{
-    width: 25%;
-    height: 20%;
+    width: 20%;
+    height: 25%;
 }
 .filterOption select{
     font-size: 14px;
-    height: 85%;
     padding: 5px;
-    width: 85%;
-    
+    width: 100%;
+
 }
+.button-filter{
+    width: 20%;
+    height: 80%;
+}
+
 
 
 .search-container{
     background: black;
     border: 1px solid gray;
     border-radius: 10px;
-    width: 500px;
-    height: 60px;
+    width: 100%;
+    height: 60%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -155,7 +166,13 @@ video{
 }
 .cards-containers-principal{
     background: rgba(196, 196, 196, 0.03);
-    padding: 20px;
+    margin: 10px;
+    padding: 10px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(6, 250px);
+    gap: 30px;
+    grid-auto-flow: dense;
 }
 .card-container{
     background: white;
@@ -174,4 +191,127 @@ video{
     height: 100%;
     height: 43%;
     padding: 8px;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.imagen-pokemon img:hover{
+    -webkit-transform:scale(1.3);transform:scale(1.3);
+    overflow: hidden;
+}
+
+
+
+
+.bug{
+    background: green;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.dragon{
+    background: linear-gradient(180deg, #4574B9 34.38%, #F47B0B 65.1%);
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.fairy{
+    background: pink;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.fire{
+    background: orange;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.ghost{
+    background: purple;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.ground{
+    background: rgb(212, 160, 18);
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.normal{
+    background: gray;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.psychic{
+    background:  rgb(216, 16, 139);
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.steel{
+    background:  rgb(71, 121, 98);
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.dark{
+    background:  rgb(47, 48, 47);
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.electric{
+    background: yellow;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.fighting{
+    background: red;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.flying{
+    background: linear-gradient(180deg, #4574B9 34.38%, gray 65.1%);
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.grass{
+    width: 100px;
+    background: greenyellow;
+    color: black;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.ice{
+    background: lightblue;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.poison{
+    background: violet;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.rock{
+    background: brown;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.water{
+    background: blue;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
 }
