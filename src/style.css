@@ -1,0 +1,37 @@
+*{
+    margin: auto;
+    padding: 0%;
+}
+.welcomePage {
+    background-image: url(https://a-static.besthdwallpaper.com/pokemon-go-video-game-papel-pintado-1024x576-41559_44.jpg);
+    background-size: 100%;
+    background-attachment: fixed;
+}
+.welcomeBox{
+    display: flex;
+    background-color: rgba(70, 130, 180, .7);
+    margin: 5% 20%;
+    padding: 0;
+    justify-content:space-around;
+    align-items:center;
+    border-radius: 40px;
+    
+    
+}
+.imgPokemon{
+    display:flex;
+    margin:5% auto;
+    align-items:center;
+    justify-content:left;
+    padding-top: auto;
+}
+.imgPokeBola{
+    display:flex;
+    margin:5% auto;
+    align-items:center;
+  justify-content:right;
+}
+.madeBy{
+    background-color: black;
+    color:white;
+}
