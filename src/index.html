@@ -3,50 +3,62 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <link rel="icon" href="images/IconGW.png">
   <title>Data Lovers</title>
   <link rel="stylesheet" href="style.css" />
+
 </head>
 
 <body>
 
   <header>
-    <div class="logo">logo</div>
+    <div class="logo"></div>
   </header>
-  <div class="titulo">
-    <h1>Películas del Studio Ghibli</h1>
-  </div>
-  <div class="bienvenida">
-    <p>texto</p>
-  </div>
 
-  <div class="contenido">
+  <main>
+
+    <div class="titulo">
+      <h1>Ghibli World</h1>
+      <p><strong>Ghibli World</strong>is an encyclopedia of all the works of <strong>Studio Ghibli's</strong>. The studio is best known for its animated feature
+      films, such as <strong>Princess Mononoke</strong>, <strong>Spirited Away</strong> and <strong>Howl's Moving Castle</strong>. These films exemplify the master story telling
+      of environmentalism, friendship, love, family, culture and war.</p>
+    </div>
+  
     <div class="barraInput">
       <select class="filtro">
         <option value="">Películas</option>
         <option value="">Personajes</option>
         <option value="">Staff</option>
       </select>
-      <select class="ordenar">
+
+      <select class="filtro">
         <option value="">A-Z</option>
         <option value="">Z-A</option>
         <option value="">Reciente-Antigua</option>
       </select>
-      <input type="text">
+
+      <div id="inputText">
+        <input type="text">
+      </div>
     </div>
 
-    <div class="pelicula">
-      <div class="portada">imagen</div>
-      <div class="año">año</div>
-      <div class="Score">Score</div>
-      <div class="nombrePelicula">nombre película</div>
-    </div>
-
-
-  </div>
+    <section>
+      <div class="pelicula">
+        <div class="portada">imagen</div>
+        <div class="año">año</div>
+        <div class="Score">Score</div>
+        <div class="nombrePelicula">nombre película</div>
+      </div>
+    </section>
+  
+  </main>
 
   <script src="main.js" type="module"></script>
 
 </body>
-<footer></footer>
+<footer>
+  <p>&copy; 2022 by <a href="https://github.com/Yazmin-Trujillo">Yazmin Trujillo</a> and <a href="https://github.com/SaraiRojas">Sarai Rojas</a>. All Rights reserved.</p>
+</footer>
 
 </html>
