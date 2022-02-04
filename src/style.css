@@ -153,14 +153,14 @@ video{
     width: 75%;
     height: 85%;
 }
-.cards-containers{
+.cards-containers-principal{
     background: rgba(196, 196, 196, 0.03);
     padding: 20px;
 }
 .card-container{
     background: white;
     border: 3px solid black;
-    width: 230px;
+    width: 250px;
     height: 230px;  
 }
 .card-container img{
