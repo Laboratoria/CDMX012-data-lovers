@@ -8,9 +8,16 @@ html {
   padding: 0%;
 }
 
+header{
+  background-color: #457b9d;
+  padding: 3.5%;
+  align-items: flex-end;
+  align-content: flex-end;
+}
 nav {
   background-color: #457b9d;
-  padding: 4%;
+  padding: 0;
+  margin-bottom: 0%;
 }
 
 .Logo {
@@ -29,8 +36,8 @@ nav {
   position: absolute;
   padding: 0;
   margin: 0;
-  top: 0;
-  width: 13%;
+  top: 1%;
+  width: 9%;
   left: 20%;
 }
 
@@ -45,37 +52,34 @@ ul {
 }
 li {
   display: inline-block;
-  padding: 0 2.5%;
+  padding: 1% 2.5%;
   margin: 0;
   align-items: flex-end;
   justify-content: space-between;
+  border-radius: 10%;
+  font-size: 1vw;
+}
+.ButtonRed{
+  background-color: red;
+  color: red;
+  margin-right: 3%;
+  font-size: 1.5vw;
 }
 
-/*
-header {
-  background-color: #457b9d;
-  width: 100%;
-  justify-content: flex-end;
-}
-header img ul {
-  display: inline-block;
-  padding: 20px;
+.ButtonYellow{
+  background-color: rgb(238, 203, 5);
+  color: rgb(238, 203, 5);
+  margin-right: 3%;
+  
+  font-size: 1.5vw;
 }
 
-.Logo {
-  margin: 0%;
-  align-items: left;
-  width: 15%;
+#Us{
+  background-color: green;
+  color: black;
+  font-size: 1.5vw;
 }
 
-nav ul li {
-  display: inline-block;
-  padding: 20 px;
-  margin-left: 50px;
-  margin-right: 50px;
-  align-items: flex-end;
-  justify-content: flex-end;
-}*/
 
 .welcomePage {
   background-image: url(https://a-static.besthdwallpaper.com/pokemon-go-video-game-papel-pintado-1024x576-41559_44.jpg);
@@ -87,18 +91,67 @@ nav ul li {
   background-color: rgba(70, 130, 180, 0.7);
   margin: 5% 20%;
   padding: 0;
-  justify-content: space-around;
   align-items: center;
   border-radius: 40px;
+  flex-direction: column;
+}
+
+h1{
+  padding: 2%;
+  color: black;
+  font-size: 2.5vw;
 }
 
 .imgPokeBola {
   display: flex;
-  margin: 5% auto;
+  margin: 1% auto;
   align-items: center;
   justify-content: center;
 }
+.imgPokeBola:hover{
+  transform: rotateY(360deg);
+  transition: transform .8s;
+}
+
+.menu{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2%;
+}
+
+#orderBy {
+  margin-right: 8%;
+  padding: 1%;
+  border-radius: 10%;
+  background-color: #F1B418;
+}
+#Clasify{
+  padding: 1%;
+  border-radius: 10%;
+  background-color: #F1B418;
+}
+
+#showData{
+  display: flex;
+  background-color: rgba(70, 130, 180, 0.7);
+  margin: 5% 20%;
+  padding: 0;
+  align-items: center;
+  border-radius: 40px;
+  flex-direction: column;
+}
+
+
+
+
 footer {
   background-color: #457b9d;
   text-align: center;
+}
+#gitHub1 , #gitHub2{
+  height: 1em;
+}
+p{
+  font-size: 1vw;
 }
