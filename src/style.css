@@ -1,10 +1,12 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  background-image: url("img/fondo.png");
 }
 
 header {
@@ -13,9 +15,6 @@ header {
   display: flex;
 }
 
-.fas fa-search {
-  padding: 22px;
-}
 .containerLogo {
   display: flex;
   align-items: flex-start;
@@ -26,7 +25,9 @@ header {
 .ghiblisLogo {
   display: flex;
   align-items: center;
-  width: 12%;
+  max-width: 12%;
+  height: auto;
+  margin-bottom: 5%;
 }
 
 #navBar {
@@ -37,28 +38,56 @@ header {
 
 .funFacts {
   margin-top: 10px;
-  width: 95%;
+  width: 100%;
+  height: auto;
 }
 
-#inputSearch {
+.inputSearch {
   display: flex;
   height: 31px;
   width: 150px;
   margin-top: 22px;
-  font-size: medium;
+  font-family: Roboto, "FontAwesome", sans-serif;
+  font-size: small;
   background: #efefef;
-  color: #4c413f;
+  color: #3c3c43;
   border-radius: 5px;
   border: 1px solid #dfdfdf;
 }
 
-input[type="text"]::placeholder {
-  padding-left: 10px;
+input[type="search"]::placeholder {
+  padding-left: 15%;
 }
 
-.kikisPicture {
+.initialPicture {
+  flex: auto;
+}
+.initialPicture .kikisPicture {
   width: 100%;
-  height: 560px;
+  height: 707px;
+}
+.posterText {
+  font-weight: 700;
+  color: #4c413f;
+  background: rgba(255, 250, 250, 0.39);
+  font-style: normal;
+  position: absolute;
+  width: 100%;
+  height: 133px;
+  top: 662px;
+}
+
+#bigText {
+  font-size: 64px;
+  text-align: right;
+  margin-right: 85px;
+  font-style: normal;
+}
+#smallText {
+  font-size: 45px;
+  text-align: right;
+  margin-right: 85px;
+  font-style: normal;
 }
 
 footer {
@@ -68,8 +97,32 @@ footer {
   background-color: #d8af39;
 }
 
-.footerItems {
+select {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  color: #4c413f;
+  font-weight: bold;
+  background-color: #efefef;
+  height: 40px;
+  width: 15%;
+  border-radius: 5px;
+}
+
+.select-items {
+  font-family: "Roboto", sans-serif;
   font-size: medium;
+  color: #4c413f;
+}
+
+#allMovies {
+  padding-bottom: 2%;
+  padding-left: 7%;
+  display: flex;
+  color: #4c413f;
+  font-size: 180%;
+}
+.footerItems {
+  font-size: small;
   color: white;
   display: flex;
   flex-direction: row;
@@ -79,4 +132,135 @@ footer {
 
 .footerContent {
   margin: 5px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* div con todas los posters */
+.allMoviesAndFilter {
+  display: flex;
+  flex-direction: row;
+  padding-top: 50px;
+  justify-content: space-evenly;
+}
+
+#allMovies {
+  font-size: 50px;
+  font-weight: 800;
+  color: #4c413f;
+  font-style: normal;
+}
+
+.movieList {
+  background: rgba(255, 250, 250, 0.39);
+  width: 95%;
+  margin: 30px;
+  display: grid;
+  grid-gap: 10px;
+}
+
+#moviesList {
+  padding: 30px;
+  color: #4c413f;
+  padding-bottom: 50px;
+  transform: perspective(600px) rotateY(0deg);
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: auto auto auto auto;
+}
+/* tarjeta global */
+.globalCard {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  position: relative;
+  background-size: cover;
+  justify-content: center;
+  transition: all ease 0.5s;
+  transform-style: preserve-3d;
+  background-position: center;
+}
+/* tarjeta frontal */
+
+.card {
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: auto;
+  position: absolute;
+  transition: all ease 0.4;
+  /* transform: perspective(600px) rotateY(180deg); */
+}
+
+.card p {
+  background: rgba(255, 250, 250, 0.39);
+  width: 200px;
+  display: flex;
+  position: absolute;
+  margin-top: 278px;
+  justify-content: center;
+  font-weight: bolder;
+  font-size: 18px;
+}
+.pSinopsys {
+  padding: 0;
+  color: #d8af39;
+  font-size: 18px;
+}
+.globalCard:hover {
+  transform: perspective(600px) rotateY(180deg);
+}
+.globalCard:hover .back-card {
+  transform: rotateY(180deg);
+}
+
+/* tarjeta trasera */
+.back-card {
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: auto;
+  position: absolute;
+  transition: all ease 0.5s;
+  backface-visibility: hidden;
+  transform: perspective(600px) rotateY(180deg);
+}
+.backCardInfo {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  color: #fff;
+  font-size: small;
+  align-items: center;
+  flex-flow: column nowrap;
+  justify-content: center;
+  background: #4c413f;
+  border-radius: 5px;
+  padding: 10px;
+}
+.divSynopsis {
+  display: flex;
+  justify-content: center;
+}
+.divFilmDescription {
+  padding-top: 10px;
+}
+.filmDescription {
+  justify-content: center;
+  font-weight: normal;
+  padding-bottom: 10px;
+}
+.btnMoreInfo {
+  width: 115px;
+  height: 30px;
+  left: 65.26px;
+  top: 268.25px;
+  background: #14454c;
+  border-radius: 10px;
+  color: #ebe9e9;
+  margin-left: 42px;
 }

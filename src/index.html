@@ -1,36 +1,55 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8"name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Lovers - Studios Ghibli</title>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+    <!-- CDN font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
       <div class="containerLogo">
-        <img src="./img/Studio_Ghibli_logo.svg.png" class="ghiblisLogo" alt="">
+        <img src="./img/Studio_Ghibli_logo.svg.png" class="ghiblisLogo" alt="" >
       </div>
       <nav>
         <div id="navBar">
           <div id="funFactsIcon">
           <img src="./img/fun facts.png" alt="" class="funFacts">
           </div>
-          <input type="text" placeholder="Search" id="inputSearch"> <i class="fas fa-search"></i>
+            <input type="search" placeholder="&#xf002;  Search movie" class="inputSearch">
         </div>
         </nav>
     </header>
-  <main> 
-    <div> 
-      <img src="./img/kikis.jpg" alt="" class="kikisPicture">
-      <div>
-      <p> Kiki's delivery service </p>
-      <p>4.8/5 <img src="./img/Star 1.png" alt=""></p>
-      </div>  
-    </div>
-    <section></section>
-    <section></section>
+  <main>  
+    <section>
+      <div class="initialPicture"> 
+        <img src="./img/kikis.jpg" alt="" class="kikisPicture">
+        <div class="posterText">
+          <p id="bigText"> Kiki's delivery service </p>
+          <p id="smallText">4.8/5 <img src="./img/Star 1.png" alt=""></p>
+        </div>    
+      </div>
+    </section>
+      <section class="allMoviesAndFilter">
+          <p id="allMovies">All movies</p>
+          <select name="selectFilter" onchange=" "> 
+            <option value="AZ">A-Z</option>
+            <option value="ZA">Z-A</option>
+            <option value="rating">Rating</option>
+            <option value="year">Year</option>
+            <option value="director">Director</option>
+          </select>
+      </section>
+      <section class="movieList">
+        <div id="moviesList"></div>
+      </section>
+
+  
+     
+    </section>
   </main>
      <footer>
       <div class="footerItems">
@@ -41,7 +60,6 @@
         </div>
       </div> 
     </footer>
-
     <div id="root"></div>
     <script src="main.js" type="module"></script>
     <script src="data.js"> </script>
