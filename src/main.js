@@ -1,6 +1,11 @@
-import { example } from './data.js';
-// import data from './data/lol/lol.js';
-import data from './data/pokemon/pokemon.js';
-// import data from './data/rickandmorty/rickandmorty.js';
+import data from './data/ghibli/ghibli.js';
+import { filterFilmsBySearch } from './data.js';
 
-console.log(example, data);
+
+const inputSearch = document.getElementById("inputSearch");
+inputSearch.addEventListener("change", function () {
+    let searchValue = inputSearch.value;
+    console.log("change", inputSearch.value);
+    const busquedaPeli = filterFilmsBySearch(data.films, searchValue);
+    console.log("busqueda", busquedaPeli);
+});
