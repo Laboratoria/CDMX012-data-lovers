@@ -174,11 +174,21 @@ video{
     gap: 30px;
     grid-auto-flow: dense;
 }
+.general-card-container{
+    position: relative;
+    width: 250px;
+    height: 230px;
+
+}
 .card-container{
     background: white;
     border: 3px solid black;
-    width: 250px;
-    height: 230px;  
+    width: 100%;
+    height: 100%;  
+    position: absolute;
+    backface-visibility: hidden;
+    transform: perspective(1000px) rotateY(0deg);
+    transition: transform .4s ease-out;
 }
 .card-container img{
     padding: 1px 0px 1px 50px;
@@ -188,7 +198,6 @@ video{
     background: black;
     color: white;
     font-size: 24px;
-    height: 100%;
     height: 43%;
     padding: 8px;
     display: flex;
@@ -196,6 +205,22 @@ video{
     justify-content: space-between;
     align-items: center;
 
+}
+.back-card-container{
+    background: black;
+    border: 3px solid white;
+    color: white;
+    font-size: 16px;
+    width: 100%;
+    height: 100%;
+    padding: 8px;
+    position: absolute;
+    flex-flow: wrap;
+    justify-content: space-between;
+    align-items: center;
+    backface-visibility: hidden;
+    transform: perspective(1000px) rotateY(180deg);
+    transition: transform .4s ease-out;
 }
 
 .imagen-pokemon img:hover{
