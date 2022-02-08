@@ -1,7 +1,7 @@
 const order = {
 
   filterData: (data, filter) => {
-    
+
     let info = [];
 
     if (filter === 'title') {
@@ -42,8 +42,12 @@ export const filterFilmsBySearch = (films, search) => films.filter(film => {
   return (titleLowercase.includes(searchLowercase) || descriptionLowercase.includes(searchLowercase));
 });
 
-function log(value) {
-  console.log(typeof value, value,);
+/**
+ * Función utilitaria para imprimir el tipo y valor de una variable
+ * @param {*} obj variable a usar para imprimer
+ */
+function log(obj) {
+  console.log(typeof obj, obj);
 }
 
 
