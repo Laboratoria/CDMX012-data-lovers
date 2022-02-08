@@ -36,20 +36,20 @@ for(let j = 0; j < allFilms.length; j++){
     //parte trasera de la tarjeta
     let backCard = document.createElement("div");
     backCard.className = "back-card";
-    let backCardInfo = document.createElement('div');
-    backCardInfo.className = 'backCardInfo';
-    backCard.appendChild(backCardInfo);
+    //let backCardInfo = document.createElement('div');
+    //backCardInfo.className = 'backCardInfo';
+    //backCard.appendChild(backCardInfo);
 
-    let divSynopsis = document.createElement("div")
-    divSynopsis.className = "divSynopsis";
+    //let divSynopsis = document.createElement("div")
+    //divSynopsis.className = "divSynopsis";
     let pSinopsys = document.createElement("p");
     pSinopsys.className="pSinopsys";
     pSinopsys.innerHTML = "<strong>" + "Sinopsys" + "</strong>";
-    divSynopsis.appendChild(pSinopsys);
-    backCardInfo.appendChild(divSynopsis);
+    backCard.appendChild(pSinopsys);
+    //backCardInfo.appendChild(divSynopsis);
 
-    let divFilmDescription = document.createElement("div")
-    divFilmDescription.className = "divFilmDescription";
+    //let divFilmDescription = document.createElement("div")
+    //divFilmDescription.className = "divFilmDescription";
     let filmDescription = document.createElement("p");
     filmDescription.className = "filmDescription";
     filmDescription.innerHTML = allFilms[j][2];
@@ -57,9 +57,9 @@ for(let j = 0; j < allFilms.length; j++){
     btnMoreInfo.className = "btnMoreInfo"
     btnMoreInfo.setAttribute("href", "#");
     btnMoreInfo.innerHTML = "More Info";
-    backCardInfo.appendChild(divFilmDescription);
-    divFilmDescription.appendChild(filmDescription);
-    divFilmDescription.appendChild(btnMoreInfo);
+    //backCardInfo.appendChild(divFilmDescription);
+    backCard.appendChild(filmDescription);
+    backCard.appendChild(btnMoreInfo);
     divGlobal.appendChild(divCreation);
     divGlobal.appendChild(backCard);
     document.getElementById("moviesList").appendChild(divGlobal);
