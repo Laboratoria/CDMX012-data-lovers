@@ -8,7 +8,7 @@ html {
   padding: 0%;
 }
 
-header{
+header {
   background-color: #457b9d;
   padding: 3.5%;
   align-items: flex-end;
@@ -59,27 +59,26 @@ li {
   border-radius: 10%;
   font-size: 1vw;
 }
-.ButtonRed{
+.ButtonRed {
   background-color: red;
   color: red;
   margin-right: 3%;
   font-size: 1.5vw;
 }
 
-.ButtonYellow{
+.ButtonYellow {
   background-color: rgb(238, 203, 5);
   color: rgb(238, 203, 5);
   margin-right: 3%;
-  
+
   font-size: 1.5vw;
 }
 
-#Us{
+#Us {
   background-color: green;
   color: black;
   font-size: 1.5vw;
 }
-
 
 .welcomePage {
   background-image: url(https://a-static.besthdwallpaper.com/pokemon-go-video-game-papel-pintado-1024x576-41559_44.jpg);
@@ -96,7 +95,7 @@ li {
   flex-direction: column;
 }
 
-h1{
+h1 {
   padding: 2%;
   color: black;
   font-size: 2.5vw;
@@ -108,31 +107,35 @@ h1{
   align-items: center;
   justify-content: center;
 }
-.imgPokeBola:hover{
+.imgPokeBola:hover {
   transform: rotateY(360deg);
-  transition: transform .8s;
+  transition: transform 0.8s;
 }
 
-.menu{
+.menu {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 2%;
+  width: 100%;
 }
 
 #orderBy {
   margin-right: 8%;
   padding: 1%;
   border-radius: 10%;
-  background-color: #F1B418;
+  background-color: #f1b418;
+  width: 46%;
+  height: 2em;
 }
-#Clasify{
+#Clasify {
   padding: 1%;
   border-radius: 10%;
-  background-color: #F1B418;
+  background-color: #f1b418;
+  width: auto;
 }
 
-#showData{
+#showData {
   display: flex;
   background-color: rgba(70, 130, 180, 0.7);
   margin: 5% 20%;
@@ -142,16 +145,14 @@ h1{
   flex-direction: column;
 }
 
-
-
-
 footer {
   background-color: #457b9d;
   text-align: center;
 }
-#gitHub1 , #gitHub2{
+#gitHub1,
+#gitHub2 {
   height: 1em;
 }
-p{
+p {
   font-size: 1vw;
 }

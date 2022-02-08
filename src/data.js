@@ -1,9 +1,10 @@
 // estas funciones son de ejemplo
 
-export const example = () => {
-  return 'example';
+export const example = (data,condition) => {
+  return "example";
 };
 
-export const anotherExample = () => {
-  return 'OMG';
+export const anotherExample = (cosa) => {
+  OMG = pokemon.name;
+  return OMG;
 };
