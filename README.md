@@ -2,16 +2,16 @@
 
 ## Índice
 
-* [1. Preámbulo](#1-preámbulo)
-* [2. Resumen del proyecto](#2-resumen-del-proyecto)
-* [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
-* [4. Consideraciones generales](#4-consideraciones-generales)
-* [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
-* [6. Hacker edition](#6-hacker-edition)
-* [7. Consideraciones técnicas](#7-consideraciones-técnicas)
-* [8. Pistas, tips y lecturas complementarias](#8-pistas-tips-y-lecturas-complementarias)
+- [1. Preámbulo](#1-preámbulo)
+- [2. Resumen del proyecto](#2-resumen-del-proyecto)
+- [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
+- [4. Consideraciones generales](#4-consideraciones-generales)
+- [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
+- [6. Hacker edition](#6-hacker-edition)
+- [7. Consideraciones técnicas](#7-consideraciones-técnicas)
+- [8. Pistas, tips y lecturas complementarias](#8-pistas-tips-y-lecturas-complementarias)
 
-***
+---
 
 # 1. Resumen del proyecto
 
@@ -80,10 +80,10 @@ hallazgos.
 
 # 4. Historias de usuario
 
- ## Historia de usuario #1
+## Historia de usuario #1
 
     Yo como usuario que es fan de Studio Ghibli quiero visualizar las películas de Studio Ghibli que han sido producidas
-    
+
     Criterios de aceptación
 
     - Al ingresar a la página ya se puede visualizar todas los carteles de las películas del estudio
@@ -97,7 +97,7 @@ hallazgos.
     - Test usabilidad
     - El código esta desplegado en GitHub
 
-   Prototipo de baja fidelidad
+Prototipo de baja fidelidad
 
   <img src="images\prototipoBajaFidelidad1.jpg"/>
         <p align="center"><strong>Figura 2.</strong> Prototipo de baja fidelidad</p>
@@ -125,17 +125,17 @@ hallazgos.
     - No se dara la opción de filtar por staff, ya que aunado a los comentarios de las pruebas de usabilidad, la base de datos de Studio Ghibli no contiene datos suficientes para mostrar en pantalla.
     - La información sera desplegada en la primera vista de la página, para permitir filtrarla se agregará formularios para filtrar y ordenar, además de una barra de busqueda para busquedas más puntuales.
 
-5. Prototipo de alta fidelidad 
+5.  Prototipo de alta fidelidad
 
-    <img src="images\Movilemovil.PNG"/>
-        <p align="center"><strong>Figure 4.</strong> Prototipo movil</p>
-        <br/>
-    <img src="images\TablettabletLan.PNG"/>
-        <p align="center"><strong>Figure 5.</strong> Prototipo tablet</p>
-        <br/>
-    <img src="images\Desktop Lan-desktop.PNG"/>
-        <p align="center"><strong>Figure 6.</strong> Prototipo Desktop</p>
-        <br/>
+<img src="images\Movilemovil.png"/>
+    <p align="center"><strong>Figure 4.</strong> Prototipo movil</p>
+    <br/>
+<img src="images\TablettabletLan.png"/>
+    <p align="center"><strong>Figure 5.</strong> Prototipo tablet</p>
+    <br/>
+<img src="images\Desktop Lan-desktop.png"/>
+    <p align="center"><strong>Figure 6.</strong> Prototipo Desktop</p>
+    <br/>
 
 ## 6. Pistas, tips y lecturas complementarias
 
@@ -143,20 +143,20 @@ hallazgos.
 
 Cuando ya estés lista para codear, te sugerimos empezar de esta manera:
 
-1. Una de las integrantes del equipo debe realizar un :fork_and_knife:
+1. Una de las integrantes del equipo debe realizar un :fork*and_knife:
    [fork](https://help.github.com/articles/fork-a-repo/) del repo de tu cohort,
-   tus _coaches_ te compartirán un _link_ a un repo y te darán acceso de lectura
+   tus \_coaches* te compartirán un _link_ a un repo y te darán acceso de lectura
    en ese repo. La otra integrante del equipo deber hacer un fork **del
    repositorio de su compañera** y
    [configurar](https://gist.github.com/BCasal/026e4c7f5c71418485c1) un `remote`
    hacia el mismo.
 2. :arrow_down: [Clona](https://help.github.com/articles/cloning-a-repository/)
-   tu *fork* a tu computadora (copia local).
+   tu _fork_ a tu computadora (copia local).
 3. 📦 Instala las dependencias del proyecto con el comando `npm install`. Esto
    asume que has instalado [Node.js](https://nodejs.org/) (que incluye [npm](https://docs.npmjs.com/)).
 4. Si todo ha ido bien, deberías poder ejecutar las :traffic_light:
    pruebas unitarias (unit tests) con el comando `npm test`.
 5. Para ver la interfaz de tu programa en el navegador, usa el comando
-  `npm start` para arrancar el servidor web y dirígete a
-  `http://localhost:5000` en tu navegador.
+   `npm start` para arrancar el servidor web y dirígete a
+   `http://localhost:5000` en tu navegador.
 6. A codear se ha dicho! :rocket:
