@@ -111,8 +111,6 @@ function pokemon(){
         let rareza = datos[i]['pokemon-rarity'];
         rarityPokemon.innerText =`Rareza: ${rareza.charAt(0).toUpperCase() + rareza.slice(1)}`;
         buttonMoreInformation.innerHTML = "More information";
-
-
         
         containerExternalCard.appendChild(classImagenPokemon);
         containerInternalCard.appendChild(namePokemon);
