@@ -1,4 +1,4 @@
-import {getArray, filterDataName} from './data.js';
+import {getArray, filterDataName, orderAscendente, orderDescendente, orderA_Z, orderZ_A} from './data.js';
 // import data from './data/lol/lol.js';
 import data from './data/pokemon/pokemon.js';
 // import data from './data/rickandmorty/rickandmorty.js';
@@ -27,10 +27,10 @@ function pokemon(){
         let containerGeneralCard=document.createElement("div");
         containerGeneralCard.classList.add("general-card-container");
 
-
         //contenedor white
         let containerExternalCard=document.createElement("div");
         containerExternalCard.classList.add("card-container");
+        
         //Crear div con una clase para la imagen
         let classImagenPokemon=document.createElement("div");
         let imagenPokemon=document.createElement("img");
@@ -72,6 +72,9 @@ function pokemon(){
         let rarityPokemon = document.createElement("div");
         rarityPokemon.classList.add("rarity-pokemon");
 
+        let buttonMoreInformation = document.createElement("button");
+        buttonMoreInformation.classList.add("btn-More-Information");
+
 
 
         let imagen=datos[i].img;
@@ -104,24 +107,24 @@ function pokemon(){
 
         let resistencia = datos[i].resistant;
         resistantPokemon.innerText =`Resistencia: ${resistencia}`;
-        
-        
 
         let rareza = datos[i]['pokemon-rarity'];
         rarityPokemon.innerText =`Rareza: ${rareza.charAt(0).toUpperCase() + rareza.slice(1)}`;
-
+        buttonMoreInformation.innerHTML = "More information";
         
         containerExternalCard.appendChild(classImagenPokemon);
         containerInternalCard.appendChild(namePokemon);
         containerInternalCard.appendChild(idPokemon);
+
         containerInternalCard.appendChild(titleTypePokemon);
-        containerInternalCard.appendChild(typePokemon);
-        containerInternalCard.appendChild(typePokemon2);
+        titleTypePokemon.appendChild(typePokemon);
+        titleTypePokemon.appendChild(typePokemon2);
 
         containerExternalCard.appendChild(containerInternalCard);
         containerBackCard.appendChild(weaknessesPokemon);
         containerBackCard.appendChild(resistantPokemon);
         containerBackCard.appendChild(rarityPokemon);
+        containerBackCard.appendChild(buttonMoreInformation);
 
         containerGeneralCard.appendChild(containerExternalCard)
         containerGeneralCard.appendChild(containerBackCard)
@@ -129,18 +132,7 @@ function pokemon(){
         principalContainer.appendChild(containerGeneralCard);
         
 
-        
-        function rotateOne(){
-            containerExternalCard.style.transform="perspective(1000px) rotateY(-180deg) ";
-            containerBackCard.style.transform="perspective(1000px) rotateY(0deg) ";
-        }
 
-        function rotateTwo(){
-            containerExternalCard.style.transform="perspective(1000px) rotateY(0deg) ";
-            containerBackCard.style.transform="perspective(1000px) rotateY(180deg) ";
-        }
-        containerExternalCard.addEventListener("mouseenter", rotateOne());
-        containerExternalCard.addEventListener("mouseleave", rotateTwo());
 
         function styleType(){
 
@@ -268,3 +260,57 @@ function filterData(){
 
 };
 
+
+/* FILTRADO: ASCENDENTE Y DESCENDENTE */
+let orderAsc = true;
+
+const buttonAZ = document.getElementById('orderA_Z');
+const buttonZA = document.getElementById('orderZ_A');
+const buttonAsc =document.getElementById('orderAscendente')
+const buttonDesc = document.getElementById('orderDescendente')
+
+
+buttonAsc.addEventListener('click', () => {
+    principalContainer.innerHTML = '';
+
+    pokemon(orderAscendente(datos, orderAsc));
+    orderAsc != orderAsc;
+    
+    buttonAsc.classList.add('hide');
+    buttonDesc.classList.remove('hide');
+
+});
+
+buttonDesc.addEventListener('click', () => {
+
+    principalContainer.innerHTML = '';
+
+    pokemon(orderDescendente(datos, orderAsc));
+    orderAsc != orderAsc;
+
+    buttonDesc.classList.add('hide');
+    buttonAsc.classList.remove('hide');
+});
+
+buttonAZ.addEventListener('click', () => {
+
+    principalContainer.innerHTML = '';
+
+    pokemon(orderA_Z(datos, orderAsc));
+    orderAsc != orderAsc;
+
+    buttonAZ.classList.add('hide')
+    buttonZA.classList.remove('hide')
+});
+
+buttonZA.addEventListener('click', () => {
+
+    principalContainer.innerHTML = '';
+
+    pokemon(orderZ_A(datos, orderAsc));
+    orderAsc != orderAsc;
+
+    buttonZA.classList.add('hide')
+    buttonAZ.classList.remove('hide')
+
+});
