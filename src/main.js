@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 const section = document.querySelector('#informacion');
 
 // Función que se llama al finalizar la carga del HTML, esta función solo llama a filter = peliculas
-function mostrarPeliculas(data){
+function mostrarPeliculas(data) {
 
     order.filterData(data, 'title').forEach(film => {
         // Creación de elementos
@@ -28,7 +28,7 @@ function mostrarPeliculas(data){
         img.src = film.poster;
         pTitle.textContent = film.title;
         pYear.textContent = film.release_date;
-        pScore.textContent = `${film.rt_score} / 100 `;
+        pScore.textContent = Number(film.rt_score) / 10;
 
         //Añadir selectores
         div1.classList.add('portada');
@@ -36,7 +36,8 @@ function mostrarPeliculas(data){
         pTitle.classList.add('filmName');
         pYear.classList.add('year');
         pScore.classList.add('score');
-       
+        img.classList.add('img-fluid');
+
 
         // Append a document
         article.appendChild(div1);
@@ -48,8 +49,8 @@ function mostrarPeliculas(data){
         section.appendChild(article);
     })
 }
- 
-function mostrarRestoCategorias(data, filter){
+
+function mostrarRestoCategorias(data, filter) {
 
     let toHTML = '';
 
@@ -72,12 +73,12 @@ function mostrarRestoCategorias(data, filter){
         toHTML += article;
     })
 
-    section.innerHTML = toHTML; 
+    section.innerHTML = toHTML;
 }
 
 // Guardar valores de los formularios
 const datosBusqueda = {
-    filtrado : '',
+    filtrado: '',
     ordenado: ''
 }
 
@@ -92,24 +93,24 @@ filtro.addEventListener('change', e => {
     //Elimina HTML previo
     limpiarHTML();
 
-    if(e.target.value === 'people' || e.target.value === 'locations' || e.target.value === 'vehicles'){
+    if (e.target.value === 'people' || e.target.value === 'locations' || e.target.value === 'vehicles') {
         console.log(order.filterData(data, e.target.value))
         mostrarRestoCategorias(data, e.target.value);
-    }else{
+    } else {
         mostrarPeliculas(data);
     }
 })
 
 //limpiar HTML
 function limpiarHTML() {
-    while(section.firstChild){
+    while (section.firstChild) {
         section.removeChild(section.firstChild);
     }
 
 }
 
 const inputSearch = document.getElementById("inputSearch");
-inputSearch.addEventListener("change", function () {
+inputSearch.addEventListener("change", function() {
     let searchValue = inputSearch.value;
     console.log("change", inputSearch.value);
     const busquedaPeli = filterFilmsBySearch(data.films, searchValue);
