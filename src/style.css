@@ -204,6 +204,7 @@ ul {
 .films-filter-sort {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .films-sort {
@@ -232,6 +233,13 @@ ul {
   align-self: flex-end;
   border-color: #1572a1;
   background-color: #fffdf9;
+  color: #1572a1;
+  box-shadow: 0 4px 3px #91e2f4;
+}
+
+.button:hover {
+  background-color: #1572a1;
+  color: #fffdf9;
 }
 
 .label-films {
@@ -242,10 +250,10 @@ ul {
 
 .movies-content {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
   flex-wrap: wrap;
-  gap: 48px;
+  gap: 66px;
 }
 
 .movie img {
