@@ -107,6 +107,7 @@ function limpiarHTML() {
     }
 
 }
+
 const inputSearch = document.getElementById("inputSearch");
 inputSearch.addEventListener("change", function () {
     let searchValue = inputSearch.value;
@@ -115,6 +116,3 @@ inputSearch.addEventListener("change", function () {
     console.log("busqueda", busquedaPeli);
 });
 
-
-console.log(data);
-console.log(order.filterData(data, 'title'));
