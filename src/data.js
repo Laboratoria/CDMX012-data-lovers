@@ -26,4 +26,12 @@ export const filmPosters = (movies) => {
   let movie = [movies.poster, movies.title, movies.description];
   return movie;
 };
+export const cutDescription = (description) => {
+  let descriptionLength = description.length;
+  if (descriptionLength > 400){
+    return description.slice(0, 400) + "..."
+  } else{
+    return description
+  }
+}
 

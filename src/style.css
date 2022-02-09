@@ -178,7 +178,6 @@ body {
   height: 300px;
   border-radius: 5px;
   margin: 10px;
-
 }
 /* tarjeta frontal */
 .globalCard .card {
@@ -235,7 +234,7 @@ body {
 
 .globalCard .back-card .filmDescription{
   color: #ebe9e9;
-  font-size: 10px;
+  font-size: 12px;
   justify-content: center;
   font-weight: normal;
   padding-bottom: 10px;
