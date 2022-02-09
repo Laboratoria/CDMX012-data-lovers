@@ -146,6 +146,8 @@ input[type="text"] {
 
 .galeria img {
     border-radius: 4%;
+    max-width: 100%;
+    height: auto;
 }
 
 .img-fluid {
@@ -167,4 +169,31 @@ a {
     text-decoration: none;
     color: black;
     font-weight: bolder;
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+
+@media only screen and (min-width: 768px) {
+    .galeria {
+        grid-template-columns: repeat(3, auto);
+    }
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+
+@media only screen and (min-width: 992px) {
+    .galeria {
+        grid-template-columns: repeat(4, auto);
+    }
+}
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+
+@media only screen and (min-width: 1200px) {
+    .galeria {
+        grid-template-columns: repeat(5, auto);
+    }
 }
