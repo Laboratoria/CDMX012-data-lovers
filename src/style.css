@@ -1,0 +1,159 @@
+
+
+body{
+  background-image: url(imagenes/pokemonfondo.jpg);
+background-size: cover;
+ background-repeat: no-repeat;
+ background-attachment: fixed;
+}
+#type{
+display: none;
+
+}
+.menuBar{
+ background-color:  #00004A; 
+
+display: flex;
+}
+.pokebola{
+  width: 80px;
+  margin:auto;
+  text-align: center;
+}
+.buttonInicio{
+  background-color: #DD4A48;
+  width: 150px;
+  height: 60px;
+  margin-top: 30px;
+  margin:30px;
+  border-radius: 10px;
+  display:inline-block;
+  margin-left: 150px;
+  font-family:'Rowdies'; 
+  font-size: 15px;
+color:white;
+}
+
+
+#menuIcon{
+  color:white;
+  font-size: 40px;
+  margin-top: 20px;
+  margin-left: 40px;
+}
+#searchIcon{
+  color:white;
+  font-size: 40px;
+  margin-top: 20px;
+  
+}
+.flexBox {
+    background-color:#FEECD7 ;
+    text-align: center;
+    display:inline-block;
+    border-radius: 15px;
+    margin:20px 20px 20px 20px;
+    padding:0px 30px 0px 30px;
+    font-family:'Rowdies'; 
+    font-size: 20px;
+  }
+#allPokemons{
+  display: none;
+   background-color: #D2691E;
+}
+   
+h1{
+  background-color: white;
+  
+  text-align: center;
+  font-size: 25px;
+  font-family: 'Rowdies';
+  border-radius: 15px;
+  margin: 20px 145px 20px 100px;
+  padding: 20px 0px 20px 0px;
+}
+.pokemonShown{
+  margin-left: 80px;
+  
+}
+.typeB{
+  
+  width: 100px;
+  height: 35px;
+  margin-top: 160px;
+  margin:20px;
+  border-radius: 10px;
+  display:inline-block;
+  margin-left: 100px;
+  font-family:'Rowdies'; 
+    font-size: 15px;
+}
+.fire{
+  background-color: #D2691E;
+}
+.water{
+  background-color: #4682B4;
+}
+.ice{
+  background-color: #00FFFF;
+}
+.ghost{
+  background-color: #9370DB;
+}
+.dragon{
+  background-image:linear-gradient( to top, #ff0505,#2a83cbfb);
+}
+.bug{
+  background-color: #6B8E23;
+}
+.electric{
+  background-color: #FFD700;
+}
+.grass{
+  background-color: #228B22;
+}
+.normal{
+  background-color: #A9A9A9;
+}
+.rock{
+  background-color: #808000;
+}
+.dark{
+  background-color: #696969;
+}
+.fairy{
+background-color: #FFB6C1;
+}
+.flying{
+  background-image: linear-gradient(to top, #C4C4C4, #08BFFD);
+}
+.ground{
+  background-image: linear-gradient(to top, #808000, #F4DC02);
+}
+.poison{
+  background-color: #EE82EE;
+}
+.psychic{
+  background-color: #FF1493;
+}
+.steel{
+  background-color: #708090;
+}
+.fighting{
+  background-color: #FF8C00;
+}
+.uno{
+  
+  font-family:'Rowdies'; 
+    font-size: 30px;
+    text-align: center;
+    display: inline-block;
+    justify-content: center;
+    margin:90px 20px 20px 300px;
+    padding:0px 30px 0px 30px;
+    
+}
+
+
+
+
