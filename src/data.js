@@ -23,9 +23,10 @@
 
 
 export const filmPosters = (movies) => {
-  let movie = [movies.poster, movies.title, movies.description];
+  let movie = [movies.poster, movies.title, movies.description, movies.release_date];
   return movie;
 };
+
 export const cutDescription = (description) => {
   let descriptionLength = description.length;
   if (descriptionLength > 400){
@@ -33,5 +34,9 @@ export const cutDescription = (description) => {
   } else{
     return description
   }
-}
+};
 
+export const year = (years) => {
+  let movieYear =[years.release_date];
+  return movieYear;
+}
