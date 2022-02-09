@@ -5,73 +5,56 @@ import order from './data.js';
 
 // Una vez cargado el archivo HTML se ejecuta la función
 document.addEventListener('DOMContentLoaded', () => {
-    mostrarPeliculas(data);
+    mostrarCategoria(data, 'title');
 })
 
 //Selecciona la seccion donde aparecera el resultado de busqueda
 const section = document.querySelector('#informacion');
 
 // Función que se llama al finalizar la carga del HTML, esta función solo llama a filter = peliculas
-function mostrarPeliculas(data) {
-
-    order.filterData(data, 'title').forEach(film => {
-        // Creación de elementos
-        const article = document.createElement("article");
-        const div1 = document.createElement('div');
-        const div2 = document.createElement('div');
-        const img = document.createElement('img');
-        const pTitle = document.createElement('p');
-        const pYear = document.createElement('p');
-        const pScore = document.createElement('p');
-
-        //Añadir contenido
-        img.src = film.poster;
-        pTitle.textContent = film.title;
-        pYear.textContent = film.release_date;
-        pScore.textContent = Number(film.rt_score) / 10;
-
-        //Añadir selectores
-        div1.classList.add('portada');
-        div2.classList.add('info');
-        pTitle.classList.add('filmName');
-        pYear.classList.add('year');
-        pScore.classList.add('score');
-        img.classList.add('img-fluid');
-
-
-        // Append a document
-        article.appendChild(div1);
-        div1.appendChild(img);
-        article.appendChild(div2);
-        div2.appendChild(pTitle);
-        div2.appendChild(pYear);
-        div2.appendChild(pScore);
-        section.appendChild(article);
-    })
-}
-
-function mostrarRestoCategorias(data, filter) {
-
+function mostrarCategoria(data, filtro){
+    
     let toHTML = '';
 
-    // innerHTML es más rapido que crear elementos como en la función mostrarPeliculas()
+    if(filtro === 'title'){
 
-    order.filterData(data, filter).forEach(film => {
+        order.filterData(data, filtro).forEach(film => {
+           
+            const article = `
+            <article>
+                <div class="portada">
+                    <img src= ${film.poster} >
+                </div>
+                <div class="info">
+                    <p class="filmName1"> ${film.title} </p>
+                    <p class="year"> ${film.release_date} </p>
+                    <p class="score"> ${Number(film.rt_score) / 10}</p>
+                </div>
+            </article>
+            `;
 
-        const article = `
-        <article>
-            <div class="portada">
-                <img src= ${film.img} >
-            </div>
-            <div class="info">
-                <p class="name"> ${film.name} </p>
-                <p class="filmName2"> ${film.title} </p>
-            </div>
-        </article>
-        `;
+            toHTML += article;
+        })
+    }else{
+        
+        order.filterData(data, filtro).forEach(film => {
 
-        toHTML += article;
-    })
+            const article = `
+            <article>
+                <div class="portada">
+                    <img src= ${film.img} >
+                </div>
+                <div class="info">
+                    <p class="name"> ${film.name} </p>
+                    <p class="filmName2"> ${film.title} </p>
+                </div>
+            </article>
+            `;
+
+            toHTML += article;
+        })
+
+    }
 
     section.innerHTML = toHTML;
 }
@@ -95,9 +78,9 @@ filtro.addEventListener('change', e => {
 
     if (e.target.value === 'people' || e.target.value === 'locations' || e.target.value === 'vehicles') {
         console.log(order.filterData(data, e.target.value))
-        mostrarRestoCategorias(data, e.target.value);
-    } else {
-        mostrarPeliculas(data);
+        mostrarCategoria(data, e.target.value);
+    }else{
+        mostrarCategoria(data, e.target.value);
     }
 })
 
@@ -106,7 +89,6 @@ function limpiarHTML() {
     while (section.firstChild) {
         section.removeChild(section.firstChild);
     }
-
 }
 
 const inputSearch = document.getElementById("inputSearch");
