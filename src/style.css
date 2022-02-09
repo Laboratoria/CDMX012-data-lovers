@@ -121,18 +121,22 @@ h1 {
 }
 
 #orderBy {
-  margin-right: 8%;
+  margin-right: 4%;
+  margin-left: 26%;
   padding: 1%;
   border-radius: 10%;
   background-color: #f1b418;
-  width: 46%;
-  height: 2em;
+  height: auto;
+  width: 20%;
 }
 #Clasify {
   padding: 1%;
   border-radius: 10%;
   background-color: #f1b418;
-  width: auto;
+  width: 20%;
+  margin-right: 26%;
+  margin-left: 4%;
+  height: auto;
 }
 
 #showData {
