@@ -87,7 +87,7 @@ li {
 }
 .welcomeBox {
   display: flex;
-  background-color: rgba(70, 130, 180, 0.7);
+  background-color: rgba(70,123,157, 0.7);
   margin: 5% 20%;
   padding: 0;
   align-items: center;
@@ -141,14 +141,23 @@ h1 {
 
 #showData {
   display: flex;
-  background-color: rgba(70, 130, 180, 0.7);
-  margin: 5% 20%;
+  background-color: rgba(70,123,157, 0.7);
+  margin: 5% 10%;
   padding: 0;
   align-items: center;
   border-radius: 40px;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
+.pokeCards{
+  background-color: #f1b418;
+  text-align: center;
+  display: block;
+  margin:2%;
+  width: 15%; 
+  border-radius: 5px; 
+}
 footer {
   background-color: #457b9d;
   text-align: center;
@@ -160,3 +169,4 @@ footer {
 p {
   font-size: 1vw;
 }
+
