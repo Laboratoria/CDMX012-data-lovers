@@ -109,6 +109,11 @@ h1 {
     justify-content: center;
 }
 
+.search-icon {
+    width: 20px;
+    height: 20px;
+}
+
 input[type="text"] {
     width: 60%;
     font-size: 14px;
