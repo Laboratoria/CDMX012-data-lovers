@@ -23,7 +23,7 @@
 
 
 export const filmPosters = (movies) => {
-  let movie = [movies.poster, movies.title, movies.description, movies.release_date];
+  let movie = [movies.poster, movies.title, movies.description, movies.release_date, movies.rt_score];
   return movie;
 };
 
@@ -36,7 +36,12 @@ export const cutDescription = (description) => {
   }
 };
 
+
 export const year = (years) => {
   let movieYear =[years.release_date];
   return movieYear;
+}
+
+export function yearSorting (a, b) {
+  return a - b;
 }
