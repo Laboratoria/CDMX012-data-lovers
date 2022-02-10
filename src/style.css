@@ -86,7 +86,7 @@ h1 {
 }
 
 .titulo p {
-    font-size: 13px;
+    font-size: 15px;
     text-align: center;
     width: 85%;
     line-height: 18px;
@@ -96,7 +96,7 @@ h1 {
     justify-self: center;
     width: 70%;
     grid-row-start: 2;
-    font-size: 11px;
+    font-size: 14px;
     text-align: center;
     background-color: var(--general-color);
     border: none;
@@ -111,27 +111,29 @@ h1 {
 
 input[type="text"] {
     width: 60%;
-    font-size: 13px;
+    font-size: 14px;
     text-align: center;
     border-radius: 20px;
     outline: none;
     border: none;
+    padding: .25rem;
 }
 
 .galeria {
     display: grid;
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 8px;
+    margin-bottom: 1rem;
 }
 
 .galeria article {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: #ffffffde;
     text-align: center;
-    grid-column-gap: 50px;
     border-radius: 4%;
+    border: 1px solid #00000066;
 }
 
-.galeria .filmName {
+.galeria .filmName1 {
     font-weight: bold;
     font-size: 15px;
 }
@@ -140,14 +142,29 @@ input[type="text"] {
     font-size: 14px;
 }
 
+.star-icon {
+    width: 20px;
+    height: 20px;
+    color: gold;
+    stroke: #81680E;
+}
+
 .galeria .score {
     font-size: 14px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
 }
 
 .galeria img {
-    border-radius: 4%;
-    max-width: 100%;
-    height: auto;
+    border-top-left-radius: 4%;
+    border-top-right-radius: 4%;
+    width: 100%;
+}
+
+.galeria .name {
+    font-weight: bold;
+    font-size: 15px;
 }
 
 .img-fluid {
@@ -176,7 +193,8 @@ a {
 
 @media only screen and (min-width: 768px) {
     .galeria {
-        grid-template-columns: repeat(3, auto);
+        grid-template-columns: repeat(3, 1fr);
+        margin-bottom: 1.5rem;
     }
 }
 
@@ -185,15 +203,30 @@ a {
 
 @media only screen and (min-width: 992px) {
     .galeria {
-        grid-template-columns: repeat(4, auto);
+        grid-template-columns: repeat(4, 1fr);
+        width: 85%;
+        margin-bottom: 3rem;
+    }
+    .titulo {
+        padding-top: 2rem;
     }
 }
 
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* Extra extra large devices (large laptops and desktops, 1400px and up) */
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1400px) {
     .galeria {
-        grid-template-columns: repeat(5, auto);
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: 14px;
+    }
+    .titulo {
+        padding-top: 3rem;
+    }
+    .titulo p {
+        font-size: 15px;
+    }
+    .filtro {
+        font-size: 14px;
     }
 }
