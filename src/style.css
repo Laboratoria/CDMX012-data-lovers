@@ -48,7 +48,6 @@ color:white;
   
 }
 .flexBox {
-    background-color:#FEECD7 ;
     text-align: center;
     display:inline-block;
     border-radius: 15px;
@@ -88,8 +87,11 @@ h1{
   font-family:'Rowdies'; 
     font-size: 15px;
 }
-.fire{
+.buttonFire{
   background-color: #D2691E;
+}
+.fire{
+  background-color:#FEECD7 ;
 }
 .water{
   background-color: #4682B4;
