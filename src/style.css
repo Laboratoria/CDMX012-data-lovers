@@ -1,199 +1,250 @@
 @import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap");
 :root {
-    --general-color: #0DBEDE;
-    ;
+  --general-color: #0dbede;
 }
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Gothic A1', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Gothic A1", sans-serif;
 }
 
 html {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 body {
-    width: 100%;
-    height: 100%;
-    border: 1px solid black;
-    display: flex;
-    flex-direction: column;
-    background-image: url("images/backimage.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-x: 100%;
-    background-attachment: fixed;
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  background-image: url("images/backimage.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: 100%;
+  background-attachment: fixed;
 }
 
 .logo {
-    position: fixed;
-    left: 0;
-    top: 5%;
-    width: 10%;
-    height: 25%;
-    border-radius: 0 20px 20px 0;
-    background-color: var(--general-color);
-    background-image: url("images/LogoGW.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position-y: 50%;
+  position: fixed;
+  left: 0;
+  top: 5%;
+  width: 10%;
+  height: 25%;
+  border-radius: 0 20px 20px 0;
+  background-color: var(--general-color);
+  background-image: url("images/LogoGW.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-y: 50%;
+  background-position-x: 50%;
 }
 
 main {
-    width: 93%;
-    height: 95%;
-    overflow: auto;
-    align-self: end;
-    display: flex;
-    gap: 0.8rem;
-    flex-direction: column;
-    align-items: center;
-    background: rgba(255, 255, 255, 0.75);
+  width: 93%;
+  height: 95%;
+  overflow: auto;
+  align-self: end;
+  display: flex;
+  gap: 0.8rem;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.75);
 }
 
 .titulo {
-    width: 85%;
-    padding-top: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: end;
+  width: 85%;
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
 }
 
 .barraInput {
-    padding: 0.5rem;
-    width: 85%;
-    height: fit-content;
-    display: grid;
-    gap: 0.5rem;
-    grid-template-columns: 1fr 1fr;
-    background-color: var(--general-color);
-    border-radius: 10px;
+  padding: 0.5rem;
+  width: 85%;
+  height: fit-content;
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: 1fr 1fr;
+  background-color: var(--general-color);
+  border-radius: 10px;
+}
+
+#filtrocategoria1 {
+  border-right: 2px solid black;
 }
 
 section {
-    width: 94%;
-    max-height: fit-content;
+  width: 94%;
+  max-height: fit-content;
 }
 
 h1 {
-    font-size: 48px;
-    font-weight: 600;
+  font-size: 48px;
+  font-weight: 600;
 }
 
 .titulo p {
-    font-size: 13px;
-    text-align: center;
-    width: 85%;
-    line-height: 18px;
+  font-size: 13px;
+  text-align: center;
+  width: 85%;
+  line-height: 18px;
 }
 
 .filtro {
-    justify-self: center;
-    width: 70%;
-    grid-row-start: 2;
-    font-size: 11px;
-    text-align: center;
-    background-color: var(--general-color);
-    border: none;
+  justify-self: center;
+  width: 100%;
+  grid-row-start: 2;
+  font-size: 11px;
+  text-align: center;
+  background-color: var(--general-color);
+  background: url("images/chevrondown_120139.png") no-repeat right;
+  background-size: 10%;
+  background-position-x: 80%;
+  -webkit-appearance: none;
+  border: none;
 }
 
 #inputText {
-    grid-column: span 2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  grid-row-start: 1;
+  grid-column: span 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 input[type="text"] {
-    width: 60%;
-    font-size: 13px;
-    text-align: center;
-    border-radius: 20px;
-    outline: none;
-    border: none;
+  width: 60%;
+  font-size: 13px;
+  text-align: center;
+  border-radius: 20px;
+  outline: none;
+  border: none;
 }
 
 .galeria {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    grid-gap: 8px;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-gap: 8px;
 }
 
 .galeria article {
-    background-color: rgba(255, 255, 255, 0.8);
-    text-align: center;
-    grid-column-gap: 50px;
-    border-radius: 4%;
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  grid-column-gap: 50px;
+  border-radius: 4%;
 }
 
 .galeria .filmName {
-    font-weight: bold;
-    font-size: 15px;
+  font-weight: bold;
+  font-size: 15px;
 }
 
 .galeria .year {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 .galeria .score {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 .galeria img {
-    border-radius: 4%;
-    max-width: 100%;
-    height: auto;
+  border-radius: 4%;
+  max-width: 100%;
+  height: auto;
 }
 
 .img-fluid {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 footer {
-    background-color: var(--general-color);
-    padding: 1.2rem;
-    padding-left: 1rem;
-    width: 100%;
-    font-size: 10px;
-    display: flex;
-    align-items: center;
+  background-color: var(--general-color);
+  padding: 1.2rem;
+  padding-left: 1rem;
+  width: 100%;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
 }
 
 a {
-    text-decoration: none;
-    color: black;
-    font-weight: bolder;
+  text-decoration: none;
+  color: black;
+  font-weight: bolder;
 }
-
 
 /* Medium devices (landscape tablets, 768px and up) */
 
 @media only screen and (min-width: 768px) {
-    .galeria {
-        grid-template-columns: repeat(3, auto);
-    }
-}
+  .galeria {
+    grid-template-columns: repeat(3, auto);
+  }
 
+  .logo {
+    width: 8%;
+  }
+
+  h1 {
+    font-size: 72px;
+  }
+
+  .titulo p {
+    font-size: 19px;
+    line-height: 22px;
+    width: 95%;
+  }
+
+  .filtro {
+    font-size: 19px;
+  }
+
+  input[type="text"] {
+    width: 40%;
+    font-size: 19px;
+  }
+
+  main {
+    margin-top: 2rem;
+    align-self: center;
+    border-radius: 10px;
+  }
+}
 
 /* Large devices (laptops/desktops, 992px and up) */
 
 @media only screen and (min-width: 992px) {
-    .galeria {
-        grid-template-columns: repeat(4, auto);
-    }
-}
+  .galeria {
+    grid-template-columns: repeat(4, auto);
+  }
 
+  .logo {
+    width: 6%;
+  }
+
+  input[type="text"] {
+    width: 40%;
+  }
+}
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 
 @media only screen and (min-width: 1200px) {
-    .galeria {
-        grid-template-columns: repeat(5, auto);
-    }
+  .galeria {
+    grid-template-columns: repeat(5, auto);
+  }
+
+  .logo {
+    width: 3%;
+  }
+
+  input[type="text"] {
+    width: 30%;
+  }
 }
