@@ -1,14 +1,3 @@
-// Recomendamos usar src/main.js para todo tu código que tenga que ver con mostrar 
-// los datos en la pantalla. Con esto nos referimos básicamente a la interacción con el DOM.
-//  Operaciones como creación de nodos, registro de manejadores de eventos (event listeners o event handlers),
-
-
-// import { example } from './data.js';
-// // import data from './data/lol/lol.js';
-// import data from './data/ghibli/ghibli.js';
-// // import data from './data/rickandmorty/rickandmorty.js';
-
-// console.log(example, data);
 
 import data from './data/ghibli/ghibli.js';
 import { filmPosters, cutDescription} from './data.js';
@@ -66,3 +55,14 @@ for(let j = 0; j < allFilms.length; j++){
   
 }
 
+
+allFilms.sort(function (a,b){
+    console.log(a, b)    
+    return Number(a[3]) - Number(b[3])
+})
+for(let j = 0; j < allFilms.length; j++){
+    let divSort = document.createElement("div");
+    divSort.className = "divSort";
+    divSort.innerHTML = allFilms[j][3];
+    document.getElementById("moviesList").appendChild(divSort);
+}

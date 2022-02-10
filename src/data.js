@@ -11,21 +11,12 @@
 // computeStats(data): la función compute o calcular, nos permitirá hacer cálculos estadísticos básicos 
 // para ser mostrados de acuerdo a la data proporcionada.
 
-// estas funciones son de ejemplo
-
-// export const example = () => {
-//   return 'example';
-// };
-
-// export const anotherExample = () => {
-//   return 'OMG';
-// };
-
 
 export const filmPosters = (movies) => {
-  let movie = [movies.poster, movies.title, movies.description];
+  let movie = [movies.poster, movies.title, movies.description, movies.release_date];
   return movie;
 };
+
 export const cutDescription = (description) => {
   let descriptionLength = description.length;
   if (descriptionLength > 400){
