@@ -41,7 +41,6 @@ export const year = (years) => {
   let movieYear =[years.release_date];
   return movieYear;
 }
-
 export function yearSorting (a, b) {
   return a - b;
 }
