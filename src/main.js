@@ -53,12 +53,12 @@ function pokemon(arreglo){
         containerBackCard.classList.add("back-card-container");
 
         //crear div con una clase para las debilidades de los pokemon
-        let weaknessesPokemon = document.createElement("div");
-        weaknessesPokemon.classList.add("weaknesses-pokemon");
+        let encounterPokemon = document.createElement("div");
+        encounterPokemon.classList.add("encounter-pokemon");
 
         //crear div con una clase para las resistencia de los pokemon
-        let resistantPokemon = document.createElement("div");
-        resistantPokemon.classList.add("resistant-pokemon");
+        let spawnChancePokemon = document.createElement("div");
+        spawnChancePokemon.classList.add("spawn-chance-pokemon");
 
         //crear div con una clase para las rarezas de los pokemon
         let rarityPokemon = document.createElement("div");
@@ -83,26 +83,27 @@ function pokemon(arreglo){
 
         
         if(tipos.length == 1){
-            titleTypePokemon.innerText='Tipo: ';
+            titleTypePokemon.innerText='Type: ';
             typePokemon.innerText=`${tipos[0].charAt(0).toUpperCase() + tipos[0].slice(1)}`;
             styleType(tipos[0]);
         }
         else {
-            titleTypePokemon.innerText='Tipo: ';
+            titleTypePokemon.innerText='Type: ';
             typePokemon.innerText=`${tipos[0].charAt(0).toUpperCase() + tipos[0].slice(1)}`;
             styleType(tipos[0]);
             typePokemon2.innerText=`${tipos[1].charAt(0).toUpperCase() + tipos[1].slice(1)}`;
-            styleType2(tipos[1]); 
+            styleType2(tipos[1]);
         }
 
-        let debilidad = arreglo[i].weaknesses;
-        weaknessesPokemon.innerText =`Debilidad: ${debilidad}`;
+        let encounterOne = arreglo[i].encounter['base-flee-rate'];
+        let encounterTwo = arreglo[i].encounter['base-capture-rate'];
+        encounterPokemon.innerText =`\n -Encounter: \n Base Flee Rate: ${encounterOne} \n Base Capture Rate: ${encounterTwo}`;
 
-        let resistencia = arreglo[i].resistant;
-        resistantPokemon.innerText =`Resistencia: ${resistencia}`;
+        let aparicion = arreglo[i]['spawn-chance'];
+        spawnChancePokemon.innerText =`\n -Spawn Chance: ${aparicion}`;
 
         let rareza = arreglo[i]['pokemon-rarity'];
-        rarityPokemon.innerText =`Rareza: ${rareza.charAt(0).toUpperCase() + rareza.slice(1)}`;
+        rarityPokemon.innerText =` \n -Rarity: ${rareza.charAt(0).toUpperCase() + rareza.slice(1)}`;
         buttonMoreInformation.innerHTML = "More information";
         
         containerExternalCard.appendChild(classImagenPokemon);
@@ -114,8 +115,8 @@ function pokemon(arreglo){
         titleTypePokemon.appendChild(typePokemon2);
 
         containerExternalCard.appendChild(containerInternalCard);
-        containerBackCard.appendChild(weaknessesPokemon);
-        containerBackCard.appendChild(resistantPokemon);
+        containerBackCard.appendChild(encounterPokemon);
+        containerBackCard.appendChild(spawnChancePokemon);
         containerBackCard.appendChild(rarityPokemon);
         containerBackCard.appendChild(buttonMoreInformation);
 
@@ -166,6 +167,13 @@ function pokemon(arreglo){
         
             let btnBack = document.createElement("button");
             btnBack.classList.add("btn-back");
+
+            let weaknessesPokemon = document.createElement("div");
+            weaknessesPokemon.classList.add("weaknesses-pokemon");
+    
+            //crear div con una clase para las resistencia de los pokemon
+            let resistantPokemon = document.createElement("div");
+            resistantPokemon.classList.add("resistant-pokemon");
         
         
         
@@ -184,14 +192,32 @@ function pokemon(arreglo){
         
             let evolutions = arreglo[i].evolution['next-evolution'];
             evolutionsPokemon.innerText =`Evolutions: ${evolutions}`;
+            console.log(evolutions)
         
             let stats = arreglo[i].stats;
             statsPokemon.innerText =`Stats: ${stats}`;
         
             btnCalculate.innerHTML = "Calculate";
             btnBack.innerHTML = "Back";
-        
-        
+
+            let debilidad = arreglo[i].weaknesses;
+            weaknessesPokemon.innerText ="Weaknesses: ";
+            debilidad.map(element => {
+                let box = document.createElement('div');
+                box.classList.add(element);
+                box.appendChild(document.createTextNode(element.charAt(0).toUpperCase() + element.slice(1)))
+                weaknessesPokemon.appendChild(box);
+            });
+
+            let resistencia = arreglo[i].resistant;
+            resistantPokemon.innerText ="Resistencia: ";
+            resistencia.map(element => {
+                let box = document.createElement('div')
+                box.classList.add(element)
+                box.appendChild(document.createTextNode(element.charAt(0).toUpperCase() + element.slice(1)))
+                resistantPokemon.appendChild(box);
+            });
+
             principalContainer.appendChild(pokemonContainer);
         
             pokemonContainer.appendChild(boxPokemon);
@@ -210,7 +236,10 @@ function pokemon(arreglo){
             informationPokemon.appendChild(heightPokemon);
         
             buttonsPokemon.appendChild(btnCalculate);
-            buttonsPokemon.appendChild(btnBack);         
+            buttonsPokemon.appendChild(btnBack);
+
+            informationPokemon.appendChild(weaknessesPokemon);
+            informationPokemon.appendChild(resistantPokemon);         
         
         });
         
@@ -221,6 +250,9 @@ function pokemon(arreglo){
         function styleType2(tipo){
             typePokemon2.classList.add(tipo);
         }
+
+
+
     }
 }
 
@@ -228,14 +260,23 @@ function pokemon(arreglo){
 pokemon(datos);
 
 
-// FILTRADO : POR TIPO
+// FILTRADO : POR TIPO DE POKEMON
 
 const btnSelectType= document.querySelector(".select-type");
 const listType=document.querySelector(".btn-general-type");
 
+
 btnSelectType.addEventListener("click", () =>{
     listType.classList.remove("hide");
 });
+
+
+
+
+
+
+
+
 
 const btnTypeFire= document.getElementById("fire");
 const btnTypeWater= document.getElementById("water");
@@ -262,42 +303,42 @@ btnTypeFire.addEventListener("click", ()=>{
     principalContainer.innerHTML = '';
 
     let value = btnTypeFire.getAttribute("name");
-    pokemon(filterDataByType(datos, value)); 
+    pokemon(filterDataByType(datos, value));
 });
 //TIPO WATER
 btnTypeWater.addEventListener("click", ()=>{
     principalContainer.innerHTML = '';
 
     let value = btnTypeWater.getAttribute("name");
-    pokemon(filterDataByType(datos, value)); 
+    pokemon(filterDataByType(datos, value));
 });
 //TIPO BUG
 btnTypeBug.addEventListener("click", ()=>{
     principalContainer.innerHTML = '';
 
     let value = btnTypeBug.getAttribute("name");
-    pokemon(filterDataByType(datos, value)); 
+    pokemon(filterDataByType(datos, value));
 });
 // TIPO GRASS
 btnTypeGrass.addEventListener("click", ()=>{
     principalContainer.innerHTML = '';
 
     let value = btnTypeGrass.getAttribute("name");
-    pokemon(filterDataByType(datos, value)); 
+    pokemon(filterDataByType(datos, value));
 });
 //TIPO DRAGON
 btnTypeDragon.addEventListener("click", ()=>{
     principalContainer.innerHTML = '';
 
     let value = btnTypeDragon.getAttribute("name");
-    pokemon(filterDataByType(datos, value)); 
+    pokemon(filterDataByType(datos, value));
 });
 //TIPO FAIRY
 btnTypeFairy.addEventListener("click", ()=>{
     principalContainer.innerHTML = '';
 
     let value = btnTypeFairy.getAttribute("name");
-    pokemon(filterDataByType(datos, value)); 
+    pokemon(filterDataByType(datos, value));
 });
 //TIPO GHOST
 btnTypeGhost.addEventListener("click", ()=>{
