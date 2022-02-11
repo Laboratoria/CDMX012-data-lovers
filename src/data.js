@@ -6,7 +6,12 @@ export const filterDataByType = (datos, tipo) =>{
 };
 
 export const filterDataByName = (datos, name) =>{
-  return datos.find(dato => dato.name == name);
+  return datos.filter(dato => dato.name == name);
+  
+};
+
+export const filterDataById = (datos, id) =>{
+  return datos.filter(dato => dato.num == id);
   
 };
 
