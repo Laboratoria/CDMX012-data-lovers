@@ -11,15 +11,27 @@ body {
 
 header {
   background-color: #d8af39;
-  height: 68px;
+  height: 80px;
   display: flex;
+}
+h1{
+  height: auto;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  font-weight: 700;
+  color: #4c413f;
+  background: rgba(255, 250, 250, 0.39);
+  font-size: 64px;
 }
 
 .containerLogo {
   display: flex;
   align-items: flex-start;
   margin-top: 5px;
-  margin-left: 30px;
+  margin-left: 100px;
 }
 
 .ghiblisLogo {
@@ -53,6 +65,7 @@ header {
   color: #3c3c43;
   border-radius: 5px;
   border: 1px solid #dfdfdf;
+  margin-left: 30px;
 }
 
 input[type="search"]::placeholder {
@@ -75,6 +88,7 @@ input[type="search"]::placeholder {
   width: 100%;
   height: 133px;
   top: 648px;
+  margin-left: 70px;
 }
 
 #bigText {
@@ -115,11 +129,13 @@ select {
 }
 
 #allMovies {
+  position: sticky;
   padding-bottom: 2%;
   padding-left: 7%;
   display: flex;
   color: #4c413f;
   font-size: 180%;
+  top: 0;
 }
 .footerItems {
   font-size: small;
@@ -143,7 +159,7 @@ body {
   display: flex;
   flex-direction: row;
   padding-top: 50px;
-  justify-content: space-evenly;
+  position: fixed;
 }
 
 #allMovies {
@@ -287,4 +303,36 @@ body {
 .globalCard:hover .back-card {
   transform: perspective(600px) rotateY(360deg);
 }
+/* scrollTopBtn */
+.scrollTopBtn{
+  position: fixed;
+  z-index: 999;
+  bottom: 4px;
+  right: 40px;
+  width: 70px;
+  height: 65px;
+  border-radius:50%;
+  justify-content: center;
+  align-items: center;
+  background: #14454c;
+  color: #d8af39;
+  font-weight: bolder;
+  font-size: 35px;
+  cursor: pointer;
+  outline: 0;
+  border: 0;
+  transition: all 0.3s ease-out;
+}
 
+.scrollTopBtn:hover{
+  background: #4c413f;
+  color: #d8af39;
+}
+
+.hidden{
+  opacity: 0;
+  visibility: hidden;
+}
+@media screen and (max-width: 980px){
+
+}
