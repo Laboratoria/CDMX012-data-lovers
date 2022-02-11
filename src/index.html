@@ -2,15 +2,17 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Data Lovers</title>
+    <title>Pokémon Go!</title>
     <link rel="stylesheet" href="style.css" />
     <link href='https://fonts.googleapis.com/css?family=Rowdies' rel='stylesheet'> 
   </head>
   <body>
     <div class="menuBar">
       <i id="menuIcon" class="fas fa-bars"></i> 
-      <i id=“searchIcon” class="fa-solid fa-magnifying-glass"></i> 
-      <img class="pokebola" src= "imagenes/pokemon.png">
+      <img id="pokeBall" src= "imagenes/pokemon.png">
+      <div id="seacrhGroup"></div>
+      <input id="searchBar" type="text" placeholder="Buscar...">
+      <i id="searchIcon" class="fas fa-search"></i>
     </div>
     <!--comence a hacer pruebas del select que comento Carlos, pero me quedé hasta ahí por que ya era hora de descansar jijiji -->
     <select class= "filtrado" name="select">
@@ -19,49 +21,50 @@
       <option value="value2" >Resistencia</option>
       <option value="value3">Debilidad</option>
     </select>
-  <a>
-    <button class="buttonInicio" id="tipo">Tipo</button>
-    <button class="buttonInicio" id="numerico"> Número</button>
-    <button class="buttonInicio"  id="nombre"> Nombre</button>
-    <button class="buttonInicio" id="resistencia"> Resistencia</button>
-    <button class="buttonInicio" id="debilidad"> Debilidad</button>
-  </a>
+    <a id="mainButtons"> <!-- por qué una etiqueta a??? -->
+      <button class="mainButtons" id="pokeType">Tipo</button>
+      <button class="mainButtons" id="pokeNumber"> Número</button>
+      <button class="mainButtons" id="pokeName"> Nombre</button>
+      <button class="mainButtons" id="pokeResistant"> Resistencia</button>
+      <button class="mainButtons" id="pokeWeaknesses"> Debilidad</button>
+    </a>
 
-    <div  id="type"  >  
+    <div id="typesShown">  
       <button class="buttonFire typeB" id="fireType">Fuego</button>
-      <button class="water typeB" id="waterType">Agua</button>
-      <button class="ice typeB" id="iceType">Hielo</button>
-      <button class= "ghost typeB" id="ghostType">Fantasma</button>
-      <button class= "dragon typeB" id="dragonType">Dragon</button>
-      <button class="bug typeB" id="bugType">Bicho</button>
-      <button class="electric typeB" id="electricType">Electrico</button>
-      <button class="grass typeB" id="grassType">Planta</button>
-      <button class="normal typeB" id="normalType">Normal</button>
-      <button class="rock typeB" id="rockType">Roca</button>
-      <button class="dark typeB" id="darkType">Siniestro</button>
-      <button class="fairy typeB" id="fairyType">Hada</button>
-      <button class= "flying typeB" id="flyingType">Volador</button>
-      <button class="ground typeB" id="groundType">Tierra</button>
-      <button class="poison typeB" id="poisonType">Veneno</button>
-      <button class="psychic typeB" id="psychicType">Psiquico</button>
-      <button class="steel typeB" id="steelType">Acero</button>
-      <button class="fighting typeB" id="fightingType">Lucha</button> 
-
-
+      <button class="buttonWater typeB" id="waterType">Agua</button>
+      <button class="buttonIce typeB" id="iceType">Hielo</button>
+      <button class= "buttonGhost typeB" id="ghostType">Fantasma</button>
+      <button class= "buttonDragon typeB" id="dragonType">Dragon</button>
+      <button class="buttonBug typeB" id="bugType">Bicho</button>
+      <button class="buttonElectric typeB" id="electricType">Electrico</button>
+      <button class="buttonGrass typeB" id="grassType">Planta</button>
+      <button class="buttonNormal typeB" id="normalType">Normal</button>
+      <button class="buttonRock typeB" id="rockType">Roca</button>
+      <button class="buttonDark typeB" id="darkType">Siniestro</button>
+      <button class="buttonFairy typeB" id="fairyType">Hada</button>
+      <button class= "buttonFlying typeB" id="flyingType">Volador</button>
+      <button class="buttonGround typeB" id="groundType">Tierra</button>
+      <button class="buttonPoison typeB" id="poisonType">Veneno</button>
+      <button class="buttonPsychic typeB" id="psychicType">Psiquico</button>
+      <button class="buttonSteel typeB" id="steelType">Acero</button>
+      <button class="buttonFighting typeB" id="fightingType">Lucha</button> 
     </div>
-    <div class="uno" >  
-<div id="number"></div>
-  <div id="name"></div>
-<img  id="img" src="">
-</div>
-<div class="allPokemons" id="allPokemons" > 
-  <br>  
-    <h1> Fuego </h1>
+    <br>
 
-    <div class="pokemonShown">
-  <div  class="infoBox" id="infoBox" ></div>
-    </div> 
-  </div>
+    <div class="allPokemons" id="allPokemons" > 
+      <br>  
+        <h1 id="h1">  </h1>
+
+        <div class="pokemonShown">
+      <div  class="infoBox" id="infoBox"> </div>
+        </div> 
+      </div>
+
+
+    <div id="modalBox" class="modalBox">
+      <div id="modalContent" class="modalContent"></div>
+    </div>
+
 
     <div id="root"></div>
     <script src="main.js" type="module"></script>
