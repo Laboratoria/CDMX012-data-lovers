@@ -70,8 +70,8 @@ function showName(){
   let div= document.getElementById("infoBox")
   div.innerHTML=""; /*agregue este div innerhtml vacio para que 
   se limpie al momento de seleccionar otro tipo*/
-  document.getElementById("allPokemons").style.display="block";
-
+   document.getElementById("allPokemons").style.display="block";
+  
 
   for(let i=0; i<pokemonTypes.fire.length; i++){
   let resultado =pokemonCard(pokemonTypes.fire[i], "fire");
@@ -108,7 +108,7 @@ function htmlStructureGhost(){
   let div= document.getElementById("infoBox")
   div.innerHTML="";
   document.getElementById("allPokemons").style.display="block";
-  
+
   
   for(let i=0; i<pokemonTypes.ghost.length; i++){
     let resultado =pokemonCard(pokemonTypes.ghost[i], "ghost");

@@ -57,8 +57,9 @@ color:white;
     font-size: 20px;
   }
 #allPokemons{
+  
   display: none;
-   background-color: #D2691E;
+  
 }
    
 h1{
