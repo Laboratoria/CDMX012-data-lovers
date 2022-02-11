@@ -168,18 +168,20 @@ a {
 }
 
 .modal {
-  visibility: hidden;
-  opacity: 0;
+  visibility:visible;
+  opacity: 1;
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   display: flex;
+  display:block;
   align-items: center;
   justify-content: center;
   background: rgba(77, 77, 77, 0.7);
   transition: all 0.4s;
+  flex-wrap: wrap;
 }
 
 .modal:target {
@@ -188,12 +190,21 @@ a {
 }
 
 .modalDialog {
+  display: flex;
   border-radius: 4px;
   position: relative;
-  width: 500px;
+  width: 50%;
+  height: auto;
   max-width: 90%;
   background: #fff;
   padding: 1em 2em;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-right: 25%;
+  margin-left:  25%;
+  margin-top: 15%;
+  
 }
 
 .closeModal {
@@ -202,6 +213,7 @@ a {
   right: 10px;
   color: #585858;
   text-decoration: none;
+  justify-content: flex-end;
 }
 
 footer {

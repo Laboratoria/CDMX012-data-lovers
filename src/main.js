@@ -82,10 +82,9 @@ for (let content of data.pokemon) {
   contentTitle.innerHTML = content.name.toUpperCase();
   contentTitle.setAttribute("class", modalTitle);
 
-  const contentImag = document.createElement("img"); //crea un Elemento de tipó imagen
+  const contentImag = document.createElement("img"); //crea un Elemento de tipo imagen
   contentImag.setAttribute("src", `${content.img}`); //le asigna el atributo de src con su propiedad que es el link
   //pokemonImag.setAttribute("data-open", modalDataOpen);
-
   const contentAbout = document.createElement("p");
   contentAbout.innerHTML =
     "Datos: <br>" +
@@ -105,6 +104,10 @@ for (let content of data.pokemon) {
   document.getElementById("idModal").appendChild(allContent);
   showTotalContent = allContent;
 }
+
+
+/*************AQUI SE LE DA FUNCIONALIDAD AL BOTON CLOSE *********/
+
 /*
 const openModal = document.querySelector("data-open]");
 const isVisibility = "is-visibility";
