@@ -16,57 +16,74 @@
             <li><a href="#">Noticias</a></li>
             <li><a href="#">Iniciar Sesión</a></li>
           </ul>
+        <div class="center-nav">
+          <!--Diseno de los botones de orden-->
+          <div class="order-container">
+            <div class="orderOption">
+              <div class="icon-pokeball"><img class="pokeball" src="./icon/pokebola gris.svg" alt="">
+              </div>  
+              <label for="">Order By: </label>
+              <section class="btn-ordenar">
+                  <button type="submit" id="orderA_Z" class="" ><img class="orderA_Z-img" src="./icon/A-Z.svg"></button>
+                  <button type="submit" id="orderZ_A" class="hide"><img class="orderZ_A-img" src="./icon/Z-a.svg"></button> 
+                  <button type="submit" id="orderAscendente" class="hide"><img class="orderBy-img" src="./icon/Mayor-menor.svg"></button>
+                  <button type="submit" id="orderDescendente" class=""><img class="orderBy-img" src="./icon/menor-mayor.svg"></button>
+              </section>
+            </div>
+          </div>
+          <!--Diseno de la barra de buscador-->
+          <div class="search">
+              <div class="search-container">
+                <label for="">Nombre o ID</label>
+                <input type="search" name="buscador" id="search" placeholder="Buscar">
+                <button type="submit" id="search-name-id"><img src="./icon/lupa.svg" class="lupa" alt=""></button>
+              </div>
+          </div>
+          <!--Diseno del boton de filtrado-->
+          
+        </div>
+        <div class="options-filter" id="filter">
+          <div class="btn-types">
+            <button type="submit"class="select-type"><img class="icon-filter" src="./icon/filtrar.png" alt=""> Select your favorite Type</button>
+          </div>
+          
+          <div class="btn-general-type hide">
+            <div class="title-type">
+              <h1>Types</h1>
+            </div>
+            <div class="description-types">
+              <ul>
+                <li><button type="submit" class="type-pokemon fire" id="fire" name="fire">Fire</button></li>
+                <li><button type="submit" class="type-pokemon water"id="water" name="water">Water</button></li>
+                <li><button type="submit" class="type-pokemon bug"id="bug" name="bug">Bug</button></li>
+                <li><button type="submit" class="type-pokemon grass" id="grass" name="grass">Grass</button></li>
+                <li><button type="submit" class="type-pokemon dragon" id="dragon" name="dragon">Dragon</button></li>
+                <li><button type="submit" class="type-pokemon fairy" id="fairy" name="fairy">Fairy</button></li>
+                <li><button type="submit" class="type-pokemon ghost" id="ghost" name="ghost">Ghost</button></li>
+                <li><button type="submit" class="type-pokemon ground" id="ground" name="ground">Ground</button></li>
+                <li><button type="submit" class="type-pokemon normal"id="normal" name="normal">Normal</button></li>
+                <li><button type="submit" class="type-pokemon psychic" id="psychic" name="psychic">Psychic</button></li>
+                <li><button type="submit" class="type-pokemon steel" id="steel" name="steel">Steel</button></li>
+                <li><button type="submit" class="type-pokemon dark" id="dark" name="dark">Dark</button></li>
+                <li><button type="submit" class="type-pokemon electric" id="electric" name="electric">Electric</button></li>
+                <li><button type="submit" class="type-pokemon fighting" id="fighting" name="fighting">Fighting</button></li>
+                <li><button type="submit" class="type-pokemon flying" id="flying" name="flying">Flying</button></li>
+                <li><button type="submit" class="type-pokemon ice" id="ice" name="ice">Ice</button></li>
+                <li><button type="submit" class="type-pokemon poison" id="poison" name="poison">Poison</button></li>
+                <li><button type="submit" class="type-pokemon rock" id="rock" name="rock">Rock</button></li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </nav>
     </header>
     <main>
       <br>
-      <div class="video">
-        <video controls loop="loop" src="./icon/¡Pokémon UNITE llega este verano!.webm"></video>
+      <div class="video hide">
+        <video class="hide" controls loop="loop" src="./icon/¡Pokémon UNITE llega este verano!.webm"></video>
       </div>
-      <div class="center-nav">
-        <div class="filter-container">
-          <div class="filterOption">
-            <img src="./icon/filtrar.png" alt="">
-            <select name="opciones-filtrado" id="filtrado">
-              <option value="Debilidad">Debilidad</option>
-            </select>
-            <!--<select name="opciones-filtrado" id="filtrado">
-              <option value="tipo">Tipo</option>
-            </select>
-
-            <select name="opciones-filtrado" id="filtrado">
-              <option value="Resistencia">Resistencia</option>
-            </select>
-            <select name="opciones-filtrado" id="filtrado">
-              <option value="Ataque_especial">Ataque Especial</option>
-            </select>-->
-          </div>
-        </div>
-
-
-        <div class="order-container">
-          <div class="orderOption">
-              <img src="./icon/pokebola gris.svg" alt="">
-              
-              <section class="btn-ordenar">
-                <button type="submit" id="orderA_Z" class="" ><img class="orderA_Z-img" src="./icon/A-Z.svg"></button>
-                <button type="submit" id="orderZ_A" class="hide"><img class="orderZ_A-img" src="./icon/Z-a.svg"></button> 
-                <button type="submit" id="orderAscendente" class="hide"><img class="orderBy-img" src="./icon/Mayor-menor.svg"></button>
-                <button type="submit" id="orderDescendente" class=""><img class="orderBy-img" src="./icon/menor-mayor.svg"></button>
-              </section>
-              
-          </div>
-
-        </div>
-
-        <div class="search">
-          <div class="search-container">
-            <label for="">Nombre o ID</label>
-            <input type="search" name="buscador" id="buscador" placeholder="Buscar">
-            <button type="submit"><img src="./icon/lupa.svg" class="lupa" alt=""></button>
-          </div>
-        </div>
-      </div>
+      
+      
       <section class="cards-containers-principal">
       </section>
       
