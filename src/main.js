@@ -50,7 +50,6 @@ function showByNumber(){  //sirve pero no es óptimo; en proceso...
  document.getElementById("typesShown").style.display="none"
  document.getElementById("h1").style.display= "none";
   let div= document.getElementById("infoBox")
-<<<<<<< HEAD
   div.innerHTML=""; 
   const colorStyle = document.getElementById("allPokemons");
   colorStyle.style.background= "";
@@ -82,12 +81,6 @@ function showTypeBox(){
   let div= document.getElementById("infoBox")
   div.innerHTML=""; 
 }
-=======
-  div.innerHTML=""; /*agregue este div innerhtml vacio para que 
-  se limpie al momento de seleccionar otro tipo*/
-   document.getElementById("allPokemons").style.display="block";
-  
->>>>>>> 7e83ec3820c3ae553170ae62315261f924beb91d
 
 function htmlStructureFire(){
   document.getElementById("h1").innerHTML= "FUEGO";
@@ -147,11 +140,6 @@ function htmlStructureGhost(){
   let div= document.getElementById("infoBox")
   div.innerHTML="";
   document.getElementById("allPokemons").style.display="block";
-<<<<<<< HEAD
-=======
-
-  
->>>>>>> 7e83ec3820c3ae553170ae62315261f924beb91d
   for(let i=0; i<pokemonTypes.ghost.length; i++){
     let resultado =pokemonCard(pokemonTypes.ghost[i], "ghost");
     div.innerHTML+=resultado;
