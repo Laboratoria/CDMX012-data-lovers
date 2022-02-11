@@ -1,15 +1,9 @@
 
 import data from './data/pokemon/pokemon.js';
 // import data from './data/pokemon/pokemon.js';
-// console.log(data);
-
 const pokemonList = data.pokemon;
 //console.log(data.pokemon)
 
-let pokemon = {};
-
-
-const pokemonList = data.pokemon;
 
 for (const property of pokemonList) {
     const pokemonContainer = document.getElementById('root');
@@ -35,11 +29,11 @@ for (const property of pokemonList) {
     const type = document.createTextNode(`${property.type}`);
 
     pokemonNum.appendChild(num);
-    pokemonName.appendChild(name);
+    pokemonName.appendChild(name)
     pokemonType.appendChild(type);
     card.appendChild(pokemonNum);
-    card.appendChild(pokemonName);
     card.appendChild(pokemonImg);
+    card.appendChild(pokemonName);
     card.appendChild(pokemonType);
     pokemonContainer.appendChild(card);
 }
