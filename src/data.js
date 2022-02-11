@@ -29,6 +29,4 @@ export const orderZ_A = (datos) => datos.sort((a, b ) => (a.name > b.name  ? -1 
 
 
 
-export const anotherExample = () => {
-  return 'OMG';
-};
+
