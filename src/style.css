@@ -1,8 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
 
-body{
-    background-image: url(images/fondo.jpg);
-    max-width: 100%;
+body {
+  background-image: url(images/fondo.jpg);
+  max-width: 100%;
+  position: static;
+}
+
+header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .header-pokemon {
@@ -10,7 +18,24 @@ body{
     max-width: 10%;
 }
 
-.card {
+#root {
     display: flex;
-    font-family: 'Roboto', sans-serif;
+    flex-flow: row wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.card {
+  font-family: "Roboto", sans-serif;
+  background-color: #ffffff;
+  flex: 9.4rem;
+  text-align: center;
+  box-shadow: 0px 0.25rem 0.2rem rgba(0, 0, 0, 0.25);
+  border-radius: 1rem;
+  color: #44696c;
+}
+
+.num {
+    text-align: left;
+    font-size: 0.75rem;
+    margin-left: 0.5rem;
 }
