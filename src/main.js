@@ -1,11 +1,16 @@
-
-
 import dataPokemon from './data.js';
 import data from './data/pokemon/pokemon.js';
 
-document.getElementById("numerico").addEventListener("click", showNumbers );
-document.getElementById("nombre").addEventListener("click", showName);
-document.getElementById("tipo").addEventListener("click", showTypeBox);
+const byName= dataPokemon.byName(data);
+const byNumber= dataPokemon.byNumber(data);
+const pokemonTypes= dataPokemon.pokemonTypesObject(data);
+
+document.getElementById("pokeBall").addEventListener("click", refreshPage);
+
+document.getElementById("pokeNumber").addEventListener("click", showByNumber);
+document.getElementById("pokeName").addEventListener("click", showByName);
+document.getElementById("pokeType").addEventListener("click", showTypeBox);
+
 document.getElementById("fireType").addEventListener("click", htmlStructureFire);
 document.getElementById("waterType").addEventListener("click", htmlStructureWater);
 document.getElementById("iceType").addEventListener("click", htmlStructureIce);
@@ -25,263 +30,295 @@ document.getElementById("psychicType").addEventListener("click", htmlStructurePs
 document.getElementById("steelType").addEventListener("click", htmlStructureSteel);
 document.getElementById("fightingType").addEventListener("click", htmlStructureFighting);
 
-/*Aqui arriba sólo las mande a llamar con su funcion y su id*/
 
 
-
-
-function showNumbers(){
-  document.getElementById("number").innerHTML = arrayNumbers[0].num;
-  document.getElementById("img").src = arrayNumbers[0].img;
-  document.getElementById("name").innerHTML = arrayNumbers[0].name;
-  
-  
-
+function refreshPage(){
+  window.location.reload(); //vuelve a cargar la página al inicio
 }
-function showName(){
-  document.getElementById("number").innerHTML = byName[0].num;
-  document.getElementById("name").innerHTML = byName[0].name;
-  document.getElementById("img").src = byName[0].img;
-  
- 
-  }
-  
-  function showTypeBox(){
-    document.getElementById("type").style.display="block"
-  }
-/*Metí todo el esqueleto que ya habíamos realizado en una función(pokemonCar)
- para poderlo utilizar en todos los tipos, ya que iban a tener el mismo estilo, 
- sólo cambia el color y  los pokemones*/
-  function pokemonCard(pokemon, type){
-    let resultado= "";
-    resultado+='<div class= "' + type + ' flexBox">' 
-    resultado+="<p>"+ pokemon.num + "</p>"
-    resultado+= "<img src='"+ pokemon.img+"'></img>"
-    resultado+= "<p>" + pokemon.name + "</p>" 
-    resultado+="</div>"
-  
+
+function pokemonCard(pokemon, type){
+  let resultado= "";
+  resultado+='<div class= "' + type + ' flexBox" id="singlePokemon">' 
+  resultado+="<p>"+ pokemon.num + "</p>"
+  resultado+= "<img src='"+ pokemon.img+"'></img>"
+  resultado+= "<p>" + pokemon.name + "</p>" 
+  resultado+="</div>" 
   return resultado 
-  
-  }
-  /*Cree la misma estructura que ya habíamos realizado jusntas y la replique
-   por cada tipo cambiado solo el nombre de las funciones y 
-   la especificación del tipo*/
-  function htmlStructureFire(){
+}
+
+function showByNumber(){  //sirve pero no es óptimo; en proceso...
+ document.getElementById("typesShown").style.display="none"
+ document.getElementById("h1").style.display= "none";
   let div= document.getElementById("infoBox")
-  div.innerHTML=""; /*agregue este div innerhtml vacio para que 
-  se limpie al momento de seleccionar otro tipo*/
+  div.innerHTML=""; 
+  const colorStyle = document.getElementById("allPokemons");
+  colorStyle.style.background= "";
+  colorStyle.style.backgroundColor= "";
   document.getElementById("allPokemons").style.display="block";
-
-
-  for(let i=0; i<pokemonTypes.fire.length; i++){
-  let resultado =pokemonCard(pokemonTypes.fire[i], "fire");
-  
-  div.innerHTML+=resultado;
+  for(let i=0; i<byNumber.length; i++){
+    let resultado =pokemonCard(byNumber[i], "organized");
+     div.innerHTML+=resultado; 
   }
 }
+
+function showByName(){ //sirve pero no es óptimo; en proceso...
+  document.getElementById("typesShown").style.display="none";
+  document.getElementById("h1").style.display= "none";
+  let div= document.getElementById("infoBox")
+  div.innerHTML=""; 
+  const colorStyle = document.getElementById("allPokemons");
+  colorStyle.style.background= "";
+  colorStyle.style.backgroundColor= "";
+  document.getElementById("allPokemons").style.display="block";
+   for(let i=0; i<byName.length; i++){
+     let resultado =pokemonCard(byName[i], "organized");
+      div.innerHTML+=resultado; 
+   }
+ }
+  
+function showTypeBox(){
+  document.getElementById("typesShown").style.display="block"
+  let div= document.getElementById("infoBox")
+  div.innerHTML=""; 
+}
+
+function htmlStructureFire(){
+  document.getElementById("h1").innerHTML= "FUEGO";
+  const colorStyle = document.getElementById("allPokemons");
+  colorStyle.style.background= "";
+  colorStyle.style.backgroundColor= "#FF8523";
+  let div= document.getElementById("infoBox")
+  div.innerHTML=""; 
+  document.getElementById("allPokemons").style.display="block";
+  for(let i=0; i<pokemonTypes.fire.length; i++){
+    let resultado =pokemonCard(pokemonTypes.fire[i], "fire");
+     div.innerHTML+=resultado; 
+  }
+  
+  let singlePokemon = document.getElementsByClassName("flexbox");
+  singlePokemon.forEach(pokemon => pokemon.addEventListener('click', () => {
+    console.log("holi"); //en proceso
+  }));
+  /*document.getElementById("singlePokemon").addEventListener("click", ()=>{ 
+    console.log("holi") 
+  })*/
+}
+
 function htmlStructureWater(){
+  document.getElementById("h1").innerHTML= "AGUA";
+  const colorStyle = document.getElementById("allPokemons");
+  colorStyle.style.background= "";
+  colorStyle.style.backgroundColor= "#1D91CA";
   let div= document.getElementById("infoBox")
   div.innerHTML="";
   document.getElementById("allPokemons").style.display="block";
-  
-  
   for(let i=0; i<pokemonTypes.water.length; i++){
     let resultado =pokemonCard(pokemonTypes.water[i], "water");
-    
     div.innerHTML+=resultado;
     }
 }
   
 function htmlStructureIce(){
-      let div= document.getElementById("infoBox")
-      div.innerHTML="";
-      document.getElementById("allPokemons").style.display="block";
-      
-      
-      for(let i=0; i<pokemonTypes.ice.length; i++){
-        let resultado =pokemonCard(pokemonTypes.water[i], "ice");
-        
-        div.innerHTML+=resultado;
-      }
-}
-function htmlStructureGhost(){
+  document.getElementById("h1").innerHTML= "HIELO";
+  const colorStyle = document.getElementById("allPokemons");
+  colorStyle.style.background= "";
+  colorStyle.style.backgroundColor= "#00C6ED";
   let div= document.getElementById("infoBox")
   div.innerHTML="";
   document.getElementById("allPokemons").style.display="block";
-  
-  
+  for(let i=0; i<pokemonTypes.ice.length; i++){
+   let resultado =pokemonCard(pokemonTypes.water[i], "ice"); 
+    div.innerHTML+=resultado;
+  }
+}
+
+function htmlStructureGhost(){
+  document.getElementById("h1").innerHTML= "FANTASMA";
+  const colorStyle = document.getElementById("allPokemons");
+  colorStyle.style.background= "";
+  colorStyle.style.backgroundColor= "#8259A7";
+  let div= document.getElementById("infoBox")
+  div.innerHTML="";
+  document.getElementById("allPokemons").style.display="block";
   for(let i=0; i<pokemonTypes.ghost.length; i++){
     let resultado =pokemonCard(pokemonTypes.ghost[i], "ghost");
-    
     div.innerHTML+=resultado;
   }
 }
 function htmlStructureDragon(){
+  document.getElementById("h1").innerHTML= "DRAGÓN";
+  document.getElementById("allPokemons").style.background= "linear-gradient( to top, #F8453B,#F8453B,#2CA4D5,#2CA4D5)";
   let div= document.getElementById("infoBox")
   div.innerHTML="";
   document.getElementById("allPokemons").style.display="block";
-  
-  
   for(let i=0; i<pokemonTypes.dragon.length; i++){
     let resultado =pokemonCard(pokemonTypes.dragon[i], "dragon");
-    
     div.innerHTML+=resultado;
   }
 }
 
 function htmlStructureBug(){
+  document.getElementById("h1").innerHTML= "BICHO";
+  const colorStyle = document.getElementById("allPokemons");
+  colorStyle.style.background= "";
+  colorStyle.style.backgroundColor= "#60A62F";
   let div= document.getElementById("infoBox")
   div.innerHTML="";
   document.getElementById("allPokemons").style.display="block";
-  
-  
   for(let i=0; i<pokemonTypes.bug.length; i++){
     let resultado =pokemonCard(pokemonTypes.bug[i], "bug");
-    
     div.innerHTML+=resultado;
   }
 } 
 function htmlStructureElectric(){
+  document.getElementById("h1").innerHTML= "ELÉCTRICO";
+  const colorStyle = document.getElementById("allPokemons");
+  colorStyle.style.background= "";
+  colorStyle.style.backgroundColor= "#F1DA00";
   let div= document.getElementById("infoBox")
   div.innerHTML="";
   document.getElementById("allPokemons").style.display="block";
-  
-  
   for(let i=0; i<pokemonTypes.electric.length; i++){
     let resultado =pokemonCard(pokemonTypes.electric[i], "electric");
-    
     div.innerHTML+=resultado;
   }
 }
 function htmlStructureGrass(){
+  document.getElementById("h1").innerHTML= "PLANTA";
+  const colorStyle = document.getElementById("allPokemons");
+  colorStyle.style.background= "";
+  colorStyle.style.backgroundColor= "#88D438";
   let div= document.getElementById("infoBox")
   div.innerHTML="";
   document.getElementById("allPokemons").style.display="block";
-  
-  
   for(let i=0; i<pokemonTypes.grass.length; i++){
     let resultado =pokemonCard(pokemonTypes.grass[i], "grass");
-    
     div.innerHTML+=resultado;
   }
 }
 function htmlStructureNormal(){
+  document.getElementById("h1").innerHTML= "NORMAL";
+  const colorStyle = document.getElementById("allPokemons");
+  colorStyle.style.background= "";
+  colorStyle.style.backgroundColor= "#A2ACB0";
   let div= document.getElementById("infoBox")
   div.innerHTML="";
   document.getElementById("allPokemons").style.display="block";
-  
-  
   for(let i=0; i<pokemonTypes.normal.length; i++){
     let resultado =pokemonCard(pokemonTypes.normal[i], "normal");
-    
     div.innerHTML+=resultado;
   }
 }
 function htmlStructureRock(){
+  document.getElementById("h1").innerHTML= "ROCA";
+  const colorStyle = document.getElementById("allPokemons");
+  colorStyle.style.background= "";
+  colorStyle.style.backgroundColor= "#A78F00";
   let div= document.getElementById("infoBox")
   div.innerHTML="";
   document.getElementById("allPokemons").style.display="block";
-  
-  
   for(let i=0; i<pokemonTypes.rock.length; i++){
     let resultado =pokemonCard(pokemonTypes.rock[i], "rock");
-    
     div.innerHTML+=resultado;
   }
 }
 function htmlStructureDark(){
+  document.getElementById("h1").innerHTML= "SINIESTRO";
+  const colorStyle = document.getElementById("allPokemons");
+  colorStyle.style.background= "";
+  colorStyle.style.backgroundColor= "#707070";
   let div= document.getElementById("infoBox")
   div.innerHTML="";
   document.getElementById("allPokemons").style.display="block";
-  
-  
   for(let i=0; i<pokemonTypes.dark.length; i++){
     let resultado =pokemonCard(pokemonTypes.dark[i], "dark");
-    
     div.innerHTML+=resultado;
   }
 }
 function htmlStructureFairy(){
+  document.getElementById("h1").innerHTML= "HADA";
+  const colorStyle = document.getElementById("allPokemons");
+  colorStyle.style.background= "";
+  colorStyle.style.backgroundColor= "#FFAFEA";
   let div= document.getElementById("infoBox")
   div.innerHTML="";
   document.getElementById("allPokemons").style.display="block";
-  
-  
   for(let i=0; i<pokemonTypes.fairy.length; i++){
     let resultado =pokemonCard(pokemonTypes.fairy[i], "fairy");
-    
     div.innerHTML+=resultado;
   }
 }
 function htmlStructureFlying(){
+  document.getElementById("h1").innerHTML= "VOLADOR";
+  document.getElementById("allPokemons").style.background= "linear-gradient( to top, #C4C4C4,#C4C4C4,#00BFFF, #00BFFF)";
   let div= document.getElementById("infoBox")
   div.innerHTML="";
   document.getElementById("allPokemons").style.display="block";
-  
-  
   for(let i=0; i<pokemonTypes.flying.length; i++){
     let resultado =pokemonCard(pokemonTypes.flying[i], "flying");
-    
     div.innerHTML+=resultado;
   }
 }
 function htmlStructureGround(){
+  document.getElementById("h1").innerHTML= "TIERRA";
+  document.getElementById("allPokemons").style.background= "linear-gradient( to top, #AE9B2B,#AE9B2B,#FAE300, #FAE300)";
   let div= document.getElementById("infoBox")
   div.innerHTML="";
   document.getElementById("allPokemons").style.display="block";
-  
-  
   for(let i=0; i<pokemonTypes.ground.length; i++){
     let resultado =pokemonCard(pokemonTypes.ground[i], "ground");
-    
     div.innerHTML+=resultado;
   }
 }
 function htmlStructurePoison(){
+  document.getElementById("h1").innerHTML= "VENENO";
+  const colorStyle = document.getElementById("allPokemons");
+  colorStyle.style.background= "";
+  colorStyle.style.backgroundColor= "#C672CD";
   let div= document.getElementById("infoBox")
   div.innerHTML="";
   document.getElementById("allPokemons").style.display="block";
-  
-  
   for(let i=0; i<pokemonTypes.poison.length; i++){
     let resultado =pokemonCard(pokemonTypes.poison[i], "poison");
-    
     div.innerHTML+=resultado;
   }
 }
 function htmlStructurePsychic(){
+  document.getElementById("h1").innerHTML= "PSÍQUICO";
+  const colorStyle = document.getElementById("allPokemons");
+  colorStyle.style.background= "";
+  colorStyle.style.backgroundColor= "#FF44B9";
   let div= document.getElementById("infoBox")
   div.innerHTML="";
   document.getElementById("allPokemons").style.display="block";
-  
-  
   for(let i=0; i<pokemonTypes.psychic.length; i++){
     let resultado =pokemonCard(pokemonTypes.psychic[i], "psychic");
-    
     div.innerHTML+=resultado;
   }
 }
 function htmlStructureSteel(){
+  document.getElementById("h1").innerHTML= "ACERO";
+  const colorStyle = document.getElementById("allPokemons");
+  colorStyle.style.background= "";
+  colorStyle.style.backgroundColor= "#97B8B9";
   let div= document.getElementById("infoBox")
   div.innerHTML="";
   document.getElementById("allPokemons").style.display="block";
-  
-  
   for(let i=0; i<pokemonTypes.steel.length; i++){
     let resultado =pokemonCard(pokemonTypes.steel[i], "steel");
-    
     div.innerHTML+=resultado;
   }
 }
 function htmlStructureFighting(){
+  document.getElementById("h1").innerHTML= "LUCHA";
+  const colorStyle = document.getElementById("allPokemons");
+  colorStyle.style.background= "";
+  colorStyle.style.backgroundColor= "#E35201";
   let div= document.getElementById("infoBox")
   div.innerHTML="";
   document.getElementById("allPokemons").style.display="block";
-  
-  
   for(let i=0; i<pokemonTypes.fighting.length; i++){
     let resultado =pokemonCard(pokemonTypes.fighting[i], "fighting");
-    
     div.innerHTML+=resultado;
   }
 }
@@ -294,9 +331,7 @@ function htmlStructureFighting(){
 
 
 
-const pokemonTypes= dataPokemon.tPokemon(data);
-  const byName= dataPokemon.byName(data);
- const arrayNumbers= dataPokemon.pokemonNumber(data);
+
  
 
  
