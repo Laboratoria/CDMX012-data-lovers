@@ -2,11 +2,66 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Data Lovers</title>
+    <meta name="description" content="Unos datos de algunos campeones de LoL">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data of Legends</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+  
   <body>
+    <header>
+      <section id="logo-lol">
+        <img src="/src/img/2logo-lol.png"/>
+      </section>
+      <nav>
+        <ul>
+          <li><a href="#">Campeones</a></li>
+          <li><a href="#">Roles</a></li>
+          <li><a href="#">Habilidades</a></li>
+        </ul>
+      </nav>
+      <aside>
+        <button><a href="#">Jugar Ahora</a></button>
+        <img src="/src/img/logo-riot.png"/>
+      </aside>
+      <hgroup class="center-align htype">
+        <h1>Data of legends</h1>
+        <h3>¿Qué campeón vas a ser hoy?</h2>
+      </hgroup>
+    </header>
+
+    <section>
+     orden alfabético
+    </section>
+
+    <section class="table-champions">
+      <hgroup class="center-align htype">
+        <h2>Titulo de la lista</h2>
+        <h4>Subtitulo</h2>
+      </hgroup>
+      <div class="table">
+        <tr id="champions">
+          <th img src="" id="champion"></th>
+          <th>campeon2</th>
+          <th>campeon3</th>
+        </tr>
+      </div>
+    </section>
+
+    <footer>
+      <small>
+        <h5>
+          2022 Riot Games Inc. Todos los derechos reservados. Riot Games, League of Legends y PvP.net son marcas comerciales, marcas de servicios o marcas registradas de Riot Games, Inc.
+        </h5>
+      </small>
+      <figure>
+        <img src="/src/img/latam-esrb.png"/>
+        <figcaption>Game Rating</figcaption>
+      </figure>
+    </footer>
+
     <div id="root"></div>
     <script src="main.js" type="module"></script>
+    <script src="/data/lol/lol.js"></script>
   </body>
 </html>
