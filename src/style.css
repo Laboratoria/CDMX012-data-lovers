@@ -1,0 +1,51 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-image: url("https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/styles/855/public/media/image/2020/02/cuentos-terramar-1873593.jpg?itok=BeiC0irq");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+nav {
+    height: 80px;
+    width: flex;
+  }
+  
+  nav ul {
+    float: none;
+    margin-right: 0px;
+    background-color: #FEE7BA;
+  }
+  
+  nav ul li{
+    display: inline-block;
+    line-height: 3;
+    margin: 0px;
+    justify-content:center;
+    margin-left: 20%;
+  }
+  
+  nav ul li a{
+    position: relative;
+    color: #6F4E5E;
+    font-size: 18px;
+  }
+
+  h1 {
+    background-color: #E7AC3E;
+    font-size: 60px;
+    font-family: 'Sanchez', Cambria;
+    margin: 0px;
+    text-align: center;
+    color: #40343D;
+    padding: 1%;
+  }
+
+ nav img {
+    width: 150px;
+    position: top; 
+    top: 5px;
+} 
