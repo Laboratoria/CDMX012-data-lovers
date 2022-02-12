@@ -156,7 +156,9 @@ function pokemon(arreglo){
             let evolutionsPokemon = document.createElement("div");
             evolutionsPokemon.classList.add("evolutions-pokemon");
         
-            let statsPokemon = document.createElement("div");
+            let statsGeneralPokemon =document.createElement("div");
+            statsGeneralPokemon.classList.add("stats-general-pokemon");
+            let statsPokemon = document.createElement("canvas");
             statsPokemon.classList.add("stats-pokemon");
         
             let buttonsPokemon = document.createElement("div");
@@ -182,26 +184,58 @@ function pokemon(arreglo){
         
             let generationNum = arreglo[i].generation.num;
             let generationName = arreglo[i].generation.name;
-            generationPokemon.innerText =`Generation: ${generationNum} - ${generationName} `;
+            generationPokemon.innerText =`\n ${generationNum.charAt(0).toUpperCase() + generationNum.slice(1)}, Name : ${generationName.charAt(0).toUpperCase() + generationName.slice(1)} `;
         
             let weight = arreglo[i].size.weight;
-            weightPokemon.innerText =`Weight: ${weight}`;
+            weightPokemon.innerText =`\n Weight: ${weight}`;
         
             let height = arreglo[i].size.height ;
-            heightPokemon.innerText =`Height: ${height}`;
+            heightPokemon.innerText =`\n Height: ${height}`;
         
-            let evolutions = arreglo[i].evolution['next-evolution'];
-            evolutionsPokemon.innerText =`Evolutions: ${evolutions}`;
+            let evolutions = arreglo[i].evolution;
+            evolutionsPokemon.innerText =`Evolutions: ${Object.keys(evolutions)} : ${Object.values(evolutions)}`;
             console.log(evolutions)
         
+            let statsPokemonCanvas = statsPokemon.getContext("2d");
             let stats = arreglo[i].stats;
-            statsPokemon.innerText =`Stats: ${stats}`;
+            console.log(Object.keys(stats));
+        
+            const statsX= Object.keys(stats);
+            const statsY={
+                data: Object.values(stats), 
+                backgroundColor: ['rgb(203, 67, 53)', 'rgb(241, 196, 15 )', 'rgb(36, 113, 163)', 'rgb(220, 118, 51)', 'rgb(26, 188, 156 )'], // Color de fondo
+                borderColor: 'rgba(54, 162, 235, 1)', // Color del borde
+                borderWidth: 1,// Ancho del borde
+            };
+            new Chart(statsPokemonCanvas, {
+                type: 'bar',// Tipo de gráfica
+                data: {
+                    labels: statsX,
+                    datasets: [
+                        statsY,
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }],
+                    },
+                }
+            });
+    
+            
+                    
+            
         
             btnCalculate.innerHTML = "Calculate";
             btnBack.innerHTML = "Back";
 
             let debilidad = arreglo[i].weaknesses;
-            weaknessesPokemon.innerText ="Weaknesses: ";
+            weaknessesPokemon.innerText ="\n Weaknesses: ";
             debilidad.map(element => {
                 let box = document.createElement('div');
                 box.classList.add(element);
@@ -210,7 +244,7 @@ function pokemon(arreglo){
             });
 
             let resistencia = arreglo[i].resistant;
-            resistantPokemon.innerText ="Resistencia: ";
+            resistantPokemon.innerText ="\n Resistencia: ";
             resistencia.map(element => {
                 let box = document.createElement('div')
                 box.classList.add(element)
@@ -226,7 +260,8 @@ function pokemon(arreglo){
             pokemonContainer.appendChild(buttonsPokemon);
         
             boxPokemon.appendChild(boxImagenPokemon);
-            boxPokemon.appendChild(statsPokemon);
+            boxPokemon.appendChild(statsGeneralPokemon);
+            statsGeneralPokemon.appendChild(statsPokemon);
         
             boxImagenPokemon.appendChild(imagenPokemon);
         
