@@ -3,73 +3,96 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name=”viewport” content=”width=device-width, initial-scale=1.0″/>
+  <meta name=”viewport” content=”width=device-width, initial-scale=1.0″>
   <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
   <link rel="icon" type="image/png" href="img/favicon.png">
+  <!-- FontAwNan -->
   <script src="https://kit.fontawesome.com/2aba56147e.js" crossorigin="anonymous"></script>
-
+  <!-- FontAwRox -->
+  <script src="https://kit.fontawesome.com/3f1a48658c.js" crossorigin="anonymous"></script>
   <title>Ghibli’s Universe</title>
   <link rel="stylesheet" href="style.css" />
 
 </head>
 
 <body>
-  <header> 
-    <img id="logo" src="img/logo.jpg">
+  <header>
+    <img id="logo" src="img/logoPeque.jpg">
     <h1>Ghibli’s Universe</h1>
   </header>
 
-  <h2>It is a Japanese animation film studio based in Koganei, Tokyo. Founded in 1985 by animators and directors 
-    Miyazaki Hayao and Takahata Isao and producer Suzuki Toshio. Studio Ghibli is known for the high quality of 
-    its cinema and its art. His feature films won praise from both critics and popularity and influenced other animation studios.</h2>
 
-<div class="contenedorItemsCarrusel">
-  <div class="itemCarrusel" id="itemCarrusel-1">
-    <div class="tarjetaCarrusel" id="tarjetaCarrusel-1">
-      A
-    </div>
 
-    <div class="flechasCarrusel">
-    <a href="#itemCarrusel-3">
-      <i>I</i>
-    </a>
-    <a href="#itemCarrusel-2">
-    <i>D</i>
-    </a>
-    </div>
-   
+  
 
-   <div class="itemCarrusel" id="itemCarrusel-2">
-    <div class="tarjetaCarrusel" id="tarjetaCarrusel-2">
-      B
-    </div>
+    <!-- Bonito carrusel -->
+    <section id="contenedorItemCarrusel">
 
-    <div class="flechasCarrusel">
-    <a href="#itemCarrusel-1">
-      <i>I</i>
-    </a>
-    <a href="#itemCarrusel-3">
-    <i>D</i>
-    </a>
-    </div>
-
-   <div class="itemCarrusel" id="itemCarrusel-3">
-    <div class="tarjetaCarrusel" id="tarjetaCarrusel-3">
-      C
-
-    </div>
-
-    <div class="flechasCarrusel">
-      <a href="#itemCarrusel-2">
-        <i>I</i>
-      </a>
-      <a href="#itemCarrusel-1">
-      <i>D</i>
-      </a>
+      <div class="itemCarrusel" id="itemCarrusel-1">
+        <div class="tarjetaCarrusel" id="tarjetaCarrusel01"><img src="./img/carrusel/chihiroCarrusel.jpg"
+            alt="Spirited Away"></div>
+        <div class="flechasCarrusel">
+          <a href="#itemCarrusel-5"><i class="fa-solid fa-chevron-left"></i></a>
+          <a href="#itemCarrusel-2"><i class="fa-solid fa-chevron-right"></i></a>
+        </div>
       </div>
 
+      <div class="itemCarrusel" id="itemCarrusel-2">
+        <div class="tarjetaCarrusel" id="tarjetaCarrusel02"><img src="./img/carrusel/kaguyahimeCarrusel.jpg"
+            alt="The Tale of the Princess Kaguya"></div>
+        <div class="flechasCarrusel">
+          <a href="#itemCarrusel-1"><i class="fa-solid fa-chevron-left"></i></a>
+          <a href="#itemCarrusel-3"><i class="fa-solid fa-chevron-right"></i></a>
+        </div>
+      </div>
+
+      <div class="itemCarrusel" id="itemCarrusel-3">
+        <div class="tarjetaCarrusel" id="tarjetaCarrusel03"><img src="./img/carrusel/karigurashiCarrusel.jpg"
+            alt="The Secret World of Arrietty"></div>
+        <div class="flechasCarrusel">
+          <a href="#itemCarrusel-2"><i class="fa-solid fa-chevron-left"></i></a>
+          <a href="#itemCarrusel-4"><i class="fa-solid fa-chevron-right"></i></a>
+        </div>
+      </div>
+
+      <div class="itemCarrusel" id="itemCarrusel-4">
+        <div class="tarjetaCarrusel" id="tarjetaCarrusel04"><img src="./img/carrusel/kazetachinuCarrusel.jpg"
+            alt="The Wind Rises"></div>
+        <div class="flechasCarrusel">
+          <a href="#itemCarrusel-3"><i class="fa-solid fa-chevron-left"></i></a>
+          <a href="#itemCarrusel-5"><i class="fa-solid fa-chevron-right"></i></a>
+        </div>
+      </div>
+
+      <div class="itemCarrusel" id="itemCarrusel-5">
+        <div class="tarjetaCarrusel" id="tarjetaCarrusel05"><img src="./img/carrusel/ponyoCarrusel.jpg"
+            alt="Ponyo on the Cliff by the Sea"></div>
+        <div class="flechasCarrusel">
+          <a href="#itemCarrusel-4"><i class="fa-solid fa-chevron-left"></i></a>
+          <a href="#itemCarrusel-1"><i class="fa-solid fa-chevron-right"></i></a>
+        </div>
+      </div>
+
+    </section>
+    <br>
+    <!-- Texto Studio Ghibli -->
+    <section id="TextoStudioGhibli">
+      <h2>Studio Ghibli</h2>
+      <h3>It is a Japanese animation film studio based in Koganei, Tokyo. Founded in 1985 by animators and directors
+        Miyazaki Hayao and Takahata Isao and producer Suzuki Toshio. Studio Ghibli is known for the high quality of
+        its cinema and its art. His feature films won praise from both critics and popularity and influenced other
+        animation
+        studios.</h3>
+    </section>
+
     
-</div>
+
+
+ 
+
+
+
+
 
 
   <section class="containerFilms">
@@ -79,11 +102,17 @@
       <div class="cards" id="showAllFilms"></div> <!-- Show all movies -->
     </section>
 
-  <footer>
-    <p>Data Lovers Copyright 2022 by Roxana Hernández <a href="https://github.com/roxypoceros"><i class="fa-brands fa-github"></i></a> 
-      Nanci Mondragón <a href="https://github.com/NanciMondragon"><i class="fa-brands fa-github"></i> </a>
-  </footer>
+    
+    <footer class="footer">
+      <p>Data Lovers Copyright 2022 by Roxana Hernández <a href="https://github.com/roxypoceros"><i
+            class="fa-brands fa-github"></i></a>
+        Nanci Mondragón <a href="https://github.com/NanciMondragon"><i class="fa-brands fa-github"></i> </a>
+    </footer>
 
-  <script src="main.js" type="module"></script>
+    
+  
+
+    <script src="main.js" type="module"></script>
 </body>
+
 </html>
