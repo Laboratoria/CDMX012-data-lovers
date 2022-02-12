@@ -1,9 +1,7 @@
 // estas funciones son de ejemplo
-
-export const example = () => {
-  return 'example';
-};
-
-export const anotherExample = () => {
-  return 'OMG';
-};
+// controlar toda la logica del programa 
+export const getFilm = (data) => {
+  const dataGhibli = data.films.map((arr) => arr);
+  return dataGhibli;
+}
+  

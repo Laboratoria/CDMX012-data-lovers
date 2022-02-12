@@ -1,12 +1,89 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta name=”viewport” content=”width=device-width, initial-scale=1.0″/>
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <script src="https://kit.fontawesome.com/2aba56147e.js" crossorigin="anonymous"></script>
+
+  <title>Ghibli’s Universe</title>
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+  <header> 
+    <img id="logo" src="img/logo.jpg">
+    <h1>Ghibli’s Universe</h1>
+  </header>
+
+  <h2>It is a Japanese animation film studio based in Koganei, Tokyo. Founded in 1985 by animators and directors 
+    Miyazaki Hayao and Takahata Isao and producer Suzuki Toshio. Studio Ghibli is known for the high quality of 
+    its cinema and its art. His feature films won praise from both critics and popularity and influenced other animation studios.</h2>
+
+<div class="contenedorItemsCarrusel">
+  <div class="itemCarrusel" id="itemCarrusel-1">
+    <div class="tarjetaCarrusel" id="tarjetaCarrusel-1">
+      A
+    </div>
+
+    <div class="flechasCarrusel">
+    <a href="#itemCarrusel-3">
+      <i>I</i>
+    </a>
+    <a href="#itemCarrusel-2">
+    <i>D</i>
+    </a>
+    </div>
+   
+
+   <div class="itemCarrusel" id="itemCarrusel-2">
+    <div class="tarjetaCarrusel" id="tarjetaCarrusel-2">
+      B
+    </div>
+
+    <div class="flechasCarrusel">
+    <a href="#itemCarrusel-1">
+      <i>I</i>
+    </a>
+    <a href="#itemCarrusel-3">
+    <i>D</i>
+    </a>
+    </div>
+
+   <div class="itemCarrusel" id="itemCarrusel-3">
+    <div class="tarjetaCarrusel" id="tarjetaCarrusel-3">
+      C
+
+    </div>
+
+    <div class="flechasCarrusel">
+      <a href="#itemCarrusel-2">
+        <i>I</i>
+      </a>
+      <a href="#itemCarrusel-1">
+      <i>D</i>
+      </a>
+      </div>
+
+    
+</div>
+
+
+  <section class="containerFilms">
+    <!-- all films -->
+    <section class="section-films">
+      <div id="count"></div>
+      <div class="cards" id="showAllFilms"></div> <!-- Show all movies -->
+    </section>
+
+  <footer>
+    <p>Data Lovers Copyright 2022 by Roxana Hernández <a href="https://github.com/roxypoceros"><i class="fa-brands fa-github"></i></a> 
+      Nanci Mondragón <a href="https://github.com/NanciMondragon"><i class="fa-brands fa-github"></i> </a>
+  </footer>
+
+  <script src="main.js" type="module"></script>
+</body>
 </html>
