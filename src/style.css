@@ -1,0 +1,71 @@
+header{
+    align-items: center;
+    background: #0C1C3E;
+
+}
+#logo {
+    weigth: 107px;
+    height: 72px;
+}
+.btn_header{
+    border: 2px white solid;
+    border-radius: 10px;
+    color: white;
+    font-size: 30px;
+}
+body{
+    background-image: url("https://lh3.googleusercontent.com/FlD4SqNV1oWy2LpHzxoJGVyCbljK5wsYw_2RtOxIoZFj4NvbjWHdmJ-PmmnP59twgTCE6DQuSolIFOdwRZspobtASJUjh8hqzvS0zXriWpUJjD8=rw-e365-w1440");
+    background-color: #0C1C3E;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+#container{
+    margin: 200px 150px 50px 150px;
+    font-family: lato;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+#title1{
+    font-size: 45px;
+}
+#title2{
+    font-size: 24px;
+}
+#title3{
+    font-size: 30px;
+}
+#container_logo{
+    height: 128px;
+    weight: 199px;
+}
+#logos_download{
+    height: 45px;
+    weigth: 150px;
+    border-radius: 10px;
+    border: 1px white solid;
+    cursor: pointer;
+}
+#container_new{
+    display: flex;
+    justify-content: center;
+    background-image: url("https://lh3.googleusercontent.com/5-w5yrCLD69zlOIfgMndRr4dMhrKW5u8nJVojvrUqnSI8ln1ywgqzNFjWQJYrN2YlVSBMHNyXzhcIrQXRPUYTcqJXjAzYbJyXiXb_uK3YO2G-g=rw-e365-w1440");
+
+}
+#pokes_new_1{
+    height: 115px;
+    weight: 115px;
+}
+#pokes_new{
+    height: 122px;
+    weight: 372px;
+}
+form{
+    border-radius: 10px;
+    border: 6px white solid;
+    cursor: pointer;
+}
+ul{
+    display: flex;
+    justify-content: space-around;
+}
