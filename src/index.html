@@ -20,7 +20,7 @@
         <div class="enlaces">
           <li><a href="#">Home</a></li>
           <li><a href="#">Characters</a></li>
-          <li><a href="#">Locations</a></li>
+          <li><a href="/src/locations.html">Locations</a></li>
           <li><a href="#">Vehicles</a></li>
         </div>
       </ul>
@@ -114,12 +114,12 @@
             <option value="" disabled selected>Selecciona</option>
           </select>
         </div>
-        <div class="films-filter">
+        <!-- <div class="films-filter">
           <label for="films-option" class="label-films">By Raiting</label>
           <select name="films-option" id="films-rt" class="films-filter-items">
             <option value="" disabled selected>Selecciona</option>
           </select>
-        </div>
+        </div> -->
 
         <div class="films-filter">
           <label for="films-option" class="label-films">By Director</label>
@@ -138,10 +138,13 @@
         <div class="films-sort">
           <label for="films-op" class="label-films">Sort Films By</label>
           <select name="films-op" id="films-op" class="films-filter-items">
-            <option value="director">Raiting Score (from best ranked to worst ranked) </option>
-            <option value="producer">Release Date (from recent to oldest)</option>
-            <option value="raiting-up">From A to Z</option>
-            <option value="raiting-down">From Z to A </option>
+            <option value="" disabled selected>Selecciona</option>
+            <option value="raiting-up">Raiting Score (from best ranked to worst ranked) </option>
+            <option value="raiting-down">Raiting Score (from worst ranked to best ranked) </option>
+            <option value="date-up">Release Date (from recent to oldest)</option>
+            <option value="date-down">Release Date (from oldest to recent)</option>
+            <option value="a-z">From A to Z</option>
+            <option value="z-a">From Z to A </option>
           </select>
         </div>
 
