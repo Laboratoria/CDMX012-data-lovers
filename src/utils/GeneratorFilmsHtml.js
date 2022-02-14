@@ -17,3 +17,17 @@ export default function GeneratorFilmsHtml(film) {
     </article>
     `;
 }
+
+export function generatorOtherHtml(film) {
+    return `
+    <article>
+                <div class="portada">
+                <img class="img-fluid" src="${film.img}">
+                </div>
+                <div class="info">
+                    <p class="name">${film.name}</p>
+                    <p class="filmName2">${film.title}</p>
+                </div>
+            </article>
+            `;
+}
