@@ -1,12 +1,188 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link href='https://fonts.googleapis.com/css?family=Baloo Tamma 2' rel='stylesheet'>
     <meta charset="utf-8">
-    <title>Data Lovers</title>
+    <title>Pokedex</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+  <!--logo y header -->
+  <header> <img src= https://letsdownloadgame.com/wp-content/uploads/2021/07/pokemon-go-png-logo-3160.png id="logo" width="77.5" height="40.2" ></header>
   <body>
     <div id="root"></div>
-    <script src="main.js" type="module"></script>
+   
+    <!--Apartado busqueda por nombre y numero (input y button) (fondo blanco)-->
+    <div class="search1">
+     <div id="searchBox" class="filter1"> 
+      <form>
+        <label for="searchName">Name or number</label><br>
+        <input type="text" id="searchName" name="searchName"><br>
+      </form>
+        <button id="searchButton"> Search </button>
+    </div>
+    
+ <!--Texto busqueda nombre y número (p) (fondo blanco)-->
+      <div class="filter1">
+        <p id="searchText"> Search your Pokemon by its name or by it pokedex number </p>
+      </div>
+    </div>
+
+      
+    <!-- sectionOne es donde esta el filtro y el top 5-->
+<div class="sectionOne">
+  <!-- super filtro contiene 2 divs principales, (Type & weakness) y (candies & ability) -->
+<div class="superSearchBox"> 
+  <div class="superSearchTitle">
+   <p id="superSearch">Super search <p>
+     <p id="">T= type W= weakness</p>
+    </div>
+    <!--(Type & weakness) lado izquierdo del filtro -->
+  <div class="filterPrincipal"> 
+     <!--caja de filtro filter2 para acomodar flex box, ¿necesitamos que el nombre sea div o puede ser label?-->
+  <div class="filter2">
+    <div class="typeSearch" id="bugs">Bugs</div>  
+    <button class="typeButton">T</button> 
+    <button class="weaknessButton">W</button>
+  </div>
+    
+  <div class="filter2">
+    <div class="typeSearch"id="dragon">Dragon</div>
+    <button class="typeButton">T</button> 
+    <button class="weaknessButton">W</button>
+  </div>  
+
+  <div class="filter2">
+    <div class="typeSearch" id="fairy"> Fairy</div>
+    <button class="typeButton">T</button> 
+    <button class="weaknessButton">W</button>
+  </div>  
+
+  <div class="filter2">
+    <div class="typeSearch" id="fire">Fire</div>
+    <button class="typeButton">T</button> 
+    <button class="weaknessButton">W</button>
+  </div>
+    
+  <div class="filter2">
+    <div class="typeSearch" id="ghost">Ghost</div>
+    <button class="typeButton">T</button> 
+    <button class="weaknessButton">W</button>
+  </div>
+    
+  <div class="filter2">
+    <div class="typeSearch" id="ground">Ground</div>
+    <button class="typeButton">T</button> 
+    <button class="weaknessButton">W</button>
+  </div>
+    
+   <div class="filter2">
+    <div class="typeSearch" id="normal">Normal</div>
+    <button class="typeButton">T</button> 
+    <button class="weaknessButton">W</button>
+  </div>
+    
+   <div class="filter2">
+    <div class="typeSearch" id="psychic">Psychic</div>
+    <button class="typeButton">T</button> 
+    <button class="weaknessButton">W</button>
+  </div>
+    
+   <div class="filter2">
+    <div class="typeSearch" id="steel">Steel</div>
+    <button class="typeButton">T</button> 
+    <button class="weaknessButton">W</button>
+  </div>
+    
+   <div class="filter2">
+    <div class="typeSearch" id="dark">Dark</div>
+    <button class="typeButton">T</button> 
+    <button class="weaknessButton">W</button>
+  </div>
+    
+  <div class="filter2">
+    <div class="typeSearch" id="electric">Electric</div>
+    <button class="typeButton">T</button> 
+    <button class="weaknessButton">W</button>
+  </div>
+    
+  <div class="filter2">
+    <div class="typeSearch"id="fighting">Fighting </div>
+    <button class="typeButton">T</button> 
+    <button class="weaknessButton">W</button>
+  </div>
+    
+  <div class="filter2">
+    <div class="typeSearch"id="flying"> Flying </div>
+    <button class="typeButton">T</button> 
+    <button class="weaknessButton">W</button>
+  </div>
+    
+  <div class="filter2">
+    <div class="typeSearch" id="grass"> Grass </div>
+    <button class="typeButton">T</button> 
+    <button class="weaknessButton">W</button>
+  </div>
+    
+   <div class="filter2">
+    <div class="typeSearch" id="ice">Ice</div>
+    <button class="typeButton">T</button> 
+    <button class="weaknessButton">W</button>
+  </div>
+    
+  <div class="filter2">
+    <div class="typeSearch" id="poison">Poison</div>
+    <button class="typeButton">T</button> 
+    <button class="weaknessButton">W</button>
+  </div>
+    
+   <div class="filter2">
+    <div class="typeSearch" id="rock"> Rock </div>
+    <button class="typeButton">T</button> 
+    <button class="weaknessButton">W</button>
+  </div>
+    
+  <div class="filter2">
+    <div class="typeSearch" id="water">Water</div>
+    <button class="typeButton">T</button> 
+    <button class="weaknessButton">W</button>
+  </div>
+
+  </div>
+
+  <!--(candies & ability) parte derecha del filtro -->
+<div class="abilityCandies">
+<!-- resistant - ability -->
+  <div class="filter3">
+    <p for="ability">Ability</p> 
+    <select name="ability" id="ability">
+      <option value="fairy">Fairy</option>
+    </select>
+  </div>
+
+  <div class="filter3">
+    <p>Candies needed for evolution</p>
+    <button class="candy" id="candySmall"> 2 </button>
+    <button class="candy" id="candyMedium">4</button>
+    <button class="candy" id="candyBig">4</button>
+  </div>
+  <br>
+  <br>
+<div class="filter3">
+  <button class="filterButton">Search</button>
+</div>
+
+</div>
+  </div>
+    <!-- di-play de pokemones general -->
+  </div>
+
+</div>
+
+  <div class="pokemonDisplay">
+    <p>Pokemon display:</p>
+  </div>
+    
+   
   </body>
+  <script src="main.js" type="module"></script>
 </html>
