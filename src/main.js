@@ -1,5 +1,4 @@
 
-
 import data from './data/ghibli/ghibli.js';
 import {filmPosters, cutDescription, year, yearSorting, scrollTopBtn} from './data.js';
 
@@ -84,3 +83,14 @@ scrollTopBtn(".scrollTopBtn");
 
 
 
+
+allFilms.sort(function (a,b){
+    console.log(a, b)    
+    return Number(a[3]) - Number(b[3])
+})
+for(let j = 0; j < allFilms.length; j++){
+    let divSort = document.createElement("div");
+    divSort.className = "divSort";
+    divSort.innerHTML = allFilms[j][3];
+    document.getElementById("moviesList").appendChild(divSort);
+}
