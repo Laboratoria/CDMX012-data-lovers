@@ -18,12 +18,13 @@ const tiposPokemon = data.pokemon.map(function (pokemon) {
 console.log(tiposPokemon);
 
 /************AQUI SACAMOS IMAGENES ************************/
-
+let showTotalPokemons = [""]; //se crea una variable vacia que almacena lo iterado
+let showTotalContent = [""];
 for (let property of data.pokemon) {
   //bucle for accede a la data
-  let showTotalPokemons = [""]; //se crea una variable vacia que almacena lo iterado
+
   let identificador = "pokeCards"; //nombre de la clase
-  let idDirection = "#modalWindowPokemon";
+  let idDirection = "#" + `${property.name}`;
   let idSeccion = property.num;
   let modalDataOpen = "idModal"; //**********tal vez pueda ir en la seccion o en el num, ya que num es el id de cada iteracion
 
@@ -53,13 +54,63 @@ for (let property of data.pokemon) {
 
   document.getElementById("showData").appendChild(modalWindow); //show data es el nodo padre y cardSpace el nodo hijo.
   showTotalPokemons = cardSpace;
-}
 
+  /***********mostrando ventana modal */
+
+  let aboutPokemon = property.about;
+  let resistantPokemon = property.resistant;
+  let weaknessesPokemon = property.weaknesses;
+  let typePokemon = property.type;
+
+  const showModal = document.createElement("section");
+  showModal.setAttribute("id", `${property.name}`);
+  showModal.setAttribute("class", "modal");
+
+  const allContent = document.createElement("article");
+  allContent.setAttribute("id", "idModal");
+  allContent.setAttribute("class", "modalDialog");
+
+  const buttonModal = document.createElement("a");
+  const textButton = document.createTextNode("X");
+  buttonModal.appendChild(textButton);
+  buttonModal.setAttribute("href", "#");
+  buttonModal.setAttribute("class", "closeModal");
+  buttonModal.setAttribute("id", "buttonModal");
+
+  const contentTitle = document.createElement("h2");
+  contentTitle.innerHTML = property.name.toUpperCase();
+  contentTitle.setAttribute("class", "modalTitle");
+
+  const contentImag = document.createElement("img"); //crea un Elemento de tipo imagen
+  contentImag.setAttribute("src", `${property.img}`); //le asigna el atributo de src con su propiedad que es el link
+  //pokemonImag.setAttribute("data-open", modalDataOpen);
+
+  const contentAbout = document.createElement("p");
+  contentAbout.innerHTML =
+    " <strong>Datos: <br> </strong>" +
+    " <strong> Descripción <br></strong>" +
+    aboutPokemon +
+    " <strong><br>Tipo: <br> </strong>" +
+    typePokemon +
+    " <strong><br>Resistencia: <br> </strong>" +
+    resistantPokemon +
+    " <strong><br>Debilidades:<br> </strong> " +
+    weaknessesPokemon;
+
+  allContent.appendChild(buttonModal);
+  allContent.appendChild(contentTitle);
+  allContent.appendChild(contentImag);
+  allContent.appendChild(contentAbout);
+  showModal.appendChild(allContent);
+  document.getElementById("showData").appendChild(showModal);
+  showTotalContent = allContent;
+}
 /********************AQUI ESTAMOS IMPRIMIENDO DATA EN VENTANAS EMERGENTES ***********************/
+/*
+let showTotalContent = [""];
 
 for (let content of data.pokemon) {
-  let showTotalContent = [""];
-  let idModalContent = content.num;
+  let idModalContent = content.name;
   let classModalDialog = "modalDialog";
   let closeModal = "closeModal";
   let modalTitle = "modalTitle";
@@ -72,9 +123,8 @@ for (let content of data.pokemon) {
   allContent.setAttribute("id", idModalContent);
   allContent.setAttribute("class", classModalDialog);
 
-  const buttonModal = document.createElement("input");
+  const buttonModal = document.createElement("a");
   buttonModal.setAttribute("class", closeModal);
-  buttonModal.setAttribute("aria-label", "closeModal");
   buttonModal.setAttribute("value", "X");
   buttonModal.setAttribute("type", "button");
 
@@ -87,14 +137,14 @@ for (let content of data.pokemon) {
   //pokemonImag.setAttribute("data-open", modalDataOpen);
   const contentAbout = document.createElement("p");
   contentAbout.innerHTML =
-    "Datos: <br>" +
-    "Descripción <br>" +
+    " <strong>Datos: <br> </strong>" +
+    " <strong> Descripción <br></strong>" +
     aboutPokemon +
-    "<br>Tipo: <br>" +
+    " <strong><br>Tipo: <br> </strong>" +
     typePokemon +
-    "<br>Resistencia: <br>" +
+    " <strong><br>Resistencia: <br> </strong>" +
     resistantPokemon +
-    "<br>Debilidades:<br> " +
+    " <strong><br>Debilidades:<br> </strong> " +
     weaknessesPokemon;
 
   allContent.appendChild(buttonModal);
@@ -103,8 +153,7 @@ for (let content of data.pokemon) {
   allContent.appendChild(contentAbout);
   document.getElementById("idModal").appendChild(allContent);
   showTotalContent = allContent;
-}
-
+}*/
 
 /*************AQUI SE LE DA FUNCIONALIDAD AL BOTON CLOSE *********/
 
