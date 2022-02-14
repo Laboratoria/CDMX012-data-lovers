@@ -4,24 +4,23 @@ import data from './data/pokemon/pokemon.js';
 const pokemonList = data.pokemon;
 //console.log(data.pokemon)
 
-
 for (const property of pokemonList) {
     const pokemonContainer = document.getElementById('root');
    
     const card = document.createElement('section');
     card.className = 'card';
    
-    const pokemonNum = document.createElement('li');
+    const pokemonNum = document.createElement('p');
     pokemonNum.className = 'property num';
    
-    const pokemonName = document.createElement('li');
+    const pokemonName = document.createElement('p');
     pokemonName.className = 'property name';
    
     const pokemonImg = document.createElement('img');
     pokemonImg.setAttribute('src', `${property.img}`);
     pokemonImg.className = 'property img';
 
-    const pokemonType = document.createElement('li');
+    const pokemonType = document.createElement('p');
     pokemonType.className = 'property type';
    
     const num = document.createTextNode(`${property.num}`);

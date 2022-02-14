@@ -1,21 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,100&display=swap');
 
-body{
+body {
     max-width: 100%;
 }
 
-header{
+header {
     background: white;
 	width: 100%;
     height: 20%;
 	left: 0;
     top: 0;
     position: fixed;
-    
 }
 
-
-h1{
+h1 {
     font-family: 'Roboto-black', sans-serif;
     color: #44696C;
     font-size: 3em;  
@@ -24,7 +22,7 @@ h1{
     top: 1%;
 }
 
-#selectSortPokemon{
+#selectSortPokemon {
     width: 250px;
     height: 40px;
     background-color: #E5E5E5;
@@ -38,7 +36,7 @@ h1{
     top: 5%;
 }
 
-.searchPokemon input{
+.searchPokemon input {
     width: 300px;
     height: 40px;
     background-color: #E5E5E5;
@@ -53,7 +51,7 @@ h1{
     top: 5%;
 }
 
-nav{
+nav {
     margin: 0px;
     float:left;
     position: fixed;
@@ -68,16 +66,16 @@ nav{
     font-weight: bold;
     text-align: center;
     color: white;
-    
 }
-#Entrenador{
+
+#Entrenador {
     width: 150px;
     height: 475px;
    padding-top: 10%;
    z-index: 1;
-    
 }
-#Pokebola{
+
+#Pokebola {
     position: absolute;
     width: 423px;
     height: 423px;
@@ -87,18 +85,18 @@ nav{
     z-index: -1;
 }
 
-h2{
+h2 {
     font-family: 'Roboto-black', sans-serif;
     color: #C4C4C4;
     font-size: 3em;  
 }
 
-h4{
+h4 {
     font-family: 'Roboto', sans-serif;
     font-size: 1.5rem;
 }
 
-main{
+main {
     float: right;
     width: 75%;
     padding-left: 3rem;
@@ -110,8 +108,8 @@ main{
     flex-flow: row wrap;
     gap: 2rem;
     margin-top: 10rem;
- 
 }
+
 .card {
   font-family: "Roboto", sans-serif;
   background-color: #ffffff;
@@ -125,7 +123,8 @@ main{
   list-style-type: none;
   text-transform: capitalize;
 }
-.name{
+
+.name {
     font-family: 'Roboto-black', sans-serif;
     font-weight: bold;
     color: #44696C;
@@ -138,4 +137,3 @@ main{
     margin-left: 1rem;
     margin-top: 2rem;
 }
-
