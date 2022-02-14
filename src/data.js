@@ -13,8 +13,8 @@
 
 
 export const filmPosters = (movies) => {
-
   let movie = [movies.poster, movies.title, movies.description, movies.release_date, movies.rt_score];
+  return movie
 };
 
 export const cutDescription = (description) => {
