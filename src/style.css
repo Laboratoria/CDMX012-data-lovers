@@ -199,16 +199,16 @@ body {
 }
 /* tarjeta frontal */
 .globalCard .card {
- transform: perspective(600px) rotateY(0deg);
- box-shadow: 0 5px 10px #4c413f;
- backface-visibility: hidden;
- position: absolute;
- width: 100%;
- height: 100%;
- transition: .5s;
- border-radius: 10px;
+  transform: perspective(600px) rotateY(0deg);
+  box-shadow: 0 5px 10px #4c413f;
+  backface-visibility: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+  border-radius: 10px;
 }
-.globalCard .card img{
+.globalCard .card img {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -217,6 +217,7 @@ body {
 }
 
 .globalCard .card p {
+
  position: absolute;
  bottom: 0;
  width: 100%;
@@ -229,6 +230,7 @@ body {
  text-align: center;
  text-justify: auto;
  border-radius: 0 0 10px 10px;
+
 }
 .globalCard .card .movieYr{
   top: 0;
@@ -244,6 +246,7 @@ body {
   letter-spacing: 0;
   background:rgba(76, 65, 63, 0.7);
  }
+
 .globalCard .card .movieRtng{
   bottom: 0;
   width: 100%;
@@ -263,25 +266,25 @@ body {
 
 /* tarjeta trasera */
 .globalCard .back-card {
- transform: perspective(600px) rotateY(180deg);
- background: #4c413f;
- font-size: 20px;
- padding: 10px;
- color: #d8af39;
- display: flex;
- flex-direction: column;
- justify-content: space-between;
- text-align: center;
- box-shadow: 0 5px 10px #4c413f;
- backface-visibility: hidden;
- position: absolute;
- width: 100%;
- height: 100%;
- transition: .5s;
- border-radius: 10px;
+  transform: perspective(600px) rotateY(180deg);
+  background: #4c413f;
+  font-size: 20px;
+  padding: 10px;
+  color: #d8af39;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  box-shadow: 0 5px 10px #4c413f;
+  backface-visibility: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+  border-radius: 10px;
 }
 
-.globalCard .back-card .filmDescription{
+.globalCard .back-card .filmDescription {
   color: #ebe9e9;
   font-size: 12px;
   justify-content: center;
@@ -299,7 +302,7 @@ body {
   color: #ebe9e9;
   margin-left: 42px;
 }
-.globalCard:hover .card{
+.globalCard:hover .card {
   transform: perspective(600px) rotateY(180deg);
 }
 .globalCard:hover .back-card {
@@ -337,4 +340,4 @@ body {
 }
 @media screen and (max-width: 980px){
 
-}
+
