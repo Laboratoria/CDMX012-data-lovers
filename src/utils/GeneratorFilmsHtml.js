@@ -1,4 +1,4 @@
-export default function GeneratorFilmsHtml(film) {
+export function GeneratorFilmsHtml(film) {
     return `
     <article>
         <div class="portada">
@@ -21,13 +21,35 @@ export default function GeneratorFilmsHtml(film) {
 export function generatorOtherHtml(film) {
     return `
     <article>
-                <div class="portada">
-                <img class="img-fluid" src="${film.img}">
-                </div>
-                <div class="info">
-                    <p class="name">${film.name}</p>
-                    <p class="filmName2">${film.title}</p>
-                </div>
-            </article>
+        <div class="portada">
+        <img class="img-fluid" src="${film.img}">
+        </div>
+        <div class="info">
+            <p class="name">${film.name}</p>
+            <p class="filmName2">${film.title}</p>
+        </div>
+    </article>
             `;
 }
+
+export function llenarSelector(filtro) {
+
+    if (filtro === 'title') {
+        return  `
+            <option value="" selected disabled hidden>Sort by</option>
+            <option value="az">A-Z</option>
+            <option value="za">Z-A</option>
+            <option value="recent">Recent</option>
+            <option value="old">Old</option>
+            <option value="highScore">High-score</option>
+            <option value="lowScore">Low-score</option>
+        `;
+
+    } else {
+        return `
+            <option value="" selected disabled hidden>Sort by</option>
+            <option value="az">A-Z</option>
+            <option value="za">Z-A</option>
+        `;
+    }
+} 
