@@ -8,6 +8,10 @@ document.addEventListener('DOMContentLoaded', () => {
     mostrarCategoria(data, 'title');
 
     llenarSelector('title');
+
+    //let dataBase = mostrarCategoria(data, 'title');
+
+    //order.orderData(dataBase, 'recent');
 })
 
 //Selecciona la seccion donde aparecera el resultado de busqueda

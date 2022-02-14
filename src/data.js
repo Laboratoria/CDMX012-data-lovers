@@ -26,7 +26,16 @@ const order = {
     }
     return info;
   },
-};
+
+  orderData: (data, sortBy) => {
+
+    if(sortBy == "recent"){
+      data.sort(function (a,b){
+        return b.release_date-a.release_date})
+    }
+    console.log(data)
+    }
+}
 
 /**
  * Filtra una lista de películas según un texto recibido.
