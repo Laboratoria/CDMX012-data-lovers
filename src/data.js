@@ -26,15 +26,6 @@ export const cutDescription = (description) => {
   }
 };
 
-export const year = (years) => {
-  let movieYear =[years.release_date];
-  return movieYear;
-};
-
-export function yearSorting (a, b) {
-  return a - b;
-};
-
 
 //Funcion de flecha scroll(regresa al inicio)
 const d=document,
