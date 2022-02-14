@@ -1,6 +1,12 @@
-import { example } from './data.js';
-// import data from './data/lol/lol.js';
-import data from './data/pokemon/pokemon.js';
-// import data from './data/rickandmorty/rickandmorty.js';
+import { imagesList } from './data.js';
+import data from './lol/lol.js';
 
-console.log(example, data);
+let img = document.createElement('img')
+    img.setAttribute('src', data.data.Aatrox.splash)
+    img.setAttribute('height', '268')
+    img.setAttribute('width', '427')
+let imgD2 = document.getElementById('image')
+    imgD2.appendChild(img)
+
+
+
