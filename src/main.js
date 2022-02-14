@@ -9,44 +9,57 @@ for(let i = 0; i < data.films.length; i++){
     allFilms.push(filmPosters(data.films[i]));
 }
 
+
 // Imprime tarjetas con los elementos de allMovies (con el poster, titulo y año).
-for(let j = 0; j < allFilms.length; j++){
+//Iniciar con las pelis por año (más reciente a menos)
+// let filmSortYear = allFilms.sort(function (a,b){   
+//     return Number(b[3]) - Number(a[3])
+// })
+// console.log(filmSortYear);
+
+// //Iniciar con las pelis por rating (de más rating a menos)
+// let filmSortRating = allFilms.sort(function (a,b){   
+//     return Number(b[4]) - Number(a[4])
+// })
+// console.log(filmSortRating);
+
+// //Iniciar con las pelis por título (A-Z, Z-A)
+// let filmSortTitle = allFilms.sort(function (a,b){   
+//     return  a[1] < b[1] ? 1 : -1
+// })
+// console.log(filmSortTitle);
+
+let createPoster = function (array){
+    document.getElementById("moviesList").innerHTML = '';
+
+for(let j = 0; j < array.length; j++){
     let divGlobal = document.createElement("div");
     divGlobal.className = "globalCard";
     let divCreation = document.createElement("div");
     divCreation.className = "card";
     let filmPoster = document.createElement("img");
-    filmPoster.setAttribute("src", allFilms[j][0]);
+    filmPoster.setAttribute("src", array[j][0]);
     let movieTitle = document.createElement("p");
-    movieTitle.innerHTML = "<strong>" + allFilms[j][1] + "</strong>";
+    movieTitle.innerHTML = "<strong>" + array[j][1] + "</strong>";
     divCreation.appendChild(filmPoster);
     divCreation.appendChild(movieTitle);
-    document.getElementById("moviesList").appendChild(divCreation);
+    // document.getElementById("moviesList").appendChild(divCreation);
+    
     //parte trasera de la tarjeta
     let backCard = document.createElement("div");
     backCard.className = "back-card";
-    //let backCardInfo = document.createElement('div');
-    //backCardInfo.className = 'backCardInfo';
-    //backCard.appendChild(backCardInfo);
-
-    //let divSynopsis = document.createElement("div")
-    //divSynopsis.className = "divSynopsis";
     let pSinopsys = document.createElement("p");
     pSinopsys.className="pSinopsys";
     pSinopsys.innerHTML = "<strong>" + "Sinopsys" + "</strong>";
     backCard.appendChild(pSinopsys);
-    //backCardInfo.appendChild(divSynopsis);
 
-    //let divFilmDescription = document.createElement("div")
-    //divFilmDescription.className = "divFilmDescription";
     let filmDescription = document.createElement("p");
     filmDescription.className = "filmDescription";
-    filmDescription.innerHTML = cutDescription(allFilms[j][2]);
+    filmDescription.innerHTML = cutDescription(array[j][2]);
     let btnMoreInfo = document.createElement("button");
     btnMoreInfo.className = "btnMoreInfo"
     btnMoreInfo.setAttribute("href", "#");
     btnMoreInfo.innerHTML = "More Info";
-    //backCardInfo.appendChild(divFilmDescription);
     backCard.appendChild(filmDescription);
     backCard.appendChild(btnMoreInfo);
     divGlobal.appendChild(divCreation);
@@ -54,15 +67,32 @@ for(let j = 0; j < allFilms.length; j++){
     document.getElementById("moviesList").appendChild(divGlobal);
   
 }
-
-
-allFilms.sort(function (a,b){
-    console.log(a, b)    
-    return Number(a[3]) - Number(b[3])
-})
-for(let j = 0; j < allFilms.length; j++){
-    let divSort = document.createElement("div");
-    divSort.className = "divSort";
-    divSort.innerHTML = allFilms[j][3];
-    document.getElementById("moviesList").appendChild(divSort);
 }
+createPoster(allFilms); 
+
+//Use the selected value to filter the movies 
+document.getElementById('selectFilter').addEventListener('change', function() {
+    let userSelection = this.value;
+    if (userSelection =="AZ"){
+        let filmSortTitle = allFilms.sort(function (a,b){   
+            return  a[1] > b[1] ? 1 : -1
+        })
+
+    } else if (userSelection == "ZA"){
+        let filmSortTitle = allFilms.sort(function (a,b){   
+            return  a[1] < b[1] ? 1 : -1
+        })
+    } else if (userSelection == "rating") {
+        let filmSortRating = allFilms.sort(function (a,b){   
+            return Number(b[4]) - Number(a[4])
+        })
+    } else if( userSelection == "year"){
+        let filmSortYear = allFilms.sort(function (a,b){   
+            return Number(b[3]) - Number(a[3])
+        })
+    }
+    createPoster(allFilms)
+    console.log(allFilms);
+  });
+
+  
