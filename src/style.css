@@ -1,0 +1,213 @@
+body{
+    background-color: #E5E5E5;
+    font-family: "Baloo Tamma 2";
+}
+header{
+    height: 96px;
+    background-color: #063376;
+    border-color: #79AED8;
+}
+select{
+    font-family: "Baloo Tamma 2";
+    font-size: 15px;
+}
+/*Apartado busqueda por nombre y numero (input y button) (fondo blanco)*/
+#searchBox {
+    background-color: white;
+}
+/* ajustar el primer boton de search (parte blanca) mas hacia la derecha*/
+.searchbutton {
+    display: flex;
+
+}
+
+.search1{
+    display:flex;
+    flex-direction: row ;
+    justify-content: center;
+    gap: 20px;
+    background-color: white;
+}
+.filter1{
+    display: flex;
+    flex-direction: column;
+    flex-basis: auto; 
+}
+#searchButton{
+    height: 20px;
+    width: 77px;
+    background-color: #79AED8;
+    font-size: 12px;
+    color: white;
+    font-family: 'Baloo Tamma 2';
+    border-radius: 35px;
+}
+.filterButton{
+    height: 30px;
+    width: 87px;
+    background-color: #79AED8;
+    font-size: 12px;
+    color: white;
+    font-family: 'Baloo Tamma 2';
+    border-radius: 35px;
+}
+/*Texto busqueda nombre y número (p) (fondo blanco)*/
+p{
+    color:white;
+    font-size: 24px;
+    font-weight: bold;
+}
+#searchText{
+    color:#07224D;
+    font-size: 24px;
+}
+
+
+
+#logo{
+    margin-top: 30px;
+    margin-left: 10px;
+    margin-right: 90px;
+}
+
+/*Tipos de pockemon del super buscador*/
+
+.typeSearch{
+height: 27px;
+width:100px;
+font-size:22px;
+color:white;
+font-family: 'Baloo Tamma 2';
+border-radius:35px;
+margin: 10px;
+text-align: center;
+padding-bottom: 4px;
+
+}
+
+/*Tipos de pockemon del super buscador id individual para los colores*/
+
+#bugs{
+    background-color:#9ABD76;
+}
+
+#dragon{
+  background-color: #E98A57;
+}
+
+#fairy{
+    background-color:#F38AE9;
+}
+
+#fire{
+    background-color: #C53943;
+}
+
+#ghost{
+    background-color: #393656;
+}
+
+#ground{
+    background-color: #C9D77B;
+}
+
+#normal{
+    background-color: #5D748D;
+}
+
+#psychic{
+    background-color: #47294C;
+}
+
+#steel{
+    background-color: #949494;
+}
+
+#dark{
+    background-color: #33373A;
+}
+
+#electric{
+    background-color: #F0C964;
+}
+
+#fighting{
+    background-color:#E6514C;
+}
+
+#flying{
+    background-color: #74B3D9 ;
+}
+
+#grass{
+    background-color: #48978A ;
+}
+
+#ice{
+    background-color: #59A5D2;
+}
+
+#poison{
+    background-color: #484276;
+}
+
+#rock{
+    background-color: #966F24;
+}
+
+#water{
+    background-color: #417B9E;
+}
+
+/*BOTON DE TIPO Y DEBILIDAD*/
+
+.typeButton, 
+.weaknessButton{
+    background-color: #5D748D;
+    border-radius: 50px;
+    height: 25px;
+    width: 25px;
+    font-size: 12px;
+    font-family: 'Baloo Tamma 2';
+    color: white;
+}
+/*flex box botons*/
+.filterPrincipal{
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    background-color:#0C4DA3;
+    width:50%;
+    height:50%;
+    padding:10px;
+
+}
+.filter2{
+    display:flex;
+    flex-direction:row wrap;
+    align-items:center;
+}
+.pokemonDisplay{
+    background-color: #FFFF;
+}
+.superSearchBox{
+    background-color: #0C4DA3;;  
+    display:flex;
+    justify-content:center;
+    height: 45%;
+    width: 85%;
+}
+.abilityCandies{
+    display:flex;
+    flex-direction:column;
+    background-color: #0C4DA3;
+    padding: 10px;
+}
+.filter3{
+    display:flex;
+    flex-direction:column;
+}
+.superSearchTitle{
+    display:flex;
+    flex-direction:column;
+}
