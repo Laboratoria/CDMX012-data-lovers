@@ -13,8 +13,8 @@
 
 
 export const filmPosters = (movies) => {
-  let movie = [movies.poster, movies.title, movies.description, movies.release_date];
-  return movie;
+
+  let movie = [movies.poster, movies.title, movies.description, movies.release_date, movies.rt_score];
 };
 
 export const cutDescription = (description) => {
@@ -24,5 +24,39 @@ export const cutDescription = (description) => {
   } else{
     return description
   }
-}
+};
 
+export const year = (years) => {
+  let movieYear =[years.release_date];
+  return movieYear;
+};
+
+export function yearSorting (a, b) {
+  return a - b;
+};
+
+
+//Funcion de flecha scroll(regresa al inicio)
+const d=document,
+w = window;
+
+export function scrollTopBtn(btn){
+  const $scrollBtn = d.querySelector(btn);
+
+  w.addEventListener("scroll", e =>{
+  let scrollTop = w.pageYOffset || d.documentElement.scrollTop;
+  if(scrollTop > 1000){
+   $scrollBtn.classList.remove("hidden");
+  }else{
+   $scrollBtn.classList.add("hidden");
+  }
+ });
+  d.addEventListener("click", e =>{
+    if(e.target.matches(btn)){
+      w.scrollTo({
+        behavior:"smooth",
+        top:0,
+      });
+    }
+  })
+}
