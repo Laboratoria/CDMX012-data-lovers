@@ -9,10 +9,8 @@ let allFilms = [];
 for(let i = 0; i < data.films.length; i++){ 
     allFilms.push(filmPosters(data.films[i]));
 }
-
-
 let createPoster = function (array){
-    document.getElementById("moviesList").innerHTML = '';
+    document.getElementById("moviesList").innerHTML = "";
 
 for(let j = 0; j < array.length; j++){
     let divGlobal = document.createElement("div");
@@ -23,7 +21,7 @@ for(let j = 0; j < array.length; j++){
     filmPoster.setAttribute("src", array[j][0]);
     let movieYr = document.createElement("p");
     movieYr.className = "movieYr";
-    movieYr.innerHTML = ("<strong>" + allFilms[j][3] + "</strong>");
+    movieYr.innerHTML = ("<strong>" + array[j][3] + "</strong>");
     let movieTitle = document.createElement("p");
     movieTitle.innerHTML = "<strong>" + array[j][1] + "</strong>";
     divCreation.appendChild(filmPoster);
