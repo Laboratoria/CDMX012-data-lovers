@@ -159,7 +159,7 @@ body {
   display: flex;
   flex-direction: row;
   padding-top: 50px;
-  position: fixed;
+  justify-content: space-evenly;
 }
 
 #allMovies {
@@ -168,6 +168,8 @@ body {
   color: #4c413f;
   font-style: normal;
   display: flex;
+  padding-bottom: 2%;
+  padding-left: 7%;
 }
 
 .movieList {
@@ -218,10 +220,10 @@ body {
  position: absolute;
  bottom: 0;
  width: 100%;
- height: 50px;
+ height: 30px;
  font-size: 15px;
  font-weight:bolder;
- line-height: 35px;
+ line-height: 30px;
  color: #4c413f;
  background:rgba(255, 250, 250, 0.7);
  text-align: center;
