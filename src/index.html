@@ -15,13 +15,12 @@
 <body>
   <header>
     <div class="nav-bar">
-    <img class='logo-g'
-          src='https://i.postimg.cc/FHMnx5gB/custom-Logo.png' alt='logo-totoro' />
+      <img class='logo-g' src='https://i.postimg.cc/FHMnx5gB/custom-Logo.png' alt='logo-totoro' />
       <ul class="menus">
         <div class="enlaces">
           <li><a href="#">Home</a></li>
           <li><a href="#">Characters</a></li>
-          <li><a href="#">Locations</a></li>
+          <li><a href="/src/locations.html">Locations</a></li>
           <li><a href="#">Vehicles</a></li>
         </div>
       </ul>
@@ -34,44 +33,38 @@
 
         <div class="mySlides fade">
           <div class="numbertext">1 / 6</div>
-          <img
-              src="https://i.postimg.cc/qMM0CpSk/image723-6052.jpg" alt="Characters party" style="width:100%" />
+          <img src="https://i.postimg.cc/qMM0CpSk/image723-6052.jpg" alt="Characters party" style="width:100%" />
           <div class="text">Ghibli Characters</div>
         </div>
 
         <div class="mySlides fade">
           <div class="numbertext">2 / 6</div>
-            <img src="https://i.postimg.cc/RF79whv0/Howls-Castle.jpg"
-              alt="Howls-Castle" style="width:100%" />
+          <img src="https://i.postimg.cc/RF79whv0/Howls-Castle.jpg" alt="Howls-Castle" style="width:100%" />
           <div class="text">Howl´s Moving Castle</div>
         </div>
 
         <div class="mySlides fade">
           <div class="numbertext">3 / 6</div>
-             <img src='https://i.postimg.cc/L4VXvQW3/Porco-Rosso-1.jpg'
-              border='0' alt='Porco-Rosso' style="width:100%" />
+          <img src='https://i.postimg.cc/L4VXvQW3/Porco-Rosso-1.jpg' border='0' alt='Porco-Rosso' style="width:100%" />
           <div class="text">Porco Rosso Airplane</div>
         </div>
 
         <div class="mySlides fade">
           <div class="numbertext">4 / 6</div>
-          <img src="https://i.postimg.cc/J0R8x8h5/1112.jpg"
-              alt="1112" style="width:100%" />
+          <img src="https://i.postimg.cc/J0R8x8h5/1112.jpg" alt="1112" style="width:100%" />
           <div class="text">Sunflower House</div>
         </div>
 
         <div class="mySlides fade">
           <div class="numbertext">5 / 6</div>
-          <img
-              src="https://i.postimg.cc/yxnHrGg4/17-Cli-Ufq-X-1.jpg" alt="17-Cli-Ufq-X-1" style="width:100%" />
+          <img src="https://i.postimg.cc/yxnHrGg4/17-Cli-Ufq-X-1.jpg" alt="17-Cli-Ufq-X-1" style="width:100%" />
           <div class="text">Adriano´s Hotel</div>
         </div>
 
         <div class="mySlides fade">
           <div class="numbertext">6 / 6</div>
-          <img
-              src="https://i.postimg.cc/c1c0HvD9/An-Yp3-Wd-studio-ghibli-wallpaper.jpg"
-              alt="An-Yp3-Wd-studio-ghibli-wallpaper" style="width:100%" />
+          <img src="https://i.postimg.cc/c1c0HvD9/An-Yp3-Wd-studio-ghibli-wallpaper.jpg"
+            alt="An-Yp3-Wd-studio-ghibli-wallpaper" style="width:100%" />
           <div class="text">Howl´s Castle</div>
         </div>
 
@@ -116,27 +109,42 @@
       <div class="films-filter-sort">
 
         <div class="films-filter">
-          <label for="films-option" class="label-films">Filter Films By</label>
-          <select name="films-option" id="films-op" class="films-filter-items">
-            <option value="director">Director</option>
-            <option value="producer">Producer</option>
-            <option value="raiting-up">Raiting Score (>90
-              %)</option>
-            <option value="raiting-down">Raiting Score (<90%) </option>
-            <option value="Release-one">Release Date (2010s)</option>
-            <option value="Release-two">Release Date (2000s)</option>
-            <option value="Release-tree">Release Date (1990s)</option>
-            <option value="Release-four">Release Date (1980s)</option>
+          <label for="films-option" class="label-films">By Release Year</label>
+          <select name="films-option" id="films-year" class="films-filter-items">
+            <option value="" disabled selected>Selecciona</option>
+          </select>
+        </div>
+        <!-- <div class="films-filter">
+          <label for="films-option" class="label-films">By Raiting</label>
+          <select name="films-option" id="films-rt" class="films-filter-items">
+            <option value="" disabled selected>Selecciona</option>
+          </select>
+        </div> -->
+
+        <div class="films-filter">
+          <label for="films-option" class="label-films">By Director</label>
+          <select name="films-option" id="films-Director" class="films-filter-items">
+            <option value="" disabled selected>Selecciona</option>
+          </select>
+        </div>
+
+        <div class="films-filter">
+          <label for="films-option" class="label-films">By Producer</label>
+          <select name="films-option" id="films-Producer" class="films-filter-items">
+            <option value="" disabled selected>Selecciona</option>
           </select>
         </div>
 
         <div class="films-sort">
           <label for="films-op" class="label-films">Sort Films By</label>
           <select name="films-op" id="films-op" class="films-filter-items">
-            <option value="director">Raiting Score (from best ranked to worst ranked) </option>
-            <option value="producer">Release Date (from recent to oldest)</option>
-            <option value="raiting-up">From A to Z</option>
-            <option value="raiting-down">From Z to A </option>
+            <option value="" disabled selected>Selecciona</option>
+            <option value="raiting-up">Raiting Score (from best ranked to worst ranked) </option>
+            <option value="raiting-down">Raiting Score (from worst ranked to best ranked) </option>
+            <option value="date-up">Release Date (from recent to oldest)</option>
+            <option value="date-down">Release Date (from oldest to recent)</option>
+            <option value="a-z">From A to Z</option>
+            <option value="z-a">From Z to A </option>
           </select>
         </div>
 
