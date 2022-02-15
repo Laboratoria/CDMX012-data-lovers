@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-image: url("img/fondo.png");
+}
+
+header {
+  background-color: #d8af39;
+  height: 80px;
+  display: flex;
+}
+
+.containerLogo {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 5px;
+  margin-left: 100px;
+}
+
+.ghiblisLogo {
+  display: flex;
+  align-items: center;
+  max-width: 12%;
+  height: auto;
+  margin-bottom: 5%;
+}
+
+#navBar {
+  display: flex;
+  flex-direction: row;
+  margin-right: 30px;
+}
+
+#home {
+  font-size: 35px;
+  margin-top: 15px;
+  width: 100%;
+  height: auto;
+  color: #efefef;
+}
+
+.inputSearch {
+  display: flex;
+  height: 31px;
+  width: 150px;
+  margin-top: 22px;
+  font-family: Roboto, "FontAwesome", sans-serif;
+  font-size: small;
+  background: #efefef;
+  color: #3c3c43;
+  border-radius: 5px;
+  border: 1px solid #dfdfdf;
+  margin-left: 30px;
+}
+
+input[type="search"]::placeholder {
+  padding-left: 15%;
+}
+
+footer {
+  height: 68px;
+  display: flex;
+  justify-content: center;
+  background-color: #d8af39;
+}
+
+.footerItems {
+  font-size: small;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footerContent {
+  margin: 5px;
+  font-style: italic;
+}
+
+.footerContent a {
+  color: #14454c;
+}

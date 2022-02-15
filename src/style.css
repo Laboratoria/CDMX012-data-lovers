@@ -78,6 +78,7 @@ input[type="search"]::placeholder {
 .initialPicture .kikisPicture {
   width: 100%;
   height: 707px;
+  padding-right: 0%;
 }
 .posterText {
   font-weight: 700;
@@ -148,10 +149,11 @@ select {
 
 .footerContent {
   margin: 5px;
+  font-style: italic;
 }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
+.footerContent a {
+  color: #14454c;
 }
 
 /* div con todas los posters */

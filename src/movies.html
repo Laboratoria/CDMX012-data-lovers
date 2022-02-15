@@ -1,51 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>movies content</title>
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="utf-8"name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Lovers - Studios Ghibli</title>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-</head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+    <!-- CDN font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style2.css" />
+  </head>
+  
 <body>
-    <header>
-        <nav>
-            <div class="logoStudiosG">
-                <img src="./imagenes/Studio_Ghibli 1.png">
-              </div>
-              <div class="searchInput">
-                <input type="search" id="search-Icon" placeholder="Search">
-                <span class="fas fa-search" id="iconSearch"></span>
-              </div>
-              <div class="homeIcon">
-                <a href="#"><i class="fas fa-home"></i>
-                
-              </div> 
-        </nav>
-    </header>
-    
-    <main>
-        <div class="moviePicture"> 
-            <img src="" alt="" class="">
-            <aside>
-                <div class="movieDescriptionContainer">
-
-                </div>
-            </aside>    
+  <header>
+    <div class="containerLogo">
+      <img src="./img/Studio_Ghibli_logo.svg.png" class="ghiblisLogo" alt="" >
+    </div>
+    <nav>
+      <div id="navBar">
+        <div id="home">
+          <i class="fa-solid fa-house" class="home" ></i>
         </div>
-          <section class="allMoviesAndFilter">
-            <p id="allMovies">All Movies</p>
-          </section>
-          <section class="moviesList">
-            <div class="filmsContainer">
-              
-              </div>
-            </div>
-          
-          </section>
-    </main>
+        <div id="searchBar">
+          <input type="search" placeholder="&#xf002;  Search movie" class="inputSearch">
+        </div>
+      </div>
+      </nav>
+  </header>
+    
+  <main>  
+<h1>Holi</h1>
+    <section class="movieList"> <!-- cuadro gral -->
+      <div id="moviesList"></div><!-- cuadro peliculas -->
+      <img src="" alt="" id="moviePoster">
+    </section>
+
+  </main>
 
     <footer>
         <div class="footerItems">
@@ -56,5 +45,6 @@
           </div>
         </div> 
       </footer>
+      <script src="main2.js" type="module"></script>
 </body>
 </html>

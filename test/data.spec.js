@@ -1,23 +1,24 @@
-import { example, anotherExample } from '../src/data.js';
+import {filmPosters} from '../src/data.js';
 
+import data from '../src/data/ghibli/ghibli.js';
 
-describe('example', () => {
-  it('is a function', () => {
-    expect(typeof example).toBe('function');
+describe('filmPosters', () => {
+  it('Should be a function', () => {
+    expect(typeof filmPosters).toBe('function');
   });
 
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
-  });
-});
-
-
-describe('anotherExample', () => {
-  it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
-  });
-
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
+  it('returns an array with different elements of movies', () => {
+    expect(typeof data.films[0] ).toBe('object');
   });
 });
+
+
+// describe('anotherExample', () => {
+//   it('is a function', () => {
+//     expect(typeof anotherExample).toBe('function');
+//   });
+
+//   it('returns `anotherExample`', () => {
+//     expect(anotherExample()).toBe('OMG');
+//   });
+// });
