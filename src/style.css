@@ -109,6 +109,7 @@ p {
 
 main{
     text-align: center;
+<<<<<<< HEAD
        
 }
 
@@ -116,4 +117,17 @@ ul .champion image {
     width: 427px;
     height: 268px;
     display: inline;
+=======
+    
+    
+}
+.imagen{
+    padding: 50px;
+    width: 200px;
+    height: 200px;
+}
+.name{
+    color:#98783C;
+
+>>>>>>> a9dee98ba80f283a697649ef444bdddc757822ea
 }
