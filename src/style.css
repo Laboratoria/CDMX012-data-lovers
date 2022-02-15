@@ -112,3 +112,12 @@ main{
     
     
 }
+.imagen{
+    padding: 50px;
+    width: 200px;
+    height: 200px;
+}
+.name{
+    color:#98783C;
+
+}
