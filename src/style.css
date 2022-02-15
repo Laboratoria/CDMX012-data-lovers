@@ -26,9 +26,10 @@ body{
 
 }
 .icon-ball{
-    margin-bottom: -65px;
-    width: 120px;
-    height: 120px;
+    margin-bottom: -35px;
+    width: 80px;
+    height: 80px;
+    position: relative;
 }
 .top-nav ul{
     margin: 0 20px 0 20px;
@@ -40,7 +41,7 @@ body{
 }
 
 .top-nav li{
-    padding: 20px;
+    padding: 5px 20px 5px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -54,17 +55,26 @@ body{
 .top-nav li a:hover{
     color: black;
     background: rgb(24, 221, 40);
-}
-.video{
-    padding-bottom: 20px;
+    width: 100px;
+    height: 25px;
+    border-radius: 3px;
     display: flex;
     justify-content: center;
     align-items: center;
     
 }
+.video{
+    padding: 10px 0 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+}
 video{
-    width: 40%;
-    height: 40%;
+    width: 30%;
+    border-radius: 10px;
+    border: 3px solid white;
 }
 .center-nav{
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.3713) 0%, rgba(196, 196, 196, 0.79) 100%);
@@ -73,7 +83,7 @@ video{
     justify-content: flex-end;
     align-items: flex-start;
     align-content: center;
-    height: 85px;
+    height: 60px;
     padding: 0 10px 0 10px;
 }
 
@@ -247,6 +257,7 @@ video{
     height: 230px;
     position: absolute;
     backface-visibility: hidden;
+    border-radius: 10px;
 
 }
 .card-container img{
@@ -281,6 +292,7 @@ video{
     backface-visibility: hidden;
     transform: perspective(1000px) rotateY(180deg);
     transition: transform .4s ease-out;
+    border-radius: 10px;
 }
 .rarity-pokemon{
     padding-bottom: 10px;
@@ -442,31 +454,74 @@ video{
 }
 .box-pokemon{
     width: 400px;
-    
+
 }
 .box-imagen-pokemon{
     background: white;
     border: 6px solid black;
-    width: 100%;
-    height: 350px;
+    width: 80%;
+    height: 250px;
     padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
 }
+
+
+.box-imagen-pokemon .id-pokemon{
+    margin: -10px 0 0 0;
+    text-align: right;
+}
+
+
 .box-imagen-pokemon img{
-    width: 300px;
+    width: 200px;
+    margin: -25px 0 0 40px;
 }
+.box-imagen-pokemon img:hover{
+    -webkit-transform: scale(1.3);
+	transform: scale(1.3);
+}
+
 .stats-general-pokemon{
     padding-top: 50px;
     
 }
 .stats-pokemon{
-    background: rgba(224, 207, 207, 0.68); 
+    background: white;
+    border: 5px solid black;
+    border-radius: 10px;
 
 }
 .information-pokemon{
-    background: rgba(224, 207, 207, 0.68); 
+    background: white; 
     width: 800px;
     padding: 30px;
-    font-size: 30px;
+    font-size: 26px;
+    border: 5px solid black;
+    border-radius: 10px;
+}
+
+
+.weaknesses-pokemon, .resistant-pokemon{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+
+}
+.buttons-pokemon{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 50px;
+}
+.btn-back, .btn-calculate{
+    background: linear-gradient(180deg, #4574B9 24.48%, rgba(133, 176, 239, 0.56) 100%); 
+    color: white;
+    width: 180px ;
+    font-size: 26px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px black;
 }
 
 

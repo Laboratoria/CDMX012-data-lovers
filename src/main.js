@@ -1,3 +1,6 @@
+/*global Chart*/
+
+
 import {
     filterDataByName,filterDataByType, filterDataById, orderAscendente, orderDescendente, orderA_Z, orderZ_A
 } from './data.js';
@@ -7,6 +10,15 @@ import data from './data/pokemon/pokemon.js';
 
 //contenedor principal
 const principalContainer= document.querySelector(".cards-containers-principal");
+
+const containerVideo = document.createElement("div");
+containerVideo.classList.add("video");
+let videoPokemon = document.createElement("video");
+videoPokemon.classList.add("video-Pokemon");
+videoPokemon.src = "./icon/¡Pokémon UNITE llega este verano!.webm";
+videoPokemon.controls="controls";
+principalContainer.appendChild(containerVideo);
+containerVideo.appendChild(videoPokemon);
 
 const datos = data.pokemon;
 
@@ -85,14 +97,14 @@ function pokemon(arreglo){
         if(tipos.length == 1){
             titleTypePokemon.innerText='Type: ';
             typePokemon.innerText=`${tipos[0].charAt(0).toUpperCase() + tipos[0].slice(1)}`;
-            styleType(tipos[0]);
+            styleType(tipos[0], typePokemon);
         }
         else {
             titleTypePokemon.innerText='Type: ';
             typePokemon.innerText=`${tipos[0].charAt(0).toUpperCase() + tipos[0].slice(1)}`;
-            styleType(tipos[0]);
+            styleType(tipos[0], typePokemon);
             typePokemon2.innerText=`${tipos[1].charAt(0).toUpperCase() + tipos[1].slice(1)}`;
-            styleType2(tipos[1]);
+            styleType2(tipos[1],typePokemon2);
         }
 
         let encounterOne = arreglo[i].encounter['base-flee-rate'];
@@ -128,7 +140,9 @@ function pokemon(arreglo){
         buttonMoreInformation.addEventListener('click', () => {
             
             principalContainer.innerHTML = '';
-        
+            
+
+
             let pokemonContainer = document.createElement("div");
             pokemonContainer.classList.add("pokemon-container");
         
@@ -177,8 +191,6 @@ function pokemon(arreglo){
             let resistantPokemon = document.createElement("div");
             resistantPokemon.classList.add("resistant-pokemon");
         
-        
-        
             let about = arreglo[i].about;
             aboutPokemon.innerText =`${about}`;
         
@@ -194,11 +206,11 @@ function pokemon(arreglo){
         
             let evolutions = arreglo[i].evolution;
             evolutionsPokemon.innerText =`Evolutions: ${Object.keys(evolutions)} : ${Object.values(evolutions)}`;
-            console.log(evolutions)
+            //console.log(evolutions)
         
             let statsPokemonCanvas = statsPokemon.getContext("2d");
             let stats = arreglo[i].stats;
-            console.log(Object.keys(stats));
+            //console.log(Object.keys(stats));
         
             const statsX= Object.keys(stats);
             const statsY={
@@ -207,6 +219,7 @@ function pokemon(arreglo){
                 borderColor: 'rgba(54, 162, 235, 1)', // Color del borde
                 borderWidth: 1,// Ancho del borde
             };
+
             new Chart(statsPokemonCanvas, {
                 type: 'bar',// Tipo de gráfica
                 data: {
@@ -233,6 +246,13 @@ function pokemon(arreglo){
         
             btnCalculate.innerHTML = "Calculate";
             btnBack.innerHTML = "Back";
+            
+            btnBack.addEventListener('click', () => {
+                principalContainer.innerHTML = '';
+                pokemon(datos);
+
+            })
+
 
             let debilidad = arreglo[i].weaknesses;
             weaknessesPokemon.innerText ="\n Weaknesses: ";
@@ -263,7 +283,9 @@ function pokemon(arreglo){
             boxPokemon.appendChild(statsGeneralPokemon);
             statsGeneralPokemon.appendChild(statsPokemon);
         
-            boxImagenPokemon.appendChild(imagenPokemon);
+            boxImagenPokemon.appendChild(namePokemon);
+            boxImagenPokemon.appendChild(imagenPokemon)
+            boxImagenPokemon.appendChild(idPokemon)
         
             informationPokemon.appendChild(aboutPokemon);
             informationPokemon.appendChild(generationPokemon);
@@ -278,19 +300,20 @@ function pokemon(arreglo){
         
         });
         
-        function styleType(tipo){
-            typePokemon.classList.add(tipo);
-        }
 
-        function styleType2(tipo){
-            typePokemon2.classList.add(tipo);
-        }
 
 
 
     }
 }
 
+function styleType(tipo, typePokemon){
+    typePokemon.classList.add(tipo);
+}
+
+function styleType2(tipo, typePokemon2){
+    typePokemon2.classList.add(tipo);
+}
 
 pokemon(datos);
 
