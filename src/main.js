@@ -1,3 +1,6 @@
+/*global Chart*/
+
+
 import {
     filterDataByName,filterDataByType, filterDataById, orderAscendente, orderDescendente, orderA_Z, orderZ_A
 } from './data.js';
@@ -94,14 +97,14 @@ function pokemon(arreglo){
         if(tipos.length == 1){
             titleTypePokemon.innerText='Type: ';
             typePokemon.innerText=`${tipos[0].charAt(0).toUpperCase() + tipos[0].slice(1)}`;
-            styleType(tipos[0]);
+            styleType(tipos[0], typePokemon);
         }
         else {
             titleTypePokemon.innerText='Type: ';
             typePokemon.innerText=`${tipos[0].charAt(0).toUpperCase() + tipos[0].slice(1)}`;
-            styleType(tipos[0]);
+            styleType(tipos[0], typePokemon);
             typePokemon2.innerText=`${tipos[1].charAt(0).toUpperCase() + tipos[1].slice(1)}`;
-            styleType2(tipos[1]);
+            styleType2(tipos[1],typePokemon2);
         }
 
         let encounterOne = arreglo[i].encounter['base-flee-rate'];
@@ -297,19 +300,20 @@ function pokemon(arreglo){
         
         });
         
-        function styleType(tipo){
-            typePokemon.classList.add(tipo);
-        }
 
-        function styleType2(tipo){
-            typePokemon2.classList.add(tipo);
-        }
 
 
 
     }
 }
 
+function styleType(tipo, typePokemon){
+    typePokemon.classList.add(tipo);
+}
+
+function styleType2(tipo, typePokemon2){
+    typePokemon2.classList.add(tipo);
+}
 
 pokemon(datos);
 
