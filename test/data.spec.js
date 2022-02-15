@@ -1,23 +1,24 @@
-import { example, anotherExample } from '../src/data.js';
+import { orderA_Z} from '../src/data.js';
 
 
-describe('example', () => {
-  it('is a function', () => {
-    expect(typeof example).toBe('function');
+describe('funciones de ordenamiento', () => {
+  it('ordena de la A a la Z', () => {
+    const dataExample = [
+      {
+        name:"picachu",
+      },
+      {
+        name:"raichu",
+      },
+      {
+        name:"nidorina",
+      },
+    ];
+
+    expect(orderA_Z(dataExample)).toBeDefined();
   });
 
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
-  });
 });
 
 
-describe('anotherExample', () => {
-  it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
-  });
 
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
-  });
-});
