@@ -1,176 +1,132 @@
-import { orderByAz } from "./data.js";
+import { order1_251, order251_1, orderByAz, orderByZa } from "./data.js";
 import data from "./data/pokemon/pokemon.js";
-/**********ESTO ES LA VARIABLE QUE TIENE EL OBJETO  ****************/
-let dataPokemons = data.pokemon; //Estamos guardando toda la data en una variable
-
-/**********ESTAMOS ITERANDO EL OBJETO  **************************/
-let eachPokemon = Object.keys(dataPokemons);
-for (let i = 0; i < dataPokemons.length; i++) {
-  let ePokemon = eachPokemon[i];
-  //console.log(dataPokemons[ePokemon]); //Lo sigue regresando como objeto¿Por qué?
-  //console.log(ePokemon);
-}
-/***********ESTAMOS OBTENIENDO TIPOS DE POKEMON  *****************/
-const tiposPokemon = data.pokemon.map(function (pokemon) {
-  let pokemonTypes = pokemon.type;
-  return pokemonTypes;
-});
-console.log(tiposPokemon);
 
 /************AQUI SACAMOS IMAGENES ************************/
-let showTotalPokemons = [""]; //se crea una variable vacia que almacena lo iterado
-let showTotalContent = [""];
-for (let property of data.pokemon) {
-  //bucle for accede a la data
+window.showPokemons = function showPokemons(pokemons) {
+  //esta funcion almacena la vista de todos los pokemons
+  const rootElement = document.getElementById("showData"); //esta variable ayuda a que la vista de los pokemons cambie de acuerdo a los datos que se desean ver
+  removeChildNodes(rootElement); //ejecuta la funcion para eliminar sus hijos
 
-  let identificador = "pokeCards"; //nombre de la clase
-  let idDirection = "#" + `${property.name}`;
-  let idSeccion = property.num;
-  let modalDataOpen = "idModal"; //**********tal vez pueda ir en la seccion o en el num, ya que num es el id de cada iteracion
+  //esta variable va a almacenar la informacion de todos los pokemons
 
-  const modalWindow = document.createElement("a");
-  modalWindow.setAttribute("href", idDirection);
+  for (let property of pokemons) {
+    //bucle for accede a la data
 
-  const cardSpace = document.createElement("section"); //crea una sección
-  cardSpace.setAttribute("class", identificador); //crea el atributo clase identificador='pokeCards'
-  cardSpace.setAttribute("id", idSeccion);
+    let identificador = "pokeCards"; //nombre de la clase
+    let idDirection = "#" + `${property.name}`;
+    let idSeccion = property.num;
+    let modalDataOpen = "idModal"; //**********tal vez pueda ir en la seccion o en el num, ya que num es el id de cada iteracion
 
-  const cardName = document.createElement("p"); //crea el elemento parrafo
-  cardName.innerHTML =
-    "Pokémon: <br>" +
-    `${property.name[0].toUpperCase() + property.name.slice(1)}`; // cambia el texto vacio del parrafo por la propiedad name convirtiendo la primera letra del array en mayuscula y concatenando desde la posicion 1 con slice
+    const modalWindow = document.createElement("a");
+    modalWindow.setAttribute("href", idDirection);
 
-  const cardNum = document.createElement("p"); //crea el elemento parrafo
-  cardNum.innerHTML = property.num; // cambia el texto vacio del parrafo por la propiedad numero
+    const cardSpace = document.createElement("section"); //crea una sección
+    cardSpace.setAttribute("class", identificador); //crea el atributo clase identificador='pokeCards'
+    cardSpace.setAttribute("id", idSeccion);
 
-  const pokemonImag = document.createElement("img"); //crea un Elemento de tipó imagen
-  pokemonImag.setAttribute("src", `${property.img}`); //le asigna el atributo de src con su propiedad que es el link
-  pokemonImag.setAttribute("data-open", modalDataOpen);
+    const cardName = document.createElement("p"); //crea el elemento parrafo
+    cardName.innerHTML =
+      "Pokémon: <br>" +
+      `${property.name[0].toUpperCase() + property.name.slice(1)}`; // cambia el texto vacio del parrafo por la propiedad name convirtiendo la primera letra del array en mayuscula y concatenando desde la posicion 1 con slice
 
-  cardSpace.appendChild(pokemonImag); //cardSpace es el nodo padre y apokemonImag es el nodo hijo
-  cardSpace.appendChild(cardName); //cardSpace es el nodo padre y cardName es el nodo hijo
-  cardSpace.appendChild(cardNum); //cardSpace es el nodo padre y cardNumes el nodo hijo
-  modalWindow.appendChild(cardSpace);
+    const cardNum = document.createElement("p"); //crea el elemento parrafo
+    cardNum.innerHTML = property.num; // cambia el texto vacio del parrafo por la propiedad numero
 
-  document.getElementById("showData").appendChild(modalWindow); //show data es el nodo padre y cardSpace el nodo hijo.
-  showTotalPokemons = cardSpace;
+    const pokemonImag = document.createElement("img"); //crea un Elemento de tipó imagen
+    pokemonImag.setAttribute("src", `${property.img}`); //le asigna el atributo de src con su propiedad que es el link
+    pokemonImag.setAttribute("data-open", modalDataOpen);
 
-  /***********mostrando ventana modal */
+    cardSpace.appendChild(pokemonImag); //cardSpace es el nodo padre y apokemonImag es el nodo hijo
+    cardSpace.appendChild(cardName); //cardSpace es el nodo padre y cardName es el nodo hijo
+    cardSpace.appendChild(cardNum); //cardSpace es el nodo padre y cardNumes el nodo hijo
+    modalWindow.appendChild(cardSpace);
 
-  let aboutPokemon = property.about;
-  let resistantPokemon = property.resistant;
-  let weaknessesPokemon = property.weaknesses;
-  let typePokemon = property.type;
+    document.getElementById("showData").appendChild(modalWindow); //show data es el nodo padre y cardSpace el nodo hijo.
 
-  const showModal = document.createElement("section");
-  showModal.setAttribute("id", `${property.name}`);
-  showModal.setAttribute("class", "modal");
+    /***********mostrando ventana modal */
 
-  const allContent = document.createElement("article");
-  allContent.setAttribute("id", "idModal");
-  allContent.setAttribute("class", "modalDialog");
+    let aboutPokemon = property.about;
+    let resistantPokemon = property.resistant;
+    let weaknessesPokemon = property.weaknesses;
+    let typePokemon = property.type;
 
-  const buttonModal = document.createElement("a");
-  const textButton = document.createTextNode("X");
-  buttonModal.appendChild(textButton);
-  buttonModal.setAttribute("href", "#");
-  buttonModal.setAttribute("class", "closeModal");
-  buttonModal.setAttribute("id", "buttonModal");
+    const showModal = document.createElement("section");
+    showModal.setAttribute("id", `${property.name}`);
+    showModal.setAttribute("class", "modal");
 
-  const contentTitle = document.createElement("h2");
-  contentTitle.innerHTML = property.name.toUpperCase();
-  contentTitle.setAttribute("class", "modalTitle");
+    const allContent = document.createElement("article");
+    allContent.setAttribute("id", "idModal");
+    allContent.setAttribute("class", "modalDialog");
 
-  const contentImag = document.createElement("img"); //crea un Elemento de tipo imagen
-  contentImag.setAttribute("src", `${property.img}`); //le asigna el atributo de src con su propiedad que es el link
-  //pokemonImag.setAttribute("data-open", modalDataOpen);
+    const buttonModal = document.createElement("a");
+    const textButton = document.createTextNode("X");
+    buttonModal.appendChild(textButton);
+    buttonModal.setAttribute("href", "#");
+    buttonModal.setAttribute("class", "closeModal");
+    buttonModal.setAttribute("id", "buttonModal");
 
-  const contentAbout = document.createElement("p");
-  contentAbout.innerHTML =
-    " <strong>Datos: <br> </strong>" +
-    " <strong> Descripción <br></strong>" +
-    aboutPokemon +
-    " <strong><br>Tipo: <br> </strong>" +
-    typePokemon +
-    " <strong><br>Resistencia: <br> </strong>" +
-    resistantPokemon +
-    " <strong><br>Debilidades:<br> </strong> " +
-    weaknessesPokemon;
+    const contentTitle = document.createElement("h2");
+    contentTitle.innerHTML = property.name.toUpperCase();
+    contentTitle.setAttribute("class", "modalTitle");
 
-  allContent.appendChild(buttonModal);
-  allContent.appendChild(contentTitle);
-  allContent.appendChild(contentImag);
-  allContent.appendChild(contentAbout);
-  showModal.appendChild(allContent);
-  document.getElementById("showData").appendChild(showModal);
-  showTotalContent = allContent;
+    const contentImag = document.createElement("img"); //crea un Elemento de tipo imagen
+    contentImag.setAttribute("src", `${property.img}`); //le asigna el atributo de src con su propiedad que es el link
+    //pokemonImag.setAttribute("data-open", modalDataOpen);
+
+    const contentAbout = document.createElement("p");
+    contentAbout.innerHTML =
+      " <strong>Datos: <br> </strong>" +
+      " <strong> Descripción <br></strong>" +
+      aboutPokemon +
+      " <strong><br>Tipo: <br> </strong>" +
+      typePokemon +
+      " <strong><br>Resistencia: <br> </strong>" +
+      resistantPokemon +
+      " <strong><br>Debilidades:<br> </strong> " +
+      weaknessesPokemon;
+
+    allContent.appendChild(buttonModal);
+    allContent.appendChild(contentTitle);
+    allContent.appendChild(contentImag);
+    allContent.appendChild(contentAbout);
+    showModal.appendChild(allContent);
+    document.getElementById("showData").appendChild(showModal);
+  }
+};
+
+window.orderPokemons = function orderPokemons() {
+  let optionSelected = document.getElementById("orderBy").value;
+  let result = [];
+  switch (optionSelected) {
+    /*case "Pokedex":
+      result = orderPokedex();
+      break;*/
+    case "1-251":
+      result = order1_251();
+      break;
+    case "251-1":
+      result = order251_1();
+      break;
+    case "AZ":
+      result = orderByAz();
+      break;
+    case "ZA":
+      result = orderByZa();
+      break;
+    default:
+      console.log("esto no funciona");
+  }
+  showPokemons(result);
+};
+
+//funcion que elimine a los hijos para limpiar pag, esto cambia al seleccionar
+function removeChildNodes(parent) {
+  while (parent.firstChild) {
+    //Condicion: mientras el parametro parent encuentre que tiene un hijo ejecuta el bucle
+    parent.removeChild(parent.firstChild); // remueve/quita/elimina un hijo a parent(elimina el primer hijo)
+  }
 }
-/********************AQUI ESTAMOS IMPRIMIENDO DATA EN VENTANAS EMERGENTES ***********************/
-/*
-let showTotalContent = [""];
 
-for (let content of data.pokemon) {
-  let idModalContent = content.name;
-  let classModalDialog = "modalDialog";
-  let closeModal = "closeModal";
-  let modalTitle = "modalTitle";
-  let aboutPokemon = content.about;
-  let resistantPokemon = content.resistant;
-  let weaknessesPokemon = content.weaknesses;
-  let typePokemon = content.type;
-
-  const allContent = document.createElement("section");
-  allContent.setAttribute("id", idModalContent);
-  allContent.setAttribute("class", classModalDialog);
-
-  const buttonModal = document.createElement("a");
-  buttonModal.setAttribute("class", closeModal);
-  buttonModal.setAttribute("value", "X");
-  buttonModal.setAttribute("type", "button");
-
-  const contentTitle = document.createElement("h2");
-  contentTitle.innerHTML = content.name.toUpperCase();
-  contentTitle.setAttribute("class", modalTitle);
-
-  const contentImag = document.createElement("img"); //crea un Elemento de tipo imagen
-  contentImag.setAttribute("src", `${content.img}`); //le asigna el atributo de src con su propiedad que es el link
-  //pokemonImag.setAttribute("data-open", modalDataOpen);
-  const contentAbout = document.createElement("p");
-  contentAbout.innerHTML =
-    " <strong>Datos: <br> </strong>" +
-    " <strong> Descripción <br></strong>" +
-    aboutPokemon +
-    " <strong><br>Tipo: <br> </strong>" +
-    typePokemon +
-    " <strong><br>Resistencia: <br> </strong>" +
-    resistantPokemon +
-    " <strong><br>Debilidades:<br> </strong> " +
-    weaknessesPokemon;
-
-  allContent.appendChild(buttonModal);
-  allContent.appendChild(contentTitle);
-  allContent.appendChild(contentImag);
-  allContent.appendChild(contentAbout);
-  document.getElementById("idModal").appendChild(allContent);
-  showTotalContent = allContent;
-}*/
-
-/*************AQUI SE LE DA FUNCIONALIDAD AL BOTON CLOSE *********/
-
-/*
-const openModal = document.querySelector("data-open]");
-const isVisibility = "is-visibility";
-const closeModal = document.querySelector("closeModal");
-
-for (const modal of openModal) {
-  modal.addEventListener("click", function () {
-    const modalId = this.dataset.open;
-    document.getElementById("idModal").classList.add(isVisibility);
-  });
-}*/
-/*
-for(const closeModal of openModal)
-*/
 /*
 HACER UN CONSOLE.LOG DE LA DATA            S
 ACCDER A LOS 3 ELEMENTOS JUNTOS EN UNA MISMA FILA 
@@ -178,5 +134,10 @@ ACCEDER AL NUMERO  DE LA DATA
 ACCEDER AL NOMBRE IMAGEN DE LA DATA        
 ACCEDER AL NOMBRE DE LA DATA               
 MODIFICAR LA SECCIÓN PARA CREAR UNA LISTA 
-
  */
+
+//crear variable que almacene id del input
+//ligar un evento click para que ejecute una funcion
+//crear variable que almacene los datos por id #pokemon
+//crear la funcion con que los ordenes
+//ligar lo que retorna de la funcion a lo que se ve en la interfaz

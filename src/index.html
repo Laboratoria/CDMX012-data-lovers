@@ -29,10 +29,12 @@
         />
       </section>
       <section class="menu">
-        <select name="orderBy" id="orderBy">
-          <option value="orderby">Ordenar por...</option>
-          <option value="AZ">De la letra A a la Z</option>
-          <option value="ZA">De la letra Z a la A</option>
+        <select name="orderBy" id="orderBy" onchange="orderPokemons()">
+          <option value="Pokedex" id="Pokedex">Ordenar por...</option>
+          <option value="1-251" id="1-251">De menor a mayor número</option>
+          <option value="251-1" id="251-1">De mayor a menor número</option>
+          <option value="AZ" id="AZ">De la letra A a la Z</option>
+          <option value="ZA" id="ZA">De la letra Z a la A</option>
         </select>
 
         <select name="Clasify" id="Clasify">
@@ -43,7 +45,6 @@
         </select>
       </section>
       <section id="showData"></section>
-      <!--<section id="idModal" class="modal"></section>-->
     </main>
     <footer>
       <p>©Derechos reservados</p>
