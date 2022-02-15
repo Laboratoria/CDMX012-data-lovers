@@ -50,9 +50,6 @@ export function orderByZa() {
 }
 /*
 
-export const orderByZtoA = () => {
-  return console.log("Hola");
-};
 
 export const filterByTypes = () => {
   return "OMG";
