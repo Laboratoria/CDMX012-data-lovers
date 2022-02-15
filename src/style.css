@@ -1,4 +1,4 @@
-/*seccion de menu*/
+/*seccion de menu backgroud*/
 *{
 margin : 0px;
 padding: 0px;
@@ -9,37 +9,53 @@ background-attachment: fixed;
 
 }
 
+/*titulo de la serie*/
 .content {
 
     width: 600px;
-    height: 400px;
+    height: 450px;
     line-height: 400px;
     margin:auto;
-    padding: 10px 10px 10px 10px;
-    position:
-     
+    padding:0%; 
 
 }
 
 .content img{
 
     vertical-align: middle;
-
+    display:fixed;
+    
+    
 }
 
-.flex-container-wrap{
+/* seccion de portales*/
+
+.flex-container{
+
     display:flex;
-    padding: 10px;
+    float: inline-end;
+    justify-content: space-between;
     flex-wrap: wrap;
+    
+}
 
+.flex-container div{
+    width: 20px;
+    height: 20px;
+    margin: 80%;
+    padding: 50%;
+}
+
+.flex-container img {
+    
+    margin: 10px;
+    width:10%;
+  
 
 }
 
-.flex-container-wrap div{
-    width: 50px;
-    height: 50px;
-    margin: 5px;
-
+.scaled{
+    transform: scale(1,0.5);
 
 
 }
