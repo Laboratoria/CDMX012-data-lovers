@@ -12,15 +12,14 @@ let imgD2 = document.getElementById('image')
 
 let arrayChampions = Object.values(data.data)
     for (let champion of arrayChampions) {
-
     let img = document.createElement('img')
-        img.getAttribute(champion.splash)
+        img.src = champion.splash
+        //img.setAttribute('height', '268')
+        //img.setAttribute('width', '427')
+
     let img2 = document.getElementById('image')
         img2.appendChild(img)
 
-
-
-   
-    console.log(img2)
-    
+    //console.dir (img);
 }
+

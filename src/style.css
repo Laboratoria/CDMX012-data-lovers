@@ -109,6 +109,11 @@ p {
 
 main{
     text-align: center;
-    
-    
+       
+}
+
+ul .champion image {
+    width: 427px;
+    height: 268px;
+    display: inline;
 }
