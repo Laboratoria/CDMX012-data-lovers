@@ -18,7 +18,6 @@ html {
 body {
   width: 100%;
   height: 100%;
-  border: 1px solid black;
   display: flex;
   flex-direction: column;
   background-image: url("images/backimage.jpg");
@@ -32,9 +31,9 @@ body {
   position: fixed;
   left: 0;
   top: 5%;
-  width: 10%;
-  height: 25%;
-  border-radius: 0 20px 20px 0;
+  height: 20%;
+  width: 8%;
+  border-radius: 0 10px 10px 0;
   background-color: var(--general-color);
   background-image: url("images/LogoGW.png");
   background-repeat: no-repeat;
@@ -66,7 +65,7 @@ main {
 
 .barraInput {
   padding: 0.5rem;
-  width: 85%;
+  width: 95%;
   height: fit-content;
   display: grid;
   gap: 0.5rem;
@@ -90,11 +89,10 @@ h1 {
 }
 
 .titulo p {
-
-    font-size: 15px;
-    text-align: center;
-    width: 85%;
-    line-height: 18px;
+  font-size: 15px;
+  text-align: center;
+  width: 85%;
+  line-height: 18px;
 }
 
 .filtro {
@@ -120,37 +118,37 @@ h1 {
 }
 
 .search-icon {
-    width: 20px;
-    height: 20px;
+  width: 20px;
+  height: 20px;
 }
 
 input[type="text"] {
-    width: 60%;
-    font-size: 14px;
-    text-align: center;
-    border-radius: 20px;
-    outline: none;
-    border: none;
-    padding: .25rem;
+  width: 80%;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  padding: 0.25rem;
 }
 
 .galeria {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 8px;
-    margin-bottom: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 8px;
+  margin-bottom: 1rem;
 }
 
 .galeria article {
-    background-color: #ffffffde;
-    text-align: center;
-    border-radius: 4%;
-    border: 1px solid #00000066;
+  background-color: #ffffffde;
+  text-align: center;
+  border-radius: 4%;
+  border: 1px solid #00000066;
 }
 
 .galeria .filmName1 {
-    font-weight: bold;
-    font-size: 15px;
+  font-weight: bold;
+  font-size: 15px;
 }
 
 .galeria .year {
@@ -158,28 +156,28 @@ input[type="text"] {
 }
 
 .star-icon {
-    width: 20px;
-    height: 20px;
-    color: gold;
-    stroke: #81680E;
+  width: 20px;
+  height: 20px;
+  color: gold;
+  stroke: #81680e;
 }
 
 .galeria .score {
-    font-size: 14px;
-    display: flex;
-    align-items: end;
-    justify-content: center;
+  font-size: 14px;
+  display: flex;
+  align-items: end;
+  justify-content: center;
 }
 
 .galeria img {
-    border-top-left-radius: 4%;
-    border-top-right-radius: 4%;
-    width: 100%;
+  border-top-left-radius: 4%;
+  border-top-right-radius: 4%;
+  width: 100%;
 }
 
 .galeria .name {
-    font-weight: bold;
-    font-size: 15px;
+  font-weight: bold;
+  font-size: 15px;
 }
 
 .img-fluid {
@@ -206,14 +204,14 @@ a {
 /* Medium devices (landscape tablets, 768px and up) */
 
 @media only screen and (min-width: 768px) {
-
-    .galeria {
-        grid-template-columns: repeat(3, 1fr);
-        margin-bottom: 1.5rem;
-    }
+  .galeria {
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 1.5rem;
+  }
 
   .logo {
-    width: 8%;
+    height: 20%;
+    width: 5%;
   }
 
   h1 {
@@ -245,18 +243,19 @@ a {
 /* Large devices (laptops/desktops, 992px and up) */
 
 @media only screen and (min-width: 992px) {
-
   .galeria {
-      grid-template-columns: repeat(4, 1fr);
-      width: 85%;
-      margin-bottom: 3rem;
+    grid-template-columns: repeat(4, 1fr);
+    width: 85%;
+    margin-bottom: 3rem;
   }
   .titulo {
-      padding-top: 2rem;
+    padding-top: 2rem;
   }
-}
+
   .logo {
-    width: 6%;
+    top: 8%;
+    height: 30%;
+    width: 4%;
   }
 
   input[type="text"] {
@@ -268,25 +267,21 @@ a {
 
 @media only screen and (min-width: 1400px) {
   .galeria {
-      grid-template-columns: repeat(5, 1fr);
-      grid-gap: 14px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 14px;
   }
   .titulo {
-      padding-top: 3rem;
+    padding-top: 3rem;
   }
   .titulo p {
-      font-size: 15px;
+    font-size: 23px;
+    line-height: 25px;
   }
   .filtro {
-      font-size: 14px;
+    font-size: 23px;
   }
-  .logo {
-    width: 3%;
-  }
-  
+
   input[type="text"] {
     width: 30%;
   }
 }
-
-
