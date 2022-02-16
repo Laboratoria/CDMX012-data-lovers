@@ -4,30 +4,36 @@
     <meta charset="utf-8">
     <title>Pokémon Go!</title>
     <link rel="stylesheet" href="style.css" />
-    <link href='https://fonts.googleapis.com/css?family=Rowdies' rel='stylesheet'> 
+    <link href="https://fonts.googleapis.com/css?family=Rowdies" rel="stylesheet"> 
   </head>
   <body>
     <div class="menuBar">
       <i id="menuIcon" class="fas fa-bars"></i> 
+      <div>
+        <ul class= "boxFiltrado" >
+          <li><a class= "filtrado" id="value1">Filtrado</a>
+            <ul>
+              <li><a class="mainButtons" id="pokeType" value="value2">Tipos</a> </li>
+              <li><a class="mainButtons" id="pokeResistant" value="valu3">Resistencia</a></li> 
+              <li><a class="mainButtons" id="pokeWeaknesses" value="value4">Debilidad</a></li> 
+            </ul>
+          </li> 
+          <li><a id="value5">Ordenado</a> 
+            <ul>
+              <li><a  class="mainButtons" id="pokeNumber" value="value6">Numérico</a></li>
+              <li><a class="mainButtons" id="pokeName" value="value7">Alfabético A-Z</a> </li>
+              <li><a class="mainButtons" id="nameReverse" value="value8">Alfabético de la Z-A</a> </li>
+            </ul>
+          </li> 
+          </ul>
+      </div>
       <img id="pokeBall" src= "imagenes/pokemon.png">
       <div id="seacrhGroup"></div>
       <input id="searchBar" type="text" placeholder="Buscar...">
       <i id="searchIcon" class="fas fa-search"></i>
+      
     </div>
-    <!--comence a hacer pruebas del select que comento Carlos, pero me quedé hasta ahí por que ya era hora de descansar jijiji -->
-    <select class= "filtrado" name="select">
-      <option value="value1">Filtrado</option>
-      <option class="buttonIninio" value="value1">Tipo</option>
-      <option value="value2" >Resistencia</option>
-      <option value="value3">Debilidad</option>
-    </select>
-    <a id="mainButtons"> <!-- por qué una etiqueta a??? -->
-      <button class="mainButtons" id="pokeType">Tipo</button>
-      <button class="mainButtons" id="pokeNumber"> Número</button>
-      <button class="mainButtons" id="pokeName"> Nombre</button>
-      <button class="mainButtons" id="pokeResistant"> Resistencia</button>
-      <button class="mainButtons" id="pokeWeaknesses"> Debilidad</button>
-    </a>
+ 
 
     <div id="typesShown">  
       <button class="buttonFire typeB" id="fireType">Fuego</button>

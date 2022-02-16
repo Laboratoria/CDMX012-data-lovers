@@ -5,19 +5,18 @@ body{
  background-repeat: no-repeat;
  background-attachment: fixed;
  margin: 0px;
+
 }
 
 .menuBar{
   background-color: #00004A; 
   display: flex;
   margin: 0px 0px 0px 0px;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
  }
- #menuIcon{
-  color:white;
-  font-size: 40px;
-  margin-top: 20px;
-  margin-left: 40px;
-}
+ 
 #pokeBall{
   size: 200px;
   width: 80px;
@@ -40,22 +39,10 @@ body{
   text-align: center;
   margin-left: 20px;
 }
-.mainButtons{
-  background-color: #FF1C1C;
-  width: 150px;
-  height: 40px;
-  margin-top: 30px;
-  margin:20px;
-  border-radius: 10px;
-  display:inline-block;
-  margin-left: 0px;
-  font-family:'Rowdies'; 
-  font-size: 15px;
-  color:white;
-}
+
 
 .organized{
-  background-color: #ffffffC7;
+ background-color: #ffffffC7;
 }
 
 #typesShown{
@@ -64,6 +51,9 @@ body{
   margin: 0px 70px 0px 70px;
   background-color: rgba(255, 255, 255, 0.596);
   border-radius: 10px;
+ position: absolute;
+ margin-top: 240px;
+ 
   
 }
 
@@ -72,6 +62,8 @@ body{
   text-align: left;
   margin: 0px 70px 0px 70px;
   border-radius: 10px;
+  position: relative;
+  margin-top: 600px;
 }
 
 h1{
@@ -220,14 +212,36 @@ background-color: #FFEDFA;
   background-color: #F9D9C7;
 }
 
-.modalBox{
-
+.boxFiltrado li a {
+  background-color: red;
+  color: white;
+  list-style: none;
+  padding: 10px 15px;
+  display: flex;
+  margin-top: 30px;
+  margin:10px;
+  font-family:'Rowdies'; 
+  font-size: 15px;
+}
+ul {
+  list-style: none;
+}
+.boxFiltrado li a:hover{
+  background-color: tan;
+}
+.boxFiltrado > li{
+float:left;
+}
+.boxFiltrado li ul{
+  display: none;
+  position: absolute;
+  min-width: 140px;
+}
+.boxFiltrado li:hover > ul{
+  display: block;
 }
 
-.modalContent{
 
-  
-}
 
 
 

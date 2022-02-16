@@ -1,23 +1,26 @@
-import { example, anotherExample } from '../src/data.js';
+import { types } from '@babel/core';
+import dataPokemon from '../src/data.js';
 
 
-describe('example', () => {
-  it('is a function', () => {
-    expect(typeof example).toBe('function');
+describe('pokemonTypesObject',() => {
+  it('debería ser un objeto', () => {
+    expect( typeof dataPokemon).toBe('object');
   });
 
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
-  });
-});
 
-
-describe('anotherExample', () => {
-  it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
-  });
-
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
+  
+it('tipos debería retornar los pokemones por categoria`', () => {
+    expect( types()).toEqual('fire,water, steel');
   });
 });
+
+
+// describe('anotherExample', () => {
+//   it('is a function', () => {
+//     expect(typeof anotherExample).toBe('function');
+//   });
+
+//   it('returns `anotherExample`', () => {
+//     expect(anotherExample()).toBe('OMG');
+//   });
+//});
