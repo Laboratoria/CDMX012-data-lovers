@@ -3,7 +3,7 @@ import data from './data/pokemon/pokemon.js';
 
 const byName= dataPokemon.byName(data);
 const byNumber= dataPokemon.byNumber(data);
-const pokemonTypes= dataPokemon.pokemonTypesObject();
+const pokemonTypes= dataPokemon.pokemonTypesObject(data);
 
 document.getElementById("pokeBall").addEventListener("click", refreshPage);
 
@@ -95,7 +95,7 @@ function htmlStructureFire(){
      div.innerHTML+=resultado; 
   }
   
-  let sinlsglePokemon = document.getElementsByClassName("flexbox");
+  let singlePokemon = document.getElementsByClassName("flexbox");
   singlePokemon.forEach(pokemon => pokemon.addEventListener('click', () => {
     
   }));

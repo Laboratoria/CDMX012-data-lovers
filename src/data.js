@@ -1,6 +1,8 @@
-import data from './data/pokemon/pokemon.js';
+
+//import data from './data/pokemon/pokemon.js';
 const dataPokemon={
-  byName:()=>{
+  
+  byName:(data)=>{
     let pokemon=data.pokemon.slice(0);
     let byName=[];
     byName= pokemon.sort((a,b)=>{
@@ -12,13 +14,13 @@ const dataPokemon={
     return byName
   },
 
-  byNumber:()=>{
+  byNumber:(data)=>{
     const pokemon = data.pokemon;
     let byNumber = pokemon.slice(0)
     return byNumber;
  },
 
- pokemonTypesObject:()=>{
+ pokemonTypesObject:(data)=>{
     const pokemon= data.pokemon; 
     let pokemonTypesObject= {}; 
     for(let i=0; i<pokemon.length; i++){ 
@@ -34,7 +36,7 @@ const dataPokemon={
     return pokemonTypesObject;
   },
 
-  pokemonResistant : (filterResistant)=>{
+  pokemonResistant : (filterResistant, data)=>{
     let arrayResistant=[];
     let pokemon= data.pokemon;
  
