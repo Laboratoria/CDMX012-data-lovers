@@ -4,15 +4,17 @@
     <meta charset="utf-8">
     <title>Pokémon Go!</title>
     <link rel="stylesheet" href="style.css" />
-    <link href='https://fonts.googleapis.com/css?family=Rowdies' rel='stylesheet'> 
-  </head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Rowdies:wght@300&display=swap" rel="stylesheet">  </head>
   <body>
     <div class="menuBar">
       <i id="menuIcon" class="fas fa-bars"></i> 
       <img id="pokeBall" src= "imagenes/pokemon.png">
-      <div id="seacrhGroup"></div>
-      <input id="searchBar" type="text" placeholder="Buscar...">
-      <i id="searchIcon" class="fas fa-search"></i>
+      <div id="seacrhGroup">
+        <input id="searchBar" type="text" placeholder="Buscar...">
+        <i id="searchIcon" class="fas fa-search"></i>
+      </div>
     </div>
     <!--comence a hacer pruebas del select que comento Carlos, pero me quedé hasta ahí por que ya era hora de descansar jijiji -->
     <select class= "filtrado" name="select">
@@ -21,7 +23,7 @@
       <option value="value2" >Resistencia</option>
       <option value="value3">Debilidad</option>
     </select>
-    <a id="mainButtons"> <!-- por qué una etiqueta a??? -->
+    <a id="mainButtons"> <!-- por qué una etiqueta a? -->
       <button class="mainButtons" id="pokeType">Tipo</button>
       <button class="mainButtons" id="pokeNumber"> Número</button>
       <button class="mainButtons" id="pokeName"> Nombre</button>
@@ -33,8 +35,8 @@
       <button class="buttonFire typeB" id="fireType">Fuego</button>
       <button class="buttonWater typeB" id="waterType">Agua</button>
       <button class="buttonIce typeB" id="iceType">Hielo</button>
-      <button class= "buttonGhost typeB" id="ghostType">Fantasma</button>
-      <button class= "buttonDragon typeB" id="dragonType">Dragon</button>
+      <button class="buttonGhost typeB" id="ghostType">Fantasma</button>
+      <button class="buttonDragon typeB" id="dragonType">Dragon</button>
       <button class="buttonBug typeB" id="bugType">Bicho</button>
       <button class="buttonElectric typeB" id="electricType">Electrico</button>
       <button class="buttonGrass typeB" id="grassType">Planta</button>
@@ -42,29 +44,29 @@
       <button class="buttonRock typeB" id="rockType">Roca</button>
       <button class="buttonDark typeB" id="darkType">Siniestro</button>
       <button class="buttonFairy typeB" id="fairyType">Hada</button>
-      <button class= "buttonFlying typeB" id="flyingType">Volador</button>
+      <button class="buttonFlying typeB" id="flyingType">Volador</button>
       <button class="buttonGround typeB" id="groundType">Tierra</button>
       <button class="buttonPoison typeB" id="poisonType">Veneno</button>
       <button class="buttonPsychic typeB" id="psychicType">Psiquico</button>
       <button class="buttonSteel typeB" id="steelType">Acero</button>
       <button class="buttonFighting typeB" id="fightingType">Lucha</button> 
     </div>
+    
     <br>
-
     <div class="allPokemons" id="allPokemons" > 
       <br>  
         <h1 id="h1">  </h1>
-
         <div class="pokemonShown">
       <div  class="infoBox" id="infoBox"> </div>
         </div> 
       </div>
-
-
     <div id="modalBox" class="modalBox">
-      <div id="modalContent" class="modalContent"></div>
+      <div id="modalContentLeft" class="modalContent">
+      </div>
+      <div id="modalContentRight" class="modalContent">
+        <span id="closeModalBox" class="closeModalBox">&times;</span>
+      </div>
     </div>
-
 
     <div id="root"></div>
     <script src="main.js" type="module"></script>

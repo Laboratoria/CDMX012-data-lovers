@@ -1,4 +1,5 @@
 import data from './data/pokemon/pokemon.js';
+
 const dataPokemon={
   byName:()=>{
     let pokemon=data.pokemon.slice(0);
@@ -34,7 +35,7 @@ const dataPokemon={
     return pokemonTypesObject;
   },
 
-  pokemonResistant : (filterResistant)=>{
+  pokemonResistant: (filterResistant)=>{
     let arrayResistant=[];
     let pokemon= data.pokemon;
  
