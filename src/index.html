@@ -2,10 +2,35 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Data Lovers</title>
+    <title>Data Lovers Ghibli Studio</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <header>
+        <a href="index.html">
+        <img src="./img/StudioGhibliLogo.png" alt="Logo" class="pic" width=500px height=250px>
+        </a>
+    </header>
+
+    <nav id="nav"> <!-- barra de navegación que muestra los botones de secciones de la página, de filtrado y ordenado-->
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Featured Works</a></li>
+            <li></li><input type="text" placeholder="Search"></li>
+            <!-- <li>Filter</li> -->
+        </ul>
+    </nav>
+
+    <main>
+    <!-- cards de las películas -->
+    <section class="containerCards" id="containerCards"></section>
+    </main>
+
+    <footer>
+      <p>All rights reserved &copy;</p>
+    </footer>
+
     <div id="root"></div>
     <script src="main.js" type="module"></script>
   </body>
