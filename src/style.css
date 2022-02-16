@@ -14,7 +14,7 @@ header {
   height: 80px;
   display: flex;
 }
-h1{
+h1 {
   height: auto;
   display: flex;
   justify-content: center;
@@ -78,6 +78,7 @@ input[type="search"]::placeholder {
 .initialPicture .kikisPicture {
   width: 100%;
   height: 707px;
+  padding-right: 0%;
 }
 .posterText {
   font-weight: 700;
@@ -148,10 +149,11 @@ select {
 
 .footerContent {
   margin: 5px;
+  font-style: italic;
 }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
+.footerContent a {
+  color: #14454c;
 }
 
 /* div con todas los posters */
@@ -217,42 +219,40 @@ body {
 }
 
 .globalCard .card p {
-
- position: absolute;
- bottom: 0;
- width: 100%;
- height: 30px;
- font-size: 15px;
- font-weight:bolder;
- line-height: 30px;
- color: #4c413f;
- background:rgba(255, 250, 250, 0.7);
- text-align: center;
- text-justify: auto;
- border-radius: 0 0 10px 10px;
-
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  font-size: 15px;
+  font-weight: bolder;
+  line-height: 30px;
+  color: #4c413f;
+  background: rgba(255, 250, 250, 0.7);
+  text-align: center;
+  text-justify: auto;
+  border-radius: 0 0 10px 10px;
 }
-.globalCard .card .movieYr{
+.globalCard .card .movieYr {
   top: 0;
   width: 100%;
   height: 30px;
   font-size: 15px;
-  font-weight:bold;
+  font-weight: bold;
   line-height: 30px;
   color: #ebe9e9;
   text-align: center;
   text-justify: auto;
   border-radius: 10px 10px 0 0;
   letter-spacing: 0;
-  background:rgba(76, 65, 63, 0.7);
- }
+  background: rgba(76, 65, 63, 0.7);
+}
 
-.globalCard .card .movieRtng{
+.globalCard .card .movieRtng {
   bottom: 0;
   width: 100%;
   height: 25px;
   font-size: 15px;
-  font-weight:bold;
+  font-weight: bold;
   line-height: 25px;
   color: #4c413f;
   text-align: center;
@@ -261,8 +261,7 @@ body {
   letter-spacing: 0;
   padding-top: 2px;
   background: none;
- }
-
+}
 
 /* tarjeta trasera */
 .globalCard .back-card {
@@ -309,14 +308,14 @@ body {
   transform: perspective(600px) rotateY(360deg);
 }
 /* scrollTopBtn */
-.scrollTopBtn{
+.scrollTopBtn {
   position: fixed;
   z-index: 999;
   bottom: 4px;
   right: 40px;
   width: 70px;
   height: 65px;
-  border-radius:50%;
+  border-radius: 50%;
   justify-content: center;
   align-items: center;
   background: #14454c;
@@ -329,15 +328,15 @@ body {
   transition: all 0.3s ease-out;
 }
 
-.scrollTopBtn:hover{
+.scrollTopBtn:hover {
   background: #4c413f;
   color: #d8af39;
 }
 
-.hidden{
+.hidden {
   opacity: 0;
   visibility: hidden;
 }
-/*@media screen and (max-width: 980px){
 
-
+@media screen and (max-width: 980px) {
+}
