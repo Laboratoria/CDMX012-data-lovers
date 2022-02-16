@@ -39,6 +39,7 @@ export const cutDescription = (description) => {
 // }
 
 //Function to create a link for each movie
+
 export let createBtnLink = function (id){
   document.location.href = "./movies.html?id=" + id;
 }
