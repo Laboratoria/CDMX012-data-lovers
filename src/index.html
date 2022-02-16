@@ -9,7 +9,10 @@
   </head>
   <body>
     <header>
-      <nav class="top-nav">
+
+      <div class="btn-primary">
+        <button type="checkbox" class="btn-burger hide"><img  class ="icon-ball-primary" src="./icon/Pokeball.svg"></button>
+        <nav class="top-nav-primary">
           <ul>
             <li><img class="icon-ball" src="./icon/Pokeball.svg"></li>
             <li><a href="#">Pokeland</a></li>
@@ -17,6 +20,10 @@
             <li><a href="#">Noticias</a></li>
             <li><a href="#">Iniciar Sesión</a></li>
           </ul>
+        </nav>
+      </div>
+
+      <nav class="top-nav">
         <div class="center-nav">
           <!--Diseno de los botones de orden-->
           <div class="order-container">
@@ -25,8 +32,8 @@
               </div>  
               <label for="">Order By: </label>
               <section class="btn-ordenar">
-                  <button type="submit" id="orderA_Z" class="" ><img class="orderA_Z-img" src="./icon/A-Z.svg"></button>
-                  <button type="submit" id="orderZ_A" class="hide"><img class="orderZ_A-img" src="./icon/Z-a.svg"></button> 
+                  <button type="submit" id="orderAZ" class="" ><img class="orderAZ-img" src="./icon/A-Z.svg"></button>
+                  <button type="submit" id="orderZA" class="hide"><img class="orderZA-img" src="./icon/Z-a.svg"></button> 
                   <button type="submit" id="orderAscendente" class="hide"><img class="orderBy-img" src="./icon/Mayor-menor.svg"></button>
                   <button type="submit" id="orderDescendente" class=""><img class="orderBy-img" src="./icon/menor-mayor.svg"></button>
               </section>
@@ -88,6 +95,13 @@
 
     </main>
     <footer>
+      <div class="footer-container">
+        <p>2022,</p>
+        <img src="./icon/derechos de autor.svg">
+        <p>Derechos reservados por Skarlet y Lorena</p>
+        <a href="https://github.com/SkarletA/CDMX012-data-lovers"><img src="./icon/github.svg"></a>
+      </div>
+
 
     </footer>
 

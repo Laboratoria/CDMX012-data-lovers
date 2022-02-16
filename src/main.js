@@ -2,7 +2,7 @@
 
 
 import {
-    filterDataByName,filterDataByType, filterDataById, orderAscendente, orderDescendente, orderA_Z, orderZ_A
+    filterDataByName,filterDataByType, filterDataById, orderAscendente, orderDescendente, orderAZ, orderZA
 } from './data.js';
 // import data from './data/lol/lol.js';
 import data from './data/pokemon/pokemon.js';
@@ -204,9 +204,22 @@ function pokemon(arreglo){
             let height = arreglo[i].size.height ;
             heightPokemon.innerText =`\n Height: ${height}`;
         
-            let evolutions = arreglo[i].evolution;
-            evolutionsPokemon.innerText =`Evolutions: ${Object.keys(evolutions)} : ${Object.values(evolutions)}`;
-            //console.log(evolutions)
+            //let evolutions = arreglo[i].evolution;
+            //let evolutions2 = evolutions[0].name;
+            //let evolutions3 = evolutions[0]["next-evolution"];
+ 
+            //evolutionsPokemon.innerText =`Evolutions: ${Object.keys(evolutions)} : ${Object.values(evolutions)}`;
+            
+               /* let boxEvolution = document.createElement('div')
+                boxEvolution.classList.add('container-evolution')
+                boxEvolution.innerText =`${evolutions2} - ${evolutions3[0].name}`;
+                evolutionsPokemon.appendChild(boxEvolution);*/
+
+
+               
+            //console.log(evolutions[0].name)
+            //console.log(evolutions3[0].name)
+          
         
             let statsPokemonCanvas = statsPokemon.getContext("2d");
             let stats = arreglo[i].stats;
@@ -502,9 +515,12 @@ btnSearch.addEventListener("click", () =>{
 
 // FUNCION DE ORDENAR: ASCENDENTE Y DESCENDENTE 
 let orderAsc = true;
+let orderDes = true;
+let orderAz=true;
+let orderZa=true;
 
-const buttonAZ = document.getElementById('orderA_Z');
-const buttonZA = document.getElementById('orderZ_A');
+const buttonAZ = document.getElementById('orderAZ');
+const buttonZA = document.getElementById('orderZA');
 const buttonAsc =document.getElementById('orderAscendente')
 const buttonDesc = document.getElementById('orderDescendente')
 
@@ -524,8 +540,8 @@ buttonDesc.addEventListener('click', () => {
 
     principalContainer.innerHTML = '';
 
-    pokemon(orderDescendente(datos, orderAsc));
-    orderAsc != orderAsc;
+    pokemon(orderDescendente(datos, orderDes));
+    orderDes != orderDes;
 
     buttonDesc.classList.add('hide');
     buttonAsc.classList.remove('hide');
@@ -537,8 +553,8 @@ buttonAZ.addEventListener('click', () => {
 
     principalContainer.innerHTML = '';
 
-    pokemon(orderA_Z(datos, orderAsc));
-    orderAsc != orderAsc;
+    pokemon(orderAZ(datos, orderAz));
+    orderAz != orderAz;
 
     buttonAZ.classList.add('hide')
     buttonZA.classList.remove('hide')
@@ -548,12 +564,18 @@ buttonZA.addEventListener('click', () => {
 
     principalContainer.innerHTML = '';
 
-    pokemon(orderZ_A(datos, orderAsc));
-    orderAsc != orderAsc;
+    pokemon(orderZA(datos, orderZa));
+    orderZa != orderZa;
 
     buttonZA.classList.add('hide')
     buttonAZ.classList.remove('hide')
 
 });
 
+const btnPrimary = document.querySelector('.btn-burger');
+const navPrimary = document.querySelector('.top-nav-primary');
+
+btnPrimary.addEventListener("click", ()=>{
+    navPrimary.style.display = 'block';
+});
 
