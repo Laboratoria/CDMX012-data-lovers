@@ -4,13 +4,13 @@ import data from './data/pokemon/pokemon.js';
 const byName= dataPokemon.byName(data);
 const byNumber= dataPokemon.byNumber(data);
 const pokemonTypes= dataPokemon.pokemonTypesObject(data);
-
+const pokemonResistant= dataPokemon.pokemonResistant("water", data);
+console.log(pokemonTypes);
+console.log(pokemonResistant);
 document.getElementById("pokeBall").addEventListener("click", refreshPage);
-
 document.getElementById("pokeNumber").addEventListener("click", showByNumber);
 document.getElementById("pokeName").addEventListener("click", showByName);
 document.getElementById("pokeType").addEventListener("click", showTypeBox);
-
 document.getElementById("fireType").addEventListener("click", htmlStructureFire);
 document.getElementById("waterType").addEventListener("click", htmlStructureWater);
 document.getElementById("iceType").addEventListener("click", htmlStructureIce);
@@ -29,8 +29,8 @@ document.getElementById("poisonType").addEventListener("click", htmlStructurePoi
 document.getElementById("psychicType").addEventListener("click", htmlStructurePsychic);
 document.getElementById("steelType").addEventListener("click", htmlStructureSteel);
 document.getElementById("fightingType").addEventListener("click", htmlStructureFighting);
-
-
+document.getElementById("pokeResistant").addEventListener("click", showTypeBox);
+document.getElementById("waterType").addEventListener("click", htmlStructureResistantWater);
 
 function refreshPage(){
   window.location.reload(); //vuelve a cargar la página al inicio
@@ -320,16 +320,18 @@ function htmlStructureFighting(){
     div.innerHTML+=resultado;
   }
 }
+  function htmlStructureResistantWater(){
+    document.getElementById("h1").innerHTML= "Resistant Water";
+    const colorStyle = document.getElementById("allPokemons");
+    colorStyle.style.background= "";
+    colorStyle.style.backgroundColor= "#1D91CA";
+    let div= document.getElementById("infoBox")
+    div.innerHTML="";
+    document.getElementById("allPokemons").style.display="block";
+    for(let i=0; i<pokemonResistant.length; i++){
+      let resultado =pokemonCard(pokemonResistant[i], "water");
+      div.innerHTML+=resultado;
+      
+    }
+}
 
-
-
-
-
-
-
-
-
-
- 
-
- 
