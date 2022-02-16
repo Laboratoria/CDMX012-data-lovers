@@ -10,7 +10,6 @@ for(let i = 0; i < data.films.length; i++){
     allFilms.push(filmPosters(data.films[i]));
 }
 
-
 function createPoster(array) {
     document.getElementById("moviesList").innerHTML = '';
 
@@ -55,7 +54,7 @@ function createPoster(array) {
         divGlobal.appendChild(backCard);
         document.getElementById("moviesList").appendChild(divGlobal);
     }
-}
+
 createPoster(allFilms); 
 
 //Use the selected value to filter the movies 
