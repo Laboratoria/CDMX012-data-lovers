@@ -1,14 +1,8 @@
 //import pokemon from "./data/pokemon/pokemon.js";
 //import pokemon from "./data/pokemon/pokemon.js";
 import data from "./data/pokemon/pokemon.js";
+import showPokemons from "./Article.js";
 // estas funciones son de ejemplo
-
-/*export function orderPokedex() {
-  const finalPokedex = data.pokemon.sort(function (a, b) {
-    return a.num - b.num;
-  });
-  return finalPokedex;
-}*/
 export function order1_251() {
   const finalUp = data.pokemon.sort(function (a, b) {
     return a.num - b.num;
@@ -48,12 +42,19 @@ export function orderByZa() {
   });
   return finalOrderZA;
 }
+
+export function filterByTypes() {
+  const filtrado = data.pokemon.filter((tipo)=> tipo.type[1] == document.getElementById("type").value || tipo.type[0] == document.getElementById("type").value);
+ 
+  console.log(filtrado)
+  showPokemons(filtrado)
+
+  return filtrado;
+}
+
+ 
+
 /*
-
-
-export const filterByTypes = () => {
-  return "OMG";
-};
 
 export const filterByEvolution = () => {
   return "OMG";

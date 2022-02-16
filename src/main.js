@@ -1,6 +1,6 @@
-import { order1_251, order251_1, orderByAz, orderByZa } from "./data.js";
+import { order1_251, order251_1, orderByAz, orderByZa, filterByTypes } from "./data.js";
 import showPokemons from "./Article.js";
-import data from "./data/pokemon/pokemon.js";
+//import data from "./data/pokemon/pokemon.js";
 
 //const showData = document.getElementById("showData");
 
@@ -8,9 +8,6 @@ window.orderPokemons = function orderPokemons() {
   let optionSelected = document.getElementById("orderBy").value;
   let result = [];
   switch (optionSelected) {
-    /*case "Pokedex":
-      result = orderPokedex();
-      break;*/
     case "1-251":
       result = order1_251();
       break;
@@ -24,15 +21,33 @@ window.orderPokemons = function orderPokemons() {
       result = orderByZa();
       break;
     default:
-      console.log("esto no funciona");
+      console.log("Por favor selecciona un orden valido");
   }
   showPokemons(result);
 };
 
+
+
+//ESTA IMPRIMIENDO AL SELECCIONAR UN TIPO PERO NO ESTÁ ATADO A SU TIPO EN ESPECIFICO 
+
+const filterByType = document.getElementById("type");
+filterByType.addEventListener("change", filterByTypes);
+
+
+
+
+
+
+/*const filterByType = document.getElementById("type");
+filterByType.addEventListener("change", pokemonTypes);*/
+
+/* PROPUESTA CARLOS
 const filterByType = document.getElementById("type");
 filterByType.addEventListener("change", (event) => {
   console.log("recibi: " + event.target.value);
 });
+*/
+
 /*
 HACER UN CONSOLE.LOG DE LA DATA            S
 ACCDER A LOS 3 ELEMENTOS JUNTOS EN UNA MISMA FILA 
