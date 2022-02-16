@@ -8,7 +8,6 @@
   </head>
   <body>
     <div class="menuBar">
-      <i id="menuIcon" class="fas fa-bars"></i> 
       <div>
         <ul class= "boxFiltrado" >
           <li><a class= "filtrado" id="value1">Filtrado</a>
@@ -20,27 +19,28 @@
           </li> 
           <li><a id="value5">Ordenado</a> 
             <ul>
-              <li><a  class="mainButtons" id="pokeNumber" value="value6">Numérico</a></li>
+              <li><a  class="mainButtons" id="pokeNumber" value="value6">Numérico  0-251</a></li>
               <li><a class="mainButtons" id="pokeName" value="value7">Alfabético A-Z</a> </li>
-              <li><a class="mainButtons" id="nameReverse" value="value8">Alfabético de la Z-A</a> </li>
+              <li><a class="mainButtons" id="nameReverse" value="value8">Alfabético Z-A</a> </li>
             </ul>
           </li> 
           </ul>
       </div>
       <img id="pokeBall" src= "imagenes/pokemon.png">
-      <div id="seacrhGroup"></div>
-      <input id="searchBar" type="text" placeholder="Buscar...">
+      <div id="searchGroup">
+        <input id="searchBar" type="text" placeholder=" Buscar...">
       <i id="searchIcon" class="fas fa-search"></i>
+      </div>
+      
       
     </div>
  
-
     <div id="typesShown">  
       <button class="buttonFire typeB" id="fireType">Fuego</button>
       <button class="buttonWater typeB" id="waterType">Agua</button>
       <button class="buttonIce typeB" id="iceType">Hielo</button>
-      <button class= "buttonGhost typeB" id="ghostType">Fantasma</button>
-      <button class= "buttonDragon typeB" id="dragonType">Dragon</button>
+      <button class="buttonGhost typeB" id="ghostType">Fantasma</button>
+      <button class="buttonDragon typeB" id="dragonType">Dragon</button>
       <button class="buttonBug typeB" id="bugType">Bicho</button>
       <button class="buttonElectric typeB" id="electricType">Electrico</button>
       <button class="buttonGrass typeB" id="grassType">Planta</button>
@@ -48,29 +48,38 @@
       <button class="buttonRock typeB" id="rockType">Roca</button>
       <button class="buttonDark typeB" id="darkType">Siniestro</button>
       <button class="buttonFairy typeB" id="fairyType">Hada</button>
-      <button class= "buttonFlying typeB" id="flyingType">Volador</button>
+      <button class="buttonFlying typeB" id="flyingType">Volador</button>
       <button class="buttonGround typeB" id="groundType">Tierra</button>
       <button class="buttonPoison typeB" id="poisonType">Veneno</button>
       <button class="buttonPsychic typeB" id="psychicType">Psiquico</button>
       <button class="buttonSteel typeB" id="steelType">Acero</button>
       <button class="buttonFighting typeB" id="fightingType">Lucha</button> 
     </div>
+    
     <br>
-
     <div class="allPokemons" id="allPokemons" > 
       <br>  
         <h1 id="h1">  </h1>
-
         <div class="pokemonShown">
       <div  class="infoBox" id="infoBox"> </div>
         </div> 
       </div>
-
-
     <div id="modalBox" class="modalBox">
-      <div id="modalContent" class="modalContent"></div>
-    </div>
+      <div id="modalContentLeftParent" class="modalContent">
+        <span id="closeModalBox" class="closeModalBox">&times;</span>
+        <div class="btnsPokedex">
+          <div id="triangleUp" class="triangle"></div>
+          <div id="triangleRight" class="triangle"></div>
+          <div id="triangleDown" class="triangle"></div>
+          <div id="triangleLeft" class="triangle"></div>
+          <img id="pokedexBotton" src= "imagenes/Untitled.png">
+          </div>
+        
 
+        <div id="modalContentLeft" class="modalContent"></div>
+      </div>
+      <div id="modalContentRight" class="modalContent"></div>
+    </div>
 
     <div id="root"></div>
     <script src="main.js" type="module"></script>
