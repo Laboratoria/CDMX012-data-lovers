@@ -1,6 +1,6 @@
 //Import data and functions 
 import data from './data/ghibli/ghibli.js';
-import {filmPosters, cutDescription, scrollTopBtn, createBtnLink} from './data.js';
+import {filmPosters, cutDescription, createBtnLink} from './data.js';
 
 //CREACION DE ELEMENTOS PARA HOMEPAGE(TARJETAS DE PELICULAS)
 // Poster y titulos de todas las peliculas.
@@ -86,7 +86,7 @@ document.getElementById("selectFilter").addEventListener("change", function() {
 
   //INTERACCION DE LOS BOTONES
 //boton que lleva al inicio de la pagina
-scrollTopBtn(".scrollTopBtn");
+// scrollTopBtn(".scrollTopBtn");
 
 //boton que lleva a las paginas de las peliculas
 // let btnLink = document.querySelectorAll(".btnMoreInfo");
