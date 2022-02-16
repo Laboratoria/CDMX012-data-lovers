@@ -1,23 +1,55 @@
-import { example, anotherExample } from '../src/data.js';
 
+import dataPokemon from '../src/data.js';
 
-describe('example', () => {
-  it('is a function', () => {
-    expect(typeof example).toBe('function');
+const pokemones={
+    "pokemon": [{
+    "num": "001",
+    "name": "bulbasaur",
+    "type": [
+      "grass",
+      "poison"
+    ]
+  }
+]
+}
+describe('pokemonTypesObject',() => {
+  it('debería ser un objeto', () => {
+    expect( typeof dataPokemon).toBe('object');
   });
 
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
+
+
+it('tipos debería retornar los pokemones por categoria`', () => {
+    expect( dataPokemon.pokemonTypesObject(pokemones)).toStrictEqual(
+      {
+        grass:[{
+          "num": "001",
+          "name": "bulbasaur",
+          "type": [
+            "grass",
+            "poison"
+          ]
+        }],
+        poison:[{
+          "num": "001",
+          "name": "bulbasaur",
+          "type": [
+            "grass",
+            "poison"
+          ]
+        }]
+      }
+    );
   });
 });
 
 
-describe('anotherExample', () => {
-  it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
-  });
+// describe('anotherExample', () => {
+//   it('is a function', () => {
+//     expect(typeof anotherExample).toBe('function');
+//   });
 
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
-  });
-});
+//   it('returns `anotherExample`', () => {
+//     expect(anotherExample()).toBe('OMG');
+//   });
+//});

@@ -197,6 +197,12 @@ function htmlStructureFire(){
       divRight.innerHTML+=resultRight; 
     });
   }
+  
+  let singlePokemon = document.getElementsByClassName("flexbox");
+  singlePokemon.forEach(pokemon => pokemon.addEventListener('click', () => {
+    
+  }));
+ 
 }
 
 function htmlStructureWater(){
