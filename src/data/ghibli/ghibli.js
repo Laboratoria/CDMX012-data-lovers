@@ -437,7 +437,7 @@ export default {
         {
           id: '62346d33-caa0-4c17-8016-0aca56f3066b',
           name: 'Karikiya',
-          img: 'https://static.wikia.nocookie.net/studio-ghibli/images/e/e3/Majo002.jpg',
+          img: 'https://i.postimg.cc/kXxGSxtv/2bf68e87cbe35066d706e62923a3b96d.jpg',
           climate: 'Mild',
           terrain: 'City',
           surface_water: '30',
@@ -972,7 +972,7 @@ export default {
         {
           id: '42f787d8-1fcb-4d3d-82f2-a74409869368',
           name: "Seiji's House",
-          img: 'https://static.wikia.nocookie.net/studio-ghibli/images/a/a7/Mimi011.jpg',
+          img: 'https://i.postimg.cc/Dz72LHK2/tumblr-9be3b679f65f1d90893e514451070638-217aa2c2-500.jpg',
           climate: 'Continental',
           terrain: 'City',
           surface_water: '0',
@@ -1433,7 +1433,7 @@ export default {
         {
           id: 'a8bd9c03-7c80-4a97-b7c0-6a668acaf576',
           name: 'The Cat Kingdom',
-          img: 'https://static.wikia.nocookie.net/studio-ghibli/images/a/a9/Baron022.jpg',
+          img: 'https://i.postimg.cc/NLvycLqY/MV5-BMzg4-Zj-Ax-OTkt-MWIx-YS00-Zj-Jl-LThl-NWIt-Mjk5-MGEx-Yz-I2-Y2-Ix-Xk-Ey-Xk-Fqc-Gde-QXVy-Mz-A0-Mz-Az-Mz-M-V1.jpg',
           climate: 'Continental',
           terrain: 'Plain',
           surface_water: '30',
@@ -1696,7 +1696,7 @@ export default {
         {
           id: 'bcc54f38-8847-45b0-97b1-307c94b2b517',
           name: 'Enland',
-          img: 'https://static.wikia.nocookie.net/studio-ghibli/images/0/0e/Ged007.jpg',
+          img: 'https://i.postimg.cc/dQNKDD1t/MV5-BMTU4-OTQw-ODUw-MV5-BMl5-Ban-Bn-Xk-Ft-ZTcw-MDQ0-MTI3-Mw-V1.jpg',
           climate: 'Wet',
           terrain: 'Earthsea',
           surface_water: '100',
@@ -1949,7 +1949,7 @@ export default {
         {
           id: '1e7ed524-4b4f-466b-978c-69dda9777396',
           name: "Sho's house",
-          img: 'https://static.wikia.nocookie.net/studio-ghibli/images/8/86/Karigurashi002.jpg',
+          img: 'https://i.postimg.cc/HW99t75d/The-Secret-World-of-Arrietty.jpg',
           climate: 'Warm',
           terrain: 'Forest',
           surface_water: '10',
@@ -2170,7 +2170,7 @@ export default {
         {
           id: '2b380662-626d-42fb-9e3a-14f951201c8b',
           name: 'Nagoya',
-          img: 'https://static.wikia.nocookie.net/studio-ghibli/images/2/20/Kazetachinu009.jpg',
+          img: 'https://i.postimg.cc/RFVZ58PP/wind-rises-the-2013-010-premodern-house.jpg',
           climate: 'Damp',
           terrain: 'Hill',
           surface_water: '20',
@@ -2427,4 +2427,3 @@ export default {
     },
   ],
 };
-

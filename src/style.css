@@ -19,6 +19,7 @@ img {
 header,
 footer {
   background-color: #1572a1;
+  letter-spacing: 1.5px;
 }
 
 .logo-g {
@@ -38,13 +39,37 @@ footer {
   padding: 20px 0 20px 0;
 }
 
+.enlaces a {
+  position: relative;
+}
+
+.enlaces a::after {
+  content: '';
+  position: absolute;
+  background-color: #91e2f4;
+  height: 4px;
+  width: 0;
+  left: 0;
+  bottom: -10px;
+  transition: 0.3s;
+}
+
+.enlaces a:hover {
+  color: #ffffff;
+}
+
+.enlaces a:hover:after,
+a.active-page:after {
+  width: 100%;
+}
+
 .autors {
   text-align: center;
 }
 
 .menus a {
   text-decoration: none;
-  color: white;
+  color: rgb(233, 225, 225);
   font-weight: bold;
   font-size: 18px;
 }
@@ -182,7 +207,9 @@ ul {
 }
 
 .about-text h1 {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  color: #ffffff;
+  margin-top: 5px;
 }
 
 .films-filter {
@@ -309,7 +336,7 @@ ul {
 h1 {
   font-size: 50px;
   margin-top: 30px;
-  margin-bottom: 0;
+  margin-bottom: 0px;
   text-align: center;
   color: #1572a1;
   font-weight: 400;
@@ -318,7 +345,8 @@ h1 {
 .filters h1 {
   font-size: 35px;
   color: black;
-  margin-top: 10px;
+  margin-top: 0;
+  margin-bottom: 40px;
   font-weight: 600;
 }
 
@@ -346,17 +374,25 @@ h1 {
 }
 
 .info {
-  font-size: 30px;
   text-align: center;
   position: relative;
   bottom: 0px;
   top: 395px;
 }
 
-.info p {
+.locations-title {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.info-loc {
+  font-size: 20px;
   margin-top: 7px;
 }
 
-.locations-title {
-  font-weight: 600;
+.movie-title {
+  font-size: 25px;
+  font-style: italic;
+  font-weight: 400;
 }
