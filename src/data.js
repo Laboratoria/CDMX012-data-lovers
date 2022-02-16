@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-import data from './data/pokemon/pokemon.js';
 
-=======
-
-//import data from './data/pokemon/pokemon.js';
->>>>>>> 22e2334c44d0395a5fc6bcdcd91cf984918e3dfd
 const dataPokemon={
   
   byName:(data)=>{
@@ -41,11 +35,7 @@ const dataPokemon={
     return pokemonTypesObject;
   },
 
-<<<<<<< HEAD
-  pokemonResistant: (filterResistant)=>{
-=======
   pokemonResistant : (filterResistant, data)=>{
->>>>>>> 22e2334c44d0395a5fc6bcdcd91cf984918e3dfd
     let arrayResistant=[];
     let pokemon= data.pokemon;
  

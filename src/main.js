@@ -34,7 +34,7 @@ document.getElementById("closeModalBox").addEventListener("click", closeModalBox
 
 
 function refreshPage(){
-  window.location.reload(); //vuelve a cargar la página al inicio
+  window.location.reload();
 }
 
 function pokemonCard(pokemon, type){
@@ -58,13 +58,6 @@ function pokemonModalBoxLeft(pokemon){
   result+="<p class='numModalBox'>"+ pokemon.num + "</p>"
   result+= "<p class='nameModalBox'>" + pokemon.name + "</p>" 
   result+= "<p class='typeModalBox'>" + pokemon.type + "</p>" 
-  result+= "<div class='btnsPokedex'>"
-  result+= "<img id='pokedexBotton' src= 'imagenes/Untitled.png'>"
-  result+= "<div id='triangleUp' class='triangle'></div>"
-  result+= "<div id='triangleRight' class='triangle'></div>"
-  result+= "<div id='triangleDown' class='triangle'></div>"
-  result+= "<div id='triangleLeft' class='triangle'></div>"
-  result+= "<7div>"
   return result
 }
 

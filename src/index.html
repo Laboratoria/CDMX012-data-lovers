@@ -8,7 +8,6 @@
   </head>
   <body>
     <div class="menuBar">
-      <i id="menuIcon" class="fas fa-bars"></i> 
       <div>
         <ul class= "boxFiltrado" >
           <li><a class= "filtrado" id="value1">Filtrado</a>
@@ -20,21 +19,22 @@
           </li> 
           <li><a id="value5">Ordenado</a> 
             <ul>
-              <li><a  class="mainButtons" id="pokeNumber" value="value6">Numérico</a></li>
+              <li><a  class="mainButtons" id="pokeNumber" value="value6">Numérico  0-251</a></li>
               <li><a class="mainButtons" id="pokeName" value="value7">Alfabético A-Z</a> </li>
-              <li><a class="mainButtons" id="nameReverse" value="value8">Alfabético de la Z-A</a> </li>
+              <li><a class="mainButtons" id="nameReverse" value="value8">Alfabético Z-A</a> </li>
             </ul>
           </li> 
           </ul>
       </div>
       <img id="pokeBall" src= "imagenes/pokemon.png">
-      <div id="seacrhGroup"></div>
-      <input id="searchBar" type="text" placeholder="Buscar...">
+      <div id="searchGroup">
+        <input id="searchBar" type="text" placeholder=" Buscar...">
       <i id="searchIcon" class="fas fa-search"></i>
+      </div>
+      
       
     </div>
  
-
     <div id="typesShown">  
       <button class="buttonFire typeB" id="fireType">Fuego</button>
       <button class="buttonWater typeB" id="waterType">Agua</button>
@@ -65,11 +65,20 @@
         </div> 
       </div>
     <div id="modalBox" class="modalBox">
-      <div id="modalContentLeft" class="modalContent">
-      </div>
-      <div id="modalContentRight" class="modalContent">
+      <div id="modalContentLeftParent" class="modalContent">
         <span id="closeModalBox" class="closeModalBox">&times;</span>
+        <div class="btnsPokedex">
+          <div id="triangleUp" class="triangle"></div>
+          <div id="triangleRight" class="triangle"></div>
+          <div id="triangleDown" class="triangle"></div>
+          <div id="triangleLeft" class="triangle"></div>
+          <img id="pokedexBotton" src= "imagenes/Untitled.png">
+          </div>
+        
+
+        <div id="modalContentLeft" class="modalContent"></div>
       </div>
+      <div id="modalContentRight" class="modalContent"></div>
     </div>
 
     <div id="root"></div>
