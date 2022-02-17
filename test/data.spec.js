@@ -1,4 +1,4 @@
-import {filmPosters, cutDescription} from '../src/data.js';
+import {filmPosters, cutDescription, createBtnLink} from '../src/data.js';
 import data from '../src/data/ghibli/ghibli.js';
 
 describe('filmPosters', () => {
@@ -27,3 +27,8 @@ describe('cutDescription', () => {
   });
 });
 
+describe('createBtnLink', () => {
+  it('Should be a function', () => {
+    expect(typeof createBtnLink).toBe('function');
+  });
+});

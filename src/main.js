@@ -1,6 +1,6 @@
 //Import data and functions 
 import data from './data/ghibli/ghibli.js';
-import {filmPosters, cutDescription, createBtnLink} from './data.js';
+import {filmPosters, cutDescription, scrollTopBtn, createBtnLink} from './data.js';
 
 //CREACION DE ELEMENTOS PARA HOMEPAGE(TARJETAS DE PELICULAS)
 // Poster y titulos de todas las peliculas.
@@ -54,8 +54,8 @@ function createPoster(array) {
         divGlobal.appendChild(backCard);
         document.getElementById("moviesList").appendChild(divGlobal);
     }
-
-createPoster(allFilms); 
+}
+   createPoster(allFilms); 
 
 //Use the selected value to filter the movies 
 document.getElementById("selectFilter").addEventListener("change", function() {
@@ -80,12 +80,16 @@ document.getElementById("selectFilter").addEventListener("change", function() {
     }
     createPoster(allFilms)
     
-  });
+});
 
 
   //INTERACCION DE LOS BOTONES
-//boton que lleva al inicio de la pagina
-// scrollTopBtn(".scrollTopBtn");
+const d = document;
+
+d.addEventListener("DOMContentLoaded", () => {
+    scrollTopBtn(".scrollTopBtn");  
+});
+
 
 //boton que lleva a las paginas de las peliculas
 // let btnLink = document.querySelectorAll(".btnMoreInfo");
@@ -99,5 +103,4 @@ document.getElementById("selectFilter").addEventListener("change", function() {
 // btnLink.forEach(btn => {
 //     btn.addEventListener("click", function() {
 //         document.location.href = "./movies.html";
-//     })
-// })
+//     });
