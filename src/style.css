@@ -223,74 +223,21 @@ main {
   display: inline-flex;
 }
 
-.normal {
-  background-color: #A9A878;
-}
-
-.fire {
-  background-color: #C03028;
-}
-
-.water {
-  background-color: #6890F0;
-}
-
-.grass {
-  background-color: #78C84F;
-}
-
-.electric {
-  background-color: #F8D030;
-}
-
-.ice {
-  background-color: #18EFE9;
-}
-
-.fighting {
-  background-color: #F07F2F;
-}
-
-.poison {
-  background-color: #A040A1;
-}
-
-.ground {
-  background-color: #995205;
-}
-
-.flying {
-  background-color: #A890F0;
-}
-
-.psychic {
-  background-color: #F85888;
-}
-
-.bug {
-  background-color: #A8B821;
-}
-
-.rock {
-  background-color: #A0935F;
-}
-
-.ghost {
-  background-color: #5932A5;
-}
-
-.dragon {
-  background-color: #1A578E;
-}
-
-.dark {
-  background-color: #3D3D3D;
-}
-
-.steel {
-  background-color: #8E8E8E;
-}
-
-.fairy {
-  background-color: #FF69C6;
-}
+.normal { background-color: #A9A878;}
+.fire { background-color: #C03028;}
+.water { background-color: #6890F0;}
+.grass { background-color: #78C84F;}
+.electric { background-color: #F8D030;}
+.ice { background-color: #18EFE9;}
+.fighting { background-color: #F07F2F;}
+.poison { background-color: #A040A1;}
+.ground {background-color: #995205;}
+.flying {background-color: #A890F0;}
+.psychic { background-color: #F85888;}
+.bug { background-color: #A8B821;}
+.rock { background-color: #A0935F;}
+.ghost { background-color: #5932A5;}
+.dragon { background-color: #1A578E;}
+.dark { background-color: #3D3D3D;}
+.steel { background-color: #8E8E8E;}
+.fairy { background-color: #FF69C6;}
