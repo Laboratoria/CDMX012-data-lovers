@@ -202,26 +202,6 @@ function pokemon(arreglo){
             let height = arreglo[i].size.height ;
             heightPokemon.innerText =`\n Height: ${height}`;
         
-<<<<<<< HEAD
-=======
-           // let evolutions = arreglo[i].evolution;
-            //let evolutions2 = evolutions[0].name;
-            //let evolutions3 = evolutions[0]["next-evolution"];
- 
-            //evolutionsPokemon.innerText =`Evolutions: ${Object.keys(evolutions)} : ${Object.values(evolutions)}`;
-            
-               /* let boxEvolution = document.createElement('div')
-                boxEvolution.classList.add('container-evolution')
-                boxEvolution.innerText =`${evolutions2} - ${evolutions3[0].name}`;
-                evolutionsPokemon.appendChild(boxEvolution);*/
-
-
-               
-            console.log(evolutions[0].name)
-            console.log(evolutions3[0].name)
-          
-        
->>>>>>> Prueba
             let statsPokemonCanvas = statsPokemon.getContext("2d");
             let stats = arreglo[i].stats;
             //console.log(Object.keys(stats));
