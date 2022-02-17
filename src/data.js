@@ -44,15 +44,18 @@ export function orderByZa() {
 }
 
 export function filterByTypes() {
-  const filtrado = data.pokemon.filter((tipo)=> tipo.type[1] == document.getElementById("type").value || tipo.type[0] == document.getElementById("type").value);
- 
-  console.log(filtrado)
-  showPokemons(filtrado)
+  const filtrado = data.pokemon.filter(
+    (tipo) =>
+      tipo.type[1] == document.getElementById("type").value ||
+      tipo.type[0] == document.getElementById("type").value
+  );
+
+  console.log(filtrado);
+  console.log("Hola jugando con la branch");
+  showPokemons(filtrado);
 
   return filtrado;
 }
-
- 
 
 /*
 
