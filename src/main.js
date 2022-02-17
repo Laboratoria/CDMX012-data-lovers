@@ -21,7 +21,7 @@ window.orderPokemons = function orderPokemons() {
       result = orderByZa();
       break;
     default:
-      console.log("Por favor selecciona un orden valido");
+      //console.log("Por favor selecciona un orden valido");
   }
   showPokemons(result);
 };

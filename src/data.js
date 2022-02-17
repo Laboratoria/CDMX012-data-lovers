@@ -50,8 +50,8 @@ export function filterByTypes() {
       tipo.type[0] == document.getElementById("type").value
   );
 
-  console.log(filtrado);
-  console.log("Hola jugando con la branch");
+ // console.log(filtrado);
+  //console.log("Hola jugando con la branch");
   showPokemons(filtrado);
 
   return filtrado;
