@@ -172,6 +172,7 @@ function pokemon(arreglo){
             let statsPokemon = document.createElement("canvas");
             statsPokemon.classList.add("stats-pokemon");
             statsPokemon.style.display="flex";
+            
             //botones
             let buttonsPokemon = document.createElement("div");
             buttonsPokemon.classList.add("buttons-pokemon");
@@ -223,6 +224,10 @@ function pokemon(arreglo){
                     ]
                 },
                 options: {
+                    title: {
+                        display: true,
+                        text: 'POKEMON STATS GRAPH'
+                      },
                     responsive: true,
                     scales: {
                         yAxes: [{
@@ -468,11 +473,32 @@ btnTypeRock.addEventListener("click", ()=>{
 // FUNCION DE FILTRAR: NOMBRE E ID
 
 //constante buscador y boton de busquedad
+const message =document.createElement("div");
+const messageImage=document.createElement("img");
+messageImage.classList.add("message-image")
+messageImage.src="/icon/404P.PNG"
+message.classList.add("message-container");
+
+
 const inputSearch = document.getElementById("search");
 const btnSearch = document.getElementById("search-name-id")
 btnSearch.addEventListener("click", () =>{
     principalContainer.innerHTML = '';
-    pokemon(filterDataByName(dataPokemon, inputSearch.value));
+
+    let pokemonDataTotal=filterDataByName(dataPokemon, inputSearch.value);
+    pokemon(pokemonDataTotal);
+    if (pokemonDataTotal.length===0){
+       
+       principalContainer.appendChild(messageImage);
+       principalContainer.appendChild(message);
+       message.innerText="NOT FOUND, PLEASE TRY WITH OTHER"
+    }
+    else{
+        message.classList.add("hide");
+    }
+        
+    
+    
     pokemon(filterDataById(dataPokemon, inputSearch.value));
 });
 
@@ -542,6 +568,6 @@ const btnPrimary = document.querySelector('.btn-pokeball');
 const navPrimary = document.querySelector('.top-nav-primary');
 
 btnPrimary.addEventListener("click", ()=>{
-    navPrimary.style.display = 'block';
+    navPrimary.classList.add("show");
 });
 
