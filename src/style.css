@@ -62,37 +62,6 @@ h1 {
 }
 
 .searchPokemon input {
-<<<<<<< HEAD
-    width: 300px;
-    height: 40px;
-    background-color: #E5E5E5;
-    font-family: 'Roboto', sans-serif;
-    padding: 0 20px;
-    outline: none;
-    
-    border-style: none;
-    border-radius: 15px;
-    position: fixed;
-    left: 80%;
-    top: 5%;
-}
-
-nav {
-    margin: 0px;
-    float:left;
-    position: fixed;
-    width: 25%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    top: 0px ;
-    left: 0px;
-    background-color: #14528F;
-    font-family: 'Roboto-black', sans-serif;
-    font-weight: bold;
-    text-align: center;
-    color: white;
-=======
   width: 15rem;
   height: 2.5rem;
   background-color: #E5E5E5;
@@ -118,7 +87,6 @@ aside {
   font-family: 'Roboto-black', sans-serif;
   text-align: center;
   color: white;
->>>>>>> b4fb88e0e7fb9541ebd0db613837a8868fdbfc8e
 }
 
 #Entrenador {
