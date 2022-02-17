@@ -204,7 +204,7 @@ function pokemon(arreglo){
             let height = arreglo[i].size.height ;
             heightPokemon.innerText =`\n Height: ${height}`;
         
-            //let evolutions = arreglo[i].evolution;
+           // let evolutions = arreglo[i].evolution;
             //let evolutions2 = evolutions[0].name;
             //let evolutions3 = evolutions[0]["next-evolution"];
  
@@ -217,8 +217,8 @@ function pokemon(arreglo){
 
 
                
-            //console.log(evolutions[0].name)
-            //console.log(evolutions3[0].name)
+            console.log(evolutions[0].name)
+            console.log(evolutions3[0].name)
           
         
             let statsPokemonCanvas = statsPokemon.getContext("2d");
