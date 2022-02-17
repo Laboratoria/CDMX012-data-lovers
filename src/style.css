@@ -1,6 +1,11 @@
 body {
     background-color: #071022;
+    font-family: BeaufortforLOL-Bold;
+    text-transform: uppercase;
     margin: 0%;
+    letter-spacing: 0.105em;
+    text-transform: uppercase;
+    font-style: normal;
 }
 
 header  {
@@ -41,8 +46,6 @@ nav li {
     line-height: 16px;
     align-items: center;
     text-align: center;
-    letter-spacing: 0.105em;
-    text-transform: uppercase;
 }
 
 ul {
@@ -73,10 +76,8 @@ button {
 }
 
 .htype {
-    font-family: BeaufortforLOL-Bold;
     font-style: normal;
     font-weight: 700;
-    letter-spacing: 0.105em;
     text-align: center;
     color:#fff;
     text-transform: uppercase;
@@ -129,12 +130,8 @@ main img {
 h5{
     color:#000000;
     background-color: #98783C;
-    font-family: BeaufortforLOL-Bold;
-    font-style: normal;
     font-size: 25px;
     text-align: center;
-    letter-spacing: 0.105em;
-    text-transform: uppercase;
     margin: 20px;
     display: block; 
 }
