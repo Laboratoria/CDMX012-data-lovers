@@ -2948,7 +2948,7 @@
         "candy-cost": "100",
         "prev-evolution": [{
           "num": "029",
-          "name": "nidoran ♀ (female)",
+          "name": "nidoran ♀ ",
           "candy-cost": "25"
         }]
       }]
@@ -2956,7 +2956,7 @@
   },
   {
     "num": "032",
-    "name": "nidoran ♂ (male)",
+    "name": "nidoran ♂",
     "generation": {
       "num": "generation i",
       "name": "kanto"

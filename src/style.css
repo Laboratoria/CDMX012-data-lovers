@@ -1,122 +1,177 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,100&display=swap');
 
 body {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 header {
-    background: white;
-	width: 100%;
-    height: 20%;
-	left: 0;
-    top: 0;
-    position: fixed;
+  background: white;
+  width: 100%;
+  height: 15%;
+  left: 0;
+  top: 0;
+  position: fixed;
+  box-shadow: 0px 0px 25px 0px rgb(0 0 0 / 53%);
+
 }
 
 h1 {
-    font-family: 'Roboto-black', sans-serif;
-    color: #44696C;
-    font-size: 3em;  
-    padding: 0 500px;
-    position: fixed;
-    top: 1%;
+  font-family: 'Roboto-black', sans-serif;
+  color: #44696C;
+  font-size: 3em;
+  padding: 0px 27%;
+  position: fixed;
+  top: 1%;
 }
 
-#selectSortPokemon {
-    width: 250px;
-    height: 40px;
-    background-color: #E5E5E5;
-    font-family: 'Roboto', sans-serif;
-    padding: 0 20px;
-    outline: none;
-    border-style: none;
-    border-radius: 15px;
-    position: fixed;
-    left: 65%;
-    top: 5%;
+#selectPokemon {
+  width: 12rem;
+  height: 2.5rem;
+  background-color: #E5E5E5;
+  font-family: 'Roboto', sans-serif;
+  padding: 0 1.5rem;
+  outline: none;
+  border-style: none;
+  border-radius: 15px;
+}
+
+.order {
+  position: fixed;
+  left: 51%;
+  top: 7%;
+}
+
+.fill {
+  position: fixed;
+  left: 64%;
+  top: 7%;
+}
+
+.searchPokemon {
+  width: 15rem;
+  height: 2.5rem;
+  background-color: #E5E5E5;
+  font-family: 'Roboto', sans-serif;
+  padding: 0 1.5rem;
+  outline: none;
+  border-style: none;
+  border-radius: 15px;
+  position: fixed;
+  left: 77%;
+  top: 7%;
 }
 
 .searchPokemon input {
-    width: 300px;
-    height: 40px;
-    background-color: #E5E5E5;
-    font-family: 'Roboto', sans-serif;
-    padding: 0 20px;
-    outline: none;
-    border-line:none;
-    border-style: none;
-    border-radius: 15px;
-    position: fixed;
-    left: 80%;
-    top: 5%;
+  width: 15rem;
+  height: 2.5rem;
+  background-color: #E5E5E5;
+  font-family: 'Roboto', sans-serif;
+  padding: 0 1.5rem;
+  outline: none;
+  border-inline: none;
+  border-style: none;
+  border-radius: 15px;
 }
 
-nav {
-    margin: 0px;
-    float:left;
-    position: fixed;
-    width: 25%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    top: 0px ;
-    left: 0px;
-    background-color: #14528F;
-    font-family: 'Roboto-black', sans-serif;
-    font-weight: bold;
-    text-align: center;
-    color: white;
+aside {
+  margin: 0px;
+  float: left;
+  position: fixed;
+  width: 25%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  top: 0px;
+  left: 0px;
+  background-color: #14528F;
+  font-family: 'Roboto-black', sans-serif;
+  text-align: center;
+  color: white;
 }
 
 #Entrenador {
-    width: 150px;
-    height: 475px;
-   padding-top: 10%;
-   z-index: 1;
+  width: 7rem;
+  height: 40%;
+  padding-top: 10%;
+  z-index: 1;
 }
 
 #Pokebola {
-    position: absolute;
-    width: 423px;
-    height: 423px;
-    left: -84px;
-    top: -8px;
-    opacity: 0.5;
-    z-index: -1;
+  position: absolute;
+  width: 25rem;
+  height: 25rem;
+  left: -5rem;
+  top: -1rem;
+  opacity: 0.5;
+  z-index: -1;
 }
 
 h2 {
-    font-family: 'Roboto-black', sans-serif;
-    color: #C4C4C4;
-    font-size: 3em;  
+  font-family: 'Roboto-black', sans-serif;
+  color: #C4C4C4;
+  font-size: 3em;
+  margin: 1rem;
 }
 
 h4 {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.5rem;
+  font-family: 'Roboto-black', sans-serif;
+  font-size: 2em;
+  display: left;
+  margin: 0%;
+}
+
+h6{
+  display: right;
+  margin: 2rem;
+}
+
+#barraNivel {
+  background-color: #18EFE9;
+  width: 60%;
+  border-radius: 15px;
+  display: inline-flex;
+  height: 1rem;
+}
+
+#level {
+  float: left;
+  width: 10%;
+  padding: 0px 10%;
+}
+
+.pags {
+  font-family: 'Roboto-black', sans-serif;
+  color: white;
+  font-size: 2em;
+  text-align: left;
+  padding: 0px 30%;
+}
+
+.pags:hover {
+  color: #C4C4C4;
 }
 
 main {
-    float: right;
-    width: 75%;
-    padding-left: 3rem;
+  float: right;
+  width: 70%;
+  padding: 3rem;
 }
 
 #root {
-    display: flex;
-    font-family: 'Roboto', sans-serif;
-    flex-flow: row wrap;
-    gap: 2rem;
-    margin-top: 10rem;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 2rem;
+  margin-top: 8rem;
+
 }
 
 .card {
-  font-family: "Roboto", sans-serif;
   background-color: #ffffff;
   flex: auto;
   width: 14rem;
   height: 17rem;
   text-align: center;
+  justify-content: center;
   box-shadow: 0px 0.25rem 0.2rem rgba(0, 0, 0, 0.30);
   border-radius: 1rem;
   color: #44696c;
@@ -124,16 +179,65 @@ main {
   text-transform: capitalize;
 }
 
-.name {
-    font-family: 'Roboto-black', sans-serif;
-    font-weight: bold;
-    color: #44696C;
-    font-size: 2em;  
+.card:hover {
+  background-color: #14528F;
+  color: whitesmoke;
 }
 
 .num {
-    text-align: left;
-    font-size: 1rem;
-    margin-left: 1rem;
-    margin-top: 2rem;
+  text-align: left;
+  font-size: 1rem;
+  margin-left: 1rem;
+  margin-top: 1rem;
 }
+
+.img {
+  margin: -1rem auto;
+}
+
+.name {
+  font-family: 'Roboto-black', sans-serif;
+  font-weight: bold;
+  font-size: 2em;
+  margin: 1rem auto;
+}
+
+.barrita {
+  background-color: #6DEDB7;
+  width: 80%;
+  border-radius: 15px;
+  display: block;
+  height: 0.3rem;
+  margin: 0.5rem auto;
+}
+
+#divType {
+  border-radius: 15px;
+  font-size: 1.1rem;
+  color: white;
+  text-align: center;
+  width: 5rem;
+  height: 1.9rem;
+  margin: 1rem 0.5rem 1rem;
+  justify-content: center;
+  display: inline-flex;
+}
+
+.normal { background-color: #A9A878;}
+.fire { background-color: #C03028;}
+.water { background-color: #6890F0;}
+.grass { background-color: #78C84F;}
+.electric { background-color: #F8D030;}
+.ice { background-color: #18EFE9;}
+.fighting { background-color: #F07F2F;}
+.poison { background-color: #A040A1;}
+.ground {background-color: #995205;}
+.flying {background-color: #A890F0;}
+.psychic { background-color: #F85888;}
+.bug { background-color: #A8B821;}
+.rock { background-color: #A0935F;}
+.ghost { background-color: #5932A5;}
+.dragon { background-color: #1A578E;}
+.dark { background-color: #3D3D3D;}
+.steel { background-color: #8E8E8E;}
+.fairy { background-color: #FF69C6;}
