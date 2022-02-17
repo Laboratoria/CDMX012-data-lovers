@@ -7,31 +7,23 @@
 
 body {
   background-image: url("img/fondo.png");
+  font-size: 16px;
+  
 }
-
+ 
+/*header section*/
 header {
   background-color: #d8af39;
-  height: 80px;
+  height: 5em;
   display: flex;
-}
-h1 {
-  height: auto;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  position: absolute;
-  width: 100%;
-  font-weight: 700;
-  color: #4c413f;
-  background: rgba(255, 250, 250, 0.39);
-  font-size: 64px;
+  flex-wrap: nowrap;
 }
 
 .containerLogo {
   display: flex;
   align-items: flex-start;
   margin-top: 5px;
-  margin-left: 100px;
+  margin-left: 6.25rem;
 }
 
 .ghiblisLogo {
@@ -42,42 +34,14 @@ h1 {
   margin-bottom: 5%;
 }
 
-#navBar {
-  display: flex;
-  flex-direction: row;
-  margin-right: 30px;
-}
-
-.funFacts {
-  margin-top: 10px;
-  width: 100%;
-  height: auto;
-}
-
-.inputSearch {
-  display: flex;
-  height: 31px;
-  width: 150px;
-  margin-top: 22px;
-  font-family: Roboto, "FontAwesome", sans-serif;
-  font-size: small;
-  background: #efefef;
-  color: #3c3c43;
-  border-radius: 5px;
-  border: 1px solid #dfdfdf;
-  margin-left: 30px;
-}
-
-input[type="search"]::placeholder {
-  padding-left: 15%;
-}
+/*main section*/
 
 .initialPicture {
   flex: auto;
 }
 .initialPicture .kikisPicture {
   width: 100%;
-  height: 707px;
+  height: 44.1875rem;
   padding-right: 0%;
 }
 .posterText {
@@ -105,58 +69,7 @@ input[type="search"]::placeholder {
   font-style: normal;
 }
 
-footer {
-  height: 68px;
-  display: flex;
-  justify-content: center;
-  background-color: #d8af39;
-}
-
-select {
-  font-family: "Roboto", sans-serif;
-  font-size: 20px;
-  color: #4c413f;
-  font-weight: bold;
-  background-color: #efefef;
-  height: 40px;
-  width: 15%;
-  border-radius: 5px;
-}
-
-.select-items {
-  font-family: "Roboto", sans-serif;
-  font-size: medium;
-  color: #4c413f;
-}
-
-#allMovies {
-  position: sticky;
-  padding-bottom: 2%;
-  padding-left: 7%;
-  display: flex;
-  color: #4c413f;
-  font-size: 180%;
-  top: 0;
-}
-.footerItems {
-  font-size: small;
-  color: white;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.footerContent {
-  margin: 5px;
-  font-style: italic;
-}
-
-.footerContent a {
-  color: #14454c;
-}
-
-/* div con todas los posters */
+/*section Allmovies and filters*/
 .allMoviesAndFilter {
   display: flex;
   flex-direction: row;
@@ -172,6 +85,49 @@ select {
   display: flex;
   padding-bottom: 2%;
   padding-left: 7%;
+}
+
+select {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  color: #4c413f;
+  font-weight: bold;
+  background-color: #efefef;
+  height: 40px;
+  width: 15%;
+  border-radius: 5px;
+  border: 1px solid #3c3c43;
+}
+
+.select-items {
+  font-family: "Roboto", sans-serif;
+  font-size: medium;
+  color: #4c413f;
+}
+
+#search {
+  display: flex;
+  flex-direction: row;
+}
+
+.inputSearch {
+  display: flex;
+  height: 40px;
+  width: 230px;
+  margin-top: 22px;
+  font-family: Roboto, "FontAwesome", sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  background: #efefef;
+  color: #4c413f;
+  border-radius: 5px;
+  border: 1px solid #4c413f;
+  margin-left: 30px;
+  padding-left: 15px;
+}
+
+input[type="search"]::placeholder {
+  padding-left: 15%;
 }
 
 .movieList {
@@ -307,7 +263,8 @@ select {
 .globalCard:hover .back-card {
   transform: perspective(600px) rotateY(360deg);
 }
-/* scrollTopBtn */
+
+/*section scrollTop*/
 .scrollTopBtn {
   position: fixed;
   z-index: 999;
@@ -338,5 +295,42 @@ select {
   visibility: hidden;
 }
 
-@media screen and (max-width: 980px) {
+/*section Footer*/
+footer {
+  height: 68px;
+  display: flex;
+  justify-content: center;
+  background-color: #d8af39;
+}
+
+.footerItems {
+  font-size: small;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footerContent {
+  margin: 5px;
+  font-style: italic;
+}
+
+.footerContent a {
+  color: #14454c;
+}
+
+
+/*media queries*/
+/*Large devices-desktops*/
+@media screen and (max-width: 992px) {
+}
+
+/*Medium devices-Tablets*/
+@media screen and (max-width: 768px) {
+}
+
+/*Small devices-Phones*/
+@media screen and (max-width: 576px) {
 }

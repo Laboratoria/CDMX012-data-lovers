@@ -27,6 +27,7 @@ describe('cutDescription', () => {
   });
 });
 
+
 describe('createBtnLink', () => {
   it('Should be a function', () => {
     expect(typeof createBtnLink).toBe('function');

@@ -11,17 +11,9 @@
   </head>
   <body>
     <header>
-      <div class="containerLogo">
+      <section class="containerLogo">
         <img src="./img/Studio_Ghibli_logo.svg.png" class="ghiblisLogo" alt="" >
-      </div>
-      <nav>
-        <div id="navBar">
-          <div id="funFactsIcon">
-          <img src="./img/fun facts.png" alt="" class="funFacts">
-          </div>
-            <input type="search" placeholder="&#xf002;  Search movie" class="inputSearch">
-        </div>
-        </nav>
+      </section>
     </header>
   <main>  
     <section>
@@ -36,12 +28,16 @@
 
     <section class="allMoviesAndFilter">
      <p id="allMovies">All movies</p>
-      <select id="selectFilter" onchange=""> 
+      <select id="selectFilter" onchange="">
+       <option value=""selected hidden>Sort by:</option> 
        <option value="AZ">A-Z</option>
        <option value="ZA">Z-A</option>
-       <option value="rating">Rating</option>
-       <option value="year">Year</option>
+       <option value="rating">Hightest rated</option>
+       <option value="year">Newer to Older</option>
       </select>
+      <section id="search">
+        <input type="search" placeholder="&#xf002;  Search movie" class="inputSearch">
+    </section>
     </section>
 
     <section class="movieList"> <!-- cuadro gral -->
