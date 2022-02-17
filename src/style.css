@@ -1,71 +1,164 @@
+            /* HEADER */
 header{
+    display: flex;
+    justify-content: space-evenly;
     align-items: center;
     background: #0C1C3E;
-
 }
 #logo {
-    weigth: 107px;
-    height: 72px;
+    display: flex;
+    justify-content: flex-end;
+    width: 140px;
+    height: 90px;
 }
 .btn_header{
-    border: 2px white solid;
+    display: flex;
+    justify-content: space-between; 
+    border: 2px solid white;
     border-radius: 10px;
+    padding: 4px 40px;
     color: white;
-    font-size: 30px;
-}
-body{
-    background-image: url("https://lh3.googleusercontent.com/FlD4SqNV1oWy2LpHzxoJGVyCbljK5wsYw_2RtOxIoZFj4NvbjWHdmJ-PmmnP59twgTCE6DQuSolIFOdwRZspobtASJUjh8hqzvS0zXriWpUJjD8=rw-e365-w1440");
     background-color: #0C1C3E;
-    background-repeat: no-repeat;
-    background-position: top;
+    font-size: 22px;
+    cursor: pointer;
+    width: 90px;
+    height: 25px;
+    text-align: center;
+    font-family: "lato", sans-serif;
 }
+
+body{
+    background-color: #0C1C3E;
+
+}
+               /* CONTAINER WELCOME */
 #container{
-    margin: 200px 150px 50px 150px;
-    font-family: lato;
+    background-image: url("https://lh3.googleusercontent.com/FlD4SqNV1oWy2LpHzxoJGVyCbljK5wsYw_2RtOxIoZFj4NvbjWHdmJ-PmmnP59twgTCE6DQuSolIFOdwRZspobtASJUjh8hqzvS0zXriWpUJjD8=rw-e365-w1440");
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: "lato", sans-serif;
     color: white;
     font-weight: bold;
     text-align: center;
+    padding: 6%;
 }
 #title1{
     font-size: 45px;
+    text-shadow: rgb(46, 46, 46) 3px 3px 4px;
 }
 #title2{
     font-size: 24px;
+    text-shadow: rgb(46, 46, 46) 3px 3px 4px;
 }
 #title3{
     font-size: 30px;
+    text-shadow: rgb(46, 46, 46) 4px 3px 4px;
 }
 #container_logo{
     height: 128px;
-    weight: 199px;
+    width: 210px;
 }
 #logos_download{
-    height: 45px;
-    weigth: 150px;
+    height: 46px;
+    width: 150px;
     border-radius: 10px;
     border: 1px white solid;
     cursor: pointer;
 }
-#container_new{
+
+               /* CONTAINER NEW TRAINER */
+#container_new_trainer{
     display: flex;
     justify-content: center;
     background-image: url("https://lh3.googleusercontent.com/5-w5yrCLD69zlOIfgMndRr4dMhrKW5u8nJVojvrUqnSI8ln1ywgqzNFjWQJYrN2YlVSBMHNyXzhcIrQXRPUYTcqJXjAzYbJyXiXb_uK3YO2G-g=rw-e365-w1440");
-
+    background-size: cover;
+    padding: 15px;
+    font-family: "lato", sans-serif;
+    font-size: 20px;
 }
 #pokes_new_1{
     height: 115px;
-    weight: 115px;
+    width: 115px;
 }
-#pokes_new{
-    height: 122px;
-    weight: 372px;
-}
-form{
-    border-radius: 10px;
-    border: 6px white solid;
+#boton_101{
+    border: 2px solid #0061af;
+    border-radius: 999px;
+    padding: 8px 24px;
+    color: #0061af;
+    background-color: #FFFFFF;
+    font-size: 17px;
     cursor: pointer;
 }
-ul{
+#pokes_new{
+    height: 130px;
+    width: 320px;
+}
+               /*REGIONS*/
+#container_gen{
+    display: flex, inline-block;
+    justify-content: space-between;
+    background-image: url(https://lh3.googleusercontent.com/4I4XB51OZpQL-JuSUcd8yrchFvAXJrK405d6CtVX9hXOqAC4vFTeuwFACbVzPSCOEeRtMHlLqA33rvlcnGb3FPTSfOuusljfWH9sf1U45Aaq=rw-e365-w1440);                                      
+    background-size: cover;
+    text-align: center;
+    padding: 80px;
+}
+#section_Regions{
+    font-size: 45px;
+    font-family: "lato", sans-serif;
+    font-weight: bolder;
+}
+#Kanto{
+    height: 240px;
+    width: 458px;
+    padding: 50px;
+}
+#Johto{
+    height: 240px;
+    width: 458px;
+    padding: 50px;
+}
+
+        /* CONTAINER DOWNLOAD */
+#container_download{
     display: flex;
     justify-content: space-around;
+    align-items: center;
+    padding: 15px;
+    background-image: url(https://lh3.googleusercontent.com/d3MUt9qnSpEQTo_yOpwf9wefXSrAbGeFT1uo69kPu0piUpx3dt7k99rRpaMZAM3rV-MwVSZe8sGuPHmFKnmwP-2S2jE8KnJnvXo2-MsaMa2B-hI=rw-e365-w1440);
+    background-size: cover;
+    font-family: "lato", 'Courier New', Courier, monospace;
+    font-size: 36px;
+    color: white;
+    font-weight: bolder;
+}
+#logo_container{
+    height: 170px;
+    width: 260px;
+}
+#pokeball{
+    height: 80px;
+    width:80px;
+}
+#back_to_top{
+    background-color: none;
+    height: 70px;
+    width: 70px;
+}
+
+        /* FOOTER */
+footer{
+    display: flex;
+    justify-content: space-around;
+    background: #FFFFFF;
+    padding: 15px;
+}
+#logo_redessociales{
+    height: 55px;
+    width: 55px;
+}
+#logo_laboratoria{
+    height: 50px;
+    width: 50px; 
 }

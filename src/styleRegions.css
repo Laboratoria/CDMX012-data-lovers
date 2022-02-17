@@ -1,0 +1,183 @@
+/* Header */
+header{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: #0C1C3E;
+}
+#logo {
+    display: flex;
+    justify-content: flex-end;
+    width: 140px;
+    height: 90px;
+}
+.btn_header{
+    display: flex;
+    justify-content: space-between; 
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 4px 40px;
+    color: white;
+    background-color: #0C1C3E;
+    font-size: 22px;
+    cursor: pointer;
+    width: 75px;
+    height: 25px;
+    text-align: center;
+}
+#search_form{
+     display: flex;
+     align-items: flex-end;
+     justify-content: flex-end;
+    
+}
+#searchbtn{
+     border-radius: 30px;
+     text-align: center;
+     font-size: 18px;
+}
+.search_1{
+    border-radius: 30px;
+    font-size: 18px;
+}
+
+body{
+    background-image: url(https://lh3.googleusercontent.com/4I4XB51OZpQL-JuSUcd8yrchFvAXJrK405d6CtVX9hXOqAC4vFTeuwFACbVzPSCOEeRtMHlLqA33rvlcnGb3FPTSfOuusljfWH9sf1U45Aaq=rw-e365-w1440);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+}
+#search{
+    height: 52.2px;
+    width: 174.47px;
+}
+#container{
+    margin: 200px 150px 50px 150px;
+    font-family: "lato";
+    
+   
+}
+#title1{
+    display: flex;
+    color: black;
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+    margin: 5px 800px;
+}
+#all_badges{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.type_button{
+    border-radius: 7px; 
+    text-shadow: rgb(44, 44, 44) 2px 2px 4px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    height: 35px;
+    width: 99px;
+}
+#title1{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+}
+.Badges{
+    height: 80px;
+    width: 80px;
+}
+.Little_Badges{
+    height: 120px;
+    width: 120px;
+}
+
+                    /* TYPE BUTTONS */
+#type_normal{
+    background-color: #AAAA99;
+    
+}
+#type_fire{
+    background-color: #FF4422;
+}
+#type_water{
+    background-color: #3399FF;
+}
+#type_electric{
+    background-color: #FFCC33;
+}
+#type_grass{
+    background-color: #77CC55;
+}
+#type_ice{
+    background-color: #66CCFF;
+}
+#type_fighting{
+    background-color: #BB5544;
+}
+#type_poison{
+    background-color: #AA5599;
+}
+#type_ground{
+    background-color: #DDBB55;
+}
+#type_flying{
+    background-color: #8899FF;
+}
+#type_psychic{
+    background-color: #FD5497;
+}
+#type_bug{
+    background-color: #AABB22;
+}
+#type_rock{
+    background-color: #BBAA66;
+}
+#type_ghost{
+    background-color: #6666BB;
+}
+#type_dragon{
+    background-color: #7766EE;
+}
+#type_dark{
+    background-color: #775544;
+}
+#type_steel{
+    background-color: #AAAABB;
+}
+#type_fairy{
+    background-color: #EE99EE;
+}
+#container_pokedex_kanto{
+    display: flex, inline-block;
+}
+#container_pokedex_johto{
+    display: flex, inline-block;
+}
+
+        /* FOOTER */
+ footer{
+    display: flex;
+    justify-content: space-around;
+    background: #FFFFFF;
+    padding: 15px;
+}
+#logo_redessociales{
+    height: 55px;
+    width: 55px;
+}
+#logo_laboratoria{
+    height: 50px;
+    width: 50px; 
+}
+
+/* 
+#container_gen{
+    display: flex;
+    justify-content: center;
+    background-image: url(https://lh3.googleusercontent.com/4I4XB51OZpQL-JuSUcd8yrchFvAXJrK405d6CtVX9hXOqAC4vFTeuwFACbVzPSCOEeRtMHlLqA33rvlcnGb3FPTSfOuusljfWH9sf1U45Aaq=rw-e365-w1440);
+    background-position: center;
+    background-repeat: no-repeat;
+    align-items: center; */ 

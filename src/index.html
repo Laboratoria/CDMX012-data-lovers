@@ -3,19 +3,20 @@
   <head>
     <meta charset="utf-8">
     <title>POKEMON GO DATA</title>
+    <link rel="icon" href="../src/Logos pokemon/Pokebola.png">
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    
+    <!-- HEADER -->
     <header>
-      <ul>
-         <img id="logo" src="../src/Logos pokemon/unnamed.png" alt="logo">
+         <img id="logo" src="../src/Logos pokemon/Logo PokemonGo.png" alt="logo">
          <a class="btn_header" href="">About</a>
          <a class="btn_header" href="https://pokemondb.net/type">Type-list</a>
-         <a class="btn_header" href="#">Regions</a>
+         <a class="btn_header" href="#section_Regions">Regions</a>
          <a class="btn_header" href="https://pokemongolive.com/en/events/">Events</a>
-      </ul>
     </header> 
+
+    <!-- CONTAINER WELCOME -->
     <div id="container">
        <div id="title1">
          <sub>Welcome, Trainers!</sub></div> <br>
@@ -24,22 +25,55 @@
          <p1>with friends and your buddy Pokémon</p1></div><br>
       <div id="title3">
          <p2>Let's GO to explore the regions of Kanto and Johto!</p2></div><br>
-         <img id="container_logo" src="../src/Logos pokemon/unnamed.png" alt="logo"><br><br>
-         <img id="logos_download" src="../src/Logos pokemon/Download AppStore.JPG" alt="Appstore">
-         <img id="logos_download" src="../src/Logos pokemon/googleplay.png" alt="Googlestore">
-         <img id="logos_download" src="../src/Logos pokemon/GalaxyStore_en.png" alt="Galaxystore">    
+         <img id="container_logo" src="../src/Logos pokemon/Logo PokemonGo.png" alt="logo"><br><br>
+         <a href="https://apps.apple.com/vc/app/pok%C3%A9mon-go/id1094591345"><img id="logos_download" src="../src/Logos pokemon/DL AppStore.JPG" alt="Appstore"></a>
+         <a href="https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo"><img id="logos_download" src="../src/Logos pokemon/DL GooglePlay.png" alt="Googlestore"></a>
+         <a href="https://galaxystore.samsung.com/detail/com.nianticlabs.pokemongo.ares"><img id="logos_download" src="../src/Logos pokemon/DL GalaxyStore.png" alt="Galaxystore"></a>    
     </div> 
-
-    <div id="container_new">
+          
+    <!-- NEW TRAINER -->
+    <div id="container_new_trainer">
          <img id="pokes_new_1" src="../src/Logos pokemon/1.png" alt="1 Pokes new">
-         <h2>New Trainer?</h2>
+         <div id="follow_new"><h2>New Trainer?</h2>
          <p>Follow this simple guide on getting started with Pokémon GO!</p>
          <form action="https://pokemongolive.com/es_mx/#learn">
-            <button type="submit">Pokémon GO 101</button> 
+            <button type="button" id="boton_101">Pokémon GO 101</button> 
          </form>
-         <img id="pokes_new" src="../src/Logos pokemon/pokes new trainer.webp" alt="Pokes new">
+         </div>
+         <img id="pokes_new" src="../src/Logos pokemon/Pokes New Trainer.webp" alt="Pokes new">
     </div>
 
+    <!-- REGIONS -->
+    <div id="container_gen">
+       <nav id="section_Regions">Get to know the regions!</nav>
+       <aside>
+       <a href="kanto.html"><img id="Kanto" src="../src/Logos pokemon/Kanto.jpeg" alt="Kanto"></a>
+       <a href="johto.html"><img id="Johto" src="../src/Logos pokemon/Jotho.jpeg" alt="Johto"></a>
+      </aside>
+      </div> 
+
+    <!-- GET UP & GO -->
+    <div id="container_download">
+      <img id="logo_container" src="../src/Logos pokemon/Logo PokemonGo.png" alt="logo">
+      <section>
+      <img id="pokeball" src="../src/Logos pokemon/Pokebola.png" alt="Pokebola">
+      <article>Get Up and GO!<br>Download Today </article>
+      <a href="https://apps.apple.com/vc/app/pok%C3%A9mon-go/id1094591345"><img id="logos_download" src="../src/Logos pokemon/DL AppStore.JPG" alt="Appstore"></a>
+      <a href="https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo"><img id="logos_download" src="../src/Logos pokemon/DL GooglePlay.png" alt="Googlestore"></a>
+      <a href="https://galaxystore.samsung.com/detail/com.nianticlabs.pokemongo.ares"><img id="logos_download" src="../src/Logos pokemon/DL GalaxyStore.png" alt="Galaxystore"></section></a> 
+      </section>
+      <a href="#logo"><img id="back_to_top" src="../src/Logos pokemon/Back_to_top.jpg" alt="b_t_t"></a>
+  </div>
+    
+    <!-- FOOTER -->
+   <footer>
+     <img id="logo_laboratoria" src="../src/Logos pokemon/Logo Laboratoria.png">
+     <p> Laboratoria 2022 / Proyecto DataLovers <br> Denisse Molina - Sui Flores </p>
+     <aside><img id="logo_redessociales" src="../src/Logos pokemon/twitter.png" alt="Twitter">
+     <img id="logo_redessociales" src="../src/Logos pokemon/instagram.png" alt="Instagram">
+     <img id="logo_redessociales" src="../src/Logos pokemon/facebook.png" alt="Facebook">
+     <img id="logo_redessociales" src="../src/Logos pokemon/youtube.png" alt="Youtube"></aside>
+   </footer>
     <div id="root"></div>
     <script src="main.js" type="module"></script>
   </body>
