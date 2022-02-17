@@ -474,7 +474,12 @@ btnTypeRock.addEventListener("click", ()=>{
 
 //constante buscador y boton de busquedad
 const message =document.createElement("div");
+const messageImage=document.createElement("img");
+messageImage.classList.add("message-image")
+messageImage.src="/icon/404P.PNG"
 message.classList.add("message-container");
+
+
 const inputSearch = document.getElementById("search");
 const btnSearch = document.getElementById("search-name-id")
 btnSearch.addEventListener("click", () =>{
@@ -483,8 +488,10 @@ btnSearch.addEventListener("click", () =>{
     let pokemonDataTotal=filterDataByName(dataPokemon, inputSearch.value);
     pokemon(pokemonDataTotal);
     if (pokemonDataTotal.length===0){
+       
+       principalContainer.appendChild(messageImage);
        principalContainer.appendChild(message);
-       message.innerText="Pokemon not found, please try with other"
+       message.innerText="NOT FOUND, PLEASE TRY WITH OTHER"
     }
     else{
         message.classList.add("hide");
@@ -561,6 +568,6 @@ const btnPrimary = document.querySelector('.btn-pokeball');
 const navPrimary = document.querySelector('.top-nav-primary');
 
 btnPrimary.addEventListener("click", ()=>{
-    navPrimary.style.display = 'block';
+    navPrimary.classList.add("show");
 });
 
