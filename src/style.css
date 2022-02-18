@@ -333,7 +333,7 @@ footer {
 
 /*media queries-----------------------------------------*/
 /*Large devices-desktops*/
-@media screen and (max-width: 992px) {
+@media only screen and (max-width: 992px) and (min-width: 701px){
   
   .kikisPicture {
     width: 800px;
@@ -376,7 +376,7 @@ select {
 }
 
 /*Medium devices-Tablets*/
-@media screen and (max-width: 768px) {
+@media only screen and (max-width: 700px) and (min-width: 601px){
   .kikisPicture {
     width: 700px;
   }
@@ -415,7 +415,7 @@ select {
 
 
 /*Small devices-Phones*/
-@media screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) and (min-width: 400px){
   .kikisPicture {
     width: 450px;
   }
