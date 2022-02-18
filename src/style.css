@@ -241,6 +241,60 @@ background-color: #FFEDFA;
 .fighting{
   background-color: #F9D9C7;
 }
+.containerfire{
+  background-color:#FF8523 ;
+}
+.containerwater{
+  background-color: #1D91CA;
+}
+ .containerice{
+   background-color: #00C6ED;
+ }
+.containerghost{
+  background-color: #8259A7;
+}
+.containerdragon{
+  background: linear-gradient( to top, #F8453B,#F8453B,#2CA4D5,#2CA4D5);
+}
+.containerbug{
+  background-color: #60A62F;
+}
+.containerelectric{
+  background-color: #F1DA00;
+}
+.containergrass{
+  background-color: #88D438;
+}
+.containernormal{
+  background-color: #A2ACB0;
+}
+.containerrock{
+  background-color: #A78F00;
+}
+.containerdark{
+  background-color: #707070;
+}
+.containerfairy{
+  background-color: #FFAFEA;
+}
+.containerflying{
+  background: linear-gradient(to top, #C4C4C4,#C4C4C4,#00BFFF, #00BFFF);
+}
+.containerground{
+  background:linear-gradient(to top, #AE9B2B,#AE9B2B,#FAE300, #FAE300);
+}
+.containerpoison{
+  background-color: #C672CD;
+}
+.containerpsychic{
+  background-color: #FF44B9;
+}
+.containersteel{
+  background-color: #97B8B9;
+}
+.containerfighting{
+  background-color: #E35201;
+}
 
 #modalBox{
   display: flex; 
