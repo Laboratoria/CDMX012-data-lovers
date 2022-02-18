@@ -30,8 +30,14 @@ document.getElementById("psychicType").addEventListener("click", htmlStructurePs
 document.getElementById("steelType").addEventListener("click", htmlStructureSteel);
 document.getElementById("fightingType").addEventListener("click", htmlStructureFighting);
 document.getElementById("closeModalBox").addEventListener("click", closeModalBox);
+//document.getElementById("triangleRight").addEventListener("click", nextPokemon);
 
-
+/*function nextPokemon (pokemon){
+  if(let i=0; i<pokemon; i++){
+    console.log("Holi");
+  }
+}*/
+console.log(byName[0].name)
 
 function refreshPage(){
   window.location.reload();
@@ -53,13 +59,26 @@ function pokemonModalBoxLeft(pokemon){
   result+= "<div id='redCircle' class='circle'></div>"
   result+= "<div id='yellowCircle' class='circle'></div>"
   result+= "<div id='greenCircle' class='circle'></div>"
-  result+="<p class='generationModalBox'>"+Object.values(pokemon.generation)[0]+": "+Object.values(pokemon.generation)[1]+"</p>"
+  result+= "<p class='generationModalBox'>"+Object.values(pokemon.generation)[0]+": "+Object.values(pokemon.generation)[1]+"</p>"
   result+= "<img class='imgModalBox' src='"+ pokemon.img+"'></img>"
-  result+="<p class='numModalBox'>"+ pokemon.num + "</p>"
+  result+= "<p class='numModalBox'>"+ pokemon.num + "</p>"
   result+= "<p class='nameModalBox'>" + pokemon.name + "</p>" 
   result+= "<p class='typeModalBox'>" + pokemon.type + "</p>" 
   return result
 }
+
+/*function arrayPokeInfo(info){
+  let quickMoves= []
+  for (let i= 0; i< info["quick-move"]; i++){
+    let quickMoveName = Object.values(info["quick-move"][i].name);
+    let quickMoveType = Object.values(info["quick-move"][i].type);
+    let quickMoveBaseDamage = Object.values(info["quick-move"][i]["base-damage"]);
+    let quickMoveEnergy = Object.values(info["quick-move"][i].energy);
+    let quickMoveMoveDurationSec = Object.values(info["quick-move"][i]["move-duration-sec"]);
+    let quickMove= [quickMoveName, quickMoveType, quickMoveBaseDamage, quickMoveEnergy, quickMoveMoveDurationSec]
+    quickMoves.push(quickMove);
+  } return quickMoves
+}*/
 
 function pokemonModalBoxRight(pokemon){
   let result= "";
@@ -71,11 +90,16 @@ function pokemonModalBoxRight(pokemon){
   result+= "<p class='spawnChanceModalBox'>Spawn chance: " + pokemon["spawn-chance"] + "</p>" 
   result+= "<table class='statsModalBox'><tr><th colspan='5'>Stats</th></tr><tr><td>Base attack</td><td>Base defense</td><td>Base stamina</td><td>Max CP</td><td>Max HP</td> </tr><tr><td>"+Object.values(pokemon.stats)[0]+"</td><td>"+Object.values(pokemon.stats)[1]+"</td><td>"+Object.values(pokemon.stats)[2]+"</td><td>"+Object.values(pokemon.stats)[3]+"</td><td>"+Object.values(pokemon.stats)[4]+"</td> </tr></table>" 
   result+= "<table class='resAndWeakModalBox'><tr><th>Resistant</th><th>Weaknesses</th></tr><tr><td>" + pokemon.resistant + "</td><td>" + pokemon.weaknesses + "</td></tr></table>" 
-  result+= "<p class='quickMoveModalBox'>Quick moves: " + Object.values(pokemon["quick-move"])/*Object.entries(pokemon["quick-move"][0])+"<br> "+ Object.entries(pokemon["quick-move"][1])*/ + "</p>" 
+  
+  
+  
+  result+= "<p class='quickMoveModalBox'>Quick moves: " + /*arrayPokeInfo(pokemon)*/ +"</p>" 
   result+= "<p class='specialAttackModalBox'>Special attacks: " + Object.values(pokemon["special-attack"]) + "</p>" 
   result+= "<p class='eggAndBuddyDistanceModalBox'>Egg: " + pokemon.egg + "</p>" 
   result+= "<p class='eggAndBuddyDistanceModalBox'>Buddy distance km: " + pokemon["buddy-distance-km"] + "</p>" 
   result+= "<p class='evolutionCandyModalBox'>Candy for evolution: " + Object.values(pokemon.evolution)[0] + "</p>" 
+
+  
 
   //result+= "<p class='evolutionModalBox'>Evolution: " + Object.values(pokemon.evolution["next-evolution"][0]) + "</p>" 
   //result+= "<p class='evolutionModalBox'>Evolution: " + Object.values(pokemon.evolution["next-evolution"]["next-evolution"]) + "</p>" 
@@ -191,10 +215,10 @@ function htmlStructureFire(){
     });
   }
   
-  let singlePokemon = document.getElementsByClassName("flexbox");
+  /*let singlePokemon = document.getElementsByClassName("flexbox");
   singlePokemon.forEach(pokemon => pokemon.addEventListener('click', () => {
     
-  }));
+  }));*/
  
 }
 
@@ -718,9 +742,6 @@ function htmlStructureFighting(){
      });
    }
 }
-
-
-
 
 
 window.addEventListener("click", function(e){
