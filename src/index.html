@@ -18,41 +18,46 @@
             <li><a href="index.html">Pokeland</a></li>
             <li><a href="https://pokemongolive.com/es_mx/">Go to the game...</a></li>
             <li><a href="https://pokemongolive.com/es_MX/post/">News</a></li>
-            <li><a href="#">Login</a></li>
+            <div class="center-nav">
+              <!--Diseno de los botones de orden-->
+              <div class="order-container">
+                <div class="orderOption">
+                  <div class="icon-pokeball"><img class="pokeball" src="./icon/pokebola gris.svg" alt="">
+                  </div>  
+                  <label for="">Order By: </label>
+                  <section class="btn-ordenar">
+                      <button type="submit" id="orderAZ" class="" ><img class="orderAZ-img" src="./icon/A-Z.svg"></button>
+                      <button type="submit" id="orderZA" class="hide"><img class="orderZA-img" src="./icon/Z-a.svg"></button> 
+                      <button type="submit" id="orderAscendente" class="hide"><img class="orderBy-img" src="./icon/Mayor-menor.svg"></button>
+                      <button type="submit" id="orderDescendente" class=""><img class="orderBy-img" src="./icon/menor-mayor.svg"></button>
+                  </section>
+                </div>
+              </div>
+              <!--Diseno de la barra de buscador-->
+              <div class="search">
+                  <div class="search-container">
+                    <label for="">Name or ID</label>
+                    <input type="search" name="buscador" id="search" placeholder="Buscar">
+                    <button type="submit" id="search-name-id"><img src="./icon/lupa.svg" class="lupa" alt=""></button>
+                  </div>
+              </div>
+              <!--Diseno del boton de filtrado-->
+              
+            </div>
+
+
+            <li class=" btn-login"><a href="#login">Login</a></li>
           </ul>
         </nav>
       </div>
 
       <nav class="top-nav">
-        <div class="center-nav">
-          <!--Diseno de los botones de orden-->
-          <div class="order-container">
-            <div class="orderOption">
-              <div class="icon-pokeball"><img class="pokeball" src="./icon/pokebola gris.svg" alt="">
-              </div>  
-              <label for="">Order By: </label>
-              <section class="btn-ordenar">
-                  <button type="submit" id="orderAZ" class="" ><img class="orderAZ-img" src="./icon/A-Z.svg"></button>
-                  <button type="submit" id="orderZA" class="hide"><img class="orderZA-img" src="./icon/Z-a.svg"></button> 
-                  <button type="submit" id="orderAscendente" class="hide"><img class="orderBy-img" src="./icon/Mayor-menor.svg"></button>
-                  <button type="submit" id="orderDescendente" class=""><img class="orderBy-img" src="./icon/menor-mayor.svg"></button>
-              </section>
-            </div>
-          </div>
-          <!--Diseno de la barra de buscador-->
-          <div class="search">
-              <div class="search-container">
-                <label for="">Name or ID</label>
-                <input type="search" name="buscador" id="search" placeholder="Buscar">
-                <button type="submit" id="search-name-id"><img src="./icon/lupa.svg" class="lupa" alt=""></button>
-              </div>
-          </div>
-          <!--Diseno del boton de filtrado-->
-          
-        </div>
+        
         <div class="options-filter" id="filter">
           <div class="btn-types">
-            <button type ="submit" class ="select-type"><img class ="icon-filter" src ="./icon/filtrar.png" alt=""> Select your favorite Type </button>
+            <button type ="submit" class ="select-type"><img class ="icon-filter" src ="./icon/Pokeball-filtrado(+).svg" alt=""> Select Pokemon Type   </button>
+            <button type ="submit" class ="select-type-cover"><img class ="icon-filter" src ="./icon/Pokeball-filtrado(-).svg" alt="">Hide Pokemon Type  </button>
+
           </div>
           
           <div class="btn-general-type hide">
@@ -84,11 +89,20 @@
           </div>
         </div>
       </nav>
-    </header>
-    <main>
+      <div class="container-login" id="container-login">
+        <div class="login " id="login">
+          <img src="./icon/user.svg" alt=""><label for="">Login</label>
+          <label for="">Username: <input type="text" class="username"></label>
+          <label for="">Password: <input type="number" class="password"></label>
+          <button type="submit" class="send"><img src="./icon/Send.svg" alt="">Send</button>
+        </div>
+    </div>
+      
 
       
       
+    </header>
+    <main>
       <section class="cards-containers-principal">
       </section>
       

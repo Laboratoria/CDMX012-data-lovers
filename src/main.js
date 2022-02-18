@@ -315,12 +315,21 @@ pokemon(dataPokemon);
 // FILTRADO : POR TIPO DE POKEMON
 
 const btnSelectType= document.querySelector(".select-type");
+const btnSelectTypeCover= document.querySelector(".select-type-cover");
 const listType=document.querySelector(".btn-general-type");
-
 
 btnSelectType.addEventListener("click", () =>{
     listType.classList.remove("hide");
+    btnSelectType.style.visibility = "hidden";
+    btnSelectTypeCover.style.visibility = "visible";
 });
+
+btnSelectTypeCover.addEventListener("click", () =>{
+    listType.classList.add("hide");
+    btnSelectTypeCover.style.visibility = "hidden";
+    btnSelectType.style.visibility = "visible";
+});
+
 
 const btnTypeFire= document.getElementById("fire");
 const btnTypeWater= document.getElementById("water");
@@ -571,3 +580,19 @@ btnPrimary.addEventListener("click", ()=>{
     navPrimary.classList.add("show");
 });
 
+const login = document.querySelector(".login");
+const btnLogin= document.querySelector(".btn-login");
+
+btnLogin.addEventListener("click", ()=>{
+    login.style.visibility="visible";
+})
+
+const username=document.querySelector(".username");
+const btnSend=document.querySelector(".send");
+
+btnSend.addEventListener("click", ()=>{
+    let userValue= username.value;
+    btnLogin.innerText=`Hello! ${userValue.charAt(0).toUpperCase() + userValue.slice(1)}`;
+    btnLogin.style.color="white";
+    login.style.visibility="hidden";
+})
