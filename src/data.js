@@ -1,5 +1,4 @@
 
-//import data from './data/pokemon/pokemon.js';
 const dataPokemon={
   
   byName:(data)=>{
