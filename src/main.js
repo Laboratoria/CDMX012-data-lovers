@@ -1,6 +1,6 @@
 import { order1_251, order251_1, orderByAz, orderByZa, filterByTypes } from "./data.js";
 import showPokemons from "./Article.js";
-//import data from "./data/pokemon/pokemon.js";
+import data from "./data/pokemon/pokemon.js";
 
 //const showData = document.getElementById("showData");
 
@@ -9,23 +9,22 @@ window.orderPokemons = function orderPokemons() {
   let result = [];
   switch (optionSelected) {
     case "1-251":
-      result = order1_251();
+      result = order1_251(data);//Aqui dataque es el argumento representa al parametro allDAta (que esta en el archivo de data.js)
       break;
     case "251-1":
-      result = order251_1();
+      result = order251_1(data);
       break;
     case "AZ":
-      result = orderByAz();
+      result = orderByAz(data);
       break;
     case "ZA":
-      result = orderByZa();
+      result = orderByZa(data);
       break;
     default:
       //console.log("Por favor selecciona un orden valido");
   }
   showPokemons(result);
 };
-
 
 
 //ESTA IMPRIMIENDO AL SELECCIONAR UN TIPO PERO NO ESTÁ ATADO A SU TIPO EN ESPECIFICO 

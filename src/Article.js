@@ -29,10 +29,11 @@ function showPokemons(pokemons) {
       `${property.name[0].toUpperCase() + property.name.slice(1)}`; // cambia el texto vacio del parrafo por la propiedad name convirtiendo la primera letra del array en mayuscula y concatenando desde la posicion 1 con slice
 
     const cardNum = document.createElement("p"); //crea el elemento parrafo
-    cardNum.innerHTML = property.num; // cambia el texto vacio del parrafo por la propiedad numero
+    cardNum.innerHTML = property.num ; 
+    cardNum.setAttribute("class","classTypeNumber")// cambia el texto vacio del parrafo por la propiedad numero
 
     const cardType = document.createElement("p");
-    const bottonTypePokemon = document.createTextNode(`${property.type}`)
+    const bottonTypePokemon = document.createTextNode("Type: " + `${property.type.join(" ")}`)
     cardType.appendChild(bottonTypePokemon)
     cardType.setAttribute("class", "typeClass")
 
@@ -41,10 +42,10 @@ function showPokemons(pokemons) {
     pokemonImag.setAttribute("src", `${property.img}`); //le asigna el atributo de src con su propiedad que es el link
     pokemonImag.setAttribute("data-open", modalDataOpen);
 
+    cardSpace.appendChild(cardNum); //cardSpace es el nodo padre y cardNumes el nodo hijo
     cardSpace.appendChild(pokemonImag); //cardSpace es el nodo padre y apokemonImag es el nodo hijo
     cardSpace.appendChild(cardName); //cardSpace es el nodo padre y cardName es el nodo hijo
     cardSpace.appendChild(cardType);
-    cardSpace.appendChild(cardNum); //cardSpace es el nodo padre y cardNumes el nodo hijo
     modalWindow.appendChild(cardSpace);
 
     document.getElementById("showData").appendChild(modalWindow); //show data es el nodo padre y cardSpace el nodo hijo.
