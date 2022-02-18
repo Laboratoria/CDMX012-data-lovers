@@ -12,7 +12,6 @@ header {
   top: 0;
   position: fixed;
   box-shadow: 0px 0px 25px 0px rgb(0 0 0 / 53%);
-
 }
 
 h1 {
@@ -24,7 +23,7 @@ h1 {
   top: 1%;
 }
 
-#selectPokemon {
+.selectPokemon {
   width: 12rem;
   height: 2.5rem;
   background-color: #E5E5E5;
@@ -35,13 +34,13 @@ h1 {
   border-radius: 15px;
 }
 
-.order {
+#order {
   position: fixed;
   left: 51%;
   top: 7%;
 }
 
-.fill {
+#fill {
   position: fixed;
   left: 64%;
   top: 7%;
