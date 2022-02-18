@@ -407,13 +407,15 @@ select {
 }
 
 #moviesList {
-  display: flex;
-  flex-direction: column;
-}
+  grid-template-columns: auto auto;
 }
 
+}
+
+
+
 /*Small devices-Phones*/
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 600px) {
   .kikisPicture {
     width: 450px;
   }
@@ -465,6 +467,64 @@ select {
 #moviesList {
   grid-template-columns: auto auto;
 }
+
+}
+/*Small devices-Phones*/
+@media screen and (max-width: 480px) {
+  .kikisPicture {
+    width: 450px;
+  }
+  .posterText {
+    height: 56px;
+    width: 450px;
+    margin-top: 190px;
+  }
+  
+  #bigText {
+    font-size: 28px;
+  }
+  #smallText {
+    font-size: 18px;
+  }
+
+  #smallText img{
+    width: 15px;
+    height: 15px;
+  }
+ 
+.allMoviesAndFilter {
+  height:100px;
+  margin-bottom: 20px;
+  flex-direction: column;
+  gap: 5px;
+}
+
+#allMovies {
+  font-size: 20px;
+}
+
+select {
+  font-size: 12px;
+  width: 120px;
+  height: 35px;
+}
+
+.inputSearch {
+  font-size: 10px;
+  width: 180px;
+  height: 35px;
+}
+.movieList {
+ justify-content: space-evenly; 
+ padding-top: 30px;
+}
+
+#moviesList {
+  display: flex;
+  flex-direction: column;
+}
+
+
   body {
     background-color: #14454c;
   }
