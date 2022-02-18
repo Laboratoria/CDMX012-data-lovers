@@ -1,18 +1,25 @@
 import { imagesList } from './data.js';
 import data from './lol/lol.js';
 
-let arrayChampions = Object.values(data.data)
-    for (let champion of arrayChampions) {
 
-    let img = document.createElement('img')
-        img.src = champion.splash
-    let name = document.createElement('h5')
-        name.textContent = champion.name
+const cards = document.querySelector('.cardbox');
+const getChampions = Object.values(data.data)
 
-    let cardChampion = document.getElementById('root')
-    cardChampion.appendChild(name).appendChild(img)
+    for (let champion of getChampions) {
 
-    //console.log(championInfo)
-}
+    const newCard = document.createElement('article');
+    const newcardBody = document.createElement('figure');
+    const newcardImage = document.createElement('img');
+    newcardImage.src = champion.splash
+    const newcardName = document.createElement('figcaption');
+    newcardName.textContent = champion.name
+    newcardName.className = "card-name";
 
-/**/
+    cards.appendChild(newCard);
+    newCard.appendChild(newcardBody);
+    newcardBody.appendChild(newcardImage);
+    newcardBody.appendChild(newcardName);  
+ //console.log(championInfo)
+} 
+
+//Hacer un event listener para hacer la funcionalidad del filtro
