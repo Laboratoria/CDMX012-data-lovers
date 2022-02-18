@@ -484,6 +484,14 @@ btnTypeRock.addEventListener("click", ()=>{
 //constante buscador y boton de busquedad
 const message =document.createElement("div");
 const messageImage=document.createElement("img");
+const btnReset= document.createElement("button");
+const nameBtn=document.createTextNode("Volver");
+btnReset.appendChild(nameBtn);
+btnReset.classList.add("btn-reset");
+
+btnReset.type="submit";
+
+
 messageImage.classList.add("message-image")
 messageImage.src="/icon/404P.PNG"
 message.classList.add("message-container");
@@ -493,22 +501,32 @@ const inputSearch = document.getElementById("search");
 const btnSearch = document.getElementById("search-name-id")
 btnSearch.addEventListener("click", () =>{
     principalContainer.innerHTML = '';
-
+    let pokemonDataTotalId= filterDataById(dataPokemon, inputSearch.value);
+    
     let pokemonDataTotal=filterDataByName(dataPokemon, inputSearch.value);
-    pokemon(pokemonDataTotal);
-    if (pokemonDataTotal.length===0){
+    
+    if (pokemonDataTotal.length===0 && pokemonDataTotalId.length===0){
        
        principalContainer.appendChild(messageImage);
        principalContainer.appendChild(message);
+       principalContainer.append(btnReset);
+       
        message.innerText="NOT FOUND, PLEASE TRY WITH OTHER"
+       
     }
     else{
         message.classList.add("hide");
-    }
+        pokemon(pokemonDataTotal);
+        pokemon(pokemonDataTotalId);
+        principalContainer.append(btnReset);
         
+    }
     
-    
-    pokemon(filterDataById(dataPokemon, inputSearch.value));
+});
+
+
+btnReset.addEventListener('click', ()=> {
+    location.reload();
 });
 
 
