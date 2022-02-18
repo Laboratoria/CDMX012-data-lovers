@@ -580,3 +580,19 @@ btnPrimary.addEventListener("click", ()=>{
     navPrimary.classList.add("show");
 });
 
+const login = document.querySelector(".login");
+const btnLogin= document.querySelector(".btn-login");
+
+btnLogin.addEventListener("click", ()=>{
+    login.style.visibility="visible";
+})
+
+const username=document.querySelector(".username");
+const btnSend=document.querySelector(".send");
+
+btnSend.addEventListener("click", ()=>{
+    let userValue= username.value;
+    btnLogin.innerText=`Hello! ${userValue.charAt(0).toUpperCase() + userValue.slice(1)}`;
+    btnLogin.style.color="white";
+    login.style.visibility="hidden";
+})
