@@ -30,9 +30,21 @@ window.orderPokemons = function orderPokemons() {
 //ESTA IMPRIMIENDO AL SELECCIONAR UN TIPO PERO NO ESTÁ ATADO A SU TIPO EN ESPECIFICO 
 
 const filterByType = document.getElementById("type");
-filterByType.addEventListener("change", filterByTypes);
+filterByType.addEventListener("change", () => {
+  filterByTypes(data);
+});
 
 
+/*const filterByType = document.getElementById("type");
+filterByType.addEventListener("change", filterByTypes(data));
+
+myFunction(data) {
+ let selectId = document.getElementById("type").value
+ let resultTypes = data.type
+ if(selectId == resultTypes){
+   return showPokemons(filterByTypes)
+ }
+}*/
 
 
 

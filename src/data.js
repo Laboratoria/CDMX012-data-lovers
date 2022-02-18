@@ -1,6 +1,6 @@
 //import pokemon from "./data/pokemon/pokemon.js";
 //import pokemon from "./data/pokemon/pokemon.js";
-import data from "./data/pokemon/pokemon.js";
+//import data from "./data/pokemon/pokemon.js";
 import showPokemons from "./Article.js";
 // estas funciones son de ejemplo
 export function order1_251(allData) {
@@ -44,8 +44,8 @@ export function orderByZa(allData) {
   return finalOrderZA;
 }
 
-export function filterByTypes() {
-  const filtrado = data.pokemon.filter(
+export function filterByTypes(allData) {
+  const filtrado = allData.pokemon.filter(
     (tipo) =>
       tipo.type[1] == document.getElementById("type").value ||
       tipo.type[0] == document.getElementById("type").value
