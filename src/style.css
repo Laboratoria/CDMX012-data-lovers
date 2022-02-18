@@ -20,7 +20,7 @@ header  {
 
 #logo img {
     position: absolute;
-    width: 234px;
+    width: 150px;
     left: 50px;
     top: 50px;
     float: left;
@@ -106,50 +106,38 @@ h4{
 
 p {
     color:#fff;
-} 
-
-/*.imagen{
-    padding: 50px;
-    width: 200px;
-    height: 200px;
-}
-*/
-
-main{
-    text-align: center;
-    
 }
 
-main img {
+.cardbox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+figure img {
     width: 427px;
     height: 268px;
-    margin: 20px;
-    margin-top: 80px;
+
 }
 
-h5{
-    color:#000000;
+figure figcaption{
     background-color: #98783C;
-    font-size: 25px;
-    text-align: center;
-    margin: 20px;
-    display: block; 
-}
-
-/*.name {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }*/
-
-  .name {
     width: 427px;
     height: 53px;
-    position: absolute;
-    
-    bottom: 8px;
-    margin-right: 20px;
-    
-  }
+    text-align: center;
+    font-size: 25px;
+    justify-content: center;
+    position: relative;
+   
+}
+
+
+.card-name {
+    padding-top: 20px;
+}
+
+
+
+
+
 
