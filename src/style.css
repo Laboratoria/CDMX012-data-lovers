@@ -413,7 +413,7 @@ select {
 }
 
 /*Small devices-Phones*/
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 480px) {
   .kikisPicture {
     width: 450px;
   }
