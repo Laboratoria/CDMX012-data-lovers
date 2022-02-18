@@ -161,9 +161,28 @@ video{
     cursor: pointer;
 
 }
+.select-type-cover{
+    border: none;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    font-family: arial;
+    font-size: 20px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin-top: -48px;
+    cursor: pointer;
+
+}
+.select-type-cover{
+    visibility: hidden;
+}
 .icon-filter{
-    width: 30px;
-    height: 30px;
+    width: 45px;
+    height: 45px;
     padding-right: 5px;
 }
 .btn-general-type{
@@ -175,6 +194,8 @@ video{
     justify-content: center;
     padding: 10px 35px 10px 35px;
 }
+
+
 .title-type{
     color:white;
     text-align: center;

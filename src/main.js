@@ -315,12 +315,21 @@ pokemon(dataPokemon);
 // FILTRADO : POR TIPO DE POKEMON
 
 const btnSelectType= document.querySelector(".select-type");
+const btnSelectTypeCover= document.querySelector(".select-type-cover");
 const listType=document.querySelector(".btn-general-type");
-
 
 btnSelectType.addEventListener("click", () =>{
     listType.classList.remove("hide");
+    btnSelectType.style.visibility = "hidden";
+    btnSelectTypeCover.style.visibility = "visible";
 });
+
+btnSelectTypeCover.addEventListener("click", () =>{
+    listType.classList.add("hide");
+    btnSelectTypeCover.style.visibility = "hidden";
+    btnSelectType.style.visibility = "visible";
+});
+
 
 const btnTypeFire= document.getElementById("fire");
 const btnTypeWater= document.getElementById("water");

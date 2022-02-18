@@ -5,7 +5,7 @@ export const filterDataByType = (datos, tipo) =>{
 
 // FUNCIÓN DE FILTRADO POR NOMBRE DE POKEMON
 export const filterDataByName = (datos, name) =>{
-  return datos.filter(dato => dato.name == name);
+  return datos.filter(dato => dato.name == name.toLowerCase());
 };
 
 // FUNCIÓN DE FILTRADO POR ID DE POKEMON
