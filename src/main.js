@@ -493,7 +493,7 @@ btnReset.type="submit";
 
 
 messageImage.classList.add("message-image")
-messageImage.src="/icon/404P.PNG"
+messageImage.src="./icon/404P.PNG"
 message.classList.add("message-container");
 
 
