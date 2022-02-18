@@ -407,7 +407,8 @@ select {
 }
 
 #moviesList {
-  grid-template-columns: auto auto;
+  display: flex;
+  flex-direction: column;
 }
 }
 
@@ -471,3 +472,5 @@ select {
     grid-template-columns: auto auto;
   }
 }
+
+
