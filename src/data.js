@@ -4,7 +4,7 @@
 import showPokemons from "./Article.js";
 // estas funciones son de ejemplo
 export function order1_251(allData) {
-  console.log(allData)
+  console.log(allData);
   const finalUp = allData.pokemon.sort(function (a, b) {
     return a.num - b.num;
   });
@@ -47,12 +47,10 @@ export function orderByZa(allData) {
 export function filterByTypes(allData) {
   const filtrado = allData.pokemon.filter(
     (tipo) =>
-      tipo.type[1] == document.getElementById("type").value ||
-      tipo.type[0] == document.getElementById("type").value
+      tipo.type[1] == allData.type ||
+      tipo.type[0] == allData.type
   );
-  showPokemons(filtrado);
-
-
+  console.log("funciona");
   return filtrado;
 }
 

@@ -1,4 +1,10 @@
-import { order1_251, order251_1, orderByAz, orderByZa, filterByTypes } from "./data.js";
+import {
+  order1_251,
+  order251_1,
+  orderByAz,
+  orderByZa,
+  filterByTypes,
+} from "./data.js";
 import showPokemons from "./Article.js";
 import data from "./data/pokemon/pokemon.js";
 
@@ -9,7 +15,7 @@ window.orderPokemons = function orderPokemons() {
   let result = [];
   switch (optionSelected) {
     case "1-251":
-      result = order1_251(data);//Aqui dataque es el argumento representa al parametro allDAta (que esta en el archivo de data.js)
+      result = order1_251(data); //Aqui dataque es el argumento representa al parametro allDAta (que esta en el archivo de data.js)
       break;
     case "251-1":
       result = order251_1(data);
@@ -21,19 +27,158 @@ window.orderPokemons = function orderPokemons() {
       result = orderByZa(data);
       break;
     default:
-      //console.log("Por favor selecciona un orden valido");
+    //console.log("Por favor selecciona un orden valido");
   }
   showPokemons(result);
 };
 
+//ESTA IMPRIMIENDO AL SELECCIONAR UN TIPO PERO NO ESTÁ ATADO A SU TIPO EN ESPECIFICO
 
-//ESTA IMPRIMIENDO AL SELECCIONAR UN TIPO PERO NO ESTÁ ATADO A SU TIPO EN ESPECIFICO 
+const filterByType = document.querySelector("#type");
 
-const filterByType = document.getElementById("type");
-filterByType.addEventListener("change", () => {
-  filterByTypes(data);
-});
+const selectByType = () => {
+  const selectByType = filterByType.selectedIndex;
+  if (selectByType === 1) {
+    let typeBug = filterByTypes(data);
+    showPokemons(typeBug);
+  }
+  if (selectByType === 2) {
+    let typeBug = filterByTypes(data);
+    showPokemons(typeBug);
+  }
+  if (selectByType === 3) {
+    let typeBug = filterByTypes(data);
+    showPokemons(typeBug);
+  }
+  if (selectByType === 4) {
+    let typeBug = filterByTypes(data);
+    showPokemons(typeBug);
+  }
+  if (selectByType === 5) {
+    let typeBug = filterByTypes(data);
+    showPokemons(typeBug);
+  }
+  if (selectByType === 6) {
+    let typeBug = filterByTypes(data);
+    showPokemons(typeBug);
+  }
+  if (selectByType === 7) {
+    let typeBug = filterByTypes(data);
+    showPokemons(typeBug);
+  }
+  if (selectByType === 8) {
+    let typeBug = filterByTypes(data);
+    showPokemons(typeBug);
+  }
+  if (selectByType === 9) {
+    let typeBug = filterByTypes(data);
+    showPokemons(typeBug);
+  }
+  if (selectByType === 10) {
+    let typeBug = filterByTypes(data);
+    showPokemons(typeBug);
+  }
+  if (selectByType === 11) {
+    let typeBug = filterByTypes(data);
+    showPokemons(typeBug);
+  }
+  if (selectByType === 12) {
+    let typeBug = filterByTypes(data);
+    showPokemons(typeBug);
+  }
+  if (selectByType === 13) {
+    let typeBug = filterByTypes(data);
+    showPokemons(typeBug);
+  }
+  if (selectByType === 14) {
+    let typeBug = filterByTypes(data);
+    showPokemons(typeBug);
+  }
+  if (selectByType === 15) {
+    let typeBug = filterByTypes(data);
+    showPokemons(typeBug);
+  }
+  if (selectByType === 16) {
+    let typeBug = filterByTypes(data);
+    showPokemons(typeBug);
+  }
+  if (selectByType === 17) {
+    let typeBug = filterByTypes(data);
+    showPokemons(typeBug);
+  }
+  if (selectByType === 18) {
+    let typeBug = filterByTypes(data);
+    showPokemons(typeBug);
+  }
+};
+filterByType.addEventListener("change", selectByType);
+/*let filter = function changeType() {
+  let filterByType = document.getElementById("type").value;
+  let result = [];
+  switch (filterByType) {
+    case "bug":
+      result = filterByTypes(data);
+      break;
+    case "dragon":
+      result = filterByTypes(data);
+      break;
+    case "fairy":
+      result = filterByTypes(data);
+      break;
+    case "fire":
+      result = filterByTypes(data);
+      break;
+    case "ghost":
+      result = filterByTypes(data);
+      break;
+    case "ground":
+      result = filterByTypes(data);
+      break;
+    case "psychic":
+      result = filterByTypes(data);
+      break;
+    case "steel":
+      result = filterByTypes(data);
+      break;
+    case "dark":
+      result = filterByTypes(data);
+      break;
+    case "electric":
+      result = filterByTypes(data);
+      break;
+    case "fighting":
+      result = filterByTypes(data);
+      break;
+    case "flying":
+      result = filterByTypes(data);
+      break;
+    case "grass":
+      result = filterByTypes(data);
+      break;
+    case "ice":
+      result = filterByTypes(data);
+      break;
+    case "poison":
+      result = filterByTypes(data);
+      break;
+    case "water":
+      result = filterByTypes(data);
+      break;
+    case "rock":
+      result = filterByTypes(data);
+      break;
+    case "normal":
+      result = filterByTypes(data);
+      break;
+    default:
+      console.log("Esto no funciona");
+  }
+  showPokemons(result);
+};
 
+filterByType.addEventListener("change", filter);
+*/
+//document.addEventListener("change", changeType);
 
 /*const filterByType = document.getElementById("type");
 filterByType.addEventListener("change", filterByTypes(data));
@@ -45,9 +190,6 @@ myFunction(data) {
    return showPokemons(filterByTypes)
  }
 }*/
-
-
-
 
 /*const filterByType = document.getElementById("type");
 filterByType.addEventListener("change", pokemonTypes);*/
