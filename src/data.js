@@ -1,11 +1,9 @@
-//import pokemon from "./data/pokemon/pokemon.js";
-//import pokemon from "./data/pokemon/pokemon.js";
-//import data from "./data/pokemon/pokemon.js";
-import showPokemons from "./Article.js";
+import { findAllPokemons } from "./data/pokemon/pokemon.repo.js";
+
 // estas funciones son de ejemplo
-export function order1_251(allData) {
-  console.log(allData);
-  const finalUp = allData.pokemon.sort(function (a, b) {
+export function order1_251() {
+  const allPokemons = findAllPokemons();
+  const finalUp = allPokemons.sort(function (a, b) {
     return a.num - b.num;
   });
   return finalUp;
@@ -44,11 +42,10 @@ export function orderByZa(allData) {
   return finalOrderZA;
 }
 
-export function filterByTypes(allData) {
-  const filtrado = allData.pokemon.filter(
-    (tipo) =>
-      tipo.type[1] == allData.type ||
-      tipo.type[0] == allData.type
+export function filterByTypes(type) {
+  const pokemones=  findAllPokemons();
+  const filtrado = pokemones.filter(
+    (pokemon) => pokemon.type.includes(type)
   );
   console.log("funciona");
   return filtrado;
