@@ -22,7 +22,7 @@
         <div class="enlaces">
           <li><a href="/src/index.html">Home</a></li>
           <li><a href="#">Characters</a></li>
-          <li><a href="/src/locations.html">Locations</a></li>
+          <li><a class="active-page" href="/src/locations.html">Locations</a></li>
           <li><a href="#">Vehicles</a></li>
         </div>
       </ul>
@@ -38,7 +38,7 @@
 
         <div class="films-filter">
           <label for="films-option" class="label-films">Films</label>
-          <select name="films-option" id="select-films" class="films-filter-items">
+          <select name="selected-film" id="selected-film" class="films-filter-items">
             <option value="" disabled selected>Select</option>
           </select>
         </div>
@@ -50,229 +50,43 @@
           </select>
         </div>
 
+        <div class="films-filter">
+          <label for="films-option" class="label-films">Terrain</label>
+          <select name="films-option" id="selected-terrain" class="films-filter-items">
+            <option value="" disabled selected>Select</option>
+          </select>
+        </div>
+
 
         <div class="films-sort">
           <label for="films-op" class="label-films">Sort Films</label>
-          <select name="films-op" id="films-op" class="films-filter-items">
+          <select name="sort-locations" id="sort-locations" class="films-filter-items">
             <option value="" disabled selected>Select</option>
             <option value="a-z">From A to Z</option>
             <option value="z-a">From Z to A </option>
           </select>
         </div>
 
-        <button type="submit" id='btn' class='button'>Filter</button>
+        <button type="submit" id='btn_loc' class='button'>Filter</button>
+        <button type="submit" id='btn_loc_reset' class='button'>Reset</button>
       </div>
     </section>
 
     <section class="locations container">
       <div class="locations-content">
 
-        <div class="location">
+        <!-- <div class="location">
           <img src="https://i.postimg.cc/hjNCHb0H/230-2307062-princess-mononoke-forest-spirit.jpg"
             alt="princess-mononoke-forest-spirit" />
           <div class="info">
             <p class="locations-title">Spirit Forest</p>
-            <p>Climate: Tropical</p>
-            <p>Terrain: Forest</p>
-          </div>
-        </div>
+            <p class='movie-title '>Castle in te sky</p>
+            <p class='info-loc'>Climate: Tropical</p>
+            <p class='info-loc'>Terrain: Forest</p>
 
-        <div class="location">
-          <img src="https://i.postimg.cc/9Mwbtwj1/Chihiro-sees-the-Bathhouse.png" alt="Chihiro-sees-the-Bathhouse" />
-          <div class="info">
-            <p class="locations-title">The Bathhouse</p>
-            <p>Climate: Tropical</p>
-            <p>Terrain: Forest</p>
           </div>
-        </div>
 
-        <div class="location">
-          <img src="https://i.postimg.cc/prnf8wzS/2436746-bigthumbnail.jpg" alt="2436746-bigthumbnail" />
-
-          <div class="info">
-            <p class="locations-title">Spirit Forest</p>
-            <p>Climate: Tropical</p>
-            <p>Terrain: Forest</p>
-          </div>
-        </div>
-
-        <div class="location">
-          <img src="https://i.postimg.cc/SxGvJ9yM/Art-of-Only-Yesterday-C-8.jpg" alt="Art-of-Only-Yesterday-C-8" />
-          <div class="info">
-            <p class="locations-title">The Bathhouse</p>
-            <p>Climate: Tropical</p>
-            <p>Terrain: Forest</p>
-          </div>
-        </div>
-
-        <div class="location">
-          <img src="https://i.postimg.cc/6Q3Yq1jk/fmikehlh8dl41.jpg" alt="fmikehlh8dl41" />
-          <div class="info">
-            <p class="locations-title">Spirit Forest</p>
-            <p>Climate: Tropical</p>
-            <p>Terrain: Forest</p>
-          </div>
-        </div>
-
-        <div class="location">
-          <img src="https://i.postimg.cc/xjkhtqPw/Fujimotos-hus.jpg" alt="Fujimotos-hus" />
-          <div class="info">
-            <p class="locations-title">The Bathhouse</p>
-            <p>Climate: Tropical</p>
-            <p>Terrain: Forest</p>
-          </div>
-        </div>
-
-        <div class="location">
-          <img src="https://i.postimg.cc/LXWkJ9Yf/Ghibli-kaguya-bamboo-forest.jpg" alt="Ghibli-kaguya-bamboo-forest" />
-          <div class="info">
-            <p class="locations-title">Spirit Forest</p>
-            <p>Climate: Tropical</p>
-            <p>Terrain: Forest</p>
-          </div>
-        </div>
-
-        <div class="location">
-          <img src="https://i.postimg.cc/yNYr9Ndr/Gutiokipanja.jpg" alt="Gutiokipanja" />
-          <div class="info">
-            <p class="locations-title">The Bathhouse</p>
-            <p>Climate: Tropical</p>
-            <p>Terrain: Forest</p>
-          </div>
-        </div>
-
-        <div class="location">
-          <img src="https://i.postimg.cc/MX2yY9Yp/Himawari-Nursery-School.jpg" alt="Himawari-Nursery-School" />
-          <div class="info">
-            <p class="locations-title">Spirit Forest</p>
-            <p>Climate: Tropical</p>
-            <p>Terrain: Forest</p>
-          </div>
-        </div>
-
-        <div class="location">
-          <img src="https://i.postimg.cc/Dw5x2KgQ/Ingary.png" alt="Ingary" />
-          <div class="info">
-            <p class="locations-title">The Bathhouse</p>
-            <p>Climate: Tropical</p>
-            <p>Terrain: Forest</p>
-          </div>
-        </div>
-
-        <div class="location">
-          <img src="https://i.postimg.cc/8CKXbVfk/Karigurashi019.jpg" alt="Karigurashi019" />
-          <div class="info">
-            <p class="locations-title">Spirit Forest</p>
-            <p>Climate: Tropical</p>
-            <p>Terrain: Forest</p>
-          </div>
-        </div>
-
-        <div class="location">
-          <img src="https://i.postimg.cc/765ssQS3/Koriko.jpg" alt="Koriko" />
-          <div class="info">
-            <p class="locations-title">The Bathhouse</p>
-            <p>Climate: Tropical</p>
-            <p>Terrain: Forest</p>
-          </div>
-        </div>
-        <div class="location">
-          <img src="https://i.postimg.cc/qBCD2SJ0/Kusakabe-Family-House.jpg" alt="Kusakabe-Family-House" />
-          <div class="info">
-            <p class="locations-title">Spirit Forest</p>
-            <p>Climate: Tropical</p>
-            <p>Terrain: Forest</p>
-          </div>
-        </div>
-
-        <div class="location">
-          <img src="https://i.postimg.cc/kGrcjMJC/Laputa.png" alt="Laputa" />
-          <div class="info">
-            <p class="locations-title">The Bathhouse</p>
-            <p>Climate: Tropical</p>
-            <p>Terrain: Forest</p>
-          </div>
-        </div>
-
-        <div class="location">
-          <img src="https://i.postimg.cc/tTJtRZTp/Marsh-house.jpg" alt="Marsh-house" />
-          <div class="info">
-            <p class="locations-title">Spirit Forest</p>
-            <p>Climate: Tropical</p>
-            <p>Terrain: Forest</p>
-          </div>
-        </div>
-
-        <div class="location">
-          <img src="https://i.postimg.cc/pXf06j56/Min-Granne-Totoro-v-rlden.jpg" alt="Min-Granne-Totoro-v-rlden" />
-          <div class="info">
-            <p class="locations-title">The Bathhouse</p>
-            <p>Climate: Tropical</p>
-            <p>Terrain: Forest</p>
-          </div>
-        </div>
-        <div class="location">
-          <img src="https://i.postimg.cc/DftDDFj8/Mononoke-Irontown.jpg" alt="Mononoke-Irontown" />
-          <div class="info">
-            <p class="locations-title">Spirit Forest</p>
-            <p>Climate: Tropical</p>
-            <p>Terrain: Forest</p>
-          </div>
-        </div>
-
-        <div class="location">
-          <img src="https://i.postimg.cc/5NLGWGTp/Piccolos-garage.jpg" alt="Piccolos-garage" />
-          <div class="info">
-            <p class="locations-title">The Bathhouse</p>
-            <p>Climate: Tropical</p>
-            <p>Terrain: Forest</p>
-          </div>
-        </div>
-
-        <div class="location">
-          <img src="https://i.postimg.cc/8PQK44cv/Satsuki-s-School-House.jpg" alt="Satsuki-s-School-House" />
-          <div class="info">
-            <p class="locations-title">Spirit Forest</p>
-            <p>Climate: Tropical</p>
-            <p>Terrain: Forest</p>
-          </div>
-        </div>
-
-        <div class="location">
-          <img src="https://i.postimg.cc/0y9tRNp2/Tedis.jpg" alt="Tedis" />
-          <div class="info">
-            <p class="locations-title">The Bathhouse</p>
-            <p>Climate: Tropical</p>
-            <p>Terrain: Forest</p>
-          </div>
-        </div>
-        <div class="location">
-          <img src="https://i.postimg.cc/SKvVM7HJ/Thumbnail-8.jpg" alt="Thumbnail-8" />
-          <div class="info">
-            <p class="locations-title">Spirit Forest</p>
-            <p>Climate: Tropical</p>
-            <p>Terrain: Forest</p>
-          </div>
-        </div>
-
-        <div class="location">
-          <img src="https://i.postimg.cc/wMJWHyf3/Ursula-s-Log-Cabin.jpg" alt="Ursula-s-Log-Cabin" />
-          <div class="info">
-            <p class="locations-title">The Bathhouse</p>
-            <p>Climate: Tropical</p>
-            <p>Terrain: Forest</p>
-          </div>
-        </div>
-
-        <div class="location">
-          <img src="https://i.postimg.cc/GmRfLK1R/Zeniba-s-Cottage.png" alt="Zeniba-s-Cottage" />
-          <div class="info">
-            <p class="locations-title">Spirit Forest</p>
-            <p>Climate: Tropical</p>
-            <p>Terrain: Forest</p>
-          </div>
-        </div>
-
+        </div> -->
 
       </div>
     </section>
@@ -292,7 +106,6 @@
   </footer>
 
   <!--<div id="root"></div>-->
-  <script src="app.js"></script>
   <script src="main.js" type="module"></script>
 </body>
 
