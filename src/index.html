@@ -14,19 +14,54 @@
       <figure class="containerLogo">
         <img src="./img/Studio_Ghibli_logo.svg.png" class="ghiblisLogo" alt="" >
       </figure>
+      <button id="BtnAllMovies" onclick="window.location.href='#allMovies'">All movies</button>
     </header>
-    
   <main>  
     <section class="posterSection">
-      <figure class="initialPicture"> 
+      <div class="slider">
+        <ul>
+        <li>
+          <img src="img/onlyyesterday.jpg">
+          <div class="posterText">
+            <p id="bigText">Only yesterday</p>
+            <p id="smallText">5/5 <img src="./img/Star 1.png" alt=""></p>
+          </div> 
+      </li>
+      <li>
+        <img src="img/4spirited.jpg">
+        <div class="posterText">
+          <p id="bigText">Spirited away</p>
+          <p id="smallText">4.8/5 <img src="./img/Star 1.png" alt=""></p>
+        </div> 
+    </li>
+    <li>
+      <img src="img/2tumba.jpg">
+      <div class="posterText">
+        <p id="bigText">Grave of the fireflies</p>
+        <p id="smallText">4.8/5 <img src="./img/Star 1.png" alt=""></p>
+      </div> 
+  </li>
+      <li>
+        <img src="img/kikis.jpg">
+            <div class="posterText">
+            <p id="bigText">Kiki's delivery service</p>
+                    <p id="smallText">4.8/5 <img src="./img/Star 1.png" alt=""></p>
+                </div> 
+            </li>
+        </ul>
+        <a href="#allMovies" id="goToAllMovies">&#11014;</a>
+    </div>
+    
+      <!-- <figure class="initialPicture"> 
         <img src="./img/kikis.jpg" alt="" class="kikisPicture">   
         <div class="posterText">
           <p id="bigText"> Kiki's delivery service </p>
           <p id="smallText">4.8/5 <img src="./img/Star 1.png" alt=""></p>
         </div> 
-      </figure>
+      </figure> -->
     </section>
-    <section class="allMoviesAndFilter">
+
+    <section id="allMovies"class="allMoviesAndFilter">
      <h1 id="allMovies">All movies</h1>
       <select id="selectFilter" onchange="">
        <option value=""selected hidden>Sort by:</option> 
@@ -40,8 +75,8 @@
      <!-- </section> -->
     </section>
 
-    <section class="movieList"> <!-- cuadro gral -->
-      <div id="moviesList"></div><!-- cuadro peliculas -->
+    <section class="movieList"> <!-- white background -->
+      <div id="moviesList"></div><!-- container for all movies -->
     </section>
 
   </main>

@@ -15,23 +15,34 @@
     <div class="containerLogo">
       <img src="./img/Studio_Ghibli_logo.svg.png" class="ghiblisLogo" alt="" >
     </div>
-    <nav>
-      <div id="navBar">
-        <div id="home">
+    <nav id="home">
           <i class="fa-solid fa-house" class="home" ></i>
-        </div>
-        <div id="searchBar">
-          <input type="search" placeholder="&#xf002;  Search movie" class="inputSearch">
-        </div>
-      </div>
       </nav>
   </header>
     
   <main>  
-<h1 id ="movietitle"></h1>
-    <section class="movieList"> <!-- cuadro gral -->
-      <div id="moviesList"></div><!-- cuadro peliculas -->
-      <img src="" alt="" id="moviePoster">
+    <h1 id ="movieTitle"></h1>
+    <section id="movieInfoAndPoster">
+    <img src="" alt="" id="moviePoster">
+    <div id=""movieInfo>
+      <p id="score"></p>
+      <p id="year"></p>
+      <p id="director"></p>
+      <p id="producer"></p>
+      <p id="description"></p>
+      <a id="linkMovie" target="_blank">
+      <button id=""watchMovie>Watch movie here:</button>
+      </a>
+    </div>
+    </section>
+    <section class="characters"> <!-- white background -->
+      <div id="characterPictures"></div><!-- container for each character -->
+    </section>
+    <section class="locations"> <!-- white background -->
+      <div id="locationPictures"></div><!-- container for each location -->
+    </section>
+    <section class="vehicles"> <!-- white background -->
+      <div id="vehiclePictures"></div><!-- container for each location -->
     </section>
 
   </main>
