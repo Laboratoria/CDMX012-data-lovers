@@ -1,4 +1,4 @@
-import { imagesList } from './data.js';
+import {sortId, filterAssassin, filterMage, filterFighter, filterMarksman, filterSupport, filterTank} from './data.js';
 import data from './lol/lol.js';
 
 
