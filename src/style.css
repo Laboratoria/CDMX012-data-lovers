@@ -40,7 +40,7 @@ h1 {
   top: 7%;
 }
 
-#fill {
+#filter {
   position: fixed;
   left: 64%;
   top: 7%;
@@ -70,6 +70,16 @@ h1 {
   border-inline: none;
   border-style: none;
   border-radius: 15px;
+}
+
+#botonSearch{
+  width: 5rem;
+  height: 2.5rem;
+  position: fixed;
+  left: 90%;
+  top: 7%;
+  color:#14528F
+
 }
 
 aside {
