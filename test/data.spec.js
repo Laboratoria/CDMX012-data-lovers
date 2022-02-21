@@ -5,9 +5,15 @@ import {
   orderByZa,
   filterByTypes,
 } from "../src/data.js";
+import * as pokemonRepo from "../src/data/pokemon/pokemon.repo.js";
+
 import dataOrdenada from "./dataordenada.js";
 import dataDesordenada from "./datadesordenada.js";
+import { jest } from "@jest/globals";
 //ESTA ES LA FUNCION 1 DE 1 A 251 NUMERICO
+
+jest.mock("../src/data/pokemon/pokemon.repo.js");
+
 describe("order1_251", () => {
   let pokemonExample = {
     pokemon: [
@@ -36,8 +42,13 @@ describe("order1_251", () => {
     expect(typeof order1_251).toBe("function");
   });
 
-  it("shoul be an string", () => {
-    expect(typeof "finalUp").toBe("string");
+  it("should return the pokemons ordered", () => {
+    jest
+      .spyOn(pokemonRepo, "findAllPokemons")
+      .mockReturnValueOnce(dataDesordenada);
+    const response = order1_251();
+
+    expect(response).toEqual(dataOrdenada);
   });
 
   it("shoul be from lowest to higher", () => {
@@ -73,7 +84,14 @@ describe("order251_1", () => {
     expect(typeof order251_1).toBe("function");
   });
 
-  it("shoul be an string", () => {
+  it("should return the pokemons ordered", () => {
+    jest.spyOn(pokemonRepo, "findAllPokemons").mockReturnValueOnce([]);
+    const response = order1_251();
+
+    expect(response).toBeDefined();
+  });
+
+  it("should be an string", () => {
     expect(typeof "finalDown").toBe("string");
   });
 
@@ -163,7 +181,7 @@ describe("filterByTypes", () => {
         num: "002",
         name: "ivysaur",
         pokemon_rarity: "normal",
-        type: ["grass", "poison"],
+        type: ["poison"],
       },
       {
         num: "001",
@@ -175,7 +193,7 @@ describe("filterByTypes", () => {
         num: "003",
         name: "venusaur",
         pokemon_rarity: "normal",
-        type: ["grass", "poison"],
+        type: ["poison"],
       },
     ],
   };
@@ -189,6 +207,17 @@ describe("filterByTypes", () => {
   });
 
   it("shoul be from type pokémon", () => {
-    expect(filterByTypes(pokemonExample)).toContain(dataOrdenada);
+    jest
+      .spyOn(pokemonRepo, "findAllPokemons")
+      .mockReturnValueOnce(pokemonExample.pokemon);
+      
+    expect(filterByTypes("grass")).toEqual([
+      {
+        num: "001",
+        name: "bulbasaur",
+        pokemon_rarity: "normal",
+        type: ["grass", "poison"],
+      },
+    ]);
   });
 });
