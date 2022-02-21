@@ -115,6 +115,7 @@ function pokemon(arreglo){
 
         let raritys = arreglo[i]['pokemon-rarity'];
         rarityPokemon.innerText =` \n -Rarity: ${raritys.charAt(0).toUpperCase() + raritys.slice(1)}`;
+
         buttonMoreInformation.innerHTML = "More information";
         
         containerExternalCard.appendChild(classImagePokemon);
@@ -244,11 +245,41 @@ function pokemon(arreglo){
             
         
             btnCalculate.innerHTML = "Calculate";
+            btnCalculate.addEventListener("click", ()=>{
+                principalContainer.innerHTML="";
+                principalContainer.appendChild(btnReset);
+                
+                let identifierFilter= pokemon(filterDataById(dataPokemon, identifier))
+                identifierFilter;
+                
+                let btnRandom= document.createElement("button");
+                btnRandom.classList.add("btn-random");
+                btnRandom.innerText="Random";
+                principalContainer.appendChild(btnRandom);
+
+                btnRandom.addEventListener("click", ()=>{
+                    const idInt= parseInt(arreglo[i].num);
+                    let randomn= Math.ceil(Math.random(idInt)*251);
+                    let randomStr= "" + randomn.toString();
+                    let pad = "000";
+                    let randomStrEnd = pad.substring(0, pad.length - randomStr.length) + randomStr;
+                    let randomFilter= pokemon(filterDataById(dataPokemon, randomStrEnd));
+                    randomFilter;
+                    
+
+                    
+                })
+                
+                
+
+            })
             btnBack.innerHTML = "Back";
             
             btnBack.addEventListener('click', () => {
                 principalContainer.innerHTML = '';
                 pokemon(dataPokemon);
+                
+                
 
             })
 
@@ -485,7 +516,7 @@ btnTypeRock.addEventListener("click", ()=>{
 const message =document.createElement("div");
 const messageImage=document.createElement("img");
 const btnReset= document.createElement("button");
-const nameBtn=document.createTextNode("Volver");
+const nameBtn=document.createTextNode("Return");
 btnReset.appendChild(nameBtn);
 btnReset.classList.add("btn-reset");
 
