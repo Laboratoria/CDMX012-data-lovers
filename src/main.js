@@ -1,12 +1,8 @@
-import {sortId, filterAssassin, filterMage, filterFighter, filterMarksman, filterSupport, filterTank} from './data.js';
-import data from './lol/lol.js';
+import {all, filterAssassin, filterMage, filterFighter, filterMarksman, filterSupport, filterTank} from './data.js';
 
 
-const cards = document.querySelector('.cardbox');
-const getChampions = Object.values(data.data)
-
-    for (let champion of getChampions) {
-
+for (let champion of all) {
+    const cards = document.querySelector('.cardbox');
     const newCard = document.createElement('article');
     const newcardBody = document.createElement('figure');
     const newcardImage = document.createElement('img');
@@ -14,12 +10,13 @@ const getChampions = Object.values(data.data)
     const newcardName = document.createElement('figcaption');
     newcardName.textContent = champion.name
     newcardName.className = "card-name";
-
     cards.appendChild(newCard);
     newCard.appendChild(newcardBody);
     newcardBody.appendChild(newcardImage);
     newcardBody.appendChild(newcardName);  
- //console.log(championInfo)
-} 
+ } 
 
-//Hacer un event listener para hacer la funcionalidad del filtro
+ //Hacer un event listener para hacer la funcionalidad del filtro
+ const selectAlphabet = document.getElementById('assasin');
+     selectAlphabet.addEventListener('event', filterAssassin);
+   console.log(selectAlphabet)
