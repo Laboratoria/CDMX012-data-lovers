@@ -1,6 +1,6 @@
 //Import data and functions 
 import data from './data/ghibli/ghibli.js';
-import {filmPosters, cutDescription, createBtnLink} from './data.js';
+import {filmPosters, cutDescription, backToTop, hideBtn, search,  createBtnLink} from './data.js';
 
 //CREACION DE ELEMENTOS PARA HOMEPAGE(TARJETAS DE PELICULAS)
 // Poster y titulos de todas las peliculas.
@@ -24,6 +24,7 @@ function createPoster(array) {
         movieYr.className = "movieYr";
         movieYr.innerHTML = ("<strong>" + allFilms[j][3] + "</strong>");
         let movieTitle = document.createElement("p");
+        movieTitle.className = "movieTitle";
         movieTitle.innerHTML = "<strong>" + array[j][1] + "</strong>";
         divCreation.appendChild(filmPoster);
         divCreation.appendChild(movieYr);
@@ -84,11 +85,36 @@ document.getElementById("selectFilter").addEventListener("change", function() {
 
 
 //   //INTERACCION DE LOS BOTONES
-// const d = document;
+//boton ScrollTo
+const btnSelector = document.querySelector(".scrollTopBtn");
 
-// d.addEventListener("DOMContentLoaded", () => {
-//     scrollTopBtn(".scrollTopBtn");  
+btnSelector.addEventListener("click", backToTop);
+window.addEventListener("scroll", hideBtn);
+
+
+
+//barra de busqueda
+const inputSearch = document.getElementById("searchBar");
+inputSearch.addEventListener("keyup", search);
+
+
+
+
+
+// const searchBar = document.getElementById("searchBar");
+
+// searchBar.addEventListener("keyup",(e) =>{
+//     const searchTitle = e.target.value.toLowerCase();
+//     const filteredTitle = allFilms[0].filter((title)=>{
+// return(
+//     title.allFilms.includes(searchTitle)
+// );
+//     });
+//     filteredTitle(allFilms);
 // });
+
+
+
 
 
 //boton que lleva a las paginas de las peliculas
