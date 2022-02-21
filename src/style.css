@@ -131,7 +131,6 @@ figure figcaption{
    
 }
 
-
 .card-name {
     padding-top: 20px;
 }
@@ -168,3 +167,9 @@ footer figure p{
     text-align: left;
     line-height: 16px;
 }
+
+.dropdown{
+    color: #98783C;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
