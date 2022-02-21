@@ -28,7 +28,7 @@ describe("order1_251", () => {
   it("should return the pokemons ordered", () => {
     jest
       .spyOn(pokemonRepo, "findAllPokemons")
-      .mockReturnValueOnce(dataDesordenada);
+      .mockReturnValueOnce(JSON.parse(JSON.stringify(dataDesordenada)));
     const response = order1_251();
 
     expect(response).toEqual(dataOrdenada);
@@ -44,7 +44,7 @@ describe("order251_1", () => {
   it("should return the pokemons ordered", () => {
     jest
       .spyOn(pokemonRepo, "findAllPokemons")
-      .mockReturnValueOnce(dataOrdenada);
+      .mockReturnValueOnce(JSON.parse(JSON.stringify(dataOrdenada)));
     const response = order251_1();
 
     expect(response).toEqual(dataDesordenada);
@@ -58,9 +58,27 @@ describe("orderByAz", () => {
   });
 
   it("shoul be from A to Z", () => {
-    jest
-      .spyOn(pokemonRepo, "findAllPokemons")
-      .mockReturnValueOnce(dataDesordenada);
+    let exampleAZ = [
+      {
+        num: "003",
+        name: "venusaur",
+        pokemon_rarity: "normal",
+        type: ["grass", "poison"],
+      },
+      {
+        num: "002",
+        name: "ivysaur",
+        pokemon_rarity: "normal",
+        type: ["grass", "poison"],
+      },
+      {
+        num: "001",
+        name: "bulbasaur",
+        pokemon_rarity: "normal",
+        type: ["grass", "poison"],
+      },
+    ];
+    jest.spyOn(pokemonRepo, "findAllPokemons").mockReturnValueOnce(exampleAZ);
     const response = orderByAz();
 
     expect(response).toEqual(dataOrdenada);
@@ -74,9 +92,27 @@ describe("orderByZa", () => {
   });
 
   it("shoul be from Z to A", () => {
-    jest
-      .spyOn(pokemonRepo, "findAllPokemons")
-      .mockReturnValueOnce(dataOrdenada);
+    let exampleZA = [
+      {
+        num: "001",
+        name: "bulbasaur",
+        pokemon_rarity: "normal",
+        type: ["grass", "poison"],
+      },
+      {
+        num: "002",
+        name: "ivysaur",
+        pokemon_rarity: "normal",
+        type: ["grass", "poison"],
+      },
+      {
+        num: "003",
+        name: "venusaur",
+        pokemon_rarity: "normal",
+        type: ["grass", "poison"],
+      },
+    ];
+    jest.spyOn(pokemonRepo, "findAllPokemons").mockReturnValueOnce(exampleZA);
     const response = orderByZa();
 
     expect(response).toEqual(dataDesordenada);
