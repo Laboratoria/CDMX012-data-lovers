@@ -21,7 +21,6 @@ header {
   justify-content: flex-start;
   width: 100%;
   padding-left: 50px;
-  
 }
 
 .containerLogo {
@@ -33,8 +32,7 @@ header {
   width: auto;
   height: 5em;
   padding: 10px;
-}  
-
+}
 
 .ghiblisLogo {
   display: flex;
@@ -45,29 +43,81 @@ header {
 }
 
 /*main section*/
-
-main{
+main {
   display: grid;
-  margin-top: 20px;
+  /* margin-top: 20px; */
   flex-flow: column wrap;
   justify-content: center;
   width: 100%;
 }
 
-.posterSection{
-width: 100%;
+/* Carousel */
+
+.slider {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
 }
 
-.initialPicture {
-  /* height: 100%; */
+.slider ul {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  position: relative;
+  animation: cambio 20s infinite alternate linear;
+  width: 400%;
+}
+.slider li {
+  width: 100%;
+  list-style: none;
+}
+.slider img {
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+@keyframes cambio {
+  0% {
+    margin-left: 0;
+  }
+  20% {
+    margin-left: 0;
+  }
+
+  25% {
+    margin-left: -100%;
+  }
+  45% {
+    margin-left: -100%;
+  }
+
+  50% {
+    margin-left: -200%;
+  }
+  70% {
+    margin-left: -200%;
+  }
+
+  75% {
+    margin-left: -300%;
+  }
+  100% {
+    margin-left: -300%;
+  }
+
+  75% {
+    margin-left: -400%;
+  }
+  100% {
+    margin-left: -400%;
+  }
 }
 
-.kikisPicture {
-  /* height: 100%; */
-  width: auto;
+.posterSection {
+  width: 100%;
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
 .posterText {
@@ -79,21 +129,29 @@ width: 100%;
   position: absolute;
   width: 1080px;
   margin-top: 460px;
+  z-index: 998;
 }
 
 #bigText {
   font-size: 4rem;
   text-align: right;
   font-style: normal;
+  /* position: absolute; */
 }
 
 #smallText {
   font-size: 2.8125rem;
   text-align: right;
   font-style: normal;
+  /* position: absolute; */
 }
 
-/*section Allmovies and filters*/
+.goToAllMovies {
+  position: absolute;
+  z-index: 998;
+}
+
+/* Allmovies and filters section*/
 .allMoviesAndFilter {
   display: flex;
   flex-flow: row wrap;
@@ -109,7 +167,7 @@ width: 100%;
   font-style: normal;
   display: flex;
   padding-bottom: 2%;
-  padding-top: 1%;
+  /* padding-top: 1%; */
 }
 
 select {
@@ -125,7 +183,6 @@ select {
 }
 
 .inputSearch {
-
   height: 40px;
   width: 230px;
   font-family: Roboto, "FontAwesome", sans-serif;
@@ -147,8 +204,8 @@ input[type="search"]::placeholder {
   display: flex;
   justify-content: center;
   /* margin-left: 70px; */
-  padding-top: 70px;
-  padding-bottom: 30px;
+  padding-top: 1px;
+  /* padding-bottom: 30px; */
 }
 
 #moviesList {
@@ -157,7 +214,7 @@ input[type="search"]::placeholder {
   grid-gap: 0.625rem;
   grid-template-columns: auto auto auto auto;
 }
-/* tarjeta global */
+/* global card characteristics */
 .globalCard {
   position: relative;
   width: 15.625rem;
@@ -165,7 +222,7 @@ input[type="search"]::placeholder {
   border-radius: 0.3125rem;
   margin: 0.625rem;
 }
-/* tarjeta frontal */
+/* front card */
 .globalCard .card {
   transform: perspective(600px) rotateY(0deg);
   box-shadow: 0 0.3125rem 0.625rem #4c413f;
@@ -229,7 +286,7 @@ input[type="search"]::placeholder {
   background: none;
 }
 
-/* tarjeta trasera */
+/* back card */
 .globalCard .back-card {
   transform: perspective(600px) rotateY(180deg);
   background: #4c413f;
@@ -274,7 +331,7 @@ input[type="search"]::placeholder {
   transform: perspective(37.5rem) rotateY(360deg);
 }
 
-/*section scrollTop*/
+/*scrolltop section */
 .scrollTopBtn {
   position: fixed;
   z-index: 999;
@@ -305,7 +362,7 @@ input[type="search"]::placeholder {
   visibility: hidden;
 }
 
-/*section Footer*/
+/*footer section */
 footer {
   height: 4.25rem;
   display: flex;
@@ -331,11 +388,10 @@ footer {
   color: #14454c;
 }
 
+/*--- media queries ---*/
 
-/*media queries-----------------------------------------*/
-/*Large devices-desktops*/
-@media only screen and (max-width: 992px) and (min-width: 701px){
-  
+/*large devices (desktops)*/
+@media only screen and (max-width: 992px) and (min-width: 701px) {
   .kikisPicture {
     width: 800px;
   }
@@ -344,40 +400,40 @@ footer {
     width: 800px;
     margin-top: 350px;
   }
-  
+
   #bigText {
     font-size: 48px;
   }
   #smallText {
     font-size: 25px;
   }
- 
-.allMoviesAndFilter {
-  height: 100px;
+
+  .allMoviesAndFilter {
+    height: 100px;
+  }
+
+  #allMovies {
+    font-size: 30px;
+  }
+
+  select {
+    font-size: 18px;
+  }
+
+  .inputSearch {
+    font-size: 15px;
+  }
+  .movieList {
+    justify-content: space-evenly;
+  }
+
+  #moviesList {
+    grid-template-columns: auto auto auto;
+  }
 }
 
-#allMovies {
-  font-size: 30px;
-}
-
-select {
-  font-size: 18px;
-}
-
-.inputSearch {
-  font-size: 15px;
-}
-.movieList {
- justify-content: space-evenly; 
-}
-
-#moviesList {
-  grid-template-columns: auto auto auto;
-}
-}
-
-/*Medium devices-Tablets*/
-@media only screen and (max-width: 700px) and (min-width: 601px){
+/*medium devices (tablets, ipads)*/
+@media only screen and (max-width: 700px) and (min-width: 601px) {
   .kikisPicture {
     width: 700px;
   }
@@ -386,37 +442,33 @@ select {
     width: 700px;
     margin-top: 300px;
   }
-  
+
   #bigText {
     font-size: 38px;
   }
   #smallText {
     font-size: 25px;
   }
- 
 
-#allMovies {
-  font-size: 30px;
+  #allMovies {
+    font-size: 30px;
+  }
+
+  select {
+    font-size: 18px;
+  }
+
+  .inputSearch {
+    font-size: 15px;
+  }
+
+  #moviesList {
+    grid-template-columns: auto auto;
+  }
 }
 
-select {
-  font-size: 18px;
-}
-
-.inputSearch {
-  font-size: 15px;
-}
-
-#moviesList {
-  grid-template-columns: auto auto;
-}
-
-}
-
-
-
-/*Small devices-Phones*/
-@media only screen and (max-width: 600px) and (min-width: 400px){
+/*small devices (phones)*/
+@media only screen and (max-width: 600px) and (min-width: 300px) {
   .kikisPicture {
     width: 450px;
   }
@@ -425,7 +477,7 @@ select {
     width: 450px;
     margin-top: 190px;
   }
-  
+
   #bigText {
     font-size: 28px;
   }
@@ -433,44 +485,43 @@ select {
     font-size: 18px;
   }
 
-  #smallText img{
+  #smallText img {
     width: 15px;
     height: 15px;
   }
- 
-.allMoviesAndFilter {
-  height:100px;
-  margin-bottom: 20px;
-  flex-direction: column;
-  gap: 5px;
-}
 
-#allMovies {
-  font-size: 20px;
-}
+  .allMoviesAndFilter {
+    height: 100px;
+    margin-bottom: 20px;
+    flex-direction: column;
+    gap: 5px;
+  }
 
-select {
-  font-size: 12px;
-  width: 120px;
-  height: 35px;
-}
+  #allMovies {
+    font-size: 20px;
+  }
 
-.inputSearch {
-  font-size: 10px;
-  width: 180px;
-  height: 35px;
-}
-.movieList {
- justify-content: space-evenly; 
- padding-top: 30px;
-}
+  select {
+    font-size: 12px;
+    width: 120px;
+    height: 35px;
+  }
 
-#moviesList {
-  grid-template-columns: auto auto;
-}
+  .inputSearch {
+    font-size: 10px;
+    width: 180px;
+    height: 35px;
+  }
+  .movieList {
+    justify-content: space-evenly;
+    padding-top: 30px;
+  }
 
+  #moviesList {
+    grid-template-columns: auto auto;
+  }
 }
-/*Small devices-Phones*/
+/*smaller devices (phones)*/
 @media screen and (max-width: 480px) {
   .kikisPicture {
     width: 450px;
@@ -480,7 +531,7 @@ select {
     width: 450px;
     margin-top: 190px;
   }
-  
+
   #bigText {
     font-size: 28px;
   }
@@ -488,50 +539,53 @@ select {
     font-size: 18px;
   }
 
-  #smallText img{
+  #smallText img {
     width: 15px;
     height: 15px;
   }
- 
-.allMoviesAndFilter {
-  height:100px;
-  margin-bottom: 20px;
-  flex-direction: column;
-  gap: 5px;
-}
 
-#allMovies {
-  font-size: 20px;
-}
-
-select {
-  font-size: 12px;
-  width: 120px;
-  height: 35px;
-}
-
-.inputSearch {
-  font-size: 10px;
-  width: 180px;
-  height: 35px;
-}
-.movieList {
- justify-content: space-evenly; 
- padding-top: 30px;
-}
-
-#moviesList {
-  display: flex;
-  flex-direction: column;
-}
-
-
-  body {
-    background-color: #14454c;
+  .allMoviesAndFilter {
+    height: 100px;
+    margin-bottom: 20px;
+    flex-direction: column;
+    gap: 5px;
   }
+
+  #allMovies {
+    font-size: 20px;
+  }
+
+  select {
+    font-size: 12px;
+    width: 120px;
+    height: 35px;
+  }
+
+  .inputSearch {
+    font-size: 10px;
+    width: 180px;
+    height: 35px;
+  }
+  .movieList {
+    justify-content: space-evenly;
+    padding-top: 30px;
+  }
+
+  #moviesList {
+    display: flex;
+    flex-direction: column;
+  }
+
   #moviesList {
     grid-template-columns: auto auto;
   }
 }
 
-
+/* Carusel */
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .slider,
+  .slider ul,
+  .slider img {
+    height: 100vh;
+  }
+}
