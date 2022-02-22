@@ -1,6 +1,6 @@
 //Import data and functions 
 import data from './data/ghibli/ghibli.js';
-import {filmPosters, cutDescription, backToTop, hideBtn, createBtnLink} from './data.js'
+import {filmPosters, cutDescription, backToTop, hideBtn, createBtnLink, goToSecondPage} from './data.js'
 
 
 //CREACION DE ELEMENTOS PARA HOMEPAGE(TARJETAS DE PELICULAS)
@@ -99,6 +99,10 @@ btnSelector.addEventListener("click", backToTop);
 window.addEventListener("scroll", hideBtn);
 
 
+//Click carousel 
+goToSecondPage (".onlyBigText", "4e236f34-b981-41c3-8c65-f8c9000b94e7"); 
+
+    
 
 
 //barra de busqueda
