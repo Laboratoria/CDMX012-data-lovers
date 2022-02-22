@@ -1,4 +1,4 @@
-import {filmPosters, cutDescription, createBtnLink, backToTop} from '../src/data.js';
+import {filmPosters, cutDescription, createBtnLink, backToTop, hideBtn} from '../src/data.js';
 import data from '../src/data/ghibli/ghibli.js';
 
 describe('filmPosters', () => {

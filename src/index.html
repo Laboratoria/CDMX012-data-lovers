@@ -16,79 +16,52 @@
       </figure>
       <button id="BtnAllMovies" onclick="window.location.href='#allMovies'">All movies</button>
     </header>
+    
   <main>  
-    <section class="posterSection">
-      <figure class="initialPicture"> 
-
-        <img src="./img/kikis.jpg" alt="" class="pictures">   
-      <div class="slider">
+    <section class="sliderBox">
+      <figure class="slider">
+        <a href="#allMovies" id="goToAllMovies" class="goMovies"><i class="fa-solid fa-chevron-down"></i></a>
         <ul>
-        <li>
-          <img src="img/onlyyesterday.jpg">
-          <div class="posterText">
-            <p id="bigText">Only yesterday</p>
-            <p id="smallText">5/5 <img src="./img/Star 1.png" alt=""></p>
-          </div> 
-      </li>
-      <li>
-        <img src="img/4spirited.jpg">
-        <div class="posterText">
-          <p id="bigText">Spirited away</p>
-          <p id="smallText">4.8/5 <img src="./img/Star 1.png" alt=""></p>
-        </div> 
-    </li>
-    <li>
-      <img src="img/2tumba.jpg">
-      <div class="posterText">
-        <p id="bigText">Grave of the fireflies</p>
-        <p id="smallText">4.8/5 <img src="./img/Star 1.png" alt=""></p>
-      </div> 
-  </li>
-      <li>
-        <img src="img/kikis.jpg">
-        
-            <div class="posterText">
-            <p id="bigText">Kiki's delivery service</p>
-                    <p id="smallText">4.8/5 <img src="./img/Star 1.png" alt=""></p>
-                </div> 
-            </li>
+          <li>
+            <img src="img/onlyyesterday.jpg">
+             <p id="topText">Top 5 movies</p>
+             <p id="bigText">Only yesterday</p>
+             <p id="smallText">5/5 <img src="./img/Star 1.png" alt=""></p>
+          </li>
+
+          <li>
+            <img src="img/1princess.jpg">
+             <p id="topText">Top 5 movies</p>
+             <p id="bigText">The tale of princess Kaguya</p>
+             <p id="smallText">5/5 <img src="./img/Star 1.png" alt=""></p>
+          </li>
+
+          <li>
+            <img src="img/4spirited.jpg">
+             <p id="topText">Top 5 movies</p>
+             <p id="bigText">Spirited away</p>
+             <p id="smallText">4.8/5 <img src="./img/Star 1.png" alt=""></p>       
+          </li>
+           
+          <li>
+            <img src="img/2tumba.jpg">
+              <p id="topText">Top 5 movies</p>
+             <p id="bigText">Grave of the fireflies</p>
+             <p id="smallText">4.8/5 <img src="./img/Star 1.png" alt=""></p>
+          </li>
+
+          <li>
+            <img src="img/kikis.jpg">
+              <p id="topText">Top 5 movies</p>
+             <p id="bigText">Kiki's delivery service</p>
+             <p id="smallText">4.8/5 <img src="./img/Star 1.png" alt=""></p>
+          </li>
         </ul>
-        <a href="#allMovies" id="goToAllMovies">&#11014;</a>
-    </div>
-        <img src="./img/gifs/onlyyesterday.gif" alt="" class="pictures">   
-        <div class="posterText">
-          <p id="bigText"> Kiki's delivery service </p>
-          <p id="smallText">4.8/5 <img src="./img/Star 1.png" alt=""></p>
-        </div> 
-
-        <img src="./img/kikis.jpg" alt="" class="pictures">   
-        <div class="posterText">
-          <p id="bigText"> Kiki's delivery service </p>
-          <p id="smallText">4.8/5 <img src="./img/Star 1.png" alt=""></p>
-        </div> 
-
-        <img src="./img/kikis.jpg" alt="" class="pictures">   
-        <div class="posterText">
-          <p id="bigText"> Kiki's delivery service </p>
-          <p id="smallText">4.8/5 <img src="./img/Star 1.png" alt=""></p>
-        </div> 
-
-          <img src="./img/kikis.jpg" alt="" class="pictures">   
-        <div class="posterText">
-          <p id="bigText"> Kiki's delivery service </p>
-          <p id="smallText">4.8/5 <img src="./img/Star 1.png" alt=""></p>
-        </div> 
-
-      </figure>
-    </section>
-
-    <section class="allMoviesAndFilter">
-     <p id="allMovies">All movies</p>
-      </figure> -->
+      </figure> 
     </section>
 
     <section id="allMovies"class="allMoviesAndFilter">
-     <h1 id="allMovies">All movies</h1>
+     <!-- <h1 id="allMovies">All movies</h1> -->
       <select id="selectFilter" onchange="">
        <option value=""selected hidden>Sort by:</option> 
        <option value="AZ">A-Z</option>
@@ -97,8 +70,7 @@
        <option value="year">Newer to Older</option>
       </select>
      <!-- <section id="search"> -->
-        <input type="search" placeholder="&#xf002;  Search movie" class="inputSearch" id="searchBar">
-     <!-- </section> -->
+      <input type="search" placeholder="&#xf002;  Search movie" class="inputSearch" id="searchBar">    
     </section>
 
     <section class="movieList"> <!-- white background -->
@@ -106,17 +78,19 @@
     </section>
 
   </main>
-  <button class="scrollTopBtn hidden">&#11014;</button>
-     <footer>
-      <div class="footerItems">
-        <div class="footerContent"><a href="https://github.com/sonifeg"><i class="fab fa-github"></i></a>
-        </div>
-            <p class="footerContent">For educational purposes only</p>
-            <div class="footerContent"><a href="https://github.com/ziomarajimenez"><i class="fab fa-github"></i></a>
-        </div>
-      </div> 
-    </footer>
-    <div id="root"></div>
+   <button class="scrollTopBtn hidden" id="scrollTop">&#11014;</button>
+
+  <footer>
+    <div class="footerItems">
+     <div class="footerContent"><a href="https://github.com/sonifeg"><i class="fab fa-github"></i></a>
+     </div>
+       <p class="footerContent">For educational purposes only</p>
+      <div class="footerContent"><a href="https://github.com/ziomarajimenez"><i class="fab fa-github"></i></a>
+      </div>
+    </div> 
+  </footer>
+    
+     <div id="root"></div>
     <script src="main.js" type="module"></script>
   </body>
 </html>
