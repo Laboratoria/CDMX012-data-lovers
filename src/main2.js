@@ -1,5 +1,6 @@
 //Import data and functions 
 import data from './data/ghibli/ghibli.js';
+import {backToTop, hideBtn} from './data.js';
 import {average, createElements} from './data2.js';
 
 const queryString = window.location.search;
@@ -7,7 +8,6 @@ const urlParams = new URLSearchParams(queryString);
 const page_type = urlParams.get('id')
 
 const found = data.films.find(element => element.id === page_type);
-console.log(found);
 
 //Poster
 let poster = found.poster
@@ -61,59 +61,16 @@ if(found.vehicles.length >0){
     createElements(".vehicles", "Vehicles", found.vehicles, "vehiclePictures")
 }
 
-//     let characterParagraph = document.querySelector(".characters")
-//     let pCar = document.createElement("h2");
-//     pCar.innerHTML = "Characters";
-//     characterParagraph.insertBefore(pCar, characterParagraph.firstChild);
-
-    
-//     for(let person of found.people){
-//     let card = document.createElement("figure")
-//     let character = document.createElement("img");
-//     character.setAttribute("src", person.img);
-//     let characterName = document.createElement("figcaption");
-//     characterName.innerHTML = person.name;
-//     card.appendChild(character); 
-//     card.appendChild(characterName)
-
-//     let characterList = document.getElementById("characterPictures")
-//     characterList.appendChild(card)
-//     }
-
-// //Locations
-//     if 
-// for(let location of found.locations){
-//     let card = document.createElement("figure")
-//     let character = document.createElement("img");
-//     character.setAttribute("src", location.img);
-//     let characterName = document.createElement("figcaption");
-//     characterName.innerHTML = location.name;
-//     card.appendChild(character); 
-//     card.appendChild(characterName)
-    
-//     let characterList = document.getElementById("characterPictures")
-//     characterList.appendChild(card)
-//     }
-    
-//     //Vehicles
-//  for(let vehicles of found.vehicles){
-//     let card = document.createElement("figure")
-//     let character = document.createElement("img");
-//     character.setAttribute("src", vehicles.img);
-//     let characterName = document.createElement("figcaption");
-//     characterName.innerHTML = vehicles.name;
-//     card.appendChild(character); 
-//     card.appendChild(characterName)
-        
-//     let characterList = document.getElementById("characterPictures")
-//     characterList.appendChild(card)
-//         }   
-
 
 //Movie button 
 
-let watchMovie = document.getElementById("watchMovie")
+// let watchMovie = document.getElementById("watchMovie")
 let linkMovie = document.getElementById("linkMovie")
 linkMovie.setAttribute("href", found.movie);
 
+//   //INTERACCION DE LOS BOTONES
+//boton ScrollTop
+const btnSelector = document.querySelector(".scrollTopBtn");
 
+btnSelector.addEventListener("click", backToTop);
+window.addEventListener("scroll", hideBtn);

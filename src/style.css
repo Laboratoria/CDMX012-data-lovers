@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  outline: 1px solid red;
+  /* outline: 1px solid red;   */
 }
 
 body {
@@ -18,8 +18,10 @@ header {
   height: 5rem;
   width: 100%;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   width: 100%;
+  padding-left: 50px;
+  align-items: center;
 }
 
 .containerLogo {
@@ -41,6 +43,25 @@ header {
   margin-bottom: 5%;
 }
 
+#BtnAllMovies{
+  font-size: 16px;
+  height: 40px;
+  width: 120px;
+  margin-right: 50px;
+  background: #d8af39;
+  border-radius: 5px;
+  color: #efefef;
+  /* box-shadow: 0 0.3125rem 0.625rem #4c413f; */
+  font-weight: bolder;
+  cursor: pointer;
+  border: #efefef solid;
+}
+
+#BtnAllMovies:hover {
+  color: #4c413f;
+  
+}
+
 /*main section*/
 main {
   display: grid;
@@ -51,103 +72,126 @@ main {
 }
 
 /* Carousel */
+.sliderBox{
+  width: 100%;
+  height: 650px;
+  /* position: relative;  */
+}
 
 .slider {
   width: 100%;
-  height: 100%;
+  height: 650px; 
   overflow: hidden;
-  position: relative;
+  /* position: relative;  */
+}
+
+/*goToAllMovies*/
+.slider a {
+  width: 100%;
+  height: 100%;  
+  position: absolute;
+}
+
+.slider .goMovies {
+  font-style: normal;
+  z-index: 998;   
+  color: #d8af39;
+  height: 20px;
+  width: 100%;
+  text-align: center;
+  font-size: 40px;
+  cursor: pointer;
+  text-decoration: none;
+  top: 94%;
+}
+
+.goMovies:hover {
+  color: #ebe9e9;
 }
 
 .slider ul {
   display: flex;
-  position: relative;
   animation: cambio 20s infinite alternate linear;
-  width: 400%;
+  width: 500%;
+  height: 100%;
+  /* position: relative;  */
 }
-.slider li {
-  width: 100%;
+
+.slider li{
   list-style: none;
+  width: 100%;
+  position: relative;  
 }
+
 .slider img {
   width: 100%;
-  height: auto;
-  display: flex;
-}
-@keyframes cambio {
-  0% {
-    margin-left: 0;
-  }
-  20% {
-    margin-left: 0;
-  }
-
-  25% {
-    margin-left: -100%;
-  }
-  45% {
-    margin-left: -100%;
-  }
-
-  50% {
-    margin-left: -200%;
-  }
-  70% {
-    margin-left: -200%;
-  }
-
-  75% {
-    margin-left: -300%;
-  }
-  100% {
-    margin-left: -300%;
-  }
-
-  75% {
-    margin-left: -400%;
-  }
-  100% {
-    margin-left: -400%;
-  }
-}
-
-.posterSection {
-  width: 100%;
-  height: 550px;
-  display: flex;
-  flex-direction: column;
+  height: 100%; 
   position: relative;
 }
+@keyframes cambio {
+  0%{margin-left: 0;}
+  15%{margin-left: 0;}
 
-.posterText {
+  25%{margin-left: -100%;}
+  45%{margin-left: -100%;}
+
+  50%{margin-left: -200%;}
+  70%{margin-left: -200%;}
+
+  75%{margin-left: -300%;}
+  100%{margin-left: -300%;}
+ 
+}
+
+.slider #topText {
+  font-weight: bolder;
+  color: #4c413f;
+  background: rgba(255, 250, 250, 0.39);
+  font-style: normal;
+  height: 80px;
+  width: 25%;
+  font-size: 60px;
+  text-align: left;
+  font-style: normal;
+  position: absolute;
+  top: 5%;
+  margin-left: 10px;
+  border-radius: 5px;
+  padding-left: 15px;
+}
+
+.slider #bigText {
   font-weight: bold;
   color: #4c413f;
   background: rgba(255, 250, 250, 0.39);
   font-style: normal;
-  height: 133px;
-  position: absolute;
-  width: 1080px;
-  margin-top: 460px;
-  z-index: 998;
-}
-
-#bigText {
+  height: 70px;
+  width: 100%;
   font-size: 4rem;
   text-align: right;
   font-style: normal;
-  /* position: absolute; */
+  position: absolute;
+  top: 75%;
 }
 
-#smallText {
+.slider #smallText {
+  font-weight: bold;
+  color: #4c413f;
+  background: rgba(255, 250, 250, 0.39);
+  font-style: normal;
+  height: 60px;
+  width: 100%;
   font-size: 2.8125rem;
   text-align: right;
-  font-style: normal;
-  /* position: absolute; */
+  font-style: normal; 
+  margin-top: 70px;
+  position: absolute;
+  top: 75%;
 }
 
-.goToAllMovies {
-  position: absolute;
-  z-index: 998;
+#smallText img {
+  height: 50px;
+  width: 50px;
 }
 
 /* Allmovies and filters section*/
@@ -240,7 +284,7 @@ input[type="search"]::placeholder {
   border-radius: 0.625rem;
 }
 
-.globalCard .card p {
+.globalCard .card .movieTitle {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -267,6 +311,7 @@ input[type="search"]::placeholder {
   border-radius: 0.625rem 0.625rem 0 0;
   letter-spacing: 0;
   background: rgba(76, 65, 63, 0.7);
+  position: absolute;
 }
 
 .globalCard .card .movieRtng {
@@ -390,23 +435,57 @@ footer {
 /*--- media queries ---*/
 
 /*large devices (desktops)*/
-@media only screen and (max-width: 992px) and (min-width: 701px) {
-  .kikisPicture {
-    width: 800px;
+@media only screen and (max-width: 992px) and (min-width: 830px) {
+ 
+  .sliderBox{
+    width: 100%;
+    height: 650px;
+    /* position: relative;  */
   }
-  .posterText {
-    height: 95px;
-    width: 800px;
-    margin-top: 350px;
+  
+  .slider {
+    width: 100%;
+    height: 650px; 
+    overflow: hidden;
+    /* position: relative;  */
   }
-
-  #bigText {
+  
+  /*goToAllMovies*/
+  .slider .goMovies {
+    font-size: 38px;
+    top: 108%;
+  }
+  
+  .slider img {
+    width: 100%;
+  }
+  
+  .slider #topText {
+    width: 40%;
+    font-size: 50px;
+  }
+  
+  .slider #bigText {
+    font-weight: bold;
+    color: #4c413f;
+    background: rgba(255, 250, 250, 0.39);
+    font-style: normal;
+    height: 70px;
+    width: 100%;
     font-size: 48px;
+    top: 75%;
   }
-  #smallText {
-    font-size: 25px;
+  
+  .slider #smallText {
+    width: 100%;
+    font-size: 42px;
   }
-
+  
+  #smallText img {
+    height: 40px;
+    width: 40px;
+  }
+  
   .allMoviesAndFilter {
     height: 100px;
   }
@@ -432,23 +511,57 @@ footer {
 }
 
 /*medium devices (tablets, ipads)*/
-@media only screen and (max-width: 700px) and (min-width: 601px) {
-  .kikisPicture {
-    width: 700px;
+@media only screen and (max-width: 829px) and (min-width: 590px) {
+  .slider .goMovies {
+    font-size: 35px;
+    top: 101%;
   }
-  .posterText {
-    height: 90px;
-    width: 700px;
-    margin-top: 300px;
+  .sliderBox{
+    height: 600px;
+  }
+  
+  .slider {
+    height: 600px; 
   }
 
-  #bigText {
+  .slider ul {
+    height: 600px;
+  }
+  
+  .slider img {
+    width: 100%;
+    height: 600px;
+  }
+  
+  .slider #topText {
+    width: 45%;
     font-size: 38px;
+    height: 65px;
+    top: 3%;
+    font-weight: bolder;
   }
-  #smallText {
-    font-size: 25px;
+  
+  .slider #bigText {
+    font-style: normal;
+    height: 65px;
+    width: 100%;
+    font-size: 45px;
+    top: 75%;
   }
-
+  
+  .slider #smallText {
+    width: 100%;
+    font-size: 40px;
+    top: 75%;
+    height: 55px;
+    margin-top: 65px;
+  }
+  
+  #smallText img {
+    height: 35px;
+    width: 35px;
+  }
+/* //////////////////////////////////////////////////////////// */
   #allMovies {
     font-size: 30px;
   }
@@ -467,27 +580,57 @@ footer {
 }
 
 /*small devices (phones)*/
-@media only screen and (max-width: 600px) and (min-width: 300px) {
-  .kikisPicture {
-    width: 450px;
+@media only screen and (max-width: 589px) and (min-width: 480px) {
+  .slider .goMovies {
+    font-size: 25px;
+    top: 88%;
   }
-  .posterText {
-    height: 56px;
-    width: 450px;
-    margin-top: 190px;
+  .sliderBox{
+    height: 500px;
   }
-
-  #bigText {
-    font-size: 28px;
-  }
-  #smallText {
-    font-size: 18px;
+  
+  .slider {
+    height: 500px; 
   }
 
+  .slider ul {
+    height: 500px;
+  }
+  
+  .slider img {
+    width: 100%;
+    height: 500px;
+  }
+  
+  .slider #topText {
+    width: 45%;
+    font-size: 30px;
+    height: 45px;
+    top: 3%;
+    font-weight: bolder;
+  }
+  
+  .slider #bigText {
+    font-style: normal;
+    height: 50px;
+    width: 100%;
+    font-size: 38px;
+    top: 76%;
+  }
+  
+  .slider #smallText {
+    width: 100%;
+    font-size: 32px;
+    top: 76%;
+    height: 55px;
+    margin-top: 50px;
+  }
+  
   #smallText img {
-    width: 15px;
-    height: 15px;
+    height: 25px;
+    width: 25px;
   }
+/* ////////////////////////////////////////////////////////// */
 
   .allMoviesAndFilter {
     height: 100px;
@@ -520,28 +663,62 @@ footer {
     grid-template-columns: auto auto;
   }
 }
+
+
 /*smaller devices (phones)*/
-@media screen and (max-width: 480px) {
-  .kikisPicture {
-    width: 450px;
+@media only screen and (max-width: 479px) and (min-width: 400px) {
+  .slider .goMovies {
+    font-size: 25px;
+    top: 79%;
   }
-  .posterText {
-    height: 56px;
-    width: 450px;
-    margin-top: 190px;
+  .sliderBox{
+    height: 450px;
   }
-
-  #bigText {
-    font-size: 28px;
-  }
-  #smallText {
-    font-size: 18px;
+  
+  .slider {
+    height: 450px; 
   }
 
+  .slider ul {
+    height: 450px;
+  }
+  
+  .slider img {
+    width: 100%;
+    height: 450px;
+  }
+  
+  .slider #topText {
+    width: 45%;
+    font-size: 25px;
+    height: 42px;
+    top: 3%;
+    font-weight: bolder;
+  }
+  
+  .slider #bigText {
+    font-style: normal;
+    height: 42px;
+    width: 100%;
+    font-size: 30px;
+    top: 76%;
+  }
+  
+  .slider #smallText {
+    width: 100%;
+    font-size: 20px;
+    top: 76%;
+    height: 38px;
+    margin-top: 42px;
+  }
+  
   #smallText img {
-    width: 15px;
-    height: 15px;
+    height: 25px;
+    width: 25px;
   }
+
+
+/* /////////////////////////////////////////////////////// */
 
   .allMoviesAndFilter {
     height: 100px;
@@ -581,10 +758,10 @@ footer {
 }
 
 /* Carusel */
-@media only screen and (min-width: 320px) and (max-width: 768px) {
+/* @media only screen and (min-width: 320px) and (max-width: 768px) {
   .slider,
   .slider ul,
   .slider img {
     height: 100vh;
   }
-}
+} */

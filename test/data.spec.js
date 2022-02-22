@@ -1,4 +1,4 @@
-import {filmPosters, cutDescription, createBtnLink} from '../src/data.js';
+import {filmPosters, cutDescription, createBtnLink, backToTop, hideBtn} from '../src/data.js';
 import data from '../src/data/ghibli/ghibli.js';
 
 describe('filmPosters', () => {
@@ -32,6 +32,17 @@ describe('cutDescription', () => {
   
 });
 
+describe('backToTop', () => {
+  it('Should be a function', () => {
+    expect(typeof backToTop).toBe('function');
+  });
+});
+
+describe('hideBtn', () => {
+  it('Should be a function', () => {
+    expect(typeof hideBtn).toBe('function');
+  });
+});
 
 describe('createBtnLink', () => {
   it('Should be a function', () => {

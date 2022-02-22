@@ -1,4 +1,4 @@
-const btnTop =document.querySelector(".scrollTopBtn");
+
 
 
 //Create an array with different characteristics
@@ -18,10 +18,34 @@ export const cutDescription = (description) => {
   }
 };
 
+
+// //Function to filter titles in finder
+// export const search = () =>{
+//   const searchbox = document.getElementById("searchBar").value.toUpperCase();
+  
+//   const cards = document.querySelectorAll(".globalCard");
+//   const titles = document.querySelectorAll(".movieTitles");
+
+//   for (let i=0; i < titles.length; i++ ){
+//     let match = cards[i].querySelectorAll(".movieTitles")[0];
+//     if(match){
+//       let textValue = match.textContent || match.innerHTML
+//        if(textValue.toUpperCase().indexOf(searchbox) > -1){
+//          cards[i].stiyle.display = "";
+//        }else{
+//          cards[i].stiyle.display = "none";
+//        }
+//     }
+//   }
+// }
+
+
 //Create a link for each movie
 export const createBtnLink = function (id){
   document.location.href = "./movies.html?id=" + id;
 }
+
+
 
 export function backToTop(){
   // window.scrollTo(0,0);
@@ -30,15 +54,16 @@ export function backToTop(){
   left: 0,
   behavior: "smooth"
     })
-  }
+}
   
 export function hideBtn(){
+  
   if(window.pageYOffset > 900){
-    btnTop.classList.remove("hidden");
+    document.getElementById("scrollTop").classList.remove("hidden");
   }else{
-    btnTop.classList.add("hidden")
+    document.getElementById("scrollTop").classList.add("hidden")
   }
-  }
+}
   
   // Search in the array
 // export const searhInTheArray = function (array, inputSearch){

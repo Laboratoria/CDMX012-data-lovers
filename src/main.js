@@ -24,6 +24,7 @@ function createPoster(array) {
         movieYr.className = "movieYr";
         movieYr.innerHTML = ("<strong>" + allFilms[j][3] + "</strong>");
         let movieTitle = document.createElement("p");
+        movieTitle.className = "movieTitle";
         movieTitle.innerHTML = "<strong>" + array[j][1] + "</strong>";
         divCreation.appendChild(filmPoster);
         divCreation.appendChild(movieYr);
@@ -97,3 +98,43 @@ const btnSelector = document.querySelector(".scrollTopBtn");
 btnSelector.addEventListener("click", backToTop);
 window.addEventListener("scroll", hideBtn);
 
+
+
+
+//barra de busqueda
+// const inputSearch = document.getElementById("searchBar");
+// inputSearch.addEventListener("keyup", search);
+
+
+
+
+
+// const searchBar = document.getElementById("searchBar");
+
+// searchBar.addEventListener("keyup",(e) =>{
+//     const searchTitle = e.target.value.toLowerCase();
+//     const filteredTitle = allFilms[0].filter((title)=>{
+// return(
+//     title.allFilms.includes(searchTitle)
+// );
+//     });
+//     filteredTitle(allFilms);
+// });
+
+
+
+
+
+//boton que lleva a las paginas de las peliculas
+// let btnLink = document.querySelectorAll(".btnMoreInfo");
+
+// for (let btn of btnLink){
+// btn.addEventListener("click", function() {
+//     document.location.href = "./movies.html";
+// })
+// };
+
+// btnLink.forEach(btn => {
+//     btn.addEventListener("click", function() {
+//         document.location.href = "./movies.html";
+//     });
