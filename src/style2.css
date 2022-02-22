@@ -300,22 +300,442 @@ footer {
 /*--- media queries ---*/
 
 /*large devices (desktops)*/
-@media only screen and (max-width: 992px) and (min-width: 830px) {
+@media only screen and (max-width: 1200px) and (min-width: 830px) {
+  
+  #movieInfoAndPoster {
+    width: 90%;
+  }
+
+  #movieInfo{
+    font-weight: bold;
+    padding-top: 10px;
+  }
+  
+  #movieInfo p{
+    padding: 5px;
+    font-size: 16px;
+  }
+  
+  #movieInfo button{
+    font-size: 16px;
+    height: 48px;
+    width: 220px;
+    font-weight: bold;
+  }
+  
+/* ///////////////////////////////////////////// */
+  .characters{
+    width: 90%;
+  }
+  
+  #characterPictures{
+    display: grid;
+    color: #4c413f;
+    grid-gap: 20px;
+    grid-template-columns: auto auto auto;
+  }
+
+  
+  .locations{
+    width: 90%;
+  }
+  
+  #locationPictures{
+    display: grid;
+    color: #4c413f;
+    grid-gap: 20px;
+    grid-template-columns: auto auto auto;
+  }
+  
+
+    .vehicles{
+      width: 90%;
+    }
+
+    
+    #vehiclePictures{
+      display: grid;
+      color: #4c413f;
+      grid-gap: 20px;
+      grid-template-columns: auto auto auto;
+    }
 
 }
  
 
-/*medium devices (tablets, ipads)*/
+ /* medium devices (tablets, ipads) */
 @media only screen and (max-width: 829px) and (min-width: 590px) {
 
+  h1 {
+    font-size: 40px;
+  }
+          
+  #movieInfoAndPoster {
+    width: 95%;
+    border: 1px solid #4c413f;
+  }
+  
+  #movieInfoAndPoster #moviePoster {
+    border-radius: 2%; 
+    height: 100%;
+    width: 60%;
+  }
+
+  #movieInfo p{
+    text-align: center;
+    font-size: 15px;
+    padding: 2px;
+  }
+  
+  #movieInfo button{
+    font-size: 16px;
+    height: 48px;
+    width: 220px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  /*/////////////////////////////////////////  */
+  .characters{
+    width: 95%;
+    border-radius: 10px;
+  }
+  
+  .characters h2{
+  font-size: 35px;
+  }
+  
+  #characterPictures{
+    grid-gap: 10px;
+    grid-template-columns: auto auto auto;
+  }
+  
+  #characterPictures img{
+  height: 200px;
+  width: 160px;
+  }
+  
+  #characterPictures figcaption{
+    font-size: 14px;
+    width: 160px;
+  }
+  
+  .locations{
+    width: 95%;
+    border-radius: 10px;
+  }
+  
+  .locations h2{
+    font-size: 35px;
+  }
+  
+  #locationPictures{
+    grid-gap: 10px;
+    grid-template-columns: auto auto auto;
+  }
+  
+  #locationPictures img{
+    height: 200px;
+    width: 160px;
+  }
+  
+  #locationPictures figcaption{
+    font-size: 14px;
+    width: 160px;
+    }
+  
+    .vehicles{
+      width: 95%;
+      border-radius: 10px;
+    }
+    
+    .vehicles h2{
+      font-size: 35px;
+    }
+    
+    #vehiclePictures{
+      grid-gap: 10px;
+      grid-template-columns: auto auto auto;
+    }
+    
+    #vehiclePictures img{
+      height: 200px;
+      width: 160px;
+    }
+    
+    #vehiclePictures figcaption{
+      font-size: 14px;
+    width: 160px;
+      }
 }
 
 
 /*small devices (phones)*/
 @media only screen and (max-width: 589px) and (min-width: 480px) {
-}
+  h1 {
+    font-size: 30px;
+  }
+          
+  #movieInfoAndPoster {
+    flex-direction: column;
+    width: 100%;
+    height: 800px;
+    border: 1px solid #4c413f;
+    border-radius: 2px;
+  }
+  
+  #movieInfoAndPoster #moviePoster {
+    border-radius: 2px;
+    width: 100%;
+    height: 60%;
+  }
+  
+  #movieInfo{
+    text-align: center;
+    overflow: hidden;
+    font-weight: bolder;
+    color: #4c413f;
+    padding-top: 5px;
+  }
+  
+  #movieInfo p{
+    text-align: center;
+    font-size: 14px;
+    padding: 1px;
+  }
+  
+  #movieInfo button{
+    font-size: 16px;
+    padding: 5px;
+    height: 30px;
+    width: 150px;
+    border-radius: 5px;
+    font-weight: normal;
+    margin-top: 15px;
+  }
+  
+/* ////////////////////////////////////////// */
+  .characters{
+    width: 95%;
+    border-radius: 2px;
+  }
+  
+  .characters h2{
+  font-size: 25px;
+  padding-top: 10px;
+  }
+  
+  #characterPictures{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: auto auto;
+  }
+  
+  #characterPictures img{
+  height: 240px;
+  width: 200px;
+  }
+  
+  #characterPictures figcaption{
+    font-size: 15px;
+    font-weight: normal;
+    width: 200px;
+  }
+  
+  .locations{
+    width: 95%;
+    border-radius: 2px;
+  }
+  
+  .locations h2{
+    font-size: 25px;
+    padding-top: 10px;
+  }
+  
+  #locationPictures{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: auto auto;
+  }
+  
+  #locationPictures img{
+    height: 240px;
+    width: 200px;
+  }
+  
+  #locationPictures figcaption{
+    font-size: 15px;
+    font-weight: normal;
+    width: 200px;
+    }
+  
+    .vehicles{
+      width: 95%;
+      border-radius: 2px;
+    }
+    
+    .vehicles h2{
+      font-size: 25px;
+      padding-top: 10px;
+    }
+    
+    #vehiclePictures{
+      display: grid;
+    grid-gap: 10px;
+    grid-template-columns: auto auto;
+    }
+    
+    #vehiclePictures img{
+      height: 240px;
+      width: 200px;
+    }
+    
+    #vehiclePictures figcaption{
+      font-size: 15px;
+      font-weight: normal;
+      width: 200px;
+      }
+} 
 
 /*smaller devices (phones)*/
-@media only screen and (max-width: 479px) and (min-width: 400px){
+ @media only screen and (max-width: 479px) and (min-width: 350px){
+  h1 {
+    font-size: 25px;
+  }
+          
+  #movieInfoAndPoster {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 800px;
+    border: 1px solid #4c413f;
+    border-radius: 2px;
+  }
+  
+  #movieInfoAndPoster #moviePoster {
+    border-radius: 2px; 
+    height: 50%;
+  }
+  
+  #movieInfo{
+    font-weight: normal;
+    width: 100%;
+    height: 50%;
+  }
+  
+  #movieInfo p{
+    margin-top: 5px;
+    font-size: 14px;
+    padding: 0;
+  }
+  
+  #movieInfo button{
+    font-size: 16px;
+    padding: 5px;
+    height: 30px;
+    width: 150px;
+    border-radius: 5px;
+    font-weight: normal;
+    margin-top: 15px;
+  }
+  
 
-}
+  .characters{
+    display: flex;
+    width: 100%;
+  }
+  
+  .characters h2{
+  font-size: 25px;
+  padding-top: 10px;
+  }
+  
+  #characterPictures{
+    display: flex;
+    flex-direction: column;
+    color: #4c413f;
+    gap: 10px;
+    margin-top: 60px;
+  }
+  
+  #characterPictures img{
+  height: 200px;
+  width: 160px;
+  border-radius: 8px;
+  }
+  
+  #characterPictures figcaption{
+    font-size: 14px;
+    font-weight: normal;
+    width: 160px;
+    height: 42px;
+    padding: 2px;
+    border-radius: 4px;
+  }
+  
+  .locations{
+    display: flex;
+    width: 100%;
+  }
+  
+  .locations h2{
+    font-size: 25px;
+    padding-top: 10px;
+  }
+  
+  #locationPictures{
+    display: flex;
+    flex-direction: column;
+    color: #4c413f;
+    gap: 10px;
+    margin-top: 60px;
+  }
+  
+  #locationPictures img{
+    height: 200px;
+    width: 160px;
+    border-radius: 8px;
+  }
+  
+  #locationPictures figcaption{
+    font-size: 14px;
+    font-weight: normal;
+    width: 160px;
+    height: 42px;
+    padding: 2px;
+    border-radius: 4px;
+    }
+  
+    .vehicles{
+      display: flex;
+      width: 100%;
+    }
+    
+    .vehicles h2{
+      font-size: 25px;
+      padding-top: 10px;
+    }
+    
+    #vehiclePictures{
+      display: flex;
+      flex-direction: column;
+      color: #4c413f;
+      gap: 10px;
+      margin-top: 60px;
+    }
+    
+    #vehiclePictures img{
+      height: 200px;
+      width: 160px;
+      border-radius: 8px;
+    }
+    
+    #vehiclePictures figcaption{
+      font-size: 14px;
+      font-weight: normal;
+      width: 160px;
+      height: 42px;
+      padding: 2px;
+      border-radius: 4px;
+      }
+} 
