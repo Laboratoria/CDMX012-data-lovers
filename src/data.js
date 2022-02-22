@@ -18,11 +18,11 @@ export const cutDescription = (description) => {
   }
 };
 
-export const goToSecondPage = (className, id) =>{
-  secondPage = document.querySelector(className)
-  let location = document.location.href = "./movies.html?id=" + id;
-  secondPage.onclick =location;
-} 
+// export const goToSecondPage = (className, id) =>{
+//   secondPage = document.querySelector(className)
+//   let location = document.location.href = "./movies.html?id=" + id;
+//   secondPage.onclick =location;
+// } 
 // //Function to filter titles in finder
 // export const search = () =>{
 //   const searchbox = document.getElementById("searchBar").value.toUpperCase();
