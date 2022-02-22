@@ -435,7 +435,7 @@ footer {
 /*--- media queries ---*/
 
 /*large devices (desktops)*/
-@media only screen and (max-width: 992px) and (min-width: 830px) {
+@media only screen and (max-width: 1200px) and (min-width: 830px) {
  
   .sliderBox{
     width: 100%;
@@ -666,30 +666,30 @@ footer {
 
 
 /*smaller devices (phones)*/
-@media only screen and (max-width: 479px) and (min-width: 400px) {
+@media only screen and (max-width: 479px) and (min-width: 350px) {
   .slider .goMovies {
     font-size: 25px;
-    top: 79%;
+    top: 72%;
   }
   .sliderBox{
-    height: 450px;
+    height: 400px;
   }
   
   .slider {
-    height: 450px; 
+    height: 400px; 
   }
 
   .slider ul {
-    height: 450px;
+    height: 400px;
   }
   
   .slider img {
     width: 100%;
-    height: 450px;
+    height: 400px;
   }
   
   .slider #topText {
-    width: 45%;
+    width: 50%;
     font-size: 25px;
     height: 42px;
     top: 3%;
@@ -698,9 +698,9 @@ footer {
   
   .slider #bigText {
     font-style: normal;
-    height: 42px;
+    height: 40px;
     width: 100%;
-    font-size: 30px;
+    font-size: 28px;
     top: 76%;
   }
   
@@ -709,7 +709,7 @@ footer {
     font-size: 20px;
     top: 76%;
     height: 38px;
-    margin-top: 42px;
+    margin-top: 40px;
   }
   
   #smallText img {
@@ -757,11 +757,3 @@ footer {
   }
 }
 
-/* Carusel */
-/* @media only screen and (min-width: 320px) and (max-width: 768px) {
-  .slider,
-  .slider ul,
-  .slider img {
-    height: 100vh;
-  }
-} */
