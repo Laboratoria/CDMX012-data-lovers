@@ -13,6 +13,12 @@ export const filterDataById = (datos, id) =>{
   return datos.filter(dato => dato.num == id);
 };
 
+export const calculateDataByStats =(datosOne, datosTwo) =>{
+  const averageDataOne= ((parseInt((datosOne["base-attack"])) + parseInt(datosOne["base-defense"]) + parseInt(datosOne["base-stamina"]))/3);
+  const averageDataTwo =((parseInt((datosTwo["base-attack"])) + parseInt(datosTwo["base-defense"]) + parseInt(datosTwo["base-stamina"]))/3);
+  return (averageDataOne-averageDataTwo);
+}
+
 //FUNCIÓN DE ORDENAR DE ASCENDENTE
 export const orderAscendente = (datos) => datos.sort((a, b ) => (a.num < b.num  ? -1 : 1));
 

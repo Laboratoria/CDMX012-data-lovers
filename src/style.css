@@ -593,6 +593,24 @@ video{
     border-radius: 10px;
 
 }
+.box-stats-general, .box-stats-random{
+    background: black;
+    width: 250px;
+    height: 230px;
+    display: flex;
+}
+.container-battle{
+    background: white;
+    width: 600px;
+    height: 300px;
+    position: absolute;
+    bottom: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+
+}
 .information-pokemon{
     background: white; 
     width: 60%;

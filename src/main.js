@@ -2,7 +2,7 @@
 
 
 import {
-    filterDataByName,filterDataByType, filterDataById, orderAscendente, orderDescendente, orderAZ, orderZA
+    filterDataByName,filterDataByType, filterDataById, calculateDataByStats, orderAscendente, orderDescendente, orderAZ, orderZA
 } from './data.js';
 // import data from './data/lol/lol.js';
 import data from './data/pokemon/pokemon.js';
@@ -10,6 +10,7 @@ import data from './data/pokemon/pokemon.js';
 
 //contenedor principal
 const principalContainer= document.querySelector(".cards-containers-principal");
+
 
 const containerVideo = document.createElement("div");
 containerVideo.classList.add("video");
@@ -207,6 +208,9 @@ function pokemon(arreglo){
             let statsPokemonCanvas = statsPokemon.getContext("2d");
             let stats = arreglo[i].stats;
             //console.log(Object.keys(stats));
+
+            
+            //console.log(arreglo[i].stats["max-cp"]);
         
             const statsX= Object.keys(stats);
             const statsY={
@@ -247,7 +251,25 @@ function pokemon(arreglo){
             btnCalculate.innerHTML = "Calculate";
             btnCalculate.addEventListener("click", ()=>{
                 principalContainer.innerHTML="";
-                principalContainer.appendChild(btnReset);
+                
+                
+                let containerBattle=document.createElement("div");
+                containerBattle.classList.add("container-battle");
+                principalContainer.appendChild(containerBattle);
+
+                
+                let boxStatsGeneralPokemon=document.createElement("div");
+                boxStatsGeneralPokemon.classList.add("box-stats-general");
+                
+                let boxStatsRandomPokemon=document.createElement("div");
+            
+                boxStatsRandomPokemon.classList.add("box-stats-random");
+                containerBattle.appendChild(boxStatsGeneralPokemon);
+                containerBattle.appendChild(boxStatsRandomPokemon);
+                containerBattle.appendChild(btnReset);
+                
+                
+
                 
                 let identifierFilter= pokemon(filterDataById(dataPokemon, identifier))
                 identifierFilter;
@@ -265,6 +287,12 @@ function pokemon(arreglo){
                     let randomStrEnd = pad.substring(0, pad.length - randomStr.length) + randomStr;
                     let randomFilter= pokemon(filterDataById(dataPokemon, randomStrEnd));
                     randomFilter;
+                    let statsGeneral= (arreglo[i].stats);
+                    console.log(statsGeneral);
+                    let statsRandom= (arreglo[randomStrEnd-1].stats);
+                    console.log(statsRandom);
+                    console.log(calculateDataByStats(statsGeneral, statsRandom));
+
                     
 
                     
@@ -645,3 +673,6 @@ btnSend.addEventListener("click", ()=>{
     btnLogin.style.color="white";
     login.style.visibility="hidden";
 })
+
+
+
