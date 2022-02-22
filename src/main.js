@@ -5,6 +5,7 @@ import {
   orderByZa,
   filterByTypes,
   filterByLegendary,
+  searchPokemon,
 } from "./data.js";
 import showPokemons from "./Article.js";
 
@@ -50,8 +51,29 @@ document
   .getElementById("Clasify")
   .addEventListener("change", selectByLegendary);
 
+//**************FUNCION DEL BUSCADOR************
 
-  
+let searchButton = document.getElementById("search");
+function showMyPokemon() {
+  let name = document.getElementById("searchText").value;
+  let mifuncion = searchPokemon(name);
+  showPokemons(mifuncion);
+}
+searchButton.addEventListener("click", showMyPokemon);
+
+/*const searchInput = document.querySelector(".searchText");
+searchInput.addEventListener("input", (e) => {
+  let value = e.target.value;
+  if (value && value.trim().lenngth > 0) {
+    value = value.trim().toLowerCase();
+    //let result = setList(value);
+    //return showPokemons(result);
+    showPokemons(pokemon)
+  } else {
+    console.log("Pokemon no encontrado..");
+  }
+});*/
+
 /* PROPUESTA CARLOS
 const filterByType = document.getElementById("type");
 filterByType.addEventListener("change", (event) => {

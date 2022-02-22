@@ -25,18 +25,20 @@ function showPokemons(pokemons) {
     cardSpace.setAttribute("id", idSeccion);
 
     const cardName = document.createElement("p"); //crea el elemento parrafo
-    cardName.innerHTML =
-      `${property.name[0].toUpperCase() + property.name.slice(1)}`; // cambia el texto vacio del parrafo por la propiedad name convirtiendo la primera letra del array en mayuscula y concatenando desde la posicion 1 con slice
+    cardName.innerHTML = `${
+      property.name[0].toUpperCase() + property.name.slice(1)
+    }`; // cambia el texto vacio del parrafo por la propiedad name convirtiendo la primera letra del array en mayuscula y concatenando desde la posicion 1 con slice
 
     const cardNum = document.createElement("p"); //crea el elemento parrafo
-    cardNum.innerHTML = property.num ; 
-    cardNum.setAttribute("class","classTypeNumber")// cambia el texto vacio del parrafo por la propiedad numero
+    cardNum.innerHTML = property.num;
+    cardNum.setAttribute("class", "classTypeNumber"); // cambia el texto vacio del parrafo por la propiedad numero
 
     const cardType = document.createElement("p");
-    const bottonTypePokemon = document.createTextNode("Type: " + `${property.type.join(" ")}`)
-    cardType.appendChild(bottonTypePokemon)
-    cardType.setAttribute("class", "typeClass")
-
+    const bottonTypePokemon = document.createTextNode(
+      "Type: " + `${property.type.join(" ")}`
+    );
+    cardType.appendChild(bottonTypePokemon);
+    cardType.setAttribute("class", "typeClass");
 
     const pokemonImag = document.createElement("img"); //crea un Elemento de tipó imagen
     pokemonImag.setAttribute("src", `${property.img}`); //le asigna el atributo de src con su propiedad que es el link
@@ -56,7 +58,8 @@ function showPokemons(pokemons) {
     let resistantPokemon = property.resistant;
     let weaknessesPokemon = property.weaknesses;
     let typePokemon = property.type;
-    let sizePokemon = property.size;
+    let sizeHeightPokemon = property.size.height;
+    let sizeWeightPokemon = property.size.weight;
 
     const showModal = document.createElement("section");
     showModal.setAttribute("id", `${property.name}`);
@@ -82,6 +85,7 @@ function showPokemons(pokemons) {
     //pokemonImag.setAttribute("data-open", modalDataOpen);
 
     const contentAbout = document.createElement("p");
+    contentAbout.setAttribute("class", "contentAboutPokemon");
     contentAbout.innerHTML =
       " <strong>Info: <br> </strong>" +
       " <strong> Description <br></strong>" +
@@ -91,9 +95,11 @@ function showPokemons(pokemons) {
       " <strong><br>Resistant: <br> </strong>" +
       resistantPokemon +
       " <strong><br>Weaknesses:<br> </strong> " +
-      weaknessesPokemon; +
-      " <strong><br>Size:<br> </strong> " +
-      sizePokemon;
+      weaknessesPokemon +
+      " <strong><br>Height:</strong> " +
+      sizeHeightPokemon +
+      " <strong><br>Weight:</strong> " +
+      sizeWeightPokemon;
 
     allContent.appendChild(buttonModal);
     allContent.appendChild(contentTitle);

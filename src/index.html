@@ -11,6 +11,13 @@
     <img class="Lente" src="./resources/lente.png" />
     <nav>
       <ul>
+        <input
+          type="text"
+          id="searchText"
+          class="searchText"
+          placeholder="Write your Pokémon..."
+        />
+        <button class="button" type="button" id="search">Search</button>
         <li class="ButtonRed">Us</li>
         <li class="ButtonYellow">Us</li>
         <li id="Us">Us</li>
@@ -39,8 +46,7 @@
 
         <select name="Clasify" id="Clasify">
           <option value="clasify">Clasify by ...</option>
-          <option value="Evolution">By Evolution</option>
-          <option value="Legendary">By Pokémon Legendary</option>
+          <option value="Legendary" id="Legendary">By Pokémon Legendary</option>
         </select>
 
         <select name="type" id="type">

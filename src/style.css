@@ -27,6 +27,7 @@ nav {
   position: absolute;
   padding: 0;
   margin: 0;
+  margin-left: 2%;
   top: 0;
   padding: 0;
   left: 0;
@@ -60,6 +61,20 @@ li {
   border-radius: 10%;
   font-size: 1vw;
 }
+
+button {
+  padding: 1% 2%;
+  margin-right: 5%;
+  font-size: 1.5vw;
+  border-radius: 10%;
+}
+
+input {
+  padding: 1% 2%;
+  font-size: 1.5vw;
+  border-radius: 10%;
+}
+
 .ButtonRed {
   background-color: red;
   color: red;
@@ -184,6 +199,10 @@ h1 {
   color: #606061;
   font-weight: 700;
   font-family: sans-serif;
+  text-transform: capitalize;
+}
+
+.contentAboutPokemon {
   text-transform: capitalize;
 }
 

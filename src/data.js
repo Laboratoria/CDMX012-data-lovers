@@ -1,5 +1,6 @@
 import { findAllPokemons } from "./data/pokemon/pokemon.repo.js";
 
+// estas funciones son de ejemplo
 export function order1_251() {
   const allPokemons = findAllPokemons();
   const finalUp = allPokemons.sort(function (a, b) {
@@ -50,19 +51,31 @@ export function filterByTypes(type) {
   return filtrado;
 }
 
-export const filterByLegendary = (type) => {
+export function filterByLegendary(legendary) {
   const pokemones = findAllPokemons();
-  type = "legendary";
+  legendary = "legendary";
   const legendarios = pokemones.filter((pokemon) =>
-    pokemon["pokemon-rarity"].includes(type)
+    pokemon["pokemon-rarity"].includes(legendary)
   );
   return legendarios;
-};
+}
+
+export function searchPokemon(name) {
+  const pokemons = findAllPokemons();
+  if (pokemons.name === name) {
+    const namePokemon = pokemons.filter(
+      (pokemon) => pokemon.name.includes(name).toLowerCase
+    );
+    return namePokemon;
+  } else console.log("esto no funciona");
+}
 
 /*
-
-export const filterByEvolution = () => {
-  return "OMG";
-};
-
-*/
+export function setList(value) {
+  const pokemons = findAllPokemons();
+  const setListPokemon = pokemons.filter((pokemon) => {
+    pokemon.name.includes(value);
+  });
+  return setListPokemon;
+}*/
+9;
