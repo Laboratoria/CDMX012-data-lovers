@@ -168,6 +168,7 @@ main {
 
 #root {
   display: flex;
+  font-family: 'Roboto', sans-serif;
   flex-flow: row wrap;
   gap: 2rem;
   margin-top: 8rem;
@@ -230,6 +231,7 @@ main {
   margin: 1rem 0.5rem 1rem;
   justify-content: center;
   display: inline-flex;
+  
 }
 
 .normal { background-color: #A9A878;}
