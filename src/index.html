@@ -17,19 +17,24 @@
               <li><a class="mainButtons" id="pokeWeaknesses" value="value4">Weaknesses</a></li> 
             </ul>
           </li> 
-          <li><a id="value5">Ordenado</a> 
+          <li><a id="value5">Sort</a> 
             <ul>
               <li><a  class="mainButtons" id="pokeNumber" value="value6">Number  0-251</a></li>
               <li><a class="mainButtons" id="pokeName" value="value7">Alphabetical A-Z</a> </li>
               <li><a class="mainButtons" id="nameReverse" value="value8">Alphabetical Z-A</a> </li>
             </ul>
           </li> 
+          <li><a id="value9">Compute</a> 
+            <ul>
+              <li><a class="mainButtons" id="pokeCompute" value="value10">Pokémon vs. Pokémon</a></li>
+            </ul>
+          </li> 
           </ul>
       </div>
       <img id="pokeBall" src= "imagenes/pokemon.png">
       <div id="searchGroup">
-        <input id="searchBar" type="text" placeholder=" Buscar...">
-      <i id="searchIcon" class="fas fa-search"></i>
+        <input id="searchBar" class="searchBar" type="text" placeholder=" Search...">
+        <i id="searchIcon" class="fas fa-search searchIcon"></i>
       </div>
       
       
@@ -79,6 +84,19 @@
         <div id="modalContentLeft" class="modalContent"></div>
       </div>
       <div id="modalContentRight" class="modalContent"></div>
+    </div>
+
+    <div id="computePokeSearch">
+      <p id="pokeSearchText">Select the Pokémons you would like to compare</p>
+      <form id="pokeInputs">
+        <input type="text" name="pokemon" id="pokeSearch1" class="pokeSearch" placeholder=" Pokémon 1">
+        <input id="pokeSearch2" name="pokemon" class="pokeSearch" type="text" placeholder=" Pokémon 2">
+      </form>
+      <br><br>
+      <button id="computeBtn" class="pokeSearchBtn">Compute</button> <br> <br>
+      <button id="refrshBtn" class="pokeSearchBtn">Select other Pokémons</button>
+
+      <div id="searchResult"></div>
     </div>
 
     <div id="root"></div>

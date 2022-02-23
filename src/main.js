@@ -3,14 +3,22 @@ import data from './data/pokemon/pokemon.js';
 
 const byName= dataPokemon.byName(data);
 const byNumber= dataPokemon.byNumber(data);
+/*const byName= dataPokemon.sortData(data, name, );
+const byNumber= dataPokemon.sortData(data, num, );
+const byNameInverse= dataPokemon.sortData(data, name, inverse);
+const byNumberInverse= dataPokemon.sortData(data, num, inverse);*/
 const pokemonTypes= dataPokemon.pokemonTypesObject(data);
 
-const pokemonResistant= dataPokemon.pokemonResistant("water", data);
+//const pokemonResistant= dataPokemon.pokemonResistant("water", data);
 
 document.getElementById("pokeBall").addEventListener("click", refreshPage);
 document.getElementById("pokeNumber").addEventListener("click", showByNumber);
 document.getElementById("pokeName").addEventListener("click", showByName);
 document.getElementById("pokeType").addEventListener("click", showTypeBox);
+document.getElementById("pokeSearch1").addEventListener("keyup", showPokeSearch);
+document.getElementById("pokeSearch2").addEventListener("keyup", showPokeSearch);
+document.getElementById("refreshBtn").addEventListener("click", refreshPokeSearch);
+
 document.getElementById("closeModalBox").addEventListener("click", closeModalBox);
 //document.getElementById("triangleRight").addEventListener("click", nextPokemon);
 
@@ -19,7 +27,40 @@ document.getElementById("closeModalBox").addEventListener("click", closeModalBox
     console.log("Holi");
   }
 }*/
-console.log(byName[0].name)
+
+function showPokeSearch(e){
+  /*let input = document.getElementById('pokeSearch1').value
+    input=input.toLowerCase();
+    let x = byName;
+      
+    for (let i = 0; i < x.length; i++) { 
+        if (!x[i].innerHTML.toLowerCase().includes(input)) {
+            x[i].style.display="none";
+        }
+        else {
+            x[i].style.display="list-item";                 
+        }
+    }*/
+
+     // 1. declare and assign the value of the event's target to a variable AKA whatever is typed in the search bar
+     let value = e.target.value
+
+     // 2. check: if input exists and if input is larger than 0
+     if (value && value.trim().length > 0){
+         // 3. redefine 'value' to exclude white space and change input to all lowercase
+          value = value.trim().toLowerCase()
+         // 4. return the results only if the value of the search is included in the person's name
+         // we need to write code (a function for filtering through our data to include the search input value)
+     } else {
+         // 5. return nothing
+         // input is invalid -- show an error message or show no results
+ 
+     }
+}
+
+function refreshPokeSearch(){
+  window.location.reload();
+}
 
 function refreshPage(){
   window.location.reload();
@@ -150,42 +191,6 @@ function typeClick(event){
       divRight.innerHTML+=resultRight; 
     });
   }
-}
-
-
-
-
-
-
-
-
-
-function refreshPage(){
-  window.location.reload();
-}
-
-function pokemonCard(pokemon, type){
-  let result= "";
-  result+='<div class= "' + type + ' flexBox" id="'+pokemon.name+'Pokemon">' 
-  result+="<p>"+ pokemon.num + "</p>"
-  result+= "<img src='"+ pokemon.img+"'></img>"
-  result+= "<p>" + pokemon.name + "</p>" 
-  result+="</div>" 
-  return result 
-}
-
-function pokemonModalBoxLeft(pokemon){
-  let result= "";
-  result+= "<div id='bigCircle' class='circle'></div>"
-  result+= "<div id='redCircle' class='circle'></div>"
-  result+= "<div id='yellowCircle' class='circle'></div>"
-  result+= "<div id='greenCircle' class='circle'></div>"
-  result+="<p class='generationModalBox'>"+Object.values(pokemon.generation)[0]+": "+Object.values(pokemon.generation)[1]+"</p>"
-  result+= "<img class='imgModalBox' src='"+ pokemon.img+"'></img>"
-  result+="<p class='numModalBox'>"+ pokemon.num + "</p>"
-  result+= "<p class='nameModalBox'>" + pokemon.name + "</p>" 
-  result+= "<p class='typeModalBox'>" + pokemon.type + "</p>" 
-  return result
 }
 
 

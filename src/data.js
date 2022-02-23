@@ -1,17 +1,32 @@
 const dataPokemon={
-  //EN PROCESP
+
   /*sortData:(data, sortBy, sortOrder)=>{
-    let pokemon=data.slice(0);
-    let sortElement = sortBy
-    let sortData=[];
-    sortData= pokemon.sort((a,b)=>{
-    if(a.sortElement>b.sortElement){
-      return 1   
-    }
-    return-1
-      })
-    return sortData
-  },*/
+    if (sortBy ==="pkeName"){
+      let pokemon=data.slice(0);
+        let byName=[];
+        byName= pokemon.sort((a,b)=>{
+        if(a.name>b.name){
+          return 1   
+        }
+          return-1
+        })
+        if (sortOrder === "inverse"){
+          byName.reverse()
+        }
+          return byName
+        }
+      else if (sortBy==="pokeNum"){
+        let pokemon=data.slice(0);
+          let byNumber = pokemon.slice(0)
+        
+        if (sortOrder === "inverse"){
+          byNumber.reverse()
+        }
+          return byNumber
+        }
+      },*/
+        
+ 
 
   byName:(data)=>{
     let pokemon=data.pokemon.slice(0);

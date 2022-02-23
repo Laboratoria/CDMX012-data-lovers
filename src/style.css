@@ -52,14 +52,14 @@ float:left;
   margin: auto;
 }
 
-#searchIcon{
+.searchIcon{
   color:white;
   font-size: 27px;
   margin-top: 28px;
   margin-left: auto;
   margin-right: 240px;
 }
-#searchBar{
+.searchBar{
   position: absolute;
   margin: auto;
   right: 0px;
@@ -643,4 +643,55 @@ th{
   font-size: 15px;
   margin-right: 20px;
   padding: 7px 5px 7px 5px;
+}
+
+#computePokeSearch{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  z-index: 100;
+  top: 150px;
+  visibility: visible;
+  position: absolute;
+  width: 100%;
+}
+
+.pokeSearch{
+  position: relative;
+  font-family: "Rowdies";
+  font-size: 15px;
+  letter-spacing: 1px;
+  padding: 5px 0px;
+  text-align: center;
+}
+
+#pokeSearchText{
+  font-family: "Rowdies";
+  font-size: 15px;
+  letter-spacing: 1px;
+  text-align: center;
+  position: relative;
+}
+
+.pokeSearchBtn{
+  font-family: "Rowdies";
+  font-size: 15px;
+  letter-spacing: 1px;
+  text-align: center;
+  position: relative;
+  background-color: red;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+#pokeInputs{
+  justify-content: space-around;
+  display: inline;
+}
+#pokeSearch1{
+  right: 100px;
+}
+#pokeSearch2{
+  left: 100px;
 }
