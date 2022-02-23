@@ -283,7 +283,7 @@ p {
   font-size: 1vw;
 }
 
-@media all and (max-width:360px){
+@media all and (max-width:428px){
   .Logo{
     width: 20%;
   }
@@ -301,7 +301,7 @@ p {
   .welcomeBox {
     display: flex;
     background-color: rgba(70, 123, 157, 0.7);
-    margin: 5% 10%;
+    margin: 7% 10% 5%;
     padding: 0;
     align-items: center;
     border-radius: 10px;
@@ -316,7 +316,7 @@ p {
   #Clasify, #type, #orderBy{
     width:40%;
     justify-content: center;
-    margin: 0%;
+    margin: 2%;
   }
   #showData a {
     text-decoration: none;
@@ -359,10 +359,6 @@ p {
     text-transform: capitalize;
     font-size:small;
     width: fit-content;
-  }
-  footer{
-    background-color: #f1b418;
-    
   }
   footer p{
     font-size: x-small;
