@@ -1,6 +1,5 @@
 /*global Chart*/
 
-
 import {
     filterDataByName,filterDataByType, filterDataById, calculateDataByStats, orderAscendente, orderDescendente, orderAZ, orderZA
 } from './data.js';
@@ -10,7 +9,6 @@ import data from './data/pokemon/pokemon.js';
 
 //contenedor principal
 const principalContainer= document.querySelector(".cards-containers-principal");
-
 
 const containerVideo = document.createElement("div");
 containerVideo.classList.add("video");
@@ -25,9 +23,8 @@ containerVideo.appendChild(videoPokemon);
 
 const dataPokemon = data.pokemon;
 
-
 function pokemon(arreglo){
-    
+
     for(let i=0; i<arreglo.length; i++){
 
         //contenedor general
@@ -37,7 +34,7 @@ function pokemon(arreglo){
         //contenedor white
         let containerExternalCard=document.createElement("div");
         containerExternalCard.classList.add("card-container");
-        
+
         //Crear div con una clase para la imagen
         let classImagePokemon=document.createElement("div");
         let imagePokemon=document.createElement("img");
@@ -71,7 +68,6 @@ function pokemon(arreglo){
         typePokemon2.classList.add("type-pokemon");
         let types= arreglo[i].type;
 
-        
         if(types.length == 1){
             titleTypePokemon.innerText='Type: ';
             typePokemon.innerText=`${types[0].charAt(0).toUpperCase() + types[0].slice(1)}`;
@@ -101,7 +97,6 @@ function pokemon(arreglo){
         let rarityPokemon = document.createElement("div");
         rarityPokemon.classList.add("rarity-pokemon");
 
-
         //boton de mas informacion
         let buttonMoreInformation = document.createElement("button");
         buttonMoreInformation.classList.add("btn-More-Information");
@@ -110,7 +105,7 @@ function pokemon(arreglo){
         let encounterOne = arreglo[i].encounter['base-flee-rate'];
         let encounterTwo = arreglo[i].encounter['base-capture-rate'];
         encounterPokemon.innerText =`\n -Encounter: \n Base Flee Rate: ${encounterOne} \n Base Capture Rate: ${encounterTwo}`;
-       
+
         let spawned = arreglo[i]['spawn-chance'];
         spawnChancePokemon.innerText =`\n -Spawn Chance: ${spawned}`;
 
@@ -118,7 +113,7 @@ function pokemon(arreglo){
         rarityPokemon.innerText =` \n -Rarity: ${raritys.charAt(0).toUpperCase() + raritys.slice(1)}`;
 
         buttonMoreInformation.innerHTML = "More information";
-        
+
         containerExternalCard.appendChild(classImagePokemon);
         containerInternalCard.appendChild(namePokemon);
         containerInternalCard.appendChild(idPokemon);
@@ -139,31 +134,35 @@ function pokemon(arreglo){
         principalContainer.appendChild(containerGeneralCard);
 
         buttonMoreInformation.addEventListener('click', () => {
-            
+
             principalContainer.innerHTML = '';
 
             //container de tarjeta principal
             let pokemonContainer = document.createElement("div");
             pokemonContainer.classList.add("pokemon-container");
-        
+
             //Contenederes de la informacion sobre cada pokemon
             let boxPokemon = document.createElement("div");
             boxPokemon.classList.add("box-pokemon");
-        
+
             let boxImagePokemon=document.createElement("div");
             boxImagePokemon.classList.add("box-image-pokemon");
-        
+
             let informationPokemon = document.createElement("div");
             informationPokemon.classList.add("information-pokemon");
+
             //descripcion
             let aboutPokemon = document.createElement("div");
             aboutPokemon.classList.add("about-pokemon");
+
             //generacion
             let generationPokemon = document.createElement("div");
             generationPokemon.classList.add("generation-pokemon");
+
             //peso
             let weightPokemon = document.createElement("div");
             weightPokemon.classList.add("weight-pokemon");
+
             //altura
             let heightPokemon = document.createElement("div");
             heightPokemon.classList.add("height-pokemon");
@@ -174,44 +173,46 @@ function pokemon(arreglo){
             let statsPokemon = document.createElement("canvas");
             statsPokemon.classList.add("stats-pokemon");
             statsPokemon.style.display="flex";
-            
+
             //botones
             let buttonsPokemon = document.createElement("div");
             buttonsPokemon.classList.add("buttons-pokemon");
-        
+
             let btnCalculate = document.createElement("button");
             btnCalculate.classList.add("btn-calculate");
-        
+
             let btnBack = document.createElement("button");
             btnBack.classList.add("btn-back");
 
             let weaknessesPokemon = document.createElement("div");
             weaknessesPokemon.classList.add("weaknesses-pokemon");
-    
+
             //crear div con una clase para las resistencia de los pokemon
             let resistantPokemon = document.createElement("div");
             resistantPokemon.classList.add("resistant-pokemon");
-        
+
             let about = arreglo[i].about;
             aboutPokemon.innerText =`${about}`;
-        
+
             let generationNum = arreglo[i].generation.num;
             let generationName = arreglo[i].generation.name;
             generationPokemon.innerText =`\n ${generationNum.charAt(0).toUpperCase() + generationNum.slice(1)}, Name : ${generationName.charAt(0).toUpperCase() + generationName.slice(1)} `;
-        
+
             let weight = arreglo[i].size.weight;
             weightPokemon.innerText =`\n Weight: ${weight}`;
-        
+
             let height = arreglo[i].size.height ;
             heightPokemon.innerText =`\n Height: ${height}`;
-        
+
             let statsPokemonCanvas = statsPokemon.getContext("2d");
             let stats = arreglo[i].stats;
-            //console.log(Object.keys(stats));
 
-            
-            //console.log(arreglo[i].stats["max-cp"]);
-        
+            let imageRabbit = document.createElement("img");
+            imageRabbit.classList.add("image-rabbit");
+            imageRabbit.src ='./icon/rabbitBall.gif';
+
+
+
             const statsX= Object.keys(stats);
             const statsY={
                 data: Object.values(stats), 
@@ -232,7 +233,7 @@ function pokemon(arreglo){
                     title: {
                         display: true,
                         text: 'POKEMON STATS GRAPH'
-                      },
+                    },
                     responsive: true,
                     scales: {
                         yAxes: [{
@@ -243,43 +244,33 @@ function pokemon(arreglo){
                     },
                 }
             });
-    
-            
-                    
-            
-        
-            btnCalculate.innerHTML = "Calculate";
+
+            btnCalculate.innerHTML = "Battle";
             btnCalculate.addEventListener("click", ()=>{
+
                 principalContainer.innerHTML="";
-                
-                
-                let containerBattle=document.createElement("div");
-                containerBattle.classList.add("container-battle");
-                principalContainer.appendChild(containerBattle);
 
-                
-                let boxStatsGeneralPokemon=document.createElement("div");
-                boxStatsGeneralPokemon.classList.add("box-stats-general");
-                
-                let boxStatsRandomPokemon=document.createElement("div");
-            
-                boxStatsRandomPokemon.classList.add("box-stats-random");
-                containerBattle.appendChild(boxStatsGeneralPokemon);
-                containerBattle.appendChild(boxStatsRandomPokemon);
-                containerBattle.appendChild(btnReset);
-                
-                
-
-                
                 let identifierFilter= pokemon(filterDataById(dataPokemon, identifier))
                 identifierFilter;
-                
+
                 let btnRandom= document.createElement("button");
                 btnRandom.classList.add("btn-random");
                 btnRandom.innerText="Random";
                 principalContainer.appendChild(btnRandom);
 
+                let imageQuestion= document.createElement("img");
+                imageQuestion.classList.add("image-question");
+                imageQuestion.src='./icon/pokemonQuestion.gif';
+                principalContainer.appendChild(imageQuestion);
+
                 btnRandom.addEventListener("click", ()=>{
+
+                    let imageVS= document.createElement("img");
+                    imageVS.classList.add("image-vs");
+                    imageVS.src='./icon/giphy (2).gif';
+                    principalContainer.appendChild(imageVS);
+
+                    //Esoger un pokemon random para batalla
                     const idInt= parseInt(arreglo[i].num);
                     let randomn= Math.ceil(Math.random(idInt)*251);
                     let randomStr= "" + randomn.toString();
@@ -287,30 +278,54 @@ function pokemon(arreglo){
                     let randomStrEnd = pad.substring(0, pad.length - randomStr.length) + randomStr;
                     let randomFilter= pokemon(filterDataById(dataPokemon, randomStrEnd));
                     randomFilter;
+
+                    let containerBattle=document.createElement("div");
+                    containerBattle.classList.add("container-battle");
+
+                    let boxStatsGeneralPokemon=document.createElement("div");
+                    boxStatsGeneralPokemon.classList.add("box-stats-general");
+
+                    let boxStatsRandomPokemon=document.createElement("div");
+                    boxStatsRandomPokemon.classList.add("box-stats-random");
+
+                    let messageBattleContainer =document.createElement("div");
+                    messageBattleContainer.classList.add("message-battle-container");
+
+                    let imagePikachu= document.createElement("img");
+                    imagePikachu.classList.add("image-pikachu");
+                    imagePikachu.src='./icon/pikachu.gif';
+
+                    principalContainer.appendChild(containerBattle);
+                    containerBattle.appendChild(messageBattleContainer);
+                    containerBattle.appendChild(boxStatsGeneralPokemon);
+                    containerBattle.appendChild(boxStatsRandomPokemon);
+                    principalContainer.appendChild(imagePikachu);
+                    containerBattle.appendChild(btnReset);
+
+                    imageQuestion.classList.add('hide');
+                    btnRandom.classList.add('hide');
+
                     let statsGeneral= (arreglo[i].stats);
-                    console.log(statsGeneral);
+                    boxStatsGeneralPokemon.innerText = ` Stats: \n\n - Base Attack: ${statsGeneral["base-attack"]} \n\n  - Base Defense: ${statsGeneral["base-defense"]} \n\n - Base Stamina: ${statsGeneral["base-stamina"]}`;
+
                     let statsRandom= (arreglo[randomStrEnd-1].stats);
-                    console.log(statsRandom);
-                    console.log(calculateDataByStats(statsGeneral, statsRandom));
+                    boxStatsRandomPokemon.innerText = ` Stats: \n\n - Base Attack: ${statsRandom["base-attack"]} \n\n  - Base Defense: ${statsRandom["base-defense"]} \n\n - Base Stamina: ${statsRandom["base-stamina"]}`;
+                    //console.log(typeof(calculateDataByStats(statsGeneral, statsRandom)));
 
-                    
-
-                    
+                    if (calculateDataByStats(statsGeneral, statsRandom) > 0   ){
+                        messageBattleContainer.innerText =` Win ${names.charAt(0).toUpperCase() + names.slice(1)}`;
+                    }
+                    else{
+                        messageBattleContainer.innerText=` Win ${arreglo[randomStrEnd-1].name.charAt(0).toUpperCase() + arreglo[randomStrEnd-1].name.slice(1)}`
+                    }
                 })
-                
-                
-
             })
             btnBack.innerHTML = "Back";
-            
+
             btnBack.addEventListener('click', () => {
                 principalContainer.innerHTML = '';
                 pokemon(dataPokemon);
-                
-                
-
             })
-
 
             let weaknesses = arreglo[i].weaknesses;
             weaknessesPokemon.innerText ="\n Weaknesses: ";
@@ -331,34 +346,34 @@ function pokemon(arreglo){
             });
 
             principalContainer.appendChild(pokemonContainer);
-        
+
             pokemonContainer.appendChild(boxPokemon);
             pokemonContainer.appendChild(informationPokemon);
             pokemonContainer.appendChild(buttonsPokemon);
-        
+
             boxPokemon.appendChild(boxImagePokemon);
             boxPokemon.appendChild(statsGeneralPokemon);
             statsGeneralPokemon.appendChild(statsPokemon);
-        
+
             boxImagePokemon.appendChild(namePokemon);
             boxImagePokemon.appendChild(imagePokemon)
             boxImagePokemon.appendChild(idPokemon)
-        
+
             informationPokemon.appendChild(aboutPokemon);
             informationPokemon.appendChild(generationPokemon);
             informationPokemon.appendChild(weightPokemon);
             informationPokemon.appendChild(heightPokemon);
-        
+            informationPokemon.appendChild(imageRabbit);
+
             buttonsPokemon.appendChild(btnCalculate);
             buttonsPokemon.appendChild(btnBack);
 
             informationPokemon.appendChild(weaknessesPokemon);
-            informationPokemon.appendChild(resistantPokemon);         
-        
+            informationPokemon.appendChild(resistantPokemon);
         });
-
     }
 }
+
 //Funciones de estilos de colores de los tipos de pokemon
 function styleType(type, typePokemon){
     typePokemon.classList.add(type);
@@ -370,9 +385,7 @@ function styleType2(type, typePokemon2){
 
 pokemon(dataPokemon);
 
-
 // FILTRADO : POR TIPO DE POKEMON
-
 const btnSelectType= document.querySelector(".select-type");
 const btnSelectTypeCover= document.querySelector(".select-type-cover");
 const listType=document.querySelector(".btn-general-type");
@@ -388,7 +401,6 @@ btnSelectTypeCover.addEventListener("click", () =>{
     btnSelectTypeCover.style.visibility = "hidden";
     btnSelectType.style.visibility = "visible";
 });
-
 
 const btnTypeFire= document.getElementById("fire");
 const btnTypeWater= document.getElementById("water");
@@ -408,7 +420,6 @@ const btnTypeFlying= document.getElementById("flying");
 const btnTypeIce= document.getElementById("ice");
 const btnTypePoison= document.getElementById("poison");
 const btnTypeRock= document.getElementById("rock");
-
 
 //TIPO FIRE
 btnTypeFire.addEventListener("click", ()=>{
@@ -550,46 +561,40 @@ btnReset.classList.add("btn-reset");
 
 btnReset.type="submit";
 
-
 messageImage.classList.add("message-image")
 messageImage.src="./icon/404P.PNG"
 message.classList.add("message-container");
-
 
 const inputSearch = document.getElementById("search");
 const btnSearch = document.getElementById("search-name-id")
 btnSearch.addEventListener("click", () =>{
     principalContainer.innerHTML = '';
     let pokemonDataTotalId= filterDataById(dataPokemon, inputSearch.value);
-    
+
     let pokemonDataTotal=filterDataByName(dataPokemon, inputSearch.value);
-    
+
     if (pokemonDataTotal.length===0 && pokemonDataTotalId.length===0){
-       
-       principalContainer.appendChild(messageImage);
-       principalContainer.appendChild(message);
-       principalContainer.append(btnReset);
-       
-       message.innerText="NOT FOUND, PLEASE TRY WITH OTHER"
-       
+
+        principalContainer.appendChild(messageImage);
+        principalContainer.appendChild(message);
+        principalContainer.append(btnReset);
+
+        message.innerText="NOT FOUND, PLEASE TRY WITH OTHER"
+
     }
     else{
         message.classList.add("hide");
         pokemon(pokemonDataTotal);
         pokemon(pokemonDataTotalId);
         principalContainer.append(btnReset);
-        
     }
-    
 });
-
 
 btnReset.addEventListener('click', ()=> {
     location.reload();
 });
 
-
-// FUNCION DE ORDENAR: ASCENDENTE Y DESCENDENTE 
+// FUNCION DE ORDENAR: ASCENDENTE Y DESCENDENTE
 let orderAsc = true;
 let orderDes = true;
 let orderAz=true;
@@ -606,7 +611,7 @@ buttonAsc.addEventListener('click', () => {
 
     pokemon(orderAscendente(dataPokemon, orderAsc));
     orderAsc != orderAsc;
-    
+
     buttonAsc.classList.add('hide');
     buttonDesc.classList.remove('hide');
 
@@ -624,7 +629,6 @@ buttonDesc.addEventListener('click', () => {
 });
 
 // FUNCION DE ORDENAR: A-Z Y Z-A
-
 buttonAZ.addEventListener('click', () => {
 
     principalContainer.innerHTML = '';
@@ -645,7 +649,6 @@ buttonZA.addEventListener('click', () => {
 
     buttonZA.classList.add('hide')
     buttonAZ.classList.remove('hide')
-
 });
 
 //Boton de menu pokeball
@@ -673,6 +676,3 @@ btnSend.addEventListener("click", ()=>{
     btnLogin.style.color="white";
     login.style.visibility="hidden";
 })
-
-
-

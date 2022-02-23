@@ -1,4 +1,4 @@
-import { orderAZ, orderZA, orderAscendente, orderDescendente, filterDataByType, filterDataByName, filterDataById} from '../src/data.js';
+import { orderAZ, orderZA, orderAscendente, orderDescendente, filterDataByType, filterDataByName, filterDataById, calculateDataByStats} from '../src/data.js';
 
 describe('funciones de ordenamiento', () => {
   it('ordena de la A a la Z', () => {
@@ -54,5 +54,14 @@ describe('funciones de filtrado', () => {
     const dataResponse =[{"num": "039"}];
 
     expect(filterDataById(dataExample, "039")).toStrictEqual(dataResponse);
+  });
+});
+
+describe('función de calculo', () => {
+  it('Calcular las estadisticas de batalla Pokemon', () => {
+    const dataExample1 = {"base-attack": "223", "base-defense": "173", "base-stamina": "186"};
+    const dataExample2 = { "base-attack": "118", "base-defense": "111", "base-stamina": "128"};
+    const dataResponse = 75;
+    expect(calculateDataByStats(dataExample1, dataExample2)).toBe(dataResponse);
   });
 });
