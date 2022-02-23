@@ -26,7 +26,7 @@ export function orderByAz() {
     if (a.name < b.name) {
       return -1;
     }
-    return 1;
+  
   });
   return finalOrderAZ;
 }
@@ -40,7 +40,7 @@ export function orderByZa() {
     if (a.name > b.name) {
       return -1;
     }
-    return 1;
+    
   });
   return finalOrderZA;
 }
@@ -60,14 +60,10 @@ export function filterByLegendary(legendary) {
   return legendarios;
 }
 
-export function searchPokemon(name) {
-  const pokemons = findAllPokemons();
-  if (pokemons.name === name) {
-    const namePokemon = pokemons.filter(
-      (pokemon) => pokemon.name.includes(name).toLowerCase
-    );
-    return namePokemon;
-  } else console.log("esto no funciona");
+export function searchPokemon(word) {
+  const pokemones = findAllPokemons();
+  let finalSearch=  pokemones.filter(item=> item.name.includes(word))
+return finalSearch
 }
 
 /*

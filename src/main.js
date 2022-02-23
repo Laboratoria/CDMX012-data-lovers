@@ -57,7 +57,13 @@ let searchButton = document.getElementById("search");
 function showMyPokemon() {
   let name = document.getElementById("searchText").value;
   let mifuncion = searchPokemon(name);
+  if(name == false || mifuncion ==false ){
+    alert("Pokémon not found, please check the spelling \n Note: If you are not sure of how to write the Pokémon´s name, try with the first letter of it´s name")
+    throw new TypeError("Please insert a value")
+} else{
+ 
   showPokemons(mifuncion);
+}
 }
 searchButton.addEventListener("click", showMyPokemon);
 
@@ -72,6 +78,14 @@ searchInput.addEventListener("input", (e) => {
   } else {
     console.log("Pokemon no encontrado..");
   }
+
+if(name == ){
+    showPokemons(mifuncion);
+  }
+  else if(name != ) {
+    return alert ("Pokémon not found, check your spelling")
+  }
+
 });*/
 
 /* PROPUESTA CARLOS

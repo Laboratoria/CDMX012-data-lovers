@@ -5,6 +5,7 @@ import {
   orderByZa,
   filterByTypes,
   filterByLegendary,
+  searchPokemon
 } from "../src/data.js";
 import * as pokemonRepo from "../src/data/pokemon/pokemon.repo.js";
 
@@ -13,6 +14,8 @@ import dataDesordenada from "./datadesordenada.js";
 import pokemonLegendaryOutput from "./pokemonLegendaryOutput.js";
 import pokemonsLegendaryInput from "./pokemonsLegendaryInput.js";
 import { jest } from "@jest/globals";
+//import { describe, it } from "eslint/lib/rule-tester/rule-tester";
+import searchedPokemonOutput from "./searchedPokemonOutput.js";
 //import { describe, it } from "eslint/lib/rule-tester/rule-tester";
 
 jest.mock("../src/data/pokemon/pokemon.repo.js");
@@ -146,4 +149,42 @@ describe("filterByLegendary", () => {
     const response = filterByLegendary();
     expect(response).toEqual(pokemonLegendaryOutput);
   });
+});
+
+describe("searchPokemon", () => {
+  it("should be a function", () => {
+    expect(typeof searchPokemon).toBe("function");
+  });
+
+  it("should be a searched Pokémon ",() => {
+    let searchExample = [
+      {
+        num: "001",
+        name: "bulbasaur",
+        pokemon_rarity: "normal",
+        type: ["grass", "poison"],
+      },
+      {
+        num: "002",
+        name: "ivysaur",
+        pokemon_rarity: "normal",
+        type: ["grass", "poison"],
+      },
+      {
+        num: "003",
+        name: "venusaur",
+        pokemon_rarity: "normal",
+        type: ["grass", "poison"],
+      },
+    ];
+    jest
+      .spyOn(pokemonRepo, "findAllPokemons")
+      .mockReturnValueOnce(searchExample);
+
+    expect(searchPokemon("venusaur")).toEqual(searchedPokemonOutput);
+  })
+  it('should throw TypeError when invoked with wrong argument types', () => {
+    expect(() => searchPokemon(false)).toThrow(TypeError)    
+  });
+
 });
