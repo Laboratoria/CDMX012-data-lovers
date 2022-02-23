@@ -18,9 +18,15 @@ document.getElementById("pokeType").addEventListener("click", showTypeBox);
 document.getElementById("closeModalBox").addEventListener("click", closeModalBox);
 document.getElementById("pokeResistant").addEventListener("click", showResisBox)
 document.getElementById("pokeWeaknesses").addEventListener("click", showWenessesBox)
+//document.getElementById("triangleRight").addEventListener("click", nextPokemon);
+
+/*function nextPokemon (pokemon){
+  if(let i=0; i<pokemon; i++){
+    console.log("Holi");
+  }
+}*/
 
 
-document.getElementById("searchIcon").addEventListener("click", searchBox)
 document.getElementById("searchBar").addEventListener("keyup", searchBox)
 
  let optionList= document.getElementById("list");
@@ -29,7 +35,11 @@ optionList.addEventListener("click", searchBox)
 
 
 function searchBox(){
+  
  let search=document.getElementById("searchBar").value;
+ if(search == ""){
+   return
+ }
  optionList.size= 5;
 let resultado=[];
   for(let i=0; i<byName.length; i++){
@@ -38,6 +48,7 @@ let resultado=[];
    }
  }
  optionList.innerText = null;
+ document.getElementById("list").style.display="block";
  for(let i=0; i<resultado.length; i++){
    showOptions(resultado[i], resultado[i]);
    
@@ -53,6 +64,8 @@ function  showOptions(text, val ) {
   createOptions.text=text;
   createOptions.value=val;
   createOptions.addEventListener("click", setVal);
+  
+  
  
   
  
@@ -61,7 +74,12 @@ function  showOptions(text, val ) {
     
   let searchPokemon={}
     
-   document.getElementById("searchBar").value=selectedVal.target.value;
+  //  document.getElementById("searchBar").value=selectedVal.target.value;
+   document.getElementById("searchBar").value=""
+   console.log("changing options object")
+   optionList.size= 0;
+   optionList.innerText = null;
+   document.getElementById("list").style.display="none";
    for (let i = 0; i < byName.length; i++) {
   if(byName[i].name==selectedVal.target.value){
     searchPokemon=byName[i];
@@ -88,6 +106,18 @@ function  showOptions(text, val ) {
   
 
 
+/*function arrayPokeInfo(info){
+  let quickMoves= []
+  for (let i= 0; i< info["quick-move"]; i++){
+    let quickMoveName = Object.values(info["quick-move"][i].name);
+    let quickMoveType = Object.values(info["quick-move"][i].type);
+    let quickMoveBaseDamage = Object.values(info["quick-move"][i]["base-damage"]);
+    let quickMoveEnergy = Object.values(info["quick-move"][i].energy);
+    let quickMoveMoveDurationSec = Object.values(info["quick-move"][i]["move-duration-sec"]);
+    let quickMove= [quickMoveName, quickMoveType, quickMoveBaseDamage, quickMoveEnergy, quickMoveMoveDurationSec]
+    quickMoves.push(quickMove);
+  } return quickMoves
+}*/
 
 
 function pokemonModalBoxRight(pokemon) {
@@ -105,6 +135,7 @@ function pokemonModalBoxRight(pokemon) {
   result += "<p class='eggAndBuddyDistanceModalBox'>Egg: " + pokemon.egg + "</p>"
   result += "<p class='eggAndBuddyDistanceModalBox'>Buddy distance km: " + pokemon["buddy-distance-km"] + "</p>"
   result += "<p class='evolutionCandyModalBox'>Candy for evolution: " + Object.values(pokemon.evolution)[0] + "</p>"
+ 
 
   //result+= "<p class='evolutionModalBox'>Evolution: " + Object.values(pokemon.evolution["next-evolution"][0]) + "</p>" 
   //result+= "<p class='evolutionModalBox'>Evolution: " + Object.values(pokemon.evolution["next-evolution"]["next-evolution"]) + "</p>" 
@@ -206,6 +237,13 @@ function typeClick(event) {
       divRight.innerHTML += resultRight;
     });
   }
+
+  
+  /*let singlePokemon = document.getElementsByClassName("flexbox");
+  singlePokemon.forEach(pokemon => pokemon.addEventListener('click', () => {
+    
+  }));*/
+ 
 }
 
 function refreshPage() {
@@ -377,3 +415,18 @@ function showByName() { //sirve pero no es óptimo; en proceso...
     });
   }
 }
+
+
+// window.addEventListener("click", function(e){
+//   this.console.log(e.target);
+// })
+
+
+
+
+
+
+ 
+
+ 
+
