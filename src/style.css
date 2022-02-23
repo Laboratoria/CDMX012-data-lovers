@@ -8,7 +8,10 @@ html {
   margin: 0%;
   padding: 0%;
 }
-
+body{
+  margin: 0%;
+  height: fit-content;
+}
 header {
   background-color: #457b9d;
   padding: 3.5%;
@@ -99,7 +102,8 @@ input {
 }
 
 .welcomePage {
-  background-image: url(https://a-static.besthdwallpaper.com/pokemon-go-video-game-papel-pintado-1024x576-41559_44.jpg);
+  /*background-image: url(https://a-static.besthdwallpaper.com/pokemon-go-video-game-papel-pintado-1024x576-41559_44.jpg);*/
+  background-image: url("./resources/background_2.jpg");
   background-size: 100%;
   background-attachment: fixed;
 }
@@ -267,6 +271,9 @@ footer {
   background-color: #1d3557;
   text-align: center;
   color: #f1faee;
+  position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 #gitHub1,
 #gitHub2 {
@@ -274,4 +281,90 @@ footer {
 }
 p {
   font-size: 1vw;
+}
+
+@media all and (max-width:360px){
+  .Logo{
+    width: 20%;
+  }
+  .Lente, .ButtonRed, .ButtonYellow{
+    display: none;
+  }
+  #Us{
+    font-size: x-small;
+  }
+  input, button {
+    margin: auto;
+    font-size:x-small;
+    
+  }
+  .welcomeBox {
+    display: flex;
+    background-color: rgba(70, 123, 157, 0.7);
+    margin: 5% 10%;
+    padding: 0;
+    align-items: center;
+    border-radius: 10px;
+    flex-direction: column;
+  }
+  h1 {
+    font-size: medium;
+  }
+  .menu{
+    flex-direction: column;
+  }
+  #Clasify, #type, #orderBy{
+    width:40%;
+    justify-content: center;
+    margin: 0%;
+  }
+  #showData a {
+    text-decoration: none;
+    width: 28%;
+    margin: 1%;
+    color: #606061;
+    font-weight: 400;
+    font-family: sans-serif;
+    text-transform: capitalize;
+    justify-content: center;
+  }
+  #showData a p {
+   font-size:xx-small;
+  }
+  .pokeCards{
+    width: fit-content;
+  }
+  #showData{
+    border-radius: 10px;
+    flex-wrap: wrap;
+  justify-content: space-around;
+  }
+  .modalDialog {
+    margin: auto;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    position: relative;
+    width: 90%;
+    height: fit-content;
+    padding: 2em 2.5em;
+    display: flex;
+    border-radius: 4px;
+    background: #fff;
+    justify-content: center;
+    align-items: center;
+    transition: all 500ms ease-in;
+    flex-wrap: wrap;
+  }
+  .contentAboutPokemon {
+    text-transform: capitalize;
+    font-size:small;
+    width: fit-content;
+  }
+  footer{
+    background-color: #f1b418;
+    
+  }
+  footer p{
+    font-size: x-small;
+  }
 }
