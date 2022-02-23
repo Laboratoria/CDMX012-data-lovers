@@ -281,13 +281,13 @@ function pokemon(arreglo){
 
                     let containerBattle=document.createElement("div");
                     containerBattle.classList.add("container-battle");
-    
+
                     let boxStatsGeneralPokemon=document.createElement("div");
                     boxStatsGeneralPokemon.classList.add("box-stats-general");
-    
+
                     let boxStatsRandomPokemon=document.createElement("div");
                     boxStatsRandomPokemon.classList.add("box-stats-random");
-    
+
                     let messageBattleContainer =document.createElement("div");
                     messageBattleContainer.classList.add("message-battle-container");
 

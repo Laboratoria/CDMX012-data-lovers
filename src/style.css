@@ -328,7 +328,6 @@ video{
 .card-container img{
     padding: 1px 0px 1px 50px;
 }
-
 .caracter-pokemon{
     background: black;
     color: white;
@@ -340,8 +339,6 @@ video{
     justify-content: space-between;
     align-items: center;
 }
-
-
 .back-card-container{
     background: black;
     border: 3px solid white;
@@ -362,7 +359,6 @@ video{
 .rarity-pokemon{
     padding-bottom: 10px;
 }
-
 .btn-More-Information{
     background: linear-gradient(180deg, #4574B9 24.48%, rgba(133, 176, 239, 0.56) 68.75%);
     color: white;
@@ -377,11 +373,6 @@ video{
     align-items: center;
     cursor: pointer;
 }
-
-
-
-
-
 .type-pokemon{
     display: flex;
     justify-content: center;
@@ -394,16 +385,12 @@ video{
     font-weight: bold;
     border-radius: 5px;
     border: 2px solid gray;
-
-  
 }
-
 .bug{
     background: green;
     color: white;
     font-size: 20px;
     text-align: center;
-    
 }
 .dragon{
     background: linear-gradient(180deg, #4574B9 34.38%, #F47B0B 65.1%);
@@ -422,7 +409,6 @@ video{
     color: white;
     font-size: 20px;
     text-align: center;
-
 }
 .ghost{
     background: purple;
@@ -530,8 +516,6 @@ video{
     flex-direction: column;
     border-radius: 10px;
 }
-
-
 .box-image-pokemon .id-pokemon{
     margin: -10px 0 0 0;
     text-align: right;
@@ -540,8 +524,6 @@ video{
 .box-image-pokemon .name-pokemon{
     color: white;
 }
-
-
 .box-image-pokemon img{
     width: 180px;
     margin: -5px 0 0 70px;
@@ -550,16 +532,13 @@ video{
     -webkit-transform: scale(1.1);
 	transform: scale(1.1);
 }
-
 .stats-general-pokemon{
     padding-top: 50px;
-    
 }
 .stats-pokemon{
     background: white;
     border: 5px solid #ffcb05;
     border-radius: 10px;
-
 }
 .box-stats-general, .box-stats-random{
     background: black;
@@ -602,7 +581,6 @@ video{
     align-items: center;
     justify-content: center;
     margin:0 50px 20px 50px;
-
 }
 .information-pokemon{
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.7047) 15.62%, rgba(0, 0, 0, 0.87) 52.08%, rgba(4, 6, 6, 0.7569) 83.85%);    width: 60%;
@@ -612,13 +590,10 @@ video{
     border-radius: 10px;
     color: white;
 }
-
-
 .weaknesses-pokemon, .resistant-pokemon{
     display: flex;
     flex-direction: row;
     align-items: flex-end;
-
 }
 .buttons-pokemon{
     display: flex;
@@ -638,14 +613,12 @@ video{
     position: relative;
     z-index: 40;
 }
-
 .image-vs{
     width: 150px;
     height: 300px;
     z-index: 40;
     margin-top: 30px;
     position: relative;
-
 }
 .image-question{
     width: 250px;
@@ -684,14 +657,12 @@ video{
     justify-content: center;
     height: 60px;
     font-size: 26px;
-
 }
 .footer-container img{
     width: 35px;
     height: 35px;
     padding: 0 5px 0 5px;
 }
-
 
 @media screen and (min-width: 0px)and (max-width: 767px) {
     .btn-primary{

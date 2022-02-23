@@ -59,13 +59,9 @@ describe('funciones de filtrado', () => {
 
 describe('función de calculo', () => {
   it('Calcular las estadisticas de batalla Pokemon', () => {
-    const dataExample1 = 319;
-     /* {"name":'pikachu',
-        "stats": { "base-attack": 112, "base-defense": 96, "base-stamina": 111}}];*/
-    const dataExample2 = 357;
-      /*{"name":'bulbasaur',
-        "stats": { "base-attack": 118, "base-defense": 111, "base-stamina": 128}}];*/
-    const dataResponse = -12;
+    const dataExample1 = {"base-attack": "223", "base-defense": "173", "base-stamina": "186"};
+    const dataExample2 = { "base-attack": "118", "base-defense": "111", "base-stamina": "128"};
+    const dataResponse = 75;
     expect(calculateDataByStats(dataExample1, dataExample2)).toBe(dataResponse);
   });
 });
