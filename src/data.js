@@ -1,6 +1,18 @@
-
 const dataPokemon={
-  
+  //EN PROCESP
+  /*sortData:(data, sortBy, sortOrder)=>{
+    let pokemon=data.slice(0);
+    let sortElement = sortBy
+    let sortData=[];
+    sortData= pokemon.sort((a,b)=>{
+    if(a.sortElement>b.sortElement){
+      return 1   
+    }
+    return-1
+      })
+    return sortData
+  },*/
+
   byName:(data)=>{
     let pokemon=data.pokemon.slice(0);
     let byName=[];
