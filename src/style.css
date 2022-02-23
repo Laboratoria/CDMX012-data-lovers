@@ -16,14 +16,12 @@ body{
     font-size: 32px;
     font-family: Arial, Helvetica, sans-serif;
 }
-
 .top-nav-primary{
     background:#424242;
     ;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
 }
 .top-nav{
     background: #040606;
@@ -45,7 +43,6 @@ body{
     align-items: center;
     list-style: none;
 }
-
 .top-nav-primary li{
 
     padding: 5px 20px 5px 20px;
@@ -53,7 +50,6 @@ body{
     justify-content: center;
     align-items: center;
 }
-
 .top-nav-primary  a{
     text-decoration: none;
     color: white;
@@ -68,7 +64,6 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 .container-login{
     position:absolute;
@@ -86,7 +81,6 @@ body{
     height: 220px;
     width: 350px;
     align-items: center;
-
 }
 .login label{
     font-size: 20px;
@@ -117,7 +111,6 @@ body{
     width: 50px;
     height: 50px;
     padding-left: 5px;
-    
 }
 .video{
     padding: 10px 0 10px 0;
@@ -125,9 +118,6 @@ body{
     justify-content: center;
     align-items: center;
     width: 100%;
-    
-
-    
 }
 video{
     width: 30%;
@@ -145,8 +135,7 @@ video{
     padding: 0 10px 0 10px;
     margin-top: 10px;
 }
-
-.btn-reset{
+.btn-reset, .btn-back, .btn-calculate{
     width: 200px;
     height: 50px;
     border-radius: 10px;
@@ -162,8 +151,9 @@ video{
     justify-content: center;
     align-items: center;
 }
-
-
+.btn-reset{
+    margin: 0 50px;
+}
 .order-container{
     background: black;
     border: 1px solid gray;
@@ -172,7 +162,6 @@ video{
     width: 250px;
     height: 52px;
     margin-right: 10px;
-
 }
 .orderOption{
     display: flex;
@@ -183,21 +172,16 @@ video{
     height: 100%;
     padding: 5px;
 }
-
-
 .icon-pokeball{
     width: 50px;
     margin-bottom: -10px;
-
 }
-
 .btn-ordenar{
     display: flex;
     align-items: center;
     justify-content: center;
     height: 90%;
     width: 60%;
-    
 }
 .btn-ordenar button{
     width: 45%;
@@ -205,11 +189,9 @@ video{
     padding-left: 5px;
     cursor: pointer;
 }
-
 .btn-ordenar img{
     width: 30%;
     height: 100%;
-    
 }
 .orderOption label{
     display: flex;
@@ -217,7 +199,6 @@ video{
     font-size: 40%;
     padding-left: 5px;
 }
-
 .btn-types{
     background-color: black;
     width: 100%;
@@ -236,7 +217,6 @@ video{
     align-items: center;
     border-radius: 10px;
     cursor: pointer;
-
 }
 .select-type-cover{
     border: none;
@@ -252,7 +232,6 @@ video{
     border-radius: 10px;
     margin-top: -48px;
     cursor: pointer;
-
 }
 .select-type-cover, .login{
     visibility: hidden;
@@ -271,18 +250,14 @@ video{
     justify-content: center;
     padding: 10px 35px 10px 35px;
 }
-
-
 .title-type{
     color:white;
     text-align: center;
     font-size: 20px;
 }
-
 .description-types button{
     cursor: pointer;
 }
-
 .description-types ul{
     list-style: none;
     display: flex;
@@ -292,9 +267,6 @@ video{
 .description-types li{
     padding: 10px;
 }
-
-
-
 .search-container{
     background: black;
     border: 1px solid gray;
@@ -310,14 +282,13 @@ video{
     display: flex;
     color: white;
     font-size: 40%;
-} 
+}
 .search-container input{
     display: flex;
     width: 70%;
     height: 85%;
     padding: 5px;
-    
-} 
+}
 .lupa{
     display: flex;
     width: 75%;
@@ -334,7 +305,6 @@ video{
     gap: 30px;
     overflow-y: scroll;
     height: 20em;
-    
 }
 .general-card-container{
     position: relative;
@@ -342,13 +312,10 @@ video{
     height: 230px;
     transform-style: preserve-3d;
     transition: transform .4s ease-out;
-
 }
 .general-card-container:hover{
     transform: rotateY(180deg);
 }
-
-
 .card-container{
     background: white;
     border: 3px solid black;
@@ -357,7 +324,6 @@ video{
     position: absolute;
     backface-visibility: hidden;
     border-radius: 10px;
-
 }
 .card-container img{
     padding: 1px 0px 1px 50px;
@@ -553,12 +519,10 @@ video{
 }
 .box-pokemon{
     width: 400px;
-    
-
 }
 .box-image-pokemon{
-    background: white;
-    border: 6px solid black;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.7047) 15.62%, rgba(196, 196, 196, 0.87) 52.08%, rgba(4, 6, 6, 0.7569) 83.85%);
+    border: 3px solid #ffcb05;
     width: 80%;
     height: 250px;
     padding-bottom: 50px;
@@ -571,6 +535,10 @@ video{
 .box-image-pokemon .id-pokemon{
     margin: -10px 0 0 0;
     text-align: right;
+    color: white;
+}
+.box-image-pokemon .name-pokemon{
+    color: white;
 }
 
 
@@ -589,35 +557,60 @@ video{
 }
 .stats-pokemon{
     background: white;
-    border: 5px solid black;
+    border: 5px solid #ffcb05;
     border-radius: 10px;
 
 }
 .box-stats-general, .box-stats-random{
     background: black;
     width: 250px;
-    height: 230px;
+    height: 150px;
     display: flex;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    margin: 0 20px;
+    border: 5px solid white;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.image-rabbit{
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    right: 100px;
+    top:270px;
 }
 .container-battle{
-    background: white;
-    width: 600px;
+    width: 60%;
     height: 300px;
     position: absolute;
-    bottom: 150px;
+    top: 450px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-
+}
+.message-battle-container{
+    width: 100%;
+    height: 80px;
+    color: white;
+    font-size: 40px;
+    border: 5px solid #273b41 ;
+    border-radius: 10px;
+    background: linear-gradient(180deg, rgba(40, 137, 79, 0.72) 34.09%, rgba(92, 209, 51, 0.78) 71.97%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:0 50px 20px 50px;
 
 }
 .information-pokemon{
-    background: white; 
-    width: 60%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.7047) 15.62%, rgba(0, 0, 0, 0.87) 52.08%, rgba(4, 6, 6, 0.7569) 83.85%);    width: 60%;
     padding: 30px;
     font-size: 26px;
-    border: 5px solid black;
+    border: 5px solid #ffcb05;
     border-radius: 10px;
+    color: white;
 }
 
 
@@ -633,7 +626,7 @@ video{
     width: 100%;
     height: 50px;
 }
-.btn-back, .btn-calculate, .btn-random{
+.btn-random{
     background: linear-gradient(180deg, #4574B9 24.48%, rgba(133, 176, 239, 0.56) 100%); 
     color: white;
     width: 180px ;
@@ -641,9 +634,30 @@ video{
     cursor: pointer;
     border-radius: 5px;
     box-shadow: 5px 5px 5px black;
-}
-.btn-random{
     height: 50px;
+    position: relative;
+    z-index: 40;
+}
+
+.image-vs{
+    width: 150px;
+    height: 300px;
+    z-index: 40;
+    margin-top: 30px;
+    position: relative;
+
+}
+.image-question{
+    width: 250px;
+    height: 230px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+.image-pikachu{
+    position: absolute;
+    right: 100px;
+    margin-top: 150px;
+    width: 250px;
 }
 .message-image{
     border-radius: 10px;
@@ -689,13 +703,11 @@ video{
     }
     .btn-pokeball::before{
         content: "";
-
     }
     .top-nav-primary {
         display: none;
         overflow: hidden;
     }
-    
     .show{
         display: block;
     }
@@ -705,19 +717,13 @@ video{
     .container-login{
         z-index: 40;
     }
-
-
     .login{
-
-        width:370px;
+        width: 320px;
     }
- 
-
     .top-nav-primary ul{
         flex-direction: column;
         display: flex;
     }
-
     .btn-pokeball{
         display: block;
         width: 100%;
@@ -727,24 +733,21 @@ video{
         display: none;
     }
     video{
-        width: 75%;
+        width: 90%;
     }
     .cards-containers-principal{
         z-index: 40;
     }
-
     .btn-ordenar img {
         width: 20px;
         height: 100%;
     }
-
     .orderOption label {
         font-size: 30%;
     }
     .search-container label {
         font-size: 30%;
     }
-
     .search-container input {
         height: 29px;
         font-size: 30%;
@@ -755,7 +758,6 @@ video{
     .box-pokemon{
         width: 300px;
         height: 450px;
-
     }
     .box-image-pokemon{
         width: 100%;
@@ -775,7 +777,6 @@ video{
         width: 300px;
         padding: 10px;
     }
-
     .weaknesses-pokemon, .resistant-pokemon {
         display: flex;
         flex-direction: column;
@@ -785,13 +786,11 @@ video{
         width: 180px;
         margin: 0 0 0 40px;
     }
-    
     .stats-general-pokemon {
-    
-    width: 100%;
-    height: 200px;
-    margin-bottom: 20px;
-    padding-top: 20px;
+        width: 100%;
+        height: 200px;
+        margin-bottom: 20px;
+        padding-top: 20px;
     }
     .box-image-pokemon .name-pokemon{
         font-size: 70%;
@@ -805,12 +804,12 @@ video{
     .weaknesses-pokemon .poison,.weaknesses-pokemon .rock,.weaknesses-pokemon .water{
         font-size: 75%; 
         margin: 3px;
-    }  
+    }
     .resistant-pokemon .bug, .resistant-pokemon .dragon, .resistant-pokemon .fairy, .resistant-pokemon .fire, .resistant-pokemon .ghost,
     .resistant-pokemon .ground, .resistant-pokemon .normal, .resistant-pokemon .psychic,.resistant-pokemon .steel,.resistant-pokemon .dark,
     .resistant-pokemon .electric,.resistant-pokemon .fighting,.resistant-pokemon .flying,.resistant-pokemon .grass,
     .resistant-pokemon .ice,.resistant-pokemon .poison,.resistant-pokemon .rock,.resistant-pokemon .water{
-        font-size: 75%; 
+        font-size: 75%;
         margin: 3px;
     }
     .buttons-pokemon{
@@ -818,8 +817,9 @@ video{
     }
     .buttons-pokemon button{
         font-size: 65%;
+        width: 50%;
+        margin: 5px;
     }
-
     .footer-container p{
         font-size: 50%;
     }
@@ -829,12 +829,55 @@ video{
     .message-image{
         width: 95%;
     }
-
-
+    .btn-random{
+        position: relative;
+        margin: 0 134px;
+        font-size: 14px;
+        padding: 5px;
+    }
+    .image-vs{
+        width: 200px;
+        height: 200px;
+        margin: 0 124px;
+        display: flex;
+    }
+    .image-pikachu{
+        display: none;
+        bottom: 0;
+        z-index: 40;
+    }
+    .container-battle {
+        width: 100%;
+        height: 200px;
+        position: relative;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    .message-battle-container{
+        width: 350px;
+        font-size: 18px;
+        margin: 10px 24px;
+    }
+    .box-stats-general{
+        margin: 10px 64px;
+        font-size: 12px;
+    }
+    .box-stats-random{
+        margin: 10px 64px;
+        font-size: 12px;
+    }
+    .btn-reset{
+        margin: 10px 100px;
+        font-size: 24px;
+        padding: 5px;
+    }
+    .image-rabbit{
+        display: none;
+    }
 }
-
-
-
 
 @media screen and (min-width: 768px) and (max-width: 1040px) {
     video{
@@ -846,7 +889,6 @@ video{
     }
     .top-nav-primary{
         font-size: 70%;
-
     }
     .top-nav-primary ul{
         margin: 0 10px 0 10px;
@@ -860,7 +902,6 @@ video{
     .lupa{
         width: 26px;
     }
-
     .information-pokemon{
         display: flex;
         font-size: 50%;
@@ -869,25 +910,23 @@ video{
         width: 40%;
         padding: 10px;
     }
-
     .weaknesses-pokemon, .resistant-pokemon {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-
     .weaknesses-pokemon .bug, .weaknesses-pokemon .dragon, .weaknesses-pokemon .fairy, .weaknesses-pokemon .fire, .weaknesses-pokemon .ghost,
     .weaknesses-pokemon .ground, .weaknesses-pokemon .normal,.weaknesses-pokemon .psychic,.weaknesses-pokemon .steel, .weaknesses-pokemon .dark,
     .weaknesses-pokemon .electric,.weaknesses-pokemon .fighting,.weaknesses-pokemon .flying,.weaknesses-pokemon .grass,.weaknesses-pokemon .ice,
     .weaknesses-pokemon .poison,.weaknesses-pokemon .rock,.weaknesses-pokemon .water{
-        font-size: 75%; 
+        font-size: 75%;
         margin: 3px;
-    }  
+    }
     .resistant-pokemon .bug, .resistant-pokemon .dragon, .resistant-pokemon .fairy, .resistant-pokemon .fire, .resistant-pokemon .ghost,
     .resistant-pokemon .ground, .resistant-pokemon .normal, .resistant-pokemon .psychic,.resistant-pokemon .steel,.resistant-pokemon .dark,
     .resistant-pokemon .electric,.resistant-pokemon .fighting,.resistant-pokemon .flying,.resistant-pokemon .grass,
     .resistant-pokemon .ice,.resistant-pokemon .poison,.resistant-pokemon .rock,.resistant-pokemon .water{
-        font-size: 75%; 
+        font-size: 75%;
         margin: 3px;
     }
     .container-login{
@@ -895,6 +934,36 @@ video{
     }
     .cards-containers-principal{
         z-index: 40;
+    }
+    .container-battle {
+        width: 80%;
+        position: relative;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+    .image-pikachu{
+        width: 25%;
+        z-index: 40;
+        position: absolute;
+        margin-top: 150px;
+    }
+    .message-battle-container{
+        margin: 10px 24px;
+    }
+    .box-stats-general, .box-stats-random{
+        margin: 10px 20px;
+    }
+    .btn-reset{
+        margin: 10px 40px;
+    }
+    .btn-random{
+        width: 15%;
+        font-size: 18px;
+    }
+    .image-rabbit{
+        display: none;
     }
 
 }
