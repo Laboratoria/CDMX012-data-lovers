@@ -250,3 +250,49 @@ main {
 .dark { background-color: #3D3D3D;}
 .steel { background-color: #8E8E8E;}
 .fairy { background-color: #FF69C6;}
+
+
+.modalStructure{
+  position: relative;
+  width: 1145px;
+  height: 672px;
+  background: whitesmoke;
+   border-radius: 15px;
+   box-shadow: 0px 0px 25px 0px rgb(0 0 0 / 53%);
+   justify-content: center;
+}
+
+.modalBackground{
+  background-color: gainsboro;
+  position: relative;
+  width: 1145px;
+  height: 500px;
+  border-radius: 15px;
+}
+
+.modInfoPokemon{
+  background-color: #8E8E8E;
+  position: relative;
+  width: 200px;
+  height: 250px;
+  border-radius: 15px;
+}
+
+.modButtons{
+  background-color: #3ab0df;
+  position: relative;
+  width: 200px;
+  height: 50px;
+  border-radius: 15px;
+
+}
+
+.modGene{
+  background-color: #df3a79;
+  opacity: 0.5;
+  position: relative;
+  width: 200px;
+  height: 50px;
+  border-radius: 15px;
+
+}
