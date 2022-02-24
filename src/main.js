@@ -1,16 +1,14 @@
 //Import data and functions 
 import data from './data/ghibli/ghibli.js';
-import {filmPosters, cutDescription, backToTop, hideBtn, createBtnLink, goToSecondPage} from './data.js'
+import {filmPosters, cutDescription, backToTop, hideBtn, createBtnLink} from './data.js'
 
-
-//CREACION DE ELEMENTOS PARA HOMEPAGE(TARJETAS DE PELICULAS)
-// Poster y titulos de todas las peliculas.
-
+//Create an array with poster, title, description, release_date, rating score and id.
 let allFilms = []; 
 for(let i = 0; i < data.films.length; i++){ 
     allFilms.push(filmPosters(data.films[i]));
 }
 
+//Create movie cards
 function createPoster(array) {
     document.getElementById("moviesList").innerHTML = '';
     for (let j = 0; j < array.length; j++) {
@@ -83,15 +81,7 @@ document.getElementById("selectFilter").addEventListener("change", function() {
     
 });
 
-//Get search input 
-// let searchSelect = document.querySelector("inputSearch");
 
-// searchSelect.addEventListener('search', function(){
-//     alert('Hi `${searchInput');
-// })
-
-
-//   //INTERACCION DE LOS BOTONES
 //boton ScrollTop
 const btnSelector = document.querySelector(".scrollTopBtn");
 
@@ -99,46 +89,31 @@ btnSelector.addEventListener("click", backToTop);
 window.addEventListener("scroll", hideBtn);
 
 
-//Click carousel 
-goToSecondPage (".onlyBigText", "4e236f34-b981-41c3-8c65-f8c9000b94e7"); 
+//Filter
+let searchBar = document.getElementById("searchBar"); 
 
+searchBar.addEventListener('keypress', (e)=>{
+if (e.key === "Enter"){
+    const searchString = e.target.value.toLowerCase(); 
+
+    const filteredMovies = data.films.filter(movie => { 
+        return movie.title.toLowerCase().includes(searchString) || movie.description.toLowerCase().includes(searchString) || movie.director.toLowerCase().includes(searchString)   ;
+    })
+    document.getElementById("showMessage").innerText = " "
+    let arraySearch = [];
+    if (filteredMovies.length == 0){
+        document.getElementById("showMessage").innerText = "Sorry! We couldn't find a movie for you. Try different movie title or director"; 
+    } 
+    for(let i = 0; i < filteredMovies.length; i++){ 
+        arraySearch.push(filmPosters(filteredMovies[i])); 
+    }
     
-
-
-//barra de busqueda
-// const inputSearch = document.getElementById("searchBar");
-// inputSearch.addEventListener("keyup", search);
-
-
-
-
-
-// const searchBar = document.getElementById("searchBar");
-
-// searchBar.addEventListener("keyup",(e) =>{
-//     const searchTitle = e.target.value.toLowerCase();
-//     const filteredTitle = allFilms[0].filter((title)=>{
-// return(
-//     title.allFilms.includes(searchTitle)
-// );
-//     });
-//     filteredTitle(allFilms);
-// });
+    createPoster(arraySearch);
+    
+   
+}
+    
+})
 
 
 
-
-
-//boton que lleva a las paginas de las peliculas
-// let btnLink = document.querySelectorAll(".btnMoreInfo");
-
-// for (let btn of btnLink){
-// btn.addEventListener("click", function() {
-//     document.location.href = "./movies.html";
-// })
-// };
-
-// btnLink.forEach(btn => {
-//     btn.addEventListener("click", function() {
-//         document.location.href = "./movies.html";
-//     });
