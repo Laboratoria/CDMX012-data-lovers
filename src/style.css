@@ -304,7 +304,7 @@ video{
     flex-wrap: wrap;
     gap: 30px;
     overflow-y: scroll;
-    height: 22em;
+    height: 23em;
 }
 .general-card-container{
     position: relative;
@@ -557,7 +557,7 @@ video{
     width: 250px;
     height: 250px;
     position: absolute;
-    right: 200px;
+    right: 350px;
     top:270px;
 }
 .container-battle{
