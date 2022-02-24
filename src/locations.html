@@ -14,16 +14,16 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 
-<body>
+<body class="bodyLocations">
   <header>
     <div class="nav-bar">
       <img class='logo-g' src='https://i.postimg.cc/FHMnx5gB/custom-Logo.png' alt='logo-totoro' />
       <ul class="menus">
         <div class="enlaces">
           <li><a href="/src/index.html">Home</a></li>
-          <li><a href="#">Characters</a></li>
+          <li><a href="/src/characters.html">Characters</a></li>
           <li><a class="active-page" href="/src/locations.html">Locations</a></li>
-          <li><a href="#">Vehicles</a></li>
+          <li><a href="/src/vehicles.html">Vehicles</a></li>
         </div>
       </ul>
     </div>
@@ -83,14 +83,30 @@
             <p class='movie-title '>Castle in te sky</p>
             <p class='info-loc'>Climate: Tropical</p>
             <p class='info-loc'>Terrain: Forest</p>
-
           </div>
-
         </div> -->
 
       </div>
     </section>
 
+    <section class="facts container" id="FunFacts">
+      <h1>Ghibli Facts</h1>
+      <div class="fun-facts">
+        <div class="graph">
+          <h3 class="fun-fact-text-one" id=></h3>
+          <canvas id="myChartTwo"></canvas>
+        </div>
+        <div class="graph">
+          <h3 class="fun-fact-text-two" id=></h3>
+          <canvas id="myChartThree"></canvas>
+        </div>
+      </div>
+      <!-- <div class="background">
+                <img class='factsImg' src='https://i.postimg.cc/Y0Xf8t3J/5WVktYO.jpg' border='0' alt='5WVktYO' />
+                <div class="white-box "></div>
+              </div> -->
+
+    </section>
 
   </main>
 
@@ -106,6 +122,9 @@
   </footer>
 
   <!--<div id="root"></div>-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"
+    integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="main.js" type="module"></script>
 </body>
 
