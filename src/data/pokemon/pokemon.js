@@ -22,7 +22,7 @@ export default {
       },
       "spawn-chance": "0.69",
       stats: {
-        "base-attack": "118",
+        "base-attack": "118", 
         "base-defense": "111",
         "base-stamina": "128",
         "max-cp": "1115",

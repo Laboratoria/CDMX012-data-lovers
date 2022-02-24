@@ -6,6 +6,7 @@ import {
   filterByTypes,
   filterByLegendary,
   searchPokemon,
+  porcentageByAttack,
 } from "./data.js";
 import showPokemons from "./Article.js";
 
@@ -36,15 +37,19 @@ window.orderPokemons = function orderPokemons() {
 const selectByType = () => {
   const type = document.getElementById("type").value;
   let pokemons = filterByTypes(type);
-  showPokemons(pokemons);
+  let showAllPokemons = showPokemons(pokemons);
+  console.log(pokemons.length);
+  porcentageByAttack(showAllPokemons);
 };
 
 document.getElementById("type").addEventListener("change", selectByType);
+//document.getElementById("type").addEventListener("change", porcentaje);
 
 //***********FUNCION QUE MUESTRA A LOS POKEMONES LEGENDARIOS*******************
 const selectByLegendary = () => {
   const legendary = document.getElementById("Clasify").value;
   let pokemons = filterByLegendary(legendary);
+
   showPokemons(pokemons);
 };
 document
@@ -57,13 +62,14 @@ let searchButton = document.getElementById("search");
 function showMyPokemon() {
   let name = document.getElementById("searchText").value;
   let mifuncion = searchPokemon(name);
-  if(name == false || mifuncion ==false ){
-    alert("Pokémon not found, please check the spelling \n Note: If you are not sure of how to write the Pokémon´s name, try with the first letter of it´s name")
-    throw new TypeError("Please insert a value")
-} else{
- 
-  showPokemons(mifuncion);
-}
+  if (name == false || mifuncion == false) {
+    alert(
+      "Pokémon not found, please check the spelling \n Note: If you are not sure of how to write the Pokémon´s name, try with the first letter of it´s name"
+    );
+    throw new TypeError("Please insert a value");
+  } else {
+    showPokemons(mifuncion);
+  }
 }
 searchButton.addEventListener("click", showMyPokemon);
 

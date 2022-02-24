@@ -8,7 +8,7 @@ html {
   margin: 0%;
   padding: 0%;
 }
-body{
+body {
   margin: 0%;
   height: fit-content;
 }
@@ -77,7 +77,6 @@ input {
   font-size: 1.5vw;
   border-radius: 10%;
   text-transform: lowercase;
-
 }
 
 .ButtonRed {
@@ -150,6 +149,7 @@ h1 {
   background-color: #f1faee;
   height: auto;
   width: 20%;
+  font-size: x-large;
 }
 #Clasify {
   padding: 1%;
@@ -159,6 +159,7 @@ h1 {
   margin-right: 4%;
   margin-left: 4%;
   height: auto;
+  font-size: x-large;
 }
 #type {
   padding: 1%;
@@ -168,6 +169,7 @@ h1 {
   margin-right: 8%;
   margin-left: 4%;
   height: auto;
+  font-size: x-large;
 }
 #showData {
   display: flex;
@@ -272,8 +274,8 @@ footer {
   text-align: center;
   color: #f1faee;
   position: fixed;
-    bottom: 0;
-    width: 100%;
+  bottom: 0;
+  width: 100%;
 }
 #gitHub1,
 #gitHub2 {
@@ -283,20 +285,22 @@ p {
   font-size: 1vw;
 }
 
-@media all and (max-width:428px){
-  .Logo{
+@media all and (max-width: 428px) {
+  .Logo {
     width: 20%;
   }
-  .Lente, .ButtonRed, .ButtonYellow{
+  .Lente,
+  .ButtonRed,
+  .ButtonYellow {
     display: none;
   }
-  #Us{
+  #Us {
     font-size: x-small;
   }
-  input, button {
+  input,
+  button {
     margin: auto;
-    font-size:x-small;
-    
+    font-size: x-small;
   }
   .welcomeBox {
     display: flex;
@@ -310,11 +314,13 @@ p {
   h1 {
     font-size: medium;
   }
-  .menu{
+  .menu {
     flex-direction: column;
   }
-  #Clasify, #type, #orderBy{
-    width:40%;
+  #Clasify,
+  #type,
+  #orderBy {
+    width: 40%;
     justify-content: center;
     margin: 2%;
   }
@@ -329,15 +335,15 @@ p {
     justify-content: center;
   }
   #showData a p {
-   font-size:xx-small;
+    font-size: xx-small;
   }
-  .pokeCards{
+  .pokeCards {
     width: fit-content;
   }
-  #showData{
+  #showData {
     border-radius: 10px;
     flex-wrap: wrap;
-  justify-content: space-around;
+    justify-content: space-around;
   }
   .modalDialog {
     margin: auto;
@@ -357,10 +363,10 @@ p {
   }
   .contentAboutPokemon {
     text-transform: capitalize;
-    font-size:small;
+    font-size: small;
     width: fit-content;
   }
-  footer p{
+  footer p {
     font-size: x-small;
   }
 }

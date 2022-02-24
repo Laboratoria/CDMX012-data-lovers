@@ -101,10 +101,15 @@ function showPokemons(pokemons) {
       " <strong><br>Weight:</strong> " +
       sizeWeightPokemon;
 
+    /*const contentEvolution = document.createElement("p");
+    contentEvolution.setAttribute("class", "evolution");
+    contentEvolution.innerHTML = " <strong>Evolution: <br> </strong>";*/
+
     allContent.appendChild(buttonModal);
     allContent.appendChild(contentTitle);
     allContent.appendChild(contentImag);
     allContent.appendChild(contentAbout);
+    //allContent.appendChild(contentEvolution)
     showModal.appendChild(allContent);
     document.getElementById("showData").appendChild(showModal);
   }

@@ -26,7 +26,6 @@ export function orderByAz() {
     if (a.name < b.name) {
       return -1;
     }
-  
   });
   return finalOrderAZ;
 }
@@ -40,15 +39,38 @@ export function orderByZa() {
     if (a.name > b.name) {
       return -1;
     }
-    
   });
   return finalOrderZA;
 }
+
+/*
+export function porcentageByType(a, b) {
+  let a = 251;
+  let b = findAllPokemons();
+  let result = filterByTypes();
+}*/
 
 export function filterByTypes(type) {
   const pokemones = findAllPokemons();
   const filtrado = pokemones.filter((pokemon) => pokemon.type.includes(type));
   return filtrado;
+}
+
+export function porcentageByAttack(type) {
+  const pokemones = findAllPokemons();
+  const stats = pokemones.stats[(0, 1)]; // valor de el numero de ataque de cada pokemon
+  console.log(stats);
+  const statsNumber = parseInt(stats); //% en numero
+  const filtrado = pokemones.filter((pokemon) => pokemon.type.includes(type)); //obtenemos el resultado numero de pokemones de cada tipo
+  const initialValue = 0; //valor inicial de reduce()
+  const suma = statsNumber.reduce(
+    (previousValue, currentValue) => previousValue + currentValue,
+    initialValue
+  );
+
+  const porcentaje = suma / filtrado.length;
+  console.log(stats);
+  return porcentaje;
 }
 
 export function filterByLegendary(legendary) {
@@ -62,8 +84,8 @@ export function filterByLegendary(legendary) {
 
 export function searchPokemon(word) {
   const pokemones = findAllPokemons();
-  let finalSearch=  pokemones.filter(item=> item.name.includes(word))
-return finalSearch
+  let finalSearch = pokemones.filter((item) => item.name.includes(word));
+  return finalSearch;
 }
 
 /*
