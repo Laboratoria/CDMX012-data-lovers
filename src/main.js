@@ -7,8 +7,10 @@ function buildCards(pokemonArray) {
   // crea las cards de pokemones
 
   for (const pokemon of pokemonArray) {
-    let card = document.createElement("section");
+    let card = document.createElement("button");
     card.className = "card";
+    card.id = `${pokemon.name}`
+    card.setAttribute('href', 'openModal')
 
     let pokemonNum = document.createElement("div");
     pokemonNum.className = "property num";
@@ -102,42 +104,3 @@ document.getElementById("filter").addEventListener(
 );
 
 buildCards(orderLowest()); // callback funcion lowest para mostrar en pag iniciada
-/*
-function pokemonShowInfo () {
-  
-    const pokemonInfo = document.getElementById('pokemon-info');
-    let pokemonNum = document.createElement("div");
-    pokemonNum.className = "property num";
-
-    let pokemonName = document.createElement("div");
-    pokemonName.className = "property name";
-
-    let pokemonImg = document.createElement("img");
-    pokemonImg.setAttribute("src", `${pokemonList.img}`);
-    pokemonImg.className = "property img";
-
-    let barrita = document.createElement("div");
-    barrita.className = "barrita";
-
-    let num = document.createTextNode(`${pokemonList.num}`);
-    let name = document.createTextNode(`${pokemonList.name}`);
-
-    pokemonNum.appendChild(num);
-    pokemonName.appendChild(name);
-    pokemonInfo.appendChild(pokemonNum);
-    pokemonInfo.appendChild(pokemonImg);
-    pokemonInfo.appendChild(pokemonName);
-    pokemonInfo.appendChild(barrita);
-
-    for (let type of pokemonList.type) {
-      let divType = document.createElement("div"); // separa los tipos en divs
-      divType.id = "divType"; //agrega clase a los divs
-      divType.className = type; //agrega clase background por tipo
-      let textType = document.createTextNode(type); //crea el texto del tipo
-      divType.appendChild(textType);
-      pokemonInfo.appendChild(divType);
-  }
-}
-
-const buttonCards = document.querySelectorAll('.card');
-buttonCards.addEventListener('click', pokemonShowInfo, true);*/
