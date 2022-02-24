@@ -1,8 +1,10 @@
-import {all, filterAssassin, filterMage, filterFighter, filterMarksman, filterSupport, filterTank} from './data.js';
+import {filterRole} from './data.js';
+import legends from './lol/lol.js';
+const all = Object.values(legends.data)
 
-
-for (let champion of all) {
-    const cards = document.querySelector('.cardbox');
+const cardsLegends = () =>{
+  const championsCards = document.createElement('div');
+    for (let champion of all) {
     const newCard = document.createElement('article');
     const newcardBody = document.createElement('figure');
     const newcardImage = document.createElement('img');
@@ -10,13 +12,17 @@ for (let champion of all) {
     const newcardName = document.createElement('figcaption');
     newcardName.textContent = champion.name
     newcardName.className = "card-name";
-    cards.appendChild(newCard);
+    championsCards.appendChild(newCard);
     newCard.appendChild(newcardBody);
     newcardBody.appendChild(newcardImage);
     newcardBody.appendChild(newcardName);  
  } 
+ return championsCards
+}
+document.getElementById('cardsChampions').appendChild(cardsLegends())
 
- //Hacer un event listener para hacer la funcionalidad del filtro
- const selectAlphabet = document.getElementById('assasin');
-     selectAlphabet.addEventListener('event', filterAssassin);
-   console.log(selectAlphabet)
+const rolChampion = document.querySelector('.role');
+  rolChampion.addEventListener('change', (e)=>{
+    filterRole(all, e.target.value)
+  })
+

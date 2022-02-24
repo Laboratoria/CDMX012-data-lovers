@@ -108,7 +108,7 @@ p {
     color:#fff;
 }
 
-.cardbox {
+.cardbox div {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
