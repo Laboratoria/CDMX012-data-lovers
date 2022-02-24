@@ -18,16 +18,14 @@
     <div>
 
     
-    <select id="selectPokemon"class="order">
-      <option value="Pokedex" id="Pokedex">Sort</option>
+    <select id="order"class="selectPokemon">
       <option value="AZ" id="AZ">Alphabetical A to Z</option>
       <option value="ZA" id="ZA">Alphabetical Z to A</option>
-      <option value="lowest" id="1-251">Lowest to Higher</option>
+      <option value="lowest" id="1-251" selected="selected">Lowest to Higher</option>
       <option value="higher" id="251-1">Higher to Lowest</option>
     </select>
 
-    <select id="selectPokemon" class="fill">
-      <option value="types">Fill</option>
+    <select id="filter" class="selectPokemon">
       <option value="normal" id="normal">Normal</option>
       <option value="grass" id="grass">Grass</option>
       <option value="bug" id="bug">Bug</option>
@@ -48,7 +46,8 @@
       <option value="psychic" id="psychic">Psychic</option>
     </select>
     
-    <div  class="searchPokemon"> <input type="text" placeholder="Search"> </div>
+    <div id ="inputSearchContainer" class="searchPokemon"> <input id ="inputSearch" type="text" value= "" placeholder="Search by Name"> </div>
+    <button type="button" id="botonSearch">Search</button>
 
  </div>
   </header>
@@ -72,13 +71,59 @@
 
   <section id="listadoPokemon">
     <main id="root">
-
     </main>
 
   </section>
 
-  <div class="popup-content">
-    <button id="buttonClose" class="buttonCloseWind">x</button>
+  <section id="modal-container">
+    <button id="modalClose" class="m-ButtonClose">X</button>
+    <div id ="ModPokeNum" ></div>
+    
+
+  <div id="containerInfoPokemon">
+
+    <div id="ModalPokemon">
+      <img id="modImgPokemon" ></img>
+      <div id="modPokeName" ></div>
+      <div id="modBarrita" class="barrita" > </div>
+      <div id="maxCP" ></div>
+      <div id="modalType"></div>
+    </div>
+    
+    <div id="modalSelectButtons" >
+      <button id="modalAbout" class="m-Button">About</button>
+      <button id="modalStats" class="m-Button">Stats</button>
+      <button id="modalEvolution" class="m-Button">Evolution</button>
+    </div>
+
+    <div id="ModalGeneration">
+      <div id="ModGenerationNum" class="modGeneNum"></div>
+      <div id="ModGenerationName"></div>
+    </div>
+
+    <div id="ModalRarity">
+      <div id="ModPokedexNum"></div>
+      <div id="ModRarity"></div>
+    </div>
+ 
+    <div id="ModalAboutPokemon"></div>
+    <div id="Section"></div>
+
+    <div id="ModalEncounter">
+      <div id="ModFleeRate"></div>
+      <div id="ModCaputureRate"></div>
+      <div id="ModSpawnChance"></div>
+    </div>
+
+    <div id="ModalSize">
+      <div id="ModHeight"></div>
+      <div id="ModWeight"></div>
+    </div>
+
+  </div>
+
+  </section> 
+
 
     <script src="main.js" type="module"></script>
 </body>
