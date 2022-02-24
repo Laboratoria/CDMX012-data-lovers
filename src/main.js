@@ -270,7 +270,7 @@ function pokemon(arreglo){
                     imageVS.src='./icon/giphy (2).gif';
                     principalContainer.appendChild(imageVS);
 
-                    //Esoger un pokemon random para batalla
+                    //Escoger un pokemon random para batalla
                     const idInt= parseInt(arreglo[i].num);
                     let randomn= Math.ceil(Math.random(idInt)*251);
                     let randomStr= "" + randomn.toString();
@@ -315,8 +315,11 @@ function pokemon(arreglo){
                     if (calculateDataByStats(statsGeneral, statsRandom) > 0   ){
                         messageBattleContainer.innerText =` Win ${names.charAt(0).toUpperCase() + names.slice(1)}`;
                     }
-                    else{
+                    else if (calculateDataByStats(statsGeneral, statsRandom) < 0 ){
                         messageBattleContainer.innerText=` Win ${arreglo[randomStrEnd-1].name.charAt(0).toUpperCase() + arreglo[randomStrEnd-1].name.slice(1)}`
+                    }
+                    else{
+                        messageBattleContainer.innerText=" It is a Draw"
                     }
                 })
             })
