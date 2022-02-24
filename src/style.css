@@ -171,7 +171,7 @@ main {
   flex-flow: row wrap;
   gap: 2rem;
   margin-top: 8rem;
-
+  font-family: 'Roboto', sans-serif;
 }
 
 .card {
