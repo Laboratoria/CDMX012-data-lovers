@@ -215,6 +215,7 @@ ul {
 .films-filter {
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
 }
 
 .films-filter label,
@@ -396,3 +397,288 @@ h1 {
   font-style: italic;
   font-weight: 400;
 }
+/* .vehicles-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+.vehicles-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.vehicle {
+  background-color: rgba(230, 204, 169, 0.6);
+  width: 80%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: rgba(0, 0, 0, 0.7);
+  margin: 60px 0;
+}
+
+.vehicle-img img {
+  border-radius: 15px;
+  height: 400px;
+  width: 670px;
+  margin: 35px;
+}
+.vehicle-info {
+  max-width: 650px;
+}
+
+.vehicle-name {
+  font-size: 45px;
+  font-weight: 600;
+  padding: 10px 0;
+}
+
+.pilots-name,
+.vehicle-class {
+  font-size: 30px;
+  padding: 0 0 0 15px;
+  font-style: italic;
+}
+
+.name-class-bold {
+  font-weight: 600;
+  font-style: normal;
+  font-size: 30px;
+}
+
+.info-vehicle {
+  font-size: 25px;
+  margin: 20px 5px 30px 5px;
+}
+
+.div-pilot,
+.div-class {
+  display: flex;
+  flex-direction: row;
+  margin: 10px 0;
+}
+
+.background {
+  padding: 80px 0 40px;
+  position: relative;
+}
+
+.facts h1 {
+  margin-bottom: 30px;
+}
+
+.factsImg {
+  position: absolute;
+
+  bottom: 1px;
+  z-index: -2;
+}
+
+.fun-facts {
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+}
+
+.graph {
+  margin: 25px 10px 25px 10px;
+  width: 40%;
+  height: 40%;
+}
+
+#funText {
+  font-weight: 400;
+  font-size: 25px;
+}
+
+.white-box {
+  background-image: linear-gradient(
+    #ffffff 0,
+    rgba(255, 255, 255, 0.4),
+    rgba(255, 255, 255, 0.25)
+  );
+
+  position: absolute;
+  z-index: 1;
+  width: 1286px;
+  height: 693px;
+  top: 180px;
+  left: -36px;
+}
+
+.graph h3 {
+  margin: 20px 0;
+}
+
+/*Sara*/
+
+.film-title {
+  width: 710px;
+  height: 162px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 64px;
+  line-height: 78px;
+  color: #22577e;
+  margin-top: 5%;
+  margin-left: 33%;
+}
+
+.film-characters {
+  margin-top: 10%;
+  margin-left: 30%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.film-characters h1 {
+  width: 710px;
+  height: 100px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 64px;
+  line-height: 50px;
+  color: #22577e;
+}
+
+.film-characters .filmTitle {
+  margin-left: -18%;
+}
+
+.filter-filmCharacters {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 5%;
+  gap: 30px;
+}
+
+/* .filter-filmCharacters label {
+  margin-left: 2%;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  color: black;
+} */
+/* 
+.filter-filmCharacters select {
+  margin-left: 10px;
+  border: 1px solid #22577e;
+  cursor: pointer;
+  border-radius: 12px;
+  color: #1572a1;
+  font-size: 16px;
+} */
+
+.filter-filmCharacters select:hover {
+  background-color: #1572a1;
+  color: #f2f2f2;
+}
+
+.input-filterChar {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+/* .input-filterChar input {
+  background-color: #fffdf9;
+  font-size: 14px;
+  font-weight: bold;
+  color: #1572a1;
+  cursor: pointer;
+  width: 180px;
+  height: 45px;
+  text-align: center;
+  border-color: #1572a1;
+  border-radius: 12px;
+}
+
+.input-filterChar input:hover {
+  background-color: #1572a1;
+  color: #f2f2f2;
+  font-weight: bolder;
+} */
+
+.characters-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.character {
+  background-color: rgba(154, 208, 236, 0.28);
+  border-color: rgba(154, 208, 236, 1);
+  border-style: solid;
+  border-radius: 20px;
+  width: 580px;
+  height: 220px;
+  font-size: 18px;
+  color: #414142;
+  margin-top: 8%;
+  padding-top: 2%;
+  padding-left: 1.5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.character-desc {
+  padding-left: 2%;
+}
+
+.genderCharacter,
+.ageCharacter,
+.specieCharacter {
+  line-height: 25px;
+}
+
+.nameCharacter p {
+  margin-bottom: 5%;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.imgCharacter {
+  width: 155px;
+  height: 160px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/*seccion de characters al click de characters*/
+.filmCharacters,
+.characters-container {
+  display: block;
+}
+
+/* .genFactsTitle {
+  color: #1572a1;
+  font-size: 26px;
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+  font-weight: bold;
+}
+.charts-characters {
+  display: flex;
+  justify-content: space-between;
+  margin: 5% 0 0 5%;
+  width: 1200px;
+  color: #1572a1;
+}
+
+.funFactGender-content {
+  padding-right: 30px;
+  text-align: center;
+}
+
+.funFactAge-content {
+  padding-left: 30px;
+  text-align: center;
+} */

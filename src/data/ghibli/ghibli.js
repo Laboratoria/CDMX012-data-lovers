@@ -186,7 +186,7 @@ export default {
         {
           id: '4e09b023-f650-4747-9ab9-eacf14540cfb',
           name: 'Air Destroyer Goliath',
-          img: 'https://static.wikia.nocookie.net/studio-ghibli/images/e/e5/Goliath.png',
+          img: 'https://i.postimg.cc/Vsg9zChL/Goliath.png',
           description:
             'A military airship utilized by the government to access Laputa',
           vehicle_class: 'Airship',
@@ -764,7 +764,7 @@ export default {
         {
           id: 'd8f893b5-1dd9-41a1-9918-0099c1aa2de8',
           name: 'Red Wing',
-          img: 'https://static.wikia.nocookie.net/studio-ghibli/images/8/8f/Porco%27s_Plane.jpg',
+          img: 'https://i.postimg.cc/L4VXvQW3/Porco-Rosso-1.jpg',
           description:
             'An experimental aircraft captured by Porco. Named Savoia S.21',
           vehicle_class: 'Airplane',
@@ -777,7 +777,7 @@ export default {
         {
           id: '7eb1b9cd-8153-4ef6-a0d4-1e9abd8d78da',
           name: 'Dabohaze',
-          img: 'https://static.wikia.nocookie.net/studio-ghibli/images/9/99/Aiuto_Gang.jpg',
+          img: 'https://i.postimg.cc/HxC0k4Hj/Aiuto-Gang.jpg',
           description:
             "It's the Mamma Aiuto Gang's battle ship, They're an air pirate gang lead by Capo",
           vehicle_class: 'Battle ship',
@@ -1587,7 +1587,7 @@ export default {
         {
           id: '2354305f-dccd-4c44-a79e-cc60ba7376e6',
           name: "Howl's castle",
-          img: 'https://static.wikia.nocookie.net/studio-ghibli/images/e/e6/Howls_Castle.jpg',
+          img: 'https://i.postimg.cc/RZNLsZXC/castle.jpg',
           description:
             "Wizard Howl's home. It's scale changes from scene to scene.",
           vehicle_class: 'Moving castle',
@@ -1842,7 +1842,7 @@ export default {
         {
           id: '923d70c9-8f15-4972-ad53-0128b261d628',
           name: "Sosuke's Boat",
-          img: 'https://static.wikia.nocookie.net/studio-ghibli/images/c/c1/PonyoS%C5%8DsukeBoat.jpg',
+          img: 'https://i.postimg.cc/XNdhLQX1/f2fc3f6e261e04054b7cd64c5019b494.png',
           description: 'A toy boat where Sosuke plays',
           vehicle_class: 'Boat',
           length: '10',
@@ -2181,7 +2181,7 @@ export default {
         {
           id: '411f66ed0-771c-46d3-8f68-a3b65c6dd91c',
           name: 'Mitsubishi 1MF9 ',
-          img: 'https://static.wikia.nocookie.net/studio-ghibli/images/4/41/Kazetachinu044.jpg',
+          img: 'https://i.postimg.cc/L5gmQfYB/the-wind-rises-theverge-5-1020.jpg',
           description:
             "The Mitsubishi 1MF9 or Mitsubishi Experimental Taka-type Carrier Fighter was a prototype Japanese fighter aircraft of the 1920s. It was a single-engined, single-seat biplane intended to operate from the Imperial Japanese Navy's aircraft carriers, but only two were built, with the type being rejected by the Navy.",
           vehicle_class: 'War plane',
