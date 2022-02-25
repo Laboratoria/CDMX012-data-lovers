@@ -60,6 +60,7 @@ function showPokemons(pokemons) {
     let typePokemon = property.type;
     let sizeHeightPokemon = property.size.height;
     let sizeWeightPokemon = property.size.weight;
+    let statsPokemon = property.stats["base-attack"];
 
     const showModal = document.createElement("section");
     showModal.setAttribute("id", `${property.name}`);
@@ -99,7 +100,9 @@ function showPokemons(pokemons) {
       " <strong><br>Height:</strong> " +
       sizeHeightPokemon +
       " <strong><br>Weight:</strong> " +
-      sizeWeightPokemon;
+      sizeWeightPokemon +
+      " <strong><br>Attack Points:</strong> " +
+      statsPokemon;
 
     /*const contentEvolution = document.createElement("p");
     contentEvolution.setAttribute("class", "evolution");

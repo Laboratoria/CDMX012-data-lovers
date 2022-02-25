@@ -13,13 +13,13 @@ body {
   height: fit-content;
 }
 header {
-  background-color: #457b9d;
   padding: 3.5%;
   align-items: flex-end;
   align-content: flex-end;
+  background-color: rgb(29, 53, 87, 0.95);
+
 }
 nav {
-  background-color: #457b9d;
   padding: 0;
   margin-bottom: 0%;
 }
@@ -170,6 +170,16 @@ h1 {
   margin-left: 4%;
   height: auto;
   font-size: x-large;
+}
+#statsSpace{
+  display: flex;
+  background-color: rgba(70, 123, 157, 0.7);
+  margin: 5% 10%;
+  padding: 2.5% 0%;
+  align-items: center;
+  border-radius: 40px;
+  flex-direction: column;
+  
 }
 #showData {
   display: flex;

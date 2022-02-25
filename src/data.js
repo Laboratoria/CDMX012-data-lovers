@@ -56,7 +56,7 @@ export function filterByTypes(type) {
   return filtrado;
 }
 
-export function porcentageByAttack(type) {
+/*export function porcentageByAttack(type) {
   const pokemones = findAllPokemons();
   const stats = pokemones.stats[(0, 1)]; // valor de el numero de ataque de cada pokemon
   console.log(stats);
@@ -72,7 +72,7 @@ export function porcentageByAttack(type) {
   console.log(stats);
   return porcentaje;
 }
-
+*/
 export function filterByLegendary(legendary) {
   const pokemones = findAllPokemons();
   legendary = "legendary";
@@ -88,6 +88,20 @@ export function searchPokemon(word) {
   return finalSearch;
 }
 
+export function attackpoint(){
+ let pokemon = findAllPokemons()
+ //let totalAttack = " "
+  /* for (let property of pokemon){            ////////////////ESTO SI ESTA FUNCIONANDO
+    let ataque= property.stats["base-attack"]   ////////////////ESTO SI ESTA FUNCIONANDO
+    let ataqueAnumero = parseInt(ataque)        ////////////////ESTO SI ESTA FUNCIONANDO
+    let totalAttack =  ataqueAnumero ;        ////////////////ESTO SI ESTA FUNCIONANDO
+    console.log(totalAttack)                ////////////////ESTO SI ESTA FUNCIONANDO
+    return totalAttack                      ////////////////ESTO SI ESTA FUNCIONANDO
+  }*/                                     ////////////////ESTO SI ESTA FUNCIONANDO
+  let porcentaje = pokemon.map((pokemon)=>pokemon.stats["base-attack"])
+  console.log(typeof(porcentaje))
+  return porcentaje
+}
 /*
 export function setList(value) {
   const pokemons = findAllPokemons();
@@ -96,4 +110,4 @@ export function setList(value) {
   });
   return setListPokemon;
 }*/
-9;
+

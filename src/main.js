@@ -6,7 +6,8 @@ import {
   filterByTypes,
   filterByLegendary,
   searchPokemon,
-  porcentageByAttack,
+ // porcentageByAttack,
+  attackpoint,
 } from "./data.js";
 import showPokemons from "./Article.js";
 
@@ -37,10 +38,23 @@ window.orderPokemons = function orderPokemons() {
 const selectByType = () => {
   const type = document.getElementById("type").value;
   let pokemons = filterByTypes(type);
-  let showAllPokemons = showPokemons(pokemons);
-  console.log(pokemons.length);
-  porcentageByAttack(showAllPokemons);
+  showPokemons(pokemons);
+  
+  document.getElementById("statsSpace").style.display = "block"
+  //poner aqui las funciones de los porcentajes dentro de una variable
+  
+  
+  let typesToMath= filterByTypes(type)
+  let AttackOfPokemons = attackpoint(typesToMath)
+  console.log(typesToMath);
+  document.getElementById("attackPoints").innerHTML = "Hola" + AttackOfPokemons;
+
+
+  //let showAllPokemons = showPokemons(pokemons);
+  //console.log(pokemons.length);
+  //porcentageByAttack(showAllPokemons);
 };
+
 
 document.getElementById("type").addEventListener("change", selectByType);
 //document.getElementById("type").addEventListener("change", porcentaje);
@@ -52,9 +66,7 @@ const selectByLegendary = () => {
 
   showPokemons(pokemons);
 };
-document
-  .getElementById("Clasify")
-  .addEventListener("change", selectByLegendary);
+document.getElementById("Clasify").addEventListener("change", selectByLegendary);
 
 //**************FUNCION DEL BUSCADOR************
 
@@ -72,6 +84,12 @@ function showMyPokemon() {
   }
 }
 searchButton.addEventListener("click", showMyPokemon);
+
+/*
+let btnprueba = document.getElementById("botonPrueba")
+function mostrarPorcentaje(){
+  document.getElementById("attackPoints").innerHTML= porcentageByAttack
+}*/
 
 /*const searchInput = document.querySelector(".searchText");
 searchInput.addEventListener("input", (e) => {
