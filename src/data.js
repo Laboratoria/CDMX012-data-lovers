@@ -43,7 +43,7 @@ export const orderZA = () => {
   //ordena los pokemones de la Z-A
   let pokemonNameZA = buildPokemonNames().sort().reverse(); //ordena los nombres de la A-Z
   let pokemonZa = new Array(); // guarda la ejecucion de la funcion
-  console.log(pokemonNameZA);
+
   for (const name of pokemonNameZA) {
     // busca por nombre en la lista de nombres
     for (const pokemon of pokemonList) {
@@ -83,7 +83,6 @@ export const orderHighest = () => {
     return b - a;
   }); //Ordena los pokemon por número 251-001 comparando el valor de su atributo num
   let pokemonHigher = new Array(); // guarda la ejecucion de la funcion
-  console.log(pokemonNumHigher);
 
   for (const num of pokemonNumHigher) {
     // busca por el numero del pokemon en la lista de pokemones ordenados

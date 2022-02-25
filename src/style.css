@@ -251,31 +251,63 @@ main {
 .steel { background-color: #8E8E8E;}
 .fairy { background-color: #FF69C6;}
 
+#modal-container {
+  position: relative;
+  top: 3rem;
+}
 
 .modalStructure{
-  position: relative;
-  width: 1145px;
-  height: 672px;
-  background: whitesmoke;
-   border-radius: 15px;
+  
+  position: sticky;
+  margin: auto;
+  width: 72rem;
+  height: 42rem;
+  background-image: url(images/fondo-modal.jpg);
+  background-size: cover;
+  object-position: center;
+   border-radius: 45px;
    box-shadow: 0px 0px 25px 0px rgb(0 0 0 / 53%);
    justify-content: center;
+   margin: auto;
 }
 
 .modalBackground{
-  background-color: gainsboro;
+  
+  background-color: #fafafa;
   position: relative;
-  width: 1145px;
-  height: 500px;
-  border-radius: 15px;
+  top: 7rem;
+  width: 72rem;
+  height: 31.25rem;
+  border-radius: 45px;
+  margin: 30px, auto;
 }
 
-.modInfoPokemon{
-  background-color: #8E8E8E;
-  position: relative;
+#modalPokemon{
+  display: inline-block;
+  background-color: hsla(0, 0%, 100%, 0);
+  position: absolute;
+  top: -15%; left: 38%;
   width: 200px;
   height: 250px;
   border-radius: 15px;
+}
+
+.general-info {
+  font-family: 'Roboto-black', sans-serif;
+  font-weight: bold;
+  font-size: 2em;
+  color: #44696c;
+  text-align: center;
+  text-transform: capitalize;
+  margin: auto;
+  object-position: center;
+}
+
+.m-maxCp {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
+  color: #44696c;
+  text-align: center;
 }
 
 .modButtons{

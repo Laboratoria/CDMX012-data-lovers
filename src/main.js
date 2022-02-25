@@ -6,7 +6,7 @@ function buildCards(pokemonArray) {
   // crea las cards de pokemones
 
   for (const pokemon of pokemonArray) {
-    let card = document.createElement("div");
+    let card = document.createElement("section");
     card.className = "card";
     card.addEventListener(
       "click",
@@ -86,65 +86,83 @@ function orderList() {
 
 ///////////// CONSTRUCTOR DE MODAL INFORMACIÓN
 
-let modalPokemonInfo = document.getElementById("modal-container");
 
 function buildModalInfo(pokemon) {
-  let modalInfo = document.createElement("div");
+  
+  const modalPokemonInfo = document.getElementById('modal-container');
+
+  //VENTANA DATOS
+  const modalInfo = document.createElement("div");
   modalInfo.className = "modalStructure";
   modalPokemonInfo.appendChild(modalInfo);
 
-  let modalClose = document.getElementById("modalClose");
-  modalInfo.appendChild(modalClose);
+  //BOTÓN CERRAR VENTANA
+  const modalClose = document.createElement('button');
+modalClose.className = 'm-ButtonClose';
+modalClose.id = 'modalClose';
+const btnClose = document.createTextNode('X')
+modalClose.appendChild(btnClose);
+modalClose.addEventListener('click', () => {
+  modalPokemonInfo.removeChild(modalInfo);
+});
+modalInfo.appendChild(modalClose);
 
-  let pokemonNum = document.getElementById("ModPokeNum");
+//NÚMERO POKEMON
+  const pokemonNum = document.createElement('div');
+  pokemonNum.id = 'ModPokeNum';
   pokemonNum.className = "m-num";
-  let num = document.createTextNode(`${pokemon.num}`);
+  const num = document.createTextNode(`${pokemon.num}`);
   pokemonNum.appendChild(num);
   modalInfo.appendChild(pokemonNum);
 
+
   //////////////////Container General
 
-  let modalInfoContainer = document.createElement("div");
+  const modalInfoContainer = document.createElement("div");
   modalInfoContainer.className = "modalBackground";
   modalInfo.appendChild(modalInfoContainer);
 
-  ////////////////////// pokemon
+  ////////////////////// general info
+  const generalInfo = document.createElement('div');
+  generalInfo.id = 'modalPokemon';
+  modalInfoContainer.appendChild(generalInfo);
 
-  let modalInfoPokemon = document.getElementById("ModalPokemon");
-  modalInfoPokemon.className = "modInfoPokemon";
-  modalInfoContainer.appendChild(modalInfoPokemon);
-
-  let pokemonImg = document.getElementById("modImgPokemon");
+  const pokemonImg = document.createElement('img');
+  pokemonImg.id = "modImgPokemon";
+  pokemonImg.className = "general-info";
   pokemonImg.setAttribute("src", `${pokemon.img}`);
-  modalInfoPokemon.appendChild(pokemonImg);
+  generalInfo.appendChild(pokemonImg);
 
-  let pokemonName = document.createElement("div");
-  pokemonName.className = "m-Name";
-  let name = document.createTextNode(`${pokemon.name}`);
+  const pokemonName = document.createElement("div");
+  pokemonName.className = "m-Name general-info";
+  const name = document.createTextNode(`${pokemon.name}`);
   pokemonName.appendChild(name);
-  modalInfoPokemon.appendChild(pokemonName);
+  generalInfo.appendChild(pokemonName);
+  
+  const barrita = document.createElement('div');
+  barrita.id = "modBarrita";
+  barrita.className = 'barrita';
+  generalInfo.appendChild(barrita);
 
-  let barrita = document.getElementById("modBarrita");
-  modalInfoPokemon.appendChild(barrita);
-
-  let contMaxCP = document.getElementById("maxCP"); //contenedor
+  const contMaxCP = document.createElement('div');
+  contMaxCP.id = "maxCP"; //contenedor
   contMaxCP.className = "m-maxCp"; // agrega class
-  let maxCp = document.createTextNode(`${pokemon.stats["max-cp"]}`); // agrega objeto
-  let atributo = document.createElement("div");
-  atributo.className = "negritas";
-  let atributs = document.createTextNode("Máx CP:");
+  const maxCp = document.createTextNode(`${pokemon.stats["max-cp"]}`); // agrega objeto
+  const atribute = document.createElement("div");
+  atribute.className = "m-maxCp negritas";
+  const atributs = document.createTextNode("Máx CP: ");
   contMaxCP.appendChild(atributs);
-  modalInfoPokemon.appendChild(contMaxCP);
+  generalInfo.appendChild(contMaxCP);
   contMaxCP.appendChild(maxCp);
-  modalInfoPokemon.appendChild(contMaxCP);
+  generalInfo.appendChild(contMaxCP);
 
   for (let type of pokemon.type) {
-    let divType = document.createElement("div"); // separa los tipos en divs
+    const divType = document.createElement("div"); // separa los tipos en divs
     divType.id = "divType"; //agrega clase a los divs
-    divType.className = type; //agrega clase background por tipo
-    let textType = document.createTextNode(type); //crea el texto del tipo
+    divType.className = `general-info ${type}` ; //agrega clase background por tipo
+    const textType = document.createTextNode(type); //crea el texto del tipo
     divType.appendChild(textType);
-    modalInfoPokemon.appendChild(divType); //agrega los divs a la card
+    generalInfo.appendChild(divType); //agrega los divs a la card
   }
   //////////////////////////////////////////////BOTONES
 
@@ -169,7 +187,7 @@ function buildModalInfo(pokemon) {
 
     let contGeneNum = document.getElementById("ModalGeneration"); //contenedor
     //contGeneNum.className="modGeneNum";
-    console.log(contGeneNum);
+
     let geneNumO = document.createTextNode(`${pokemon.generation["name"]}`); // agrega objeto
     let atributoGeneNum = document.createElement("div");
     atributoGeneNum.className = "negritas";

@@ -15,117 +15,108 @@
 
   <header>
     <h1>Pokédex</h1>
+
     <div>
+      <select id="order" class="selectPokemon">
+        <option value="AZ" id="AZ">Alphabetical A to Z</option>
+        <option value="ZA" id="ZA">Alphabetical Z to A</option>
+        <option value="lowest" id="1-251" selected="selected">Lowest to Higher</option>
+        <option value="higher" id="251-1">Higher to Lowest</option>
+      </select>
 
-    
-    <select id="order"class="selectPokemon">
-      <option value="AZ" id="AZ">Alphabetical A to Z</option>
-      <option value="ZA" id="ZA">Alphabetical Z to A</option>
-      <option value="lowest" id="1-251" selected="selected">Lowest to Higher</option>
-      <option value="higher" id="251-1">Higher to Lowest</option>
-    </select>
+      <select id="filter" class="selectPokemon">
+        <option value="normal" id="normal">Normal</option>
+        <option value="grass" id="grass">Grass</option>
+        <option value="bug" id="bug">Bug</option>
+        <option value="water" id="water">Water</option>
+        <option value="electric" id="electric">Electric</option>
+        <option value="fire" id="fire">Fire</option>
+        <option value="ground" id="ground">Ground</option>
+        <option value="rock" id="rock">Rock</option>
+        <option value="steel" id="steel">Steel</option>
+        <option value="dark" id="dark">Dark</option>
+        <option value="fighting" id="fighting">Fighting</option>
+        <option value="flying" id="flying">Flying</option>
+        <option value="fairy" id="fairy">Fairy</option>
+        <option value="dragon" id="dragon">Dragon</option>
+        <option value="ice" id="ice">Ice</option>
+        <option value="poison" id="poison">Poison</option>
+        <option value="ghost" id="ghost">Ghost</option>
+        <option value="psychic" id="psychic">Psychic</option>
+      </select>
 
-    <select id="filter" class="selectPokemon">
-      <option value="normal" id="normal">Normal</option>
-      <option value="grass" id="grass">Grass</option>
-      <option value="bug" id="bug">Bug</option>
-      <option value="water" id="water">Water</option>
-      <option value="electric" id="electric">Electric</option>
-      <option value="fire" id="fire">Fire</option>
-      <option value="ground" id="ground">Ground</option>
-      <option value="rock" id="rock">Rock</option>
-      <option value="steel" id="steel">Steel</option>
-      <option value="dark" id="dark">Dark</option>
-      <option value="fighting" id="fighting">Fighting</option>
-      <option value="flying" id="flying">Flying</option>
-      <option value="fairy" id="fairy">Fairy</option>
-      <option value="dragon" id="dragon">Dragon</option>
-      <option value="ice" id="ice">Ice</option>
-      <option value="poison" id="poison">Poison</option>
-      <option value="ghost" id="ghost">Ghost</option>
-      <option value="psychic" id="psychic">Psychic</option>
-    </select>
-    
-    <div id ="inputSearchContainer" class="searchPokemon"> <input id ="inputSearch" type="text" value= "" placeholder="Search by Name"> </div>
-    <button type="button" id="botonSearch">Search</button>
-
- </div>
+      <div id="inputSearchContainer" class="searchPokemon">
+        <button type="button" id="botonSearch">Search</button>
+        <input id="inputSearch" type="text" value="" placeholder="Search by Name">
+      </div>
+    </div>
   </header>
 
   <aside>
-    <nav>
-      <img id="Entrenador" src="./images/Entrenador_Pokémon_Go.png">
-      <img id="Pokebola" src="./images/POKEBOLA_Mesa de trabajo 1.png">
 
-      <h2>Drasher16</h2>
+    <img id="Entrenador" src="./images/Entrenador_Pokémon_Go.png">
+    <img id="Pokebola" src="./images/POKEBOLA_Mesa de trabajo 1.png">
+
+    <h2>Drasher16</h2>
     <div class="player">
-      <div id="level"> <h4>21 <br> Level</h4></div>
+      <div id="level">
+        <h4>21 <br> Level</h4>
+      </div>
       <div id="barraNivel"></div>
-      <div class="raiting"> <h6>49,352/50,000</h6></div>
+      <div class="raiting">
+        <h6>49,352/50,000</h6>
+      </div>
     </div>
-      <option class="pags" id="Home"> Home </option>
-      <option class="pags" id="Pokedex"> Pokédex </option>
-      <option class="pags" id="Comparation"> Comparation </option>
-    </nav>
+    <option class="pags" id="Home"> Home </option>
+    <option class="pags" id="Pokedex"> Pokédex </option>
+    <option class="pags" id="Comparation"> Comparation </option>
+
   </aside>
 
-  <section id="listadoPokemon">
-    <main id="root">
-    </main>
-
-  </section>
+  <main id="root">
+  </main>
 
   <section id="modal-container">
-    <button id="modalClose" class="m-ButtonClose">X</button>
-    <div id ="ModPokeNum" ></div>
     
 
-  <div id="containerInfoPokemon">
+<!--
+    <article id="containerInfoPokemon">
 
-    <div id="ModalPokemon">
-      <img id="modImgPokemon" ></img>
-      <div id="modPokeName" ></div>
-      <div id="modBarrita" class="barrita" > </div>
-      <div id="maxCP" ></div>
-      <div id="modalType"></div>
-    </div>
-    
-    <div id="modalSelectButtons" >
-      <button id="modalAbout" class="m-Button">About</button>
-      <button id="modalStats" class="m-Button">Stats</button>
-      <button id="modalEvolution" class="m-Button">Evolution</button>
-    </div>
+      <div id="modalSelectButtons">
+        <button id="modalAbout" class="m-Button">About</button>
+        <button id="modalStats" class="m-Button">Stats</button>
+        <button id="modalEvolution" class="m-Button">Evolution</button>
+      </div>
 
-    <div id="ModalGeneration">
-      <div id="ModGenerationNum" class="modGeneNum"></div>
-      <div id="ModGenerationName"></div>
-    </div>
+      <div id="ModalGeneration">
+        <div id="ModGenerationNum" class="modGeneNum"></div>
+        <div id="ModGenerationName"></div>
+      </div>
 
-    <div id="ModalRarity">
-      <div id="ModPokedexNum"></div>
-      <div id="ModRarity"></div>
-    </div>
- 
-    <div id="ModalAboutPokemon"></div>
-    <div id="Section"></div>
+      <div id="ModalRarity">
+        <div id="ModPokedexNum"></div>
+        <div id="ModRarity"></div>
+      </div>
 
-    <div id="ModalEncounter">
-      <div id="ModFleeRate"></div>
-      <div id="ModCaputureRate"></div>
-      <div id="ModSpawnChance"></div>
-    </div>
+      <div id="ModalAboutPokemon"></div>
+      <div id="Section"></div>
 
-    <div id="ModalSize">
-      <div id="ModHeight"></div>
-      <div id="ModWeight"></div>
-    </div>
+      <div id="ModalEncounter">
+        <div id="ModFleeRate"></div>
+        <div id="ModCaputureRate"></div>
+        <div id="ModSpawnChance"></div>
+      </div>
 
-  </div>
+      <div id="ModalSize">
+        <div id="ModHeight"></div>
+        <div id="ModWeight"></div>
+      </div>
 
-  </section> 
+    </article> -->
+  </section>
 
 
-    <script src="main.js" type="module"></script>
+  <script src="main.js" type="module"></script>
 </body>
 
 </html>
