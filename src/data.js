@@ -1,7 +1,8 @@
-// estas funciones son de ejemplo
 import data from "./data/pokemon/pokemon.js";
 
 let pokemonList = data.pokemon;
+
+///////////////////////CONSTRUCCIÓN DE NUEVOS ARRAYS PARA MOSTRAR LA INFORMACIÓN
 
 function buildPokemonNames() {
   let pokemonNames = new Array(); //array lista nombres

@@ -129,7 +129,7 @@ h4 {
   margin: 0%;
 }
 
-h6{
+p{
   display: right;
   margin: 2rem;
 }
@@ -168,6 +168,7 @@ main {
 
 #root {
   display: flex;
+  font-family: 'Roboto', sans-serif;
   flex-flow: row wrap;
   gap: 2rem;
   margin-top: 8rem;
@@ -181,8 +182,10 @@ main {
   height: 17rem;
   text-align: center;
   justify-content: center;
+  border-color: white;
   box-shadow: 0px 0.25rem 0.2rem rgba(0, 0, 0, 0.30);
   border-radius: 1rem;
+  
   color: #44696c;
   list-style-type: none;
   text-transform: capitalize;
@@ -230,6 +233,7 @@ main {
   margin: 1rem 0.5rem 1rem;
   justify-content: center;
   display: inline-flex;
+  
 }
 
 .normal { background-color: #A9A878;}

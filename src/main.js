@@ -77,7 +77,7 @@ function orderList() {
       break;
 
     case "higher": //toma el valor de la opcion seleccionada HTML value = higher
-      resultOrder = orderHighest();
+      resultOrder = orderHighest().reverse();
       break;
   }
 
