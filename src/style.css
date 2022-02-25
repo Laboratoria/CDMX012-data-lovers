@@ -17,7 +17,6 @@ header {
   align-items: flex-end;
   align-content: flex-end;
   background-color: rgb(29, 53, 87, 0.95);
-
 }
 nav {
   padding: 0;
@@ -151,7 +150,7 @@ h1 {
   width: 20%;
   font-size: x-large;
 }
-#Clasify {
+#clasifyLegendary {
   padding: 1%;
   border-radius: 10%;
   background-color: #f1faee;
@@ -171,15 +170,14 @@ h1 {
   height: auto;
   font-size: x-large;
 }
-#statsSpace{
+#statsSpace {
   display: flex;
-  background-color: rgba(70, 123, 157, 0.7);
+  background-color: rgba(70, 123, 157, 0.9);
   margin: 5% 10%;
   padding: 2.5% 0%;
   align-items: center;
   border-radius: 40px;
   flex-direction: column;
-  
 }
 #showData {
   display: flex;

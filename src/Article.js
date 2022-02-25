@@ -2,6 +2,7 @@
 //showPokemons(data.pokemon);
 
 function showPokemons(pokemons) {
+  document.getElementById("statsSpace").style.display = "none";
   //esta funcion almacena la vista de todos los pokemons
 
   const rootElement = document.getElementById("showData"); //esta variable ayuda a que la vista de los pokemons cambie de acuerdo a los datos que se desean ver

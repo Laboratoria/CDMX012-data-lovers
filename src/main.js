@@ -6,7 +6,7 @@ import {
   filterByTypes,
   filterByLegendary,
   searchPokemon,
- // porcentageByAttack,
+  // porcentageByAttack,
   attackpoint,
 } from "./data.js";
 import showPokemons from "./Article.js";
@@ -39,34 +39,42 @@ const selectByType = () => {
   const type = document.getElementById("type").value;
   let pokemons = filterByTypes(type);
   showPokemons(pokemons);
-  
-  document.getElementById("statsSpace").style.display = "block"
+
+  document.getElementById("statsSpace").style.display = "block";
   //poner aqui las funciones de los porcentajes dentro de una variable
-  
-  
-  let typesToMath= filterByTypes(type)
-  let AttackOfPokemons = attackpoint(typesToMath)
-  console.log(typesToMath);
-  document.getElementById("attackPoints").innerHTML = "Hola" + AttackOfPokemons;
 
+  let typesToMath = filterByTypes(type);
+  let totalPokemonsByType = AttackOfPokemons.length;
 
-  //let showAllPokemons = showPokemons(pokemons);
-  //console.log(pokemons.length);
-  //porcentageByAttack(showAllPokemons);
+  //************ESTA FUNCION NOS DA LOS VALORES DE BASE-ATTACK */
+  let AttackOfPokemons = attackpoint(typesToMath); //saca el base attack de los pokemones de ese tipo
+  let suma = AttackOfPokemons.reduce((a, b) => a + b, 0);
+  let porcentageAttack = suma / totalPokemonsByType;
+
+  //********base-defense */
+
+  document.getElementById("totalPokemons").innerHTML =
+    "Este grupo esta conformado por " + totalPokemonsByType + " Pokemons";
+  document.getElementById("attackPoints").innerHTML =
+    "El valor total de ataque de este grupo de pokemones es de : " +
+    suma +
+    " puntos, con un promedio de: " +
+    porcentageAttack +
+    "%";
 };
 
-
 document.getElementById("type").addEventListener("change", selectByType);
-//document.getElementById("type").addEventListener("change", porcentaje);
 
 //***********FUNCION QUE MUESTRA A LOS POKEMONES LEGENDARIOS*******************
 const selectByLegendary = () => {
-  const legendary = document.getElementById("Clasify").value;
+  const legendary = document.getElementById("clasifyLegendary").value;
   let pokemons = filterByLegendary(legendary);
 
   showPokemons(pokemons);
 };
-document.getElementById("Clasify").addEventListener("change", selectByLegendary);
+document
+  .getElementById("clasifyLegendary")
+  .addEventListener("click", selectByLegendary);
 
 //**************FUNCION DEL BUSCADOR************
 
@@ -84,33 +92,6 @@ function showMyPokemon() {
   }
 }
 searchButton.addEventListener("click", showMyPokemon);
-
-/*
-let btnprueba = document.getElementById("botonPrueba")
-function mostrarPorcentaje(){
-  document.getElementById("attackPoints").innerHTML= porcentageByAttack
-}*/
-
-/*const searchInput = document.querySelector(".searchText");
-searchInput.addEventListener("input", (e) => {
-  let value = e.target.value;
-  if (value && value.trim().lenngth > 0) {
-    value = value.trim().toLowerCase();
-    //let result = setList(value);
-    //return showPokemons(result);
-    showPokemons(pokemon)
-  } else {
-    console.log("Pokemon no encontrado..");
-  }
-
-if(name == ){
-    showPokemons(mifuncion);
-  }
-  else if(name != ) {
-    return alert ("Pokémon not found, check your spelling")
-  }
-
-});*/
 
 /* PROPUESTA CARLOS
 const filterByType = document.getElementById("type");

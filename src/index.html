@@ -5,14 +5,17 @@
     <title>Data Lovers Pokémon</title>
     <link rel="stylesheet" href="style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   </head>
   <header>
     <img class="Logo" src="./resources/poke-image.png" />
     <img class="Lente" src="./resources/lente.png" />
     <nav>
       <ul>
-        <input type="search" id="searchText" class="searchText" placeholder="Write your Pokémon..."
+        <input
+          type="search"
+          id="searchText"
+          class="searchText"
+          placeholder="Write your Pokémon..."
         />
         <button class="button" type="button" id="search">Search</button>
         <li class="ButtonRed">Us</li>
@@ -41,10 +44,9 @@
           <option value="ZA" id="ZA">From letter Z to A</option>
         </select>
 
-        <select name="Clasify" id="Clasify">
-          <option value="clasify">Clasify by ...</option>
-          <option value="Legendary" id="Legendary">By Pokémon Legendary</option>
-        </select>
+        <button value="Legendary" id="clasifyLegendary">
+          Pokémon Legendary
+        </button>
 
         <select name="type" id="type">
           <option value="types">Types....</option>
@@ -69,12 +71,14 @@
         </select>
       </section>
       <!--<button id="botonPrueba" type="button">Picame</button> -->
-      <section style="display: none;" id="statsSpace">
-        <h3 id="attackPoints">Esto</h3>
-        <h3 id="defensePoints">debe</h3>
-        <h3 id="staminaPoints">de </h3>
-        <h3 id="cpPoints">cambiar</h3>
-        <h3 id="hpPoints">:)</h3>
+      <section style="display: none" id="statsSpace">
+        <h2 id="totalPokemons">Esto</h2>
+        <br />
+        <h4 id="attackPoints">Esto</h4>
+        <h4 id="defensePoints">debe</h4>
+        <h4 id="staminaPoints">de</h4>
+        <h4 id="cpPoints">cambiar</h4>
+        <h4 id="hpPoints">:)</h4>
       </section>
       <section id="showData"></section>
     </main>
