@@ -176,8 +176,13 @@ h1 {
   margin: 5% 10%;
   padding: 2.5% 0%;
   align-items: center;
-  border-radius: 40px;
-  flex-direction: column;
+  border-radius: 20px;
+  flex-direction: column; 
+  padding: 2%;
+  text-align: center;
+}
+#statsSpace p {
+  font-size: large;
 }
 #showData {
   display: flex;
@@ -325,7 +330,7 @@ p {
   .menu {
     flex-direction: column;
   }
-  #Clasify,
+  #clasifyLegendary,
   #type,
   #orderBy {
     width: 40%;

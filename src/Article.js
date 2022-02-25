@@ -62,6 +62,11 @@ function showPokemons(pokemons) {
     let sizeHeightPokemon = property.size.height;
     let sizeWeightPokemon = property.size.weight;
     let statsPokemon = property.stats["base-attack"];
+    let statsDefensePokemon = property.stats["base-defense"];
+    let statsStaminaPokemon = property.stats["base-stamina"];
+    let statsCpPokemon = property.stats["max-cp"];
+    let statsHpPokemon = property.stats["max-hp"];
+    
 
     const showModal = document.createElement("section");
     showModal.setAttribute("id", `${property.name}`);
@@ -103,8 +108,15 @@ function showPokemons(pokemons) {
       " <strong><br>Weight:</strong> " +
       sizeWeightPokemon +
       " <strong><br>Attack Points:</strong> " +
-      statsPokemon;
-
+      statsPokemon +
+      " <strong><br>Defense Points:</strong> " +
+      statsDefensePokemon +
+      " <strong><br>Stamina Points:</strong> " +
+      statsStaminaPokemon +
+      " <strong><br>Combat Points:</strong> " +
+      statsCpPokemon +
+      " <strong><br>Health Points:</strong> " +
+      statsHpPokemon;
     /*const contentEvolution = document.createElement("p");
     contentEvolution.setAttribute("class", "evolution");
     contentEvolution.innerHTML = " <strong>Evolution: <br> </strong>";*/

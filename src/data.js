@@ -70,6 +70,35 @@ export function attackpoint(totalPokemonsbyType) {
   );
   return porcentaje;
 }
+
+export function defensePoint(totalPokemonsbyType) {
+  let porcentaje = totalPokemonsbyType.map((pokemon) =>
+    parseInt(pokemon.stats["base-defense"])
+  );
+  return porcentaje;
+}
+
+export function staminaPoints(totalPokemonsbyType) {
+  let porcentaje = totalPokemonsbyType.map((pokemon) =>
+    parseInt(pokemon.stats["base-stamina"])
+  );
+  return porcentaje;
+}
+
+export function cpPoints(totalPokemonsbyType) {
+  let porcentaje = totalPokemonsbyType.map((pokemon) =>
+    parseInt(pokemon.stats["max-cp"])
+  );
+  return porcentaje;
+}
+
+export function hpPoints(totalPokemonsbyType) {
+  let porcentaje = totalPokemonsbyType.map((pokemon) =>
+    parseInt(pokemon.stats["max-hp"])
+  );
+  return porcentaje;
+}
+
 /*
 export function setList(value) {
   const pokemons = findAllPokemons();

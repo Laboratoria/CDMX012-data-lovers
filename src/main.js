@@ -6,8 +6,11 @@ import {
   filterByTypes,
   filterByLegendary,
   searchPokemon,
-  // porcentageByAttack,
   attackpoint,
+  defensePoint,
+  staminaPoints,
+  cpPoints,
+  hpPoints
 } from "./data.js";
 import showPokemons from "./Article.js";
 
@@ -44,23 +47,54 @@ const selectByType = () => {
   //poner aqui las funciones de los porcentajes dentro de una variable
 
   let typesToMath = filterByTypes(type);
-  let totalPokemonsByType = AttackOfPokemons.length;
+  
 
   //************ESTA FUNCION NOS DA LOS VALORES DE BASE-ATTACK */
   let AttackOfPokemons = attackpoint(typesToMath); //saca el base attack de los pokemones de ese tipo
+  let totalPokemonsByType = AttackOfPokemons.length;
   let suma = AttackOfPokemons.reduce((a, b) => a + b, 0);
   let porcentageAttack = suma / totalPokemonsByType;
+//********base-defense */
+  let defenseOfPokemons = defensePoint(typesToMath)
+  let sumDefense = defenseOfPokemons.reduce((a,b) => a + b, 0);
+  let porcentageDefense = sumDefense/totalPokemonsByType;
+  //********base-stamina */
+  let staminaOfPokemons = staminaPoints(typesToMath)
+  let sumStamina = staminaOfPokemons.reduce((a,b)=> a + b, 0);
+  let porcentageStamina = sumStamina / totalPokemonsByType; 
+  //********max-cp */
+  let maxCpOfPokemons = cpPoints(typesToMath);
+  let sumCp =maxCpOfPokemons.reduce((a,b)=> a + b, 0);
+  let porcentageCp = sumCp / typesToMath.length
+  //*********max-hp */
+  let maxHpPokemons = hpPoints(typesToMath);
+  let sumHp = maxHpPokemons.reduce((a,b)=> a + b , 0);
+  let porcentageHp = sumHp / typesToMath.length
 
-  //********base-defense */
 
   document.getElementById("totalPokemons").innerHTML =
-    "Este grupo esta conformado por " + totalPokemonsByType + " Pokemons";
+  `This group is made of  ${totalPokemonsByType}  Pokemons`
   document.getElementById("attackPoints").innerHTML =
-    "El valor total de ataque de este grupo de pokemones es de : " +
-    suma +
-    " puntos, con un promedio de: " +
-    porcentageAttack +
-    "%";
+  `The total <strong>Attack points</strong> of this group is : 
+    <strong>${suma}</strong>
+     points, with a porcentage of : 
+     <strong>${porcentageAttack}</strong>  points
+    <br> The total <strong>Defense points</strong> of this group is: 
+    <strong>${sumDefense}</strong> 
+     points,  with a porcentage of : 
+     <strong>${porcentageDefense}</strong>  points
+    <br> The total <strong>Stamina points</strong> of this group is: 
+    <strong>${sumStamina}</strong> 
+     points,  with a porcentage of : 
+     <strong>${porcentageStamina}</strong>  points 
+    <br> The total <strong>Combat points</strong> of this group is: 
+    <strong>${sumCp}</strong> 
+     points,  with a porcentage of :
+    <strong>${porcentageCp}</strong>  points 
+    <br> The total <strong>Health points</strong> of this group is: 
+    <strong>${sumHp}</strong> 
+     points,  with a porcentage of : 
+     <strong>${porcentageHp}</strong> points`
 };
 
 document.getElementById("type").addEventListener("change", selectByType);
