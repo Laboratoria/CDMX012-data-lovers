@@ -9,6 +9,7 @@ const byNumber= dataPokemon.sortData(data, num, );
 const byNameInverse= dataPokemon.sortData(data, name, inverse);
 const byNumberInverse= dataPokemon.sortData(data, num, inverse);*/
 const pokemonTypes= dataPokemon.pokemonTypesObject(data);
+const pokemonEvolution= dataPokemon.pokemonEvolution(data);
 const pokemonResistant = dataPokemon.pokemonResistant(data);
 const pokemonWeaknesses = dataPokemon.pokemonWeaknesses(data);
 let arrayTypes = Object.keys(pokemonTypes);
@@ -24,6 +25,7 @@ document.getElementById("refreshBtn").addEventListener("click", refreshPokeSearc
 document.getElementById("closeModalBox").addEventListener("click", closeModalBox);
 document.getElementById("pokeResistant").addEventListener("click", showResisBox)
 document.getElementById("pokeWeaknesses").addEventListener("click", showWenessesBox)
+
 //document.getElementById("triangleRight").addEventListener("click", nextPokemon);
 
 /*function nextPokemon (pokemon){
