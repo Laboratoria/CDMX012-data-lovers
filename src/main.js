@@ -3,7 +3,7 @@ import dataPokemon from './data.js';
 import data from './data/pokemon/pokemon.js';
 
 const byName = dataPokemon.byName(data);
-
+const pokemonEvolution= dataPokemon.pokemonEvolution(data);
 const byNumber = dataPokemon.byNumber(data);
 const pokemonTypes = dataPokemon.pokemonTypesObject(data);
 const pokemonResistant = dataPokemon.pokemonResistant(data);
@@ -18,6 +18,7 @@ document.getElementById("pokeType").addEventListener("click", showTypeBox);
 document.getElementById("closeModalBox").addEventListener("click", closeModalBox);
 document.getElementById("pokeResistant").addEventListener("click", showResisBox)
 document.getElementById("pokeWeaknesses").addEventListener("click", showWenessesBox)
+
 //document.getElementById("triangleRight").addEventListener("click", nextPokemon);
 
 /*function nextPokemon (pokemon){

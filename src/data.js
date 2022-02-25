@@ -1,4 +1,4 @@
-const dataPokemon={
+const dataPokemon = {
   //EN PROCESP
   /*sortData:(data, sortBy, sortOrder)=>{
     let pokemon=data.slice(0);
@@ -13,33 +13,33 @@ const dataPokemon={
     return sortData
   },*/
 
-  byName:(data)=>{
-    let pokemon=data.pokemon.slice(0);
-    let byName=[];
-    byName= pokemon.sort((a,b)=>{
-    if(a.name>b.name){
-      return 1   
-    }
-    return-1
-      })
+  byName: (data) => {
+    let pokemon = data.pokemon.slice(0);
+    let byName = [];
+    byName = pokemon.sort((a, b) => {
+      if (a.name > b.name) {
+        return 1
+      }
+      return -1
+    })
     return byName;
   },
 
-  byNumber:(data)=>{
+  byNumber: (data) => {
     const pokemon = data.pokemon;
     let byNumber = pokemon.slice(0)
     return byNumber;
- },
+  },
 
- pokemonTypesObject:(data)=>{
-    const pokemon= data.pokemon; 
-    let pokemonTypesObject= {}; 
-    for(let i=0; i<pokemon.length; i++){ 
-      let types=pokemon[i].type; 
-      for(let j=0; j<types.length; j++){ 
-        let typePokemon= types[j]; 
-        if(!Object.prototype.hasOwnProperty.call(pokemonTypesObject, typePokemon)){
-          pokemonTypesObject[typePokemon]=[];
+  pokemonTypesObject: (data) => {
+    const pokemon = data.pokemon;
+    let pokemonTypesObject = {};
+    for (let i = 0; i < pokemon.length; i++) {
+      let types = pokemon[i].type;
+      for (let j = 0; j < types.length; j++) {
+        let typePokemon = types[j];
+        if (!Object.prototype.hasOwnProperty.call(pokemonTypesObject, typePokemon)) {
+          pokemonTypesObject[typePokemon] = [];
         }
         pokemonTypesObject[typePokemon].push(pokemon[i]);
       }
@@ -47,53 +47,63 @@ const dataPokemon={
     return pokemonTypesObject;
   },
 
-  pokemonResistant:( data)=>{
-    let pokemon= data.pokemon;
-    let pokemonResistantObject= {}; 
-   
-    
-    for(let i=0; i<pokemon.length; i++){
-      let resistant=pokemon[i].resistant;
-    
-    
-      for(let j=0; j<resistant.length; j++){
-        let resistantPokemon=resistant[j];
-       
-      if(!Object.prototype.hasOwnProperty.call(pokemonResistantObject, resistantPokemon)){
-        pokemonResistantObject[resistantPokemon]=[];
-      }
-     pokemonResistantObject[resistantPokemon].push(pokemon[i])
+  pokemonResistant: (data) => {
+    let pokemon = data.pokemon;
+    let pokemonResistantObject = {};
+
+
+    for (let i = 0; i < pokemon.length; i++) {
+      let resistant = pokemon[i].resistant;
+
+
+      for (let j = 0; j < resistant.length; j++) {
+        let resistantPokemon = resistant[j];
+
+        if (!Object.prototype.hasOwnProperty.call(pokemonResistantObject, resistantPokemon)) {
+          pokemonResistantObject[resistantPokemon] = [];
+        }
+        pokemonResistantObject[resistantPokemon].push(pokemon[i])
       }
     }
-      
+
     return pokemonResistantObject;
-    
+
   },
 
 
-  pokemonWeaknesses:( data)=>{
-    let pokemon= data.pokemon;
-    let pokemonWeaknessestObject= {}; 
-   
-    
-    for(let i=0; i<pokemon.length; i++){
-      let weaknesses=pokemon[i].weaknesses;
-    
-    
-      for(let j=0; j<weaknesses.length; j++){
-        let weaknessesPokemon=weaknesses[j];
-       
-      if(!Object.prototype.hasOwnProperty.call(pokemonWeaknessestObject, weaknessesPokemon)){
-        pokemonWeaknessestObject[weaknessesPokemon]=[];
-      }
-     pokemonWeaknessestObject[weaknessesPokemon].push(pokemon[i])
+  pokemonWeaknesses: (data) => {
+    let pokemon = data.pokemon;
+
+    let pokemonWeaknessestObject = {};
+
+
+    for (let i = 0; i < pokemon.length; i++) {
+      let weaknesses = pokemon[i].weaknesses;
+
+
+      for (let j = 0; j < weaknesses.length; j++) {
+        let weaknessesPokemon = weaknesses[j];
+
+        if (!Object.prototype.hasOwnProperty.call(pokemonWeaknessestObject, weaknessesPokemon)) {
+          pokemonWeaknessestObject[weaknessesPokemon] = [];
+        }
+        pokemonWeaknessestObject[weaknessesPokemon].push(pokemon[i])
       }
     }
-      
-    return pokemonWeaknessestObject;
-    
-  },
 
+    return pokemonWeaknessestObject;
+
+  },
+  pokemonEvolution: (data) => {
+    let pokemon = data.pokemon;
+    let evolution = [];
+    for (let i = 0; i < pokemon.length; i++) {
+      let pokemonEvolution = pokemon[i].evolution;
+      evolution = pokemonEvolution;
+      console.log(evolution);
+
+    }
+  }
 
 };
 export default dataPokemon;
