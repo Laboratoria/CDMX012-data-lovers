@@ -57,7 +57,7 @@ float:left;
   font-size: 27px;
   margin-top: 28px;
   margin-left: auto;
-  margin-right: 350px;
+  margin-right: 270px;
 }
 .searchBar{
   position: absolute;
@@ -68,21 +68,22 @@ float:left;
   font-family: "Rowdies";
   font-size: 15px;
   letter-spacing: 1px;
-  padding: 5px 0px;
+  padding: 5px 10px;
 }
-.list{
-  margin-top: 20px;
+#list{
+  margin-top: 5px;
   font-family:'Rowdies'; 
   font-size: 15px;
   display:block;
-  margin-right: 50px;
-  
+  right:100px ;
+  position: absolute;
+  padding: 0px 10px;
  
 }
-.list{
+#list{
   float:right;
 }
-.list :hover{
+#list :hover{
   background-color:red ;
 
 }
@@ -667,9 +668,9 @@ th{
   align-items: center;
   text-align: center;
   margin: auto;
-  z-index: 100;
-  top: 150px;
-  visibility: visible;
+  z-index: 1;
+  top: 130px;
+  visibility: hidden;
   position: absolute;
   width: 100%;
 }
@@ -685,7 +686,7 @@ th{
 
 #pokeSearchText{
   font-family: "Rowdies";
-  font-size: 15px;
+  font-size: 20px;
   letter-spacing: 1px;
   text-align: center;
   position: relative;
@@ -707,8 +708,29 @@ th{
   display: inline;
 }
 #pokeSearch1{
-  right: 100px;
+  padding: 5px 20px;
 }
-#pokeSearch2{
-  left: 100px;
+
+#list1{
+  font-family:'Rowdies'; 
+  font-size: 15px;
+  display:block;
+  position: relative;
+  left: 500px;
+  padding: 0px 10px;
+ 
 }
+
+#list1 :hover{
+  background-color:red ;
+
+}
+
+#noResults{
+  font-family: "Rowdies";
+  font-size: 15px;
+  letter-spacing: 1px;
+  text-align: center;
+  position: relative;
+}
+

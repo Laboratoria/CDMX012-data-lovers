@@ -18,10 +18,9 @@ document.getElementById("pokeBall").addEventListener("click", refreshPage);
 document.getElementById("pokeNumber").addEventListener("click", showByNumber);
 document.getElementById("pokeName").addEventListener("click", showByName);
 document.getElementById("pokeType").addEventListener("click", showTypeBox);
+document.getElementById("pokeCompute").addEventListener("click", showCompute);
 document.getElementById("pokeSearch1").addEventListener("keyup", showPokeSearch);
-document.getElementById("pokeSearch2").addEventListener("keyup", showPokeSearch);
 document.getElementById("refreshBtn").addEventListener("click", refreshPokeSearch);
-
 document.getElementById("closeModalBox").addEventListener("click", closeModalBox);
 document.getElementById("pokeResistant").addEventListener("click", showResisBox)
 document.getElementById("pokeWeaknesses").addEventListener("click", showWenessesBox)
@@ -33,38 +32,89 @@ document.getElementById("pokeWeaknesses").addEventListener("click", showWenesses
   }
 }*/
 
-function showPokeSearch(e){
-  /*let input = document.getElementById('pokeSearch1').value
-    input=input.toLowerCase();
-    let x = byName;
-      
-    for (let i = 0; i < x.length; i++) { 
-        if (!x[i].innerHTML.toLowerCase().includes(input)) {
-            x[i].style.display="none";
-        }
-        else {
-            x[i].style.display="list-item";                 
-        }
-    }*/
-
-     // 1. declare and assign the value of the event's target to a variable AKA whatever is typed in the search bar
-     let value = e.target.value
-
-     // 2. check: if input exists and if input is larger than 0
-     if (value && value.trim().length > 0){
-         // 3. redefine 'value' to exclude white space and change input to all lowercase
-          value = value.trim().toLowerCase()
-         // 4. return the results only if the value of the search is included in the person's name
-         // we need to write code (a function for filtering through our data to include the search input value)
-     } else {
-         // 5. return nothing
-         // input is invalid -- show an error message or show no results
- 
-     }
+function showCompute() {
+  document.getElementById("computePokeSearch").style.visibility="visible";
 }
+let optionList1= document.getElementById("list1");
+optionList1.addEventListener("click", showPokeSearch)
+
+
+
+function showPokeSearch(){
+  let search=document.getElementById("pokeSearch1").value;
+  if(search == ""){
+    return 
+  }
+ let result=[];
+   for(let i=0; i<byName.length; i++){
+    if(byName[i].name.startsWith(search)){
+    result.push(byName[i].name);
+    }
+  }
+  document.getElementById("list1").style.display="block";
+  if(result.length> 5){
+    optionList1.size=5
+    let div = document.getElementById("pokeResult")
+    div.innerHTML+= ""
+  } else if(result.length==1 ){
+    optionList1.size=2
+    let div = document.getElementById("pokeResult")
+    div.innerHTM+= ""
+  } else if (result.length ==0){
+    optionList1.style.display="none";
+    let div = document.getElementById("pokeResult")
+    div.innerHTML= "<p id='noResults'>Pokémon not found, try again</p>" 
+  }
+  else{
+    optionList1.size=result.length
+    let div = document.getElementById("pokeResult")
+    div.innerHTML+= ""
+  }
+
+  optionList1.innerText = null;
+  for(let i=0; i<result.length; i++){
+    showOptions1(result[i], result[i]);
+  }
+   return result;
+ }
+ function  showOptions1(text, val ) {
+   let createOptions=document.createElement("option");
+   optionList1.appendChild(createOptions);
+   createOptions.text=text;
+   createOptions.value=val;
+   createOptions.addEventListener("click", setVal1);
+   if(createOptions == null){
+    let div = document.getElementById("pokeResult")
+    optionList1.size = 0
+    div.innerHTML+= "<p>Pokémon not found</p>"
+   }
+  }
+   function setVal1(selectedVal){
+   let searchPokemon={}
+    document.getElementById("pokeSearch1").value=""
+    optionList1.size= 0;
+    optionList1.innerText = null;
+    document.getElementById("list1").style.display="none";
+    for (let i = 0; i < byName.length; i++) {
+   if(byName[i].name==selectedVal.target.value){
+     searchPokemon=byName[i];
+     }
+   }
+   let div = document.getElementById("pokeResult")
+   let openPokeCard =pokemonCard(searchPokemon, "organized")
+       div.innerHTML=openPokeCard
+       optionList1.innerText = null; 
+  
+   }
+
+
+
 
 function refreshPokeSearch(){
-  window.location.reload();
+  document.getElementById("pokeSearch1").value = ""
+  let div = document.getElementById("pokeResult");
+  div.innerHTML="";
+
 }
 
 
@@ -82,22 +132,23 @@ function searchBox(){
    return
  }
  optionList.size= 5;
-let resultado=[];
+ 
+let result=[];
   for(let i=0; i<byName.length; i++){
    if(byName[i].name.startsWith(search)){
-   resultado.push(byName[i].name);
+   result.push(byName[i].name);
    }
  }
  optionList.innerText = null;
  document.getElementById("list").style.display="block";
- for(let i=0; i<resultado.length; i++){
-   showOptions(resultado[i], resultado[i]);
+ for(let i=0; i<result.length; i++){
+   showOptions(result[i], result[i]);
    
 
  }
  
  
-  return resultado;
+  return result;
 }
 function  showOptions(text, val ) {
   let createOptions=document.createElement("option");
@@ -117,7 +168,6 @@ function  showOptions(text, val ) {
     
   //  document.getElementById("searchBar").value=selectedVal.target.value;
    document.getElementById("searchBar").value=""
-   console.log("changing options object")
    optionList.size= 0;
    optionList.innerText = null;
    document.getElementById("list").style.display="none";
@@ -144,9 +194,6 @@ function  showOptions(text, val ) {
   }
   
 
-  
-
-
 /*function arrayPokeInfo(info){
   let quickMoves= []
   for (let i= 0; i< info["quick-move"]; i++){
@@ -160,6 +207,29 @@ function  showOptions(text, val ) {
   } return quickMoves
 }*/
 
+function pokemonCard(pokemon, type) {
+  let result = "";
+  result += '<div class= "' + type + ' flexBox" id="' + pokemon.name + 'Pokemon">'
+  result += "<p>" + pokemon.num + "</p>"
+  result += "<img src='" + pokemon.img + "'></img>"
+  result += "<p>" + pokemon.name + "</p>"
+  result += "</div>"
+  return result
+}
+
+function pokemonModalBoxLeft(pokemon) {
+  let result = "";
+  result += "<div id='bigCircle' class='circle'></div>"
+  result += "<div id='redCircle' class='circle'></div>"
+  result += "<div id='yellowCircle' class='circle'></div>"
+  result += "<div id='greenCircle' class='circle'></div>"
+  result += "<p class='generationModalBox'>" + Object.values(pokemon.generation)[0] + ": " + Object.values(pokemon.generation)[1] + "</p>"
+  result += "<img class='imgModalBox' src='" + pokemon.img + "'></img>"
+  result += "<p class='numModalBox'>" + pokemon.num + "</p>"
+  result += "<p class='nameModalBox'>" + pokemon.name + "</p>"
+  result += "<p class='typeModalBox'>" + pokemon.type + "</p>"
+  return result
+}
 
 function pokemonModalBoxRight(pokemon) {
   let result = "";
@@ -171,8 +241,8 @@ function pokemonModalBoxRight(pokemon) {
   result += "<p class='spawnChanceModalBox'>Spawn chance: " + pokemon["spawn-chance"] + "</p>"
   result += "<table class='statsModalBox'><tr><th colspan='5'>Stats</th></tr><tr><td>Base attack</td><td>Base defense</td><td>Base stamina</td><td>Max CP</td><td>Max HP</td> </tr><tr><td>" + Object.values(pokemon.stats)[0] + "</td><td>" + Object.values(pokemon.stats)[1] + "</td><td>" + Object.values(pokemon.stats)[2] + "</td><td>" + Object.values(pokemon.stats)[3] + "</td><td>" + Object.values(pokemon.stats)[4] + "</td> </tr></table>"
   result += "<table class='resAndWeakModalBox'><tr><th>Resistant</th><th>Weaknesses</th></tr><tr><td>" + pokemon.resistant + "</td><td>" + pokemon.weaknesses + "</td></tr></table>"
-  result += "<p class='quickMoveModalBox'>Quick moves: " + Object.values(pokemon["quick-move"])/*Object.entries(pokemon["quick-move"][0])+"<br> "+ Object.entries(pokemon["quick-move"][1])*/ + "</p>"
-  result += "<p class='specialAttackModalBox'>Special attacks: " + Object.values(pokemon["special-attack"]) + "</p>"
+  //result += "<p class='quickMoveModalBox'>Quick moves: " + Object.values(pokemon["quick-move"])/*Object.entries(pokemon["quick-move"][0])+"<br> "+ Object.entries(pokemon["quick-move"][1])*/ + "</p>"
+  //result += "<p class='specialAttackModalBox'>Special attacks: " + Object.values(pokemon["special-attack"]) + "</p>"
   result += "<p class='eggAndBuddyDistanceModalBox'>Egg: " + pokemon.egg + "</p>"
   result += "<p class='eggAndBuddyDistanceModalBox'>Buddy distance km: " + pokemon["buddy-distance-km"] + "</p>"
   result += "<p class='evolutionCandyModalBox'>Candy for evolution: " + Object.values(pokemon.evolution)[0] + "</p>"
@@ -291,29 +361,6 @@ function refreshPage() {
   window.location.reload();
 }
 
-function pokemonCard(pokemon, type) {
-  let result = "";
-  result += '<div class= "' + type + ' flexBox" id="' + pokemon.name + 'Pokemon">'
-  result += "<p>" + pokemon.num + "</p>"
-  result += "<img src='" + pokemon.img + "'></img>"
-  result += "<p>" + pokemon.name + "</p>"
-  result += "</div>"
-  return result
-}
-
-function pokemonModalBoxLeft(pokemon) {
-  let result = "";
-  result += "<div id='bigCircle' class='circle'></div>"
-  result += "<div id='redCircle' class='circle'></div>"
-  result += "<div id='yellowCircle' class='circle'></div>"
-  result += "<div id='greenCircle' class='circle'></div>"
-  result += "<p class='generationModalBox'>" + Object.values(pokemon.generation)[0] + ": " + Object.values(pokemon.generation)[1] + "</p>"
-  result += "<img class='imgModalBox' src='" + pokemon.img + "'></img>"
-  result += "<p class='numModalBox'>" + pokemon.num + "</p>"
-  result += "<p class='nameModalBox'>" + pokemon.name + "</p>"
-  result += "<p class='typeModalBox'>" + pokemon.type + "</p>"
-  return result
-}
 
 
 
@@ -458,9 +505,9 @@ function showByName() { //sirve pero no es óptimo; en proceso...
 }
 
 
-// window.addEventListener("click", function(e){
-//   this.console.log(e.target);
-// })
+window.addEventListener("click", function(e){
+   this.console.log(e.target);
+ })
 
 
 

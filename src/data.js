@@ -1,6 +1,6 @@
 const dataPokemon={
 
-  /*sortData:(data, sortBy, sortOrder)=>{
+  /*¡sortData:(data, sortBy, sortOrder)=>{
     if (sortBy ==="pkeName"){
       let pokemon=data.slice(0);
         let byName=[];
@@ -108,6 +108,22 @@ const dataPokemon={
     return pokemonWeaknessestObject;
     
   },
+
+
+  computeStats: (pokemon1, pokemon2)=>{
+   // let pokemon = data.pokemon;
+    let result = ""
+    //AL SELECCIONAR POKEMON, COMPARAR
+    if(pokemon1["special-attack"]["base-damage"] > pokemon2["special-attack"]["base-damage"]){
+      result = "The winner is " + pokemon1 + "."
+    } else if (pokemon1["special-attack"]["base-damage"] == pokemon2["special-attack"]["base-damage"]){
+      result = "There's a tie"
+    }
+    else {
+      result = "The winner is " + pokemon2 + "."
+    }
+    return result
+  }
 
 
 };

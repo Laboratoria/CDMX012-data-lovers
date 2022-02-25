@@ -26,7 +26,7 @@
           </li> 
           <li><a id="value9">Compute</a> 
             <ul>
-              <li><a class="mainButtons" id="pokeCompute" value="value10">Pokémon vs. Pokémon</a></li>
+              <li><a class="mainButtons" id="pokeCompute" value="value10">Candies for evolution</a></li>
             </ul>
           </li> 
           </ul>
@@ -34,8 +34,8 @@
       <img id="pokeBall" src= "imagenes/pokemon.png">
       <div id="searchGroup">
         <input id="searchBar" class="searchBar" type="text" placeholder=" Search...">
-        <!--<i id="searchIcon" class="fas fa-search searchIcon"></i>-->
-      <button id="searchIcon" class="fas fa-search searchIcon"></button> 
+        <i id="searchIcon" class="fas fa-search searchIcon"></i>
+      <!--<button id="searchIcon" class="fas fa-search searchIcon"></button> -->
       <nav><select class= "list" name="list" id="list" style="display:none"></select></nav>
       </div>
     </div>
@@ -89,16 +89,21 @@
     </div>
 
     <div id="computePokeSearch">
-      <p id="pokeSearchText">Select the Pokémons you would like to compare</p>
-      <form id="pokeInputs">
-        <input type="text" name="pokemon" id="pokeSearch1" class="pokeSearch" placeholder=" Pokémon 1">
-        <input id="pokeSearch2" name="pokemon" class="pokeSearch" type="text" placeholder=" Pokémon 2">
-      </form>
+      <p id="pokeSearchText">Select Pokémon to show candies needed for next evolution</p>
+      <div id="pokeInputs">
+        <input type="text" name="pokemon" id="pokeSearch1" class="pokeSearch" placeholder="   Search Pokémon..." autocomplete="off">
+        <nav><select class= "list1" name="list1" id="list1" style="display:none"></select></nav>
+        <div id="pokeResult"></div>
+
+      </div>
       <br><br>
       <button id="computeBtn" class="pokeSearchBtn">Compute</button> <br> <br>
-      <button id="refrshBtn" class="pokeSearchBtn">Select other Pokémons</button>
-
-      <div id="searchResult"></div>
+      <button id="refreshBtn" class="pokeSearchBtn">Select other Pokémon</button>
+      
+      
+     <!-- <ul id="computeSearchResult">
+        <li></li>
+      </ul>-->
     </div>
 
     <div id="root"></div>
