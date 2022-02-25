@@ -90,7 +90,7 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
 
 ### HTML
 
-- [ ] **Uso de HTML semántico**
+- [x] **Uso de HTML semántico**
 
   <details><summary>Links</summary><p>
 
@@ -100,7 +100,7 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
 
 ### CSS
 
-- [ ] **Uso de selectores de CSS**
+- [x] **Uso de selectores de CSS**
 
   <details><summary>Links</summary><p>
 
@@ -108,7 +108,7 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
   * [CSS Selectors - MDN](https://developer.mozilla.org/es/docs/Web/CSS/CSS_Selectors)
 </p></details>
 
-- [ ] **Modelo de caja (box model): borde, margen, padding**
+- [x] **Modelo de caja (box model): borde, margen, padding**
 
   <details><summary>Links</summary><p>
 
@@ -119,7 +119,7 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
   * [display - CSS Tricks](https://css-tricks.com/almanac/properties/d/display/)
 </p></details>
 
-- [ ] **Uso de flexbox en CSS**
+- [x] **Uso de flexbox en CSS**
 
   <details><summary>Links</summary><p>
 
@@ -130,7 +130,7 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
 
 ### Web APIs
 
-- [ ] **Uso de selectores del DOM**
+- [x] **Uso de selectores del DOM**
 
   <details><summary>Links</summary><p>
 
@@ -139,7 +139,7 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
   * [Localizando elementos DOM usando selectores - MDN](https://developer.mozilla.org/es/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
 </p></details>
 
-- [ ] **Manejo de eventos del DOM (listeners, propagación, delegación)**
+- [x] **Manejo de eventos del DOM (listeners, propagación, delegación)**
 
   <details><summary>Links</summary><p>
 
@@ -149,7 +149,7 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
   * [El objeto Event](https://developer.mozilla.org/es/docs/Web/API/Event)
 </p></details>
 
-- [ ] **Manipulación dinámica del DOM**
+- [x] **Manipulación dinámica del DOM**
 
   <details><summary>Links</summary><p>
 
@@ -163,9 +163,9 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
 
 ### JavaScript
 
-- [ ] **Diferenciar entre tipos de datos primitivos y no primitivos**
+- [x] **Diferenciar entre tipos de datos primitivos y no primitivos**
 
-- [ ] **Arrays (arreglos)**
+- [x] **Arrays (arreglos)**
 
   <details><summary>Links</summary><p>
 
@@ -178,14 +178,14 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
   * [Array.prototype.reduce() - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
 </p></details>
 
-- [ ] **Objetos (key, value)**
+- [x] **Objetos (key, value)**
 
   <details><summary>Links</summary><p>
 
   * [Objetos en JavaScript](https://curriculum.laboratoria.la/es/topics/javascript/05-objects/01-objects)
 </p></details>
 
-- [ ] **Variables (declaración, asignación, ámbito)**
+- [x] **Variables (declaración, asignación, ámbito)**
 
   <details><summary>Links</summary><p>
 
@@ -193,7 +193,7 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
   * [Variables](https://curriculum.laboratoria.la/es/topics/javascript/01-basics/02-variables)
 </p></details>
 
-- [ ] **Uso de condicionales (if-else, switch, operador ternario, lógica booleana)**
+- [x] **Uso de condicionales (if-else, switch, operador ternario, lógica booleana)**
 
   <details><summary>Links</summary><p>
 
@@ -201,7 +201,7 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
   * [Tomando decisiones en tu código — condicionales - MDN](https://developer.mozilla.org/es/docs/Learn/JavaScript/Building_blocks/conditionals)
 </p></details>
 
-- [ ] **Uso de bucles/ciclos (while, for, for..of)**
+- [x] **Uso de bucles/ciclos (while, for, for..of)**
 
   <details><summary>Links</summary><p>
 
@@ -209,7 +209,7 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
   * [Bucles e iteración - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Loops_and_iteration)
 </p></details>
 
-- [ ] **Funciones (params, args, return)**
+- [x] **Funciones (params, args, return)**
 
   <details><summary>Links</summary><p>
 
@@ -219,14 +219,14 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
   * [Funciones — bloques de código reutilizables - MDN](https://developer.mozilla.org/es/docs/Learn/JavaScript/Building_blocks/Functions)
 </p></details>
 
-- [ ] **Pruebas unitarias (unit tests)**
+- [-] **Pruebas unitarias (unit tests)**
 
   <details><summary>Links</summary><p>
 
   * [Empezando con Jest - Documentación oficial](https://jestjs.io/docs/es-ES/getting-started)
 </p></details>
 
-- [ ] **Módulos de ECMAScript (ES Modules)**
+- [x] **Módulos de ECMAScript (ES Modules)**
 
   <details><summary>Links</summary><p>
 
@@ -234,19 +234,19 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
   * [export - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/export)
 </p></details>
 
-- [ ] **Uso de linter (ESLINT)**
+- [x] **Uso de linter (ESLINT)**
 
-- [ ] **Uso de identificadores descriptivos (Nomenclatura y Semántica)**
+- [x] **Uso de identificadores descriptivos (Nomenclatura y Semántica)**
 
-- [ ] **Diferenciar entre expresiones (expressions) y sentencias (statements)**
+- [-] **Diferenciar entre expresiones (expressions) y sentencias (statements)**
 
 ### Control de Versiones (Git y GitHub)
 
-- [ ] **Git: Instalación y configuración**
+- [x] **Git: Instalación y configuración**
 
-- [ ] **Git: Control de versiones con git (init, clone, add, commit, status, push, pull, remote)**
+- [x] **Git: Control de versiones con git (init, clone, add, commit, status, push, pull, remote)**
 
-- [ ] **Git: Integración de cambios entre ramas (branch, checkout, fetch, merge, reset, rebase, tag)**
+- [-] **Git: Integración de cambios entre ramas (branch, checkout, fetch, merge, reset, rebase, tag)**
 
 - [ ] **GitHub: Creación de cuenta y repos, configuración de llaves SSH**
 
@@ -261,17 +261,17 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
 
 ### user-centricity
 
-- [ ] **Diseñar un producto o servicio poniendo a la usuaria en el centro**
+- [x] **Diseñar un producto o servicio poniendo a la usuaria en el centro**
 
 ### product-design
 
-- [ ] **Crear prototipos de alta fidelidad que incluyan interacciones**
+- [x] **Crear prototipos de alta fidelidad que incluyan interacciones**
 
-- [ ] **Seguir los principios básicos de diseño visual**
+- [x] **Seguir los principios básicos de diseño visual**
 
 ### research
 
-- [ ] **Planear y ejecutar testeos de usabilidad de prototipos en distintos niveles de fidelidad**
+- [x] **Planear y ejecutar testeos de usabilidad de prototipos en distintos niveles de fidelidad**
 
 ## 4. Consideraciones generales
 
@@ -288,7 +288,12 @@ Los criterios para considerar que has completado este proyecto son:
 
 Documenta brevemente tu trabajo en el archivo `README.md` de tu repositorio,
 contándonos cómo fue tu proceso de diseño y cómo crees que el producto resuelve
-el problema (o problemas) que tiene tu usuario.
+el problema (o problemas) que tiene tu usuario:
+
+Nuestro proceso de diseño =>
+Se basó directamente en las necesidades e inquietudes del usuario sobre la información y
+datos que queria visualizar en nuestra interfaz, para poder recabar la información se realizó una investigación mediante un formulario, el cual puedes visualizar en el siguiente link:
+(https://forms.gle/LZEnSEK8vwdLAENo7).
 
 ### Historias de usuario
 
@@ -303,6 +308,97 @@ Criterios de Aceptación para cada una.
 En la medida de lo posible, termina una historia de usuario antes de pasar
 a la siguiente (Cumple con Definición de Terminado + Criterios de Aceptación).
 
+Historias de Usuario (5 en total)=>
+HISTORIA DE USUARIO 1(POKÉDEX):
+Yo como:Usuario 
+
+Quiero:Visualizar a los pokemones de acuerdo a los datos de la pokédex
+
+Para:Observar todas las características de los Pokémon
+
+CRITERIOS DE ACEPTACIÓN:
+-El usuario puede acceder a una sección para la visualización general de los datos sobre Pokémon en orden establecido de la Pokédex 
+-El usuario tendrá acceso a la data de 251 Pokémon
+-El usuario observera la información sin filtro aplicado 
+
+DEFINICIÓN DE TERMINADO:
+-El código pasa el test 
+-El código es responsivo a diferentes aparatos/tamaños 
+-El código ha pasado el code-review
+-El código ha sido subido al repositorio 
+
+HISTORIA DE USUARIO 2(CLASIFICACIÓN:TIPO):
+Yo como:Usuario 
+
+Quiero:Visualizar a los Pokémon según su tipo 
+
+Para:conocer a qué tipo pertenece cada uno
+
+CRITERIOS DE ACEPTACIÓN:
+-El usuario tiene un botón donde se despliega la opción de clasificar por tipo
+-El usuario puede seleccionar el tipo que quiere visualizar (agua, tierra, fuego,hierba, venenosos, rocosos, magnéticos, legendarios, etc.)
+-El usuario tendrá acceso a todos los tipos de Pokémon de acuerdo a su clasificación 
+-El usuario tiene acceso a una serie de botones que divide a los Pokémon según sus tipos 
+
+DEFINICIÓN DE TERMINADO:
+-El código pasa el test 
+-El código es responsivo a diferentes aparatos/tamaños 
+-El código ha pasado el code-review
+-El código ha sido subido al repositorio 
+
+HISTORIA DE USUARIO 3(CLASIFICACIÓN:Buscador):
+Yo como:Usuario 
+
+Quiero:Acceder únicamente a la información de un Pokémon a través de su nombre 
+
+Para:conocer sus datos 
+
+CRITERIOS DE ACEPTACIÓN:
+-El usuario tiene una sección de búsqueda donde puede introducir el nombre completo de su Pokémon
+-El usuario puede acceder a los pokemón que incluya el nombre introducido 
+-Si el usuario desconoce la forma correcta de escribir el nombre, podrá introducir valores incompletos para su búsqueda y así arrojar las opciones que coincidan con su búsqueda
+-El usuario podrá ver el o los Pokémon´s deseados en pantalla 
+DEFINICIÓN DE TERMINADO:
+-El código pasa el test 
+-El código es responsivo a diferentes aparatos/tamaños 
+-El código ha pasado el code-review
+-El código ha sido subido al repositorio 
+
+HISTORIA DE USUARIO 4(CLASIFICACIÓN:Legendarios):
+Yo como:Usuario 
+
+Quiero:Visualizar a los Pokémon según su rareza 
+
+Para:Diferenciarlos de los Pokémon normales 
+
+CRITERIOS DE ACEPTACIÓN:
+-El usuario podrá acceder a un menú desplegable donde se le permita ver la clasificación de acuerdo a su rareza: Legendarios
+-El usuario puede seleccionar la rareza que tienen legendario 
+-El usuario podrá visualizar el total de pokemones legendarios 
+DEFINICIÓN DE TERMINADO:
+-El código pasa el test 
+-El código es responsivo a diferentes aparatos/tamaños 
+-El código ha pasado el code-review
+-El código ha sido subido al repositorio 
+
+HISTORIA DE USUARIO 5(CLASIFICACIÓN:Estadística) :
+Yo como:Usuario 
+
+Quiero:Visualizar las estadísticas(promedio) de un tipo de Pokémon
+
+Para:conocer el promedio general por cada estadística de Puntos de ataque, puntos de defensa, puntos de stamina, puntos de combate y puntos de vida
+
+CRITERIOS DE ACEPTACIÓN:
+-El usuario podrá visualizar la información al clasificar por el tipo deseado 
+-Podrá ver el promedio general y acceder de manera individual en cada pokémon
+-El usuario únicamente podrá visualizar esta información clasificando por tipo seleccionado
+DEFINICIÓN DE TERMINADO:
+-El código pasa el test 
+-El código es responsivo a diferentes aparatos/tamaños 
+-El código ha pasado el code-review
+-El código ha sido subido al repositorio 
+
+
 ### Diseño de la Interfaz de Usuario
 
 #### Prototipo de baja fidelidad
@@ -311,6 +407,8 @@ Durante tu trabajo deberás haber hecho e iterado bocetos (_sketches_) de tu
 solución usando papel y lápiz. Te recomendamos tomar fotos de todas las
 iteraciones que hagas, que las subas a tu repositorio y las menciones en tu
 `README.md`.
+Imagen 1:(src=./resources/PrototipoBajaFidelidad2.jpg)
+Imagen2: (src=./resources/PrototipoBajaFidelidad3.jpg)
 
 #### Prototipo de alta fidelidad
 
@@ -324,6 +422,12 @@ Illustrator, Photoshop, PowerPoint, Keynote, etc.
 El diseño debe representar el _ideal_ de tu solución. Digamos que es lo que
 desearías implementar si tuvieras tiempo ilimitado para trabajar. Además, tu
 diseño debe seguir los fundamentos de _visual design_.
+
+Nuestro prototipo de alta fidelidad para computadora podrá ser visualizado en el siguiente link:
+(https://www.figma.com/proto/jpLJspNMvQj1zWbVYwiM6i/POKEMON-DATA-LOVERS?node-id=64%3A2&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=64%3A2&show-proto-sidebar=1)
+
+Nuestro prototipo de alta fidelidad para telefonos moviles podrá ser visualizado en el siguiente link:
+(https://www.figma.com/proto/jpLJspNMvQj1zWbVYwiM6i/POKEMON-DATA-LOVERS?node-id=128%3A123&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=128%3A123&show-proto-sidebar=1)
 
 #### Testeos de usabilidad
 
