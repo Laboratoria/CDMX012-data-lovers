@@ -36,7 +36,7 @@ function showPokemons(pokemons) {
 
     const cardType = document.createElement("p");
     const bottonTypePokemon = document.createTextNode(
-      "Type: " + `${property.type.join(" ")}`
+      "Type: " + `${property.type.join(", ")}`
     );
     cardType.appendChild(bottonTypePokemon);
     cardType.setAttribute("class", "typeClass");
@@ -56,9 +56,9 @@ function showPokemons(pokemons) {
     /***********mostrando ventana modal */
 
     let aboutPokemon = property.about;
-    let resistantPokemon = property.resistant;
-    let weaknessesPokemon = property.weaknesses;
-    let typePokemon = property.type;
+    let resistantPokemon = property.resistant.join(", ");
+    let weaknessesPokemon = property.weaknesses.join(", ");
+    let typePokemon = property.type.join(", ");
     let sizeHeightPokemon = property.size.height;
     let sizeWeightPokemon = property.size.weight;
     let statsPokemon = property.stats["base-attack"];
@@ -66,7 +66,6 @@ function showPokemons(pokemons) {
     let statsStaminaPokemon = property.stats["base-stamina"];
     let statsCpPokemon = property.stats["max-cp"];
     let statsHpPokemon = property.stats["max-hp"];
-    
 
     const showModal = document.createElement("section");
     showModal.setAttribute("id", `${property.name}`);
@@ -109,14 +108,19 @@ function showPokemons(pokemons) {
       sizeWeightPokemon +
       " <strong><br>Attack Points:</strong> " +
       statsPokemon +
+      " points" +
       " <strong><br>Defense Points:</strong> " +
       statsDefensePokemon +
+      " points" +
       " <strong><br>Stamina Points:</strong> " +
       statsStaminaPokemon +
+      " points" +
       " <strong><br>Combat Points:</strong> " +
       statsCpPokemon +
+      " points" +
       " <strong><br>Health Points:</strong> " +
-      statsHpPokemon;
+      statsHpPokemon +
+      " points";
     /*const contentEvolution = document.createElement("p");
     contentEvolution.setAttribute("class", "evolution");
     contentEvolution.innerHTML = " <strong>Evolution: <br> </strong>";*/

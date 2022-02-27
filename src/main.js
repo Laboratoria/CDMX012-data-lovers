@@ -10,7 +10,7 @@ import {
   defensePoint,
   staminaPoints,
   cpPoints,
-  hpPoints
+  hpPoints,
 } from "./data.js";
 import showPokemons from "./Article.js";
 
@@ -42,59 +42,48 @@ const selectByType = () => {
   const type = document.getElementById("type").value;
   let pokemons = filterByTypes(type);
   showPokemons(pokemons);
-
-  document.getElementById("statsSpace").style.display = "block";
-  //poner aqui las funciones de los porcentajes dentro de una variable
-
+  document.getElementById("statsSpace").style.display = "block"; //poner aqui las funciones de los porcentajes dentro de una variable
   let typesToMath = filterByTypes(type);
-  
-
+  let totalPokemonsByType = typesToMath.length;
   //************ESTA FUNCION NOS DA LOS VALORES DE BASE-ATTACK */
-  let AttackOfPokemons = attackpoint(typesToMath); //saca el base attack de los pokemones de ese tipo
-  let totalPokemonsByType = AttackOfPokemons.length;
-  let suma = AttackOfPokemons.reduce((a, b) => a + b, 0);
-  let porcentageAttack = suma / totalPokemonsByType;
-//********base-defense */
-  let defenseOfPokemons = defensePoint(typesToMath)
-  let sumDefense = defenseOfPokemons.reduce((a,b) => a + b, 0);
-  let porcentageDefense = sumDefense/totalPokemonsByType;
+  let AttackOfPokemons = attackpoint(typesToMath).porcentagePoint; //saca el base attack de los pokemones de ese tipo
+  let allAttack = attackpoint(typesToMath).suma;
+  //********base-defense */
+  let defenseOfPokemons = defensePoint(typesToMath).porcentagePoint;
+  let allDefense = defensePoint(typesToMath).suma;
   //********base-stamina */
-  let staminaOfPokemons = staminaPoints(typesToMath)
-  let sumStamina = staminaOfPokemons.reduce((a,b)=> a + b, 0);
-  let porcentageStamina = sumStamina / totalPokemonsByType; 
+  let staminaOfPokemons = staminaPoints(typesToMath).porcentagePoint;
+  let allStamina = staminaPoints(typesToMath).suma;
   //********max-cp */
-  let maxCpOfPokemons = cpPoints(typesToMath);
-  let sumCp =maxCpOfPokemons.reduce((a,b)=> a + b, 0);
-  let porcentageCp = sumCp / typesToMath.length
+  let maxCpOfPokemons = cpPoints(typesToMath)
   //*********max-hp */
   let maxHpPokemons = hpPoints(typesToMath);
-  let sumHp = maxHpPokemons.reduce((a,b)=> a + b , 0);
-  let porcentageHp = sumHp / typesToMath.length
 
-
-  document.getElementById("totalPokemons").innerHTML =
-  `This group is made of  ${totalPokemonsByType}  Pokemons`
-  document.getElementById("attackPoints").innerHTML =
-  `The total <strong>Attack points</strong> of this group is : 
-    <strong>${suma}</strong>
-     points, with a porcentage of : 
-     <strong>${porcentageAttack}</strong>  points
+  document.getElementById(
+    "totalPokemons"
+  ).innerHTML = `This group is made of  ${totalPokemonsByType}  Pokemons`;
+  document.getElementById(
+    "attackPoints"
+  ).innerHTML = `The total <strong>Attack points</strong> of this group is: 
+  <strong>${allAttack}</strong>
+  points, with a porcentage of: 
+  <strong>${AttackOfPokemons}</strong>  points
     <br> The total <strong>Defense points</strong> of this group is: 
-    <strong>${sumDefense}</strong> 
-     points,  with a porcentage of : 
-     <strong>${porcentageDefense}</strong>  points
+    <strong>${allDefense}</strong> 
+     points,  with a porcentage of: 
+     <strong>${defenseOfPokemons}</strong>  points
     <br> The total <strong>Stamina points</strong> of this group is: 
-    <strong>${sumStamina}</strong> 
-     points,  with a porcentage of : 
-     <strong>${porcentageStamina}</strong>  points 
+    <strong>${allStamina}</strong> 
+     points,  with a porcentage of: 
+     <strong>${staminaOfPokemons}</strong>  points 
     <br> The total <strong>Combat points</strong> of this group is: 
-    <strong>${sumCp}</strong> 
-     points,  with a porcentage of :
-    <strong>${porcentageCp}</strong>  points 
+    <strong>${maxCpOfPokemons[1]}</strong> 
+     points,  with a porcentage of:
+    <strong>${maxCpOfPokemons[0]}</strong>  points 
     <br> The total <strong>Health points</strong> of this group is: 
-    <strong>${sumHp}</strong> 
-     points,  with a porcentage of : 
-     <strong>${porcentageHp}</strong> points`
+    <strong>${maxHpPokemons[1]}</strong> 
+     points,  with a porcentage of: 
+     <strong>${maxHpPokemons[0]}</strong> points`;
 };
 
 document.getElementById("type").addEventListener("change", selectByType);

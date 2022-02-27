@@ -65,45 +65,59 @@ export function searchPokemon(word) {
 
 //*******************FUNCION DE ATAQUE */
 export function attackpoint(totalPokemonsbyType) {
-  let porcentaje = totalPokemonsbyType.map((pokemon) =>
+  let allBaseAttack = totalPokemonsbyType.map((pokemon) =>
     parseInt(pokemon.stats["base-attack"])
   );
-  return porcentaje;
+  let totalNumOfPokemons = allBaseAttack.length;
+  let suma = allBaseAttack.reduce((a, b) => a + b, 0);
+  let porcentagePoint = (suma / totalNumOfPokemons).toFixed(2); //toFixed disminuye el numero de decimales al valor introducido en los parentesis
+  let allResult = { suma, porcentagePoint };
+
+  return allResult;
 }
 
 export function defensePoint(totalPokemonsbyType) {
-  let porcentaje = totalPokemonsbyType.map((pokemon) =>
+  let allBaseDefense = totalPokemonsbyType.map((pokemon) =>
     parseInt(pokemon.stats["base-defense"])
   );
-  return porcentaje;
+  let totalNumOfPokemons = allBaseDefense.length;
+  let suma = allBaseDefense.reduce((a, b) => a + b, 0);
+  let porcentagePoint = (suma / totalNumOfPokemons).toFixed(2);
+  let allResult = { suma, porcentagePoint };
+
+  return allResult;
 }
 
 export function staminaPoints(totalPokemonsbyType) {
-  let porcentaje = totalPokemonsbyType.map((pokemon) =>
+  let allBaseStamina = totalPokemonsbyType.map((pokemon) =>
     parseInt(pokemon.stats["base-stamina"])
   );
-  return porcentaje;
+  let totalNumOfPokemons = allBaseStamina.length;
+  let suma = allBaseStamina.reduce((a, b) => a + b, 0);
+  let porcentagePoint = (suma / totalNumOfPokemons).toFixed(2);
+  let allResult = { suma, porcentagePoint }; //para poder acceder a los dos resultados en main, se integran a un objeto, en main se puede acceder a ellos mediante "."
+
+  return allResult;
 }
 
 export function cpPoints(totalPokemonsbyType) {
   let porcentaje = totalPokemonsbyType.map((pokemon) =>
-    parseInt(pokemon.stats["max-cp"])
-  );
-  return porcentaje;
+  parseInt(pokemon.stats["max-cp"])
+);
+let pokemonsTypeAttackLength = porcentaje.length
+let cpTotalSum = porcentaje.reduce((a, b) => a + b, 0);
+let porcentageCp= cpTotalSum / pokemonsTypeAttackLength 
+return [porcentageCp.toFixed(2),cpTotalSum]
+
 }
 
+//otra forma de hacerlo
 export function hpPoints(totalPokemonsbyType) {
-  let porcentaje = totalPokemonsbyType.map((pokemon) =>
+  let allMaxHp = totalPokemonsbyType.map((pokemon) =>
     parseInt(pokemon.stats["max-hp"])
   );
-  return porcentaje;
+  let pokemonsTypeAttackLength = allMaxHp.length;
+  let hpTotalSum = allMaxHp.reduce((a, b) => a + b, 0);
+  let porcentageHp = hpTotalSum / pokemonsTypeAttackLength;
+  return [porcentageHp.toFixed(2), hpTotalSum];
 }
-
-/*
-export function setList(value) {
-  const pokemons = findAllPokemons();
-  const setListPokemon = pokemons.filter((pokemon) => {
-    pokemon.name.includes(value);
-  });
-  return setListPokemon;
-}*/
