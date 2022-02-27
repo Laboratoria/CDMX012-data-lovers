@@ -14,13 +14,18 @@
       <section id="logo">
         <img src="img/2logo-lol.png"/>
       </section>
-      <nav>
-        <ul>
-          <li><a href="#">Champions</a></li>
-          <li><a href="#">Classes</a></li>
-          <li><a href="#">Abilities</a></li>
-          <button><a href="#">Play now</a></button>
-        </ul>
+      <section>
+        <a href="#" class="toggle-button"></a>
+      </section>
+      <nav class="navbar">
+        <section class="navLinks">
+          <ul>
+            <li><a href="#">Champions</a></li>
+            <li><a href="#">Computed</a></li>
+            <li><a href="#">Charts</a></li>
+            <button><a href="#">Play now</a></button>
+          </ul>
+        </section>
       </nav>
       <aside id="riot">
         <img src="img/logo-riot.png"/>
@@ -32,14 +37,14 @@
   </header>
 
   <main>
-      <section class="dropdown">
+    <section class="dropdown">
         <select name="alphabetical" id="alphabetical" class="alphaOrder">
             <option value="0" id="etiqueta"> Order alphabetically </option>
             <option value="1" id="atoz"> From letter A to Z </option>
             <option value="2" id="ztoa"> From letter Z to A </option>
           </select>
           <select name="role" class="role">
-            <option value="0" id="etiqueta"> Classification by Role </option>
+            <option value="Role" id="etiqueta"> Classification by Role </option>
             <option value="Assassin" id="assasin"> Assasins </option>
             <option value="Fighter" id="figther"> Figthers </option>
             <option value="Mage" id="mage"> Mages </option>
@@ -53,12 +58,13 @@
             <option value="2" id="media"> Media </option>
             <option value="3" id="high"> High </option>
           </select>
-      </section>
+    </section>
+    <section>
+      <h3>Choose your champion</h3>
+    </section>
 
-  <section class="cardbox" id="cardsChampions">
-  </section>
-
-  <section class="resultado"></section>
+    <section class="cardbox" id="cardsChampions">
+    </section>
 
   </main>
 
@@ -73,8 +79,7 @@
             <p> Blood <br>
                 Fantasy Violence <br>
                 Mild Suggestive Themes <br>
-                Use of Alcohol and Tobacco <br>
-                Online Interactions Not Rated by the ESRB
+                Use of Alcohol and Tobacco
             </p>
         </figure>
       </div>  
