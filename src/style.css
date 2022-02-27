@@ -690,11 +690,12 @@ th{
   letter-spacing: 1px;
   text-align: center;
   position: relative;
+  margin-bottom: 60px;
 }
 
 .pokeSearchBtn{
   font-family: "Rowdies";
-  font-size: 15px;
+  font-size: 17px;
   letter-spacing: 1px;
   text-align: center;
   position: relative;
@@ -702,31 +703,37 @@ th{
   color: white;
   padding: 10px 15px;
   border: none;
+  top: 10px;
+  right: 25%;
+  margin-bottom: 20px;
 }
-#pokeInputs{
-  justify-content: space-around;
-  display: inline;
+.pokeSearchBtn :hover{
+  background-color: tan; /*no sirve pero no sé por qué*/
 }
+
+
 #pokeSearch1{
   padding: 5px 20px;
+  position: relative;
+  right: 25%;
 }
 
 #list1{
   font-family:'Rowdies'; 
   font-size: 15px;
   display:block;
-  position: relative;
-  left: 500px;
+  position: absolute;
+  left: 18%;
   padding: 0px 10px;
+  top: 140px;
  
 }
 
 #list1 :hover{
   background-color:red ;
-
 }
 
-#noResults{
+.noResults{
   font-family: "Rowdies";
   font-size: 15px;
   letter-spacing: 1px;
@@ -734,3 +741,45 @@ th{
   position: relative;
 }
 
+#pokeResult{
+  position: absolute;
+  left: 42%;
+  top:80px;
+}
+#pokeResultEvolution{
+  position: absolute;
+  left: 57%;
+  top:80px;
+}
+
+.notFound{
+  color: #ffff ;
+  position:relative;
+  top: 70px;
+  background-color: #011464;
+  left: 30%;
+  padding: 10px 30px;
+  font-size: 18px;
+}
+.noEvolution{
+  color: #ffff ;
+  position:relative;
+  top: 70px;
+  background-color: #011464;
+  left: 20%;
+  padding: 10px 30px;
+  font-size: 16px;
+}
+
+.results{
+  color: black ;
+  position:relative;
+  background-color: white;
+  padding: 10px 30px;
+  font-size: 15px;
+  right: 32%;
+}
+
+button.pokeSearchBtn:hover{
+  background-color: tan;
+}
