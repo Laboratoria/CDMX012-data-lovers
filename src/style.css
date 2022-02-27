@@ -1,9 +1,18 @@
+html{
+    font-size: 13px;
+    line-height: 16px;
+    margin: 0%;
+    padding: 0%;
+}
+
 body {
     background-color: #071022;
     font-family: BeaufortforLOL-Bold;
     text-transform: uppercase;
+    padding: 0%;
     margin: 0%;
-    letter-spacing: 0.105em;
+    margin-top: 30rem;
+    letter-spacing: 0.2rem;
     text-transform: uppercase;
     font-style: normal;
 }
@@ -11,47 +20,60 @@ body {
 header  {
     background-image: url("img/img-header.jpg");
     width:100%;
-    height: 450px;
+    height: 25rem;
     background-position: center;
-    position: relative;
     top:0;
+    position:absolute;
     
 }
 
 #logo img {
     position: absolute;
-    width: 150px;
-    left: 50px;
-    top: 50px;
+    width: 11rem;
+    left: 4rem;
+    top: 5rem;
     float: left;
 }
 
 #riot img {
     position: absolute;
     width: 80px;
-    right:80px;
-    top: 80px;
+    right: 5rem;
+    top: 6rem;
     float: right;
     margin:0%;
 }
 
-nav li {
-    display: inline;
-    margin-right: 70px;
-    width: 100%;
+.navbar {
+    
+    padding-top: 6rem;
+
+}
+
+.navLinks ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.navLinks li {
+    list-style:none;
+    padding-left: 2rem;
+}
+
+.navLinks li a {
+    color: #fff;
     font-family: Mark Pro;
     font-style: normal;
     font-weight: bold;
-    font-size: 13px;
-    line-height: 16px;
-    align-items: center;
-    text-align: center;
+    font-size: 1rem;
+    line-height: 1rem;
+    padding: 1rem;
 }
 
-ul {
-    text-align: center;
-    padding-top: 80px;
-    margin:0%;
+.navLinks a:hover {
+    color:#98783C;
 }
 
 a {
@@ -61,18 +83,19 @@ a {
 
 button {
     background: #111111;
-    border-radius: 12px;
+    border-radius: 1rem;
     border-color: #111111;
-    padding: 10px;
+    padding: 1rem;
     font-family: Mark Pro;
     font-style: normal;
     font-weight: bold;
-    font-size: 13px;
-    line-height: 16px;
+    font-size: 1rem;
+    line-height: 1rem;
     align-items: center;
     text-align: center;
     letter-spacing: 0.105em;
     text-transform: uppercase;
+    margin-left:7rem;
 }
 
 .htype {
@@ -84,20 +107,19 @@ button {
 }
 
 h1 {
-    font-size: 70px;
-    margin-bottom: 10px;
-    margin-top: 70px;
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    margin-top: 4rem;
 }
 
 h2{
-    font-size: 35px;
-    line-height: 44px;
+    font-size: 4rem;
+    line-height: 4rem;
 }
 
 h3{
-    font-size: 24px;
-    line-height: 30px;
-    margin-top: 10px;
+    font-size: 1.5rem;
+    line-height: 3rem;
 }
 
 h4{
@@ -115,61 +137,243 @@ p {
 }
 
 figure img {
-    width: 427px;
-    height: 268px;
+    width: 32rem;
 
 }
 
 figure figcaption{
     background-color: #98783C;
-    width: 427px;
-    height: 53px;
+    width: 32rem;
+    height: 3rem;
     text-align: center;
-    font-size: 25px;
+    font-size: 2rem;
     justify-content: center;
     position: relative;
    
 }
 
 .card-name {
-    padding-top: 20px;
+    padding-top: 2rem;
+    margin-bottom: 3.5rem;
 }
 
 footer{
-    background-color: black;
-    padding: 0.5px;
+    background-color: #292929;
     font-family: Mark Pro;
-    font-size: 12px;
+    font-size: 1rem;
     color: #fff;
+    margin: 0;
+    padding:0;  
 }
 
-footer h6{
+h6{
     text-align: center;
-    line-height: 16px;
+    line-height: 1rem;
+    margin-top: 1rem;
+    padding-top: 2rem;
+    
 }
 
 footer figure{
     display: flex;
     align-items: center;
     justify-content: center;
-    clear: both;      
+    background-color: black;
+    margin: 0;
+    padding: 3rem; 
 }
 
 footer figure img{
     float: left;
-    width: 67px;
-    height: 100px;
+    width: 4.19rem;
+    height: 6rem;
 }
 
 footer figure p{
     float: left;
-    margin-left: 10px;
+    margin-left: 1rem;
     text-align: left;
-    line-height: 16px;
 }
 
 .dropdown{
-    color: #98783C;
     text-align: center;
-    margin-top: 30px;
-    margin-bottom: 20px;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+select {
+    width: 20rem;
+    height: 4rem;
+    background: transparent;
+    background: url('img/icon-arrow.svg') no-repeat right;
+    -webkit-appearance: none;
+    background-position-x: 92%;
+    background-position-y: .8rem;
+    background-size: 2rem;
+    border: 2px solid #98783C;
+    box-sizing: border-box;
+    margin: 1rem;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: .8rem;
+    letter-spacing: 0.2rem;
+    text-align: center;
+  
+}
+
+section h3 {
+    text-align: center;
+    color: #fff;
+}
+
+.toggle-button {
+    position:absolute;
+    flex-direction: column;
+    right: 1rem;
+    display: none;
+    background-color: transparent;
+    background-image: url(img/icon-menu.svg);
+    border-width: 2px;
+    width: 4rem;
+    height: 4rem;
+    
+}
+
+@media screen and (max-width: 1000px) {
+
+    body {
+        margin:0%;
+        padding:0%;
+        margin-top: 27rem;
+    }
+
+    #logo img {
+        float: left;
+        width: 11rem;
+        top: 5rem;
+        
+    }
+    
+    #riot img {
+        width: 80px;
+        top: 5rem;
+        float: left;
+    }
+
+    nav {
+        padding-top: 9rem;
+    }
+
+    h1 {
+        margin-top: 2rem;
+        line-height: 4rem;
+    }
+
+    h3 {
+        line-height: 2rem;
+        margin: 1rem;
+    }
+
+    
+}
+
+@media screen and (max-width: 600px) {
+
+    body {
+        margin:0%;
+        padding:0%;
+        margin-top: 22rem;
+    }
+
+    header {
+        width:100%;
+        height: 20rem;
+        top:0;
+    }
+
+    #riot img {
+        top: 3rem;
+        right: 7rem;
+    }
+
+    #logo img {
+        width: 11rem;
+        left: 2rem;
+        top: 2rem;   
+    }
+
+    header h1 {
+        margin: 0%;
+        padding-top: 9rem;
+        font-size: 3rem;
+        
+    }
+
+    header h3 {
+        margin: 0%;
+        padding: 0%;
+    }
+
+    
+    .toggle-button{
+        display: flex;
+    }
+
+    nav {
+        background-color: #111;    
+        display: none;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navbar ul {
+        margin: 0%;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navbar li {
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    .htype.active {
+        display:none;
+    }
+
+
+   button {
+        border: none;
+        display: none;
+    }
+
+
+
+    figure img {
+        width: 100%;
+    
+    }
+    
+    figure figcaption{
+        width:100%
+       
+    }
+
+    footer figure {
+        width:100%;
+        padding:0;
+    }
+
+    figure p {
+        font-size: .4rem;
+    }
+
+}
+
