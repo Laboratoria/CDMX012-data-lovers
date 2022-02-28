@@ -1,0 +1,785 @@
+body{
+ background-color: rgb(175, 175, 175);
+ background-image: url(imagenes/scenery0.jpeg);
+ background-size: cover;
+ background-repeat: no-repeat;
+ background-attachment: fixed;
+ margin: 0px;
+
+}
+
+.menuBar{
+  background-color: #00004A; 
+  display: flex;
+  margin: 0px 0px 0px 0px;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  justify-content: center;
+ }
+ 
+ .boxFiltrado li a {
+  background-color: red;
+  color: white;
+  list-style: none;
+  padding: 10px 15px;
+  display: flex;
+  margin:10px;
+  font-family:'Rowdies'; 
+  font-size: 15px;
+}
+ul {
+  list-style: none;
+}
+.boxFiltrado li a:hover{
+  background-color: tan;
+}
+.boxFiltrado > li{
+float:left;
+}
+.boxFiltrado li ul{
+  display: none;
+  position: absolute;
+  min-width: 140px;
+}
+.boxFiltrado li:hover > ul{
+  display: block;
+}
+#pokeBall{
+  size: 200px;
+  width: 80px;
+  text-align: center;
+  margin: auto;
+}
+
+.searchIcon{
+  color:white;
+  font-size: 27px;
+  margin-top: 28px;
+  margin-left: auto;
+  margin-right: 270px;
+}
+.searchBar{
+  position: absolute;
+  margin: auto;
+  right: 0px;
+  margin-top: 25px;
+  margin-right: 50px;
+  font-family: "Rowdies";
+  font-size: 15px;
+  letter-spacing: 1px;
+  padding: 5px 10px;
+}
+#list{
+  margin-top: 5px;
+  font-family:'Rowdies'; 
+  font-size: 15px;
+  display:block;
+  right:100px ;
+  position: absolute;
+  padding: 0px 10px;
+ 
+}
+#list{
+  float:right;
+}
+#list :hover{
+  background-color:red ;
+
+}
+
+#mainButtons{
+  text-align: center;
+  margin-left: 20px;
+}
+.organized{
+ background-color: #ffffffC7;
+}
+#typesShown{
+  display: none;
+  text-align: center; 
+  margin: 0px 70px 0px 70px;
+  background-color: rgba(255, 255, 255, 0.596);
+  border-radius: 10px;
+ position: relative;
+ top: 140px;
+}
+
+#allPokemons{
+  display: none;
+  text-align: left;
+  margin: 0px 70px 0px 70px;
+  border-radius: 10px;
+  position: relative;
+  margin-top: 160px;
+}
+
+h1{
+  background-color: white;
+  text-align: center;
+  font-size: 25px;
+  font-family: 'Rowdies';
+  border-radius: 15px;
+  margin: 20px 145px 20px 100px;
+  padding: 20px 0px 20px 0px;
+}
+
+.pokemonShown{
+  margin-left: 80px;
+}
+.flexBox {
+  text-align: center;
+  display:inline-block;
+  border-radius: 15px;
+  margin:20px 20px 20px 20px;
+  padding:0px 30px 0px 30px;
+  font-family:'Rowdies'; 
+  font-size: 20px;
+  }
+ 
+.typeB{
+  width: 100px;
+  height: 35px;
+  margin-top: 160px;
+  margin:20px;
+  border-radius: 7px;
+  border-top: none;
+  border-left: none;
+  display:inline-block;
+  margin-left: 30px; 
+  font-family:'Rowdies'; 
+  font-size: 15px;
+}
+.buttonFire{
+  background-color: #FF8523;
+}
+.buttonWater{
+  background-color: #1D91CA;
+}
+.buttonIce{
+  background-color: #00C6ED;
+}
+.buttonGhost{
+  background-color: #8259A7;
+}
+.buttonDragon{
+  background:linear-gradient( to top, #F8453B,#F8453B,#2CA4D5, #2CA4D5);
+}
+.buttonBug{
+  background-color: #60A62F;
+}
+.buttonElectric{
+  background-color: #F1DA00;
+}
+.buttonGrass{
+  background-color: #88D438;
+}
+.buttonNormal{
+  background-color: #A2ACB0;
+}
+.buttonRock{
+  background-color: #A78F00;
+}
+.buttonDark{
+  background-color: #707070;
+}
+.buttonFairy{
+  background-color: #FFAFEA;
+}
+.buttonFlying{
+  background:linear-gradient( to top, #C4C4C4,#C4C4C4,#00BFFF, #00BFFF);
+}
+.buttonGround{
+  background:linear-gradient( to top, #AE9B2B,#AE9B2B,#FAE300, #FAE300);
+}
+.buttonPoison{
+  background-color: #C672CD;
+}
+.buttonPsychic{
+  background-color: #FF44B9;
+}
+.buttonSteel{
+  background-color: #97B8B9;
+}
+.buttonFighting{
+  background-color: #E35201;
+}
+
+.fire{
+  background-color:#FFE4CF ;
+}
+.water{
+  background-color: #CDE7F3;
+}
+.ice{
+  background-color: #C7F2FB;
+}
+.ghost{
+  background-color: #E3DAEC;
+}
+.dragon{
+  background-color:#ffffffc7;
+}
+.bug{
+  background-color: #DCEBD1;
+}
+.electric{
+  background-color: #FCF7C7;
+}
+.grass{
+  background-color: #E5F6D3;
+}
+.normal{
+  background-color: #EBEDEE;
+}
+.rock{
+  background-color: #ECE6C7;
+}
+.dark{
+  background-color: #E0E0E0;
+}
+.fairy{
+background-color: #FFEDFA;
+}
+.flying{
+  background-color: #ffffffc7;
+}
+.ground{
+  background-color: #ffffffc7;
+}
+.poison{
+  background-color: #F2E0F4;
+}
+.psychic{
+  background-color: #FFD6F0;
+}
+.steel{
+  background-color: #E8EFF0;
+}
+.fighting{
+  background-color: #F9D9C7;
+}
+.containerfire{
+  background-color:#FF8523 ;
+}
+.containerwater{
+  background-color: #1D91CA;
+}
+ .containerice{
+   background-color: #00C6ED;
+ }
+.containerghost{
+  background-color: #8259A7;
+}
+.containerdragon{
+  background: linear-gradient( to top, #F8453B,#F8453B,#2CA4D5,#2CA4D5);
+}
+.containerbug{
+  background-color: #60A62F;
+}
+.containerelectric{
+  background-color: #F1DA00;
+}
+.containergrass{
+  background-color: #88D438;
+}
+.containernormal{
+  background-color: #A2ACB0;
+}
+.containerrock{
+  background-color: #A78F00;
+}
+.containerdark{
+  background-color: #707070;
+}
+.containerfairy{
+  background-color: #FFAFEA;
+}
+.containerflying{
+  background: linear-gradient(to top, #C4C4C4,#C4C4C4,#00BFFF, #00BFFF);
+}
+.containerground{
+  background:linear-gradient(to top, #AE9B2B,#AE9B2B,#FAE300, #FAE300);
+}
+.containerpoison{
+  background-color: #C672CD;
+}
+.containerpsychic{
+  background-color: #FF44B9;
+}
+.containersteel{
+  background-color: #97B8B9;
+}
+.containerfighting{
+  background-color: #E35201;
+}
+
+#modalBox{
+  display: flex; 
+  visibility: hidden;
+  position: fixed; 
+  z-index: 11; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0, 0, 0, 0.63); 
+  justify-content: center;
+  align-items: center;
+}
+
+.modalContent{
+  /*width: 40%; */
+  height: 80%; 
+  max-width: 450px;
+  margin-top: 0px;
+  background-color: #d10101;
+  padding: 20px;
+  border: 5px solid #9e0101;
+  text-align: center;
+  font-size: 20px;
+  overflow-y: auto;
+  position: relative;
+}
+#modalContentLeftParent{
+  overflow: hidden;
+  margin: 0px;
+  padding: 0px;
+  bottom: 5px;
+  padding-bottom: 40px;
+  top: 0px;
+}
+#modalContentLeft{
+  overflow: hidden;
+  bottom: 0px;
+  padding-bottom: 130px;
+}
+
+#modalContentRight{
+  position:relative;
+}
+
+.closeModalBox{
+  position: absolute;
+  color: #7e0101;
+  font-size: 30px;
+  font-weight: bold;
+  z-index: 12;
+  left: 12px;
+  top: 0px;
+}
+
+.closeModalBox:hover{
+  color: #000;
+}
+
+.circle{
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  z-index: 10;
+  position: relative;
+  border: 2px solid rgb(0, 0, 0);
+}
+
+#bigCircle{
+  background-color: rgb(76, 171, 235);
+  width: 60px;
+  height: 60px;
+  top: 5px;
+  left: 10px;
+  outline: 10px solid white;
+  box-shadow: 0 0 0 12px black;
+  margin-bottom: 0px;
+}
+#redCircle{
+  background-color: red;
+  bottom: 70px;
+  left: 100px;
+}
+#yellowCircle{
+  background-color: yellow;
+  left: 150px;
+  bottom: 104px;
+}
+#greenCircle{
+  background-color: green;
+  left: 200px;
+  bottom: 138px;
+}
+
+.imgModalBox{
+  position: relative;
+  background-color: #dadada;
+  border-radius: 10px;
+  border: 2px solid rgb(0, 0, 0);
+  outline: 25px solid rgb(150, 150, 150);
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 20px 70px 20px 70px;
+  box-shadow: 0 0 0 27px black;
+  bottom: 110px;
+}
+
+.numModalBox{
+  font-family: 'Rowdies', cursive;
+  position: relative;
+  left: 90px;
+  bottom: 285px;
+  font-size: 18px;
+}
+
+.nameModalBox{
+  position: relative;
+  font-family: 'Rowdies', cursive;
+  background-color: #49B08B ;
+  padding: 10px 55px 40px 55px;
+  border-radius: 10px;
+  border: 2px solid black;
+  margin: 0px 120px 0px 40px;
+  bottom: 130px;
+  z-index:1;
+}
+
+.typeModalBox{
+  position: relative;
+  font-family: 'Rowdies', cursive;
+  font-size: 15px;
+  letter-spacing: 1px;
+  color: white;
+  background-color: black;
+  border-radius: 10px;
+  margin: 0px 140px 0px 140px;
+  padding: 0px 10px 0px 10px;
+  z-index:2;
+  bottom: 165px;
+  right: 40px;
+}
+
+.generationModalBox{
+  position: relative;
+  font-family: 'Rowdies', cursive;
+  letter-spacing: 1px;
+  border-radius: 10px;
+  background-color: #03402A;
+  color: #FFD700;
+  border: 2px solid black;
+  font-size: 15px;
+  margin: 0px 120px 45px 40px;
+  padding: 7px 5px 7px 5px;
+  left: 80px;
+  bottom: 110px;
+}
+
+#pokedexBotton{
+  position: absolute ;
+  width: 20%;
+  left: 300px;
+  z-index: 3;
+  bottom: 60px;
+}
+
+.triangle{
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 15px solid rgb(9, 27, 51);
+  z-index: 100;
+}
+#triangleUp{
+  left: 332px;
+  bottom: 129px;
+}
+#triangleDown{
+  left: 332px;
+  bottom: 70px;
+  transform: rotate(180deg);
+}
+#triangleRight{
+  left: 362px;
+  bottom: 99px;
+  transform: rotate(90deg);
+}
+#triangleLeft{
+  left: 304px;
+  bottom: 99px;
+  transform: rotate(270deg);
+}
+.triangle:hover{
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 15px solid #FFD700;
+}
+
+.aboutModalBox{
+  position: relative;
+  font-family: 'Rowdies', cursive;
+  border-radius: 10px;
+  background-color: #dadada;
+  border: 2px solid black;
+  font-size: 15px;
+  margin-right: 20px;
+  padding: 7px 5px 7px 5px;
+}
+
+.sizeModalBox{
+  position: relative;
+  font-family: 'Rowdies', cursive;
+  border-radius: 10px;
+  color: #FFD700;
+  letter-spacing: 1px;
+  font-size: 14px;
+  background-color: #03402A;
+  border: 2px solid black;
+  margin-right: 20px;
+  margin-left: 10px;
+  padding: 7px 10px 7px 10px;
+  display: inline;
+  top: 5px;
+}
+
+.pokemonRarityModalBox{
+  position: relative;
+  font-family: 'Rowdies', cursive;
+  border-radius: 10px;
+  background-color: #98CB98;
+  border: 2px solid black;
+  font-size: 15px;
+  margin-right: 20px;
+  padding: 7px 5px 7px 5px;
+  top: 4px;
+}
+
+.encounterModalBox{
+  position: relative;
+  font-family: 'Rowdies', cursive;
+  border-radius: 10px;
+  background-color: #509BFC;
+  border: 2px solid black;
+  font-size: 15px;
+  margin-right: 20px;
+  padding: 7px 5px 7px 5px;
+}
+
+.spawnChanceModalBox{
+  position: relative;
+  font-family: 'Rowdies', cursive;
+  border-radius: 10px;
+  background-color: #03402A;
+  color: #FFD700;
+  letter-spacing: 1px;
+  border: 2px solid black;
+  font-size: 15px;
+  margin-right: 20px;
+  padding: 7px 5px 7px 5px;
+}
+
+.statsModalBox{
+  position: relative;
+  font-family: 'Rowdies', cursive;
+  border-radius: 10px;
+  background-color: #49B08B;
+  border: 2px solid black;
+  color: #012216;
+  font-size: 15px;
+  margin-right: 20px;
+  padding: 7px 5px 7px 5px;
+}
+
+th, td {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid #03402A;
+}
+
+th{
+  color: black;
+}
+
+.resAndWeakModalBox{
+  position: relative;
+  font-family: 'Rowdies', cursive;
+  border-radius: 10px;
+  background-color: #dadada;
+  border: 2px solid black;
+  color: black;
+  font-size: 15px;
+  margin-right: 20px;
+  margin-top: 15px;
+  padding: 7px 7px 7px 7px;
+  width: 95%;
+}
+
+.quickMoveModalBox{
+  position: relative;
+  font-family: 'Rowdies', cursive;
+  border-radius: 10px;
+  background-color: #509BFC;
+  border: 2px solid black;
+  font-size: 15px;
+  margin-right: 20px;
+  padding: 7px 5px 7px 5px;
+}
+
+.specialAttackModalBox{
+  position: relative;
+  font-family: 'Rowdies', cursive;
+  border-radius: 10px;
+  background-color: #98CB98;
+  border: 2px solid black;
+  font-size: 15px;
+  margin-right: 20px;
+  padding: 7px 5px 7px 5px;
+}
+
+.eggAndBuddyDistanceModalBox{
+  position: relative;
+  font-family: 'Rowdies', cursive;
+  border-radius: 10px;
+  color: #000000;
+  font-size: 15px;
+  background-color: #49B08B;
+  border: 2px solid black;
+  margin-right: 20px;
+  margin-left: 10px;
+  padding: 7px 10px 7px 10px;
+  display: inline;
+}
+
+.evolutionCandyModalBox{
+  position: relative;
+  font-family: 'Rowdies', cursive;
+  border-radius: 10px;
+  background-color: #03402A;
+  color: #FFD700;
+  letter-spacing: 1px;
+  border: 2px solid black;
+  font-size: 15px;
+  margin-right: 20px;
+  padding: 7px 5px 7px 5px;
+}
+
+#computePokeSearch{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  z-index: 1;
+  top: 130px;
+  visibility: hidden;
+  position: absolute;
+  width: 100%;
+}
+
+.pokeSearch{
+  position: relative;
+  font-family: "Rowdies";
+  font-size: 15px;
+  letter-spacing: 1px;
+  padding: 5px 0px;
+  text-align: center;
+}
+
+#pokeSearchText{
+  font-family: "Rowdies";
+  font-size: 20px;
+  letter-spacing: 1px;
+  text-align: center;
+  position: relative;
+  margin-bottom: 60px;
+}
+
+.pokeSearchBtn{
+  font-family: "Rowdies";
+  font-size: 17px;
+  letter-spacing: 1px;
+  text-align: center;
+  position: relative;
+  background-color: red;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  top: 10px;
+  right: 25%;
+  margin-bottom: 20px;
+}
+.pokeSearchBtn :hover{
+  background-color: tan; /*no sirve pero no sé por qué*/
+}
+
+
+#pokeSearch1{
+  padding: 5px 20px;
+  position: relative;
+  right: 25%;
+}
+
+#list1{
+  font-family:'Rowdies'; 
+  font-size: 15px;
+  display:block;
+  position: absolute;
+  left: 18%;
+  padding: 0px 10px;
+  top: 140px;
+ 
+}
+
+#list1 :hover{
+  background-color:red ;
+}
+
+.noResults{
+  font-family: "Rowdies";
+  font-size: 15px;
+  letter-spacing: 1px;
+  text-align: center;
+  position: relative;
+}
+
+#pokeResult{
+  position: absolute;
+  left: 42%;
+  top:80px;
+}
+#pokeResultEvolution{
+  position: absolute;
+  left: 57%;
+  top:80px;
+}
+
+.notFound{
+  color: #ffff ;
+  position:relative;
+  top: 70px;
+  background-color: #011464;
+  left: 30%;
+  padding: 10px 30px;
+  font-size: 18px;
+}
+.noEvolution{
+  color: #ffff ;
+  position:relative;
+  top: 70px;
+  background-color: #011464;
+  left: 20%;
+  padding: 10px 30px;
+  font-size: 16px;
+}
+
+.results{
+  color: black ;
+  position:relative;
+  background-color: white;
+  padding: 10px 30px;
+  font-size: 15px;
+  right: 32%;
+}
+
+button.pokeSearchBtn:hover{
+  background-color: tan;
+}

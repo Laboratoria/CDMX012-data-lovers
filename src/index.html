@@ -1,12 +1,113 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>Pokémon Go!</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Rowdies" rel="stylesheet">
+</head>
+
+<body>
+  <main>
+    <header class="menuBar">
+      <section>
+        <ul class="boxFiltrado">
+          <li><a class="filtrado" id="value1">Filter</a>
+            <ul>
+              <li><a class="mainButtons" id="pokeType" value="value2">Types</a> </li>
+              <li><a class="mainButtons" id="pokeResistant" value="valu3">Resistant</a></li>
+              <li><a class="mainButtons" id="pokeWeaknesses" value="value4">Weaknesses</a></li>
+            </ul>
+          </li>
+          <li><a id="value5">Sort</a>
+            <ul>
+              <li><a class="mainButtons" id="pokeNumber" value="value6">Number 0-251</a></li>
+              <li><a class="mainButtons" id="pokeName" value="value7">Alphabetical A-Z</a> </li>
+              <li><a class="mainButtons" id="nameReverse" value="value8">Alphabetical Z-A</a> </li>
+            </ul>
+          </li>
+          <li><a id="value9">Compute</a>
+            <ul>
+              <li><a class="mainButtons" id="pokeCompute" value="value10">Candies for evolution</a></li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <img id="pokeBall" src="imagenes/pokemon.png">
+      <section id="searchGroup">
+        <input id="searchBar" class="searchBar" type="text" placeholder=" Search by name...">
+        <i id="searchIcon" class="fas fa-search searchIcon"></i>
+        <nav><select class="list" name="list" id="list" style="display:none"></select></nav>
+      </section>
+    </header>
+
+
+
+    <article id="typesShown">
+      <button class="buttonFire typeB" value="fire" id="fireType">Fire</button>
+      <button class="buttonWater typeB" value="water" id="waterType">Water</button>
+      <button class="buttonIce typeB" value="ice" id="iceType">Ice</button>
+      <button class="buttonGhost typeB" value="ghost" id="ghostType">Ghost</button>
+      <button class="buttonDragon typeB" value="dragon" id="dragonType">Dragon</button>
+      <button class="buttonBug typeB" value="bug" id="bugType">Bug</button>
+      <button class="buttonElectric typeB" value="electric" id="electricType">Electric</button>
+      <button class="buttonGrass typeB" value="grass" id="grassType">Grass</button>
+      <button class="buttonNormal typeB" value="normal" id="normalType">Normal</button>
+      <button class="buttonRock typeB" value="rock" id="rockType">Rock</button>
+      <button class="buttonDark typeB" value="dark" id="darkType">Dark</button>
+      <button class="buttonFairy typeB" value="fairy" id="fairyType">Fairy</button>
+      <button class="buttonFlying typeB" value="flying" id="flyingType">Flying</button>
+      <button class="buttonGround typeB" value="ground" id="groundType">Ground</button>
+      <button class="buttonPoison typeB" value="poison" id="poisonType">Poison</button>
+      <button class="buttonPsychic typeB" value="psychic" id="psychicType">Psychic</button>
+      <button class="buttonSteel typeB" value="steel" id="steelType">Steel</button>
+      <button class="buttonFighting typeB" value="fighting" id="fightingType">Fighting</button>
+    </article>
+
+    <br>
+    <article class="allPokemons" id="allPokemons">
+      <br>
+      <h1 id="h1"> </h1>
+      <section class="pokemonShown">
+        <div class="infoBox" id="infoBox"> </div>
+      </section>
+    </article>
+
+    <article id="modalBox" class="modalBox">
+      <section id="modalContentLeftParent" class="modalContent">
+        <span id="closeModalBox" class="closeModalBox">&times;</span>
+        <section class="btnsPokedex">
+          <div id="triangleUp" class="triangle"></div>
+          <div id="triangleRight" class="triangle"></div>
+          <div id="triangleDown" class="triangle"></div>
+          <div id="triangleLeft" class="triangle"></div>
+          <img id="pokedexBotton" src="imagenes/Untitled.png">
+        </section>
+        <div id="modalContentLeft" class="modalContent"></div>
+      </section>
+      <div id="modalContentRight" class="modalContent"></div>
+    </article>
+
+    <article id="computePokeSearch">
+      <p id="pokeSearchText">Select Pokémon to show candies needed for next evolution</p>
+      <section id="pokeInputs">
+        <input type="text" name="pokemon" id="pokeSearch1" class="pokeSearch" placeholder="Search Pokémon..."
+          autocomplete="off">
+        <nav><select class="list1" name="list1" id="list1" style="display:none"></select></nav>
+        <section id="computeResults">
+          <div id="pokeResult"></div>
+          <div id="pokeResultEvolution"></div>
+        </section>
+      </section>
+      <br><br><br><br><br><br><br><br>
+      <button id="computeBtn" class="pokeSearchBtn">Compute</button> <br> <br>
+      <button id="refreshBtn" class="pokeSearchBtn">Refresh search</button>
+    </article>
+  </main>
+  <div id="root"></div>
+  <script src="main.js" type="module"></script>
+  <script src="https://kit.fontawesome.com/6f67727d58.js" crossorigin="anonymous"></script>
+</body>
+
 </html>
