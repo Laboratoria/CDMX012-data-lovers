@@ -1,11 +1,20 @@
+//Traer los datos y funciones
 import {filterRole} from './data.js';
 import legends from './lol/lol.js';
 
+//sacar los objetos del arreglo
 const all = Object.values(legends.data)
 
-const cardsLegends = () =>{
+//crear las constantes para manejar el dom
+const showCards = document.getElementById('cardsChampions');
+const selectionRoles = document.getElementById('roles');
+const selectionOrder = document.getElementById('order');
+const selectionDifficult = document.getElementById('difficult');
+
+//Funcion para crear las tarjetas
+const cardsLegends = (champions) =>{
   const championsCards = document.createElement('div');
-    for (let champion of all) {
+    for (let champion of champions) {
     const newCard = document.createElement('article');
     const newcardBody = document.createElement('figure');
     const newcardImage = document.createElement('img');
@@ -20,39 +29,13 @@ const cardsLegends = () =>{
  } 
  return championsCards
 }
+showCards.appendChild(cardsLegends(all))
 
-document.getElementById('cardsChampions').appendChild(cardsLegends())
-//una variable para llamar el innerHTML vacío
-const container = document.getElementById('cardsChampions')
-
-//selecciona el filtro al hacer click en la opción del dropdown
-const rolChampion = document.querySelector('.role');
-  rolChampion.addEventListener('change', (e)=>{
-    //se crea una variable de todos los filtros para poder guardar los resultados y jalarlos después
-    let filteredRoles = filterRole(all, e.target.value)
-    //un innerHTML vacío para construir las tarjetas iterando en los filtros
-    container.innerHTML = '';
-    let cardsRoles = () => {
-      let championsCards = document.createElement('div')
-      for (let role of filteredRoles){
-      let newCard = document.createElement('article');
-      let newcardBody = document.createElement('figure');
-      let newcardImage = document.createElement('img');
-      newcardImage.src = role.splash
-      let newcardName = document.createElement('figcaption');
-      newcardName.textContent = role.name
-      newcardName.className = "card-name";
-      championsCards.appendChild(newCard);
-      newCard.appendChild(newcardBody);
-      newcardBody.appendChild(newcardImage);
-      newcardBody.appendChild(newcardName);  
-    }
-    return championsCards
- } 
- //en este elemento se renderizan los campeones
- document.getElementById('cardsChampions').appendChild(cardsRoles())
-});
-
+//evento para el selector de rol
+selectionRoles.addEventListener('change', (e)=>{
+    showCards.innerHTML = '';
+    showCards.appendChild(cardsLegends(filterRole(all, e.target.value)))
+  })
 
 //Botón Toggle Responsive
 const toggleButton = document.getElementsByClassName('toggle-button')[0]
