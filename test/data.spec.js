@@ -5,7 +5,8 @@ import {
   orderByZa,
   filterByTypes,
   filterByLegendary,
-  searchPokemon
+  searchPokemon,
+  getTotalAndAverange,
 } from "../src/data.js";
 import * as pokemonRepo from "../src/data/pokemon/pokemon.repo.js";
 
@@ -156,7 +157,7 @@ describe("searchPokemon", () => {
     expect(typeof searchPokemon).toBe("function");
   });
 
-  it("should be a searched Pokémon ",() => {
+  it("should be a searched Pokémon ", () => {
     let searchExample = [
       {
         num: "001",
@@ -182,9 +183,90 @@ describe("searchPokemon", () => {
       .mockReturnValueOnce(searchExample);
 
     expect(searchPokemon("venusaur")).toEqual(searchedPokemonOutput);
-  })
-  it('should throw TypeError when invoked with wrong argument types', () => {
-    expect(() => searchPokemon(false)).toThrow(TypeError)    
+  });
+  it("should throw TypeError when invoked with wrong argument types", () => {
+    expect(() => searchPokemon(false)).toThrow(TypeError);
+  });
+});
+
+describe("getTotalAndAverange", () => {
+  let searchExample = [
+    {
+      num: "001",
+      name: "bulbasaur",
+      pokemon_rarity: "normal",
+      type: ["poison"],
+      stats: {
+        "base-attack": "118",
+        "base-defense": "111",
+        "base-stamina": "128",
+        "max-cp": "1115",
+        "max-hp": "113",
+      },
+    },
+    {
+      num: "002",
+      name: "ivysaur",
+      pokemon_rarity: "normal",
+      type: ["poison"],
+      stats: {
+        "base-attack": "151",
+        "base-defense": "143",
+        "base-stamina": "155",
+        "max-cp": "1699",
+        "max-hp": "134",
+      },
+    },
+    {
+      num: "003",
+      name: "venusaur",
+      pokemon_rarity: "normal",
+      type: ["poison"],
+      stats: {
+        "base-attack": "198",
+        "base-defense": "189",
+        "base-stamina": "190",
+        "max-cp": "2720",
+        "max-hp": "162",
+      },
+    },
+  ];
+  it("should be a function", () => {
+    expect(typeof getTotalAndAverange).toBe("function");
   });
 
+  it("should return the base-attack object", () => {
+    expect(getTotalAndAverange(searchExample, "base-attack")).toEqual({
+      suma: 467,
+      porcentagePoint: 155.67,
+    });
+  });
+
+  it("should return the base-defense object", () => {
+    expect(getTotalAndAverange(searchExample, "base-defense")).toEqual({
+      suma: 443,
+      porcentagePoint: 147.67,
+    });
+  });
+
+  it("should return the base-stamina object", () => {
+    expect(getTotalAndAverange(searchExample, "base-stamina")).toEqual({
+      suma: 473,
+      porcentagePoint: 157.67,
+    });
+  });
+
+  it("should return the max-cp object", () => {
+    expect(getTotalAndAverange(searchExample, "max-cp")).toEqual({
+      suma: 5534,
+      porcentagePoint: 1844.67,
+    });
+  });
+
+  it("should return the max-hp object", () => {
+    expect(getTotalAndAverange(searchExample, "max-hp")).toEqual({
+      suma: 409,
+      porcentagePoint: 136.33,
+    });
+  });
 });

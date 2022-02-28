@@ -6,11 +6,7 @@ import {
   filterByTypes,
   filterByLegendary,
   searchPokemon,
-  attackpoint,
-  defensePoint,
-  staminaPoints,
-  cpPoints,
-  hpPoints,
+  getTotalAndAverange,
 } from "./data.js";
 import showPokemons from "./Article.js";
 
@@ -46,18 +42,23 @@ const selectByType = () => {
   let typesToMath = filterByTypes(type);
   let totalPokemonsByType = typesToMath.length;
   //************ESTA FUNCION NOS DA LOS VALORES DE BASE-ATTACK */
-  let AttackOfPokemons = attackpoint(typesToMath).porcentagePoint; //saca el base attack de los pokemones de ese tipo
-  let allAttack = attackpoint(typesToMath).suma;
-  //********base-defense */
-  let defenseOfPokemons = defensePoint(typesToMath).porcentagePoint;
-  let allDefense = defensePoint(typesToMath).suma;
-  //********base-stamina */
-  let staminaOfPokemons = staminaPoints(typesToMath).porcentagePoint;
-  let allStamina = staminaPoints(typesToMath).suma;
-  //********max-cp */
-  let maxCpOfPokemons = cpPoints(typesToMath)
-  //*********max-hp */
-  let maxHpPokemons = hpPoints(typesToMath);
+  let { suma: attackSum, porcentagePoint: attackPorcentagePoint } =
+    getTotalAndAverange(typesToMath, "base-attack");
+
+  let { suma: defenseSum, porcentagePoint: defensePorcentagePoint } =
+    getTotalAndAverange(typesToMath, "base-defense"); //suma es el nombre del objeto en return y su propiedad es una variable
+
+  let { suma: staminaSum, porcentagePoint: staminaPorcentagePoint } =
+    getTotalAndAverange(typesToMath, "base-stamina");
+
+  let { suma: cpSum, porcentagePoint: cpPorcentagePoint } = getTotalAndAverange(
+    typesToMath,
+    "max-cp"
+  );
+  let { suma: hpSum, porcentagePoint: hpPorcentagePoint } = getTotalAndAverange(
+    typesToMath,
+    "max-hp"
+  );
 
   document.getElementById(
     "totalPokemons"
@@ -65,25 +66,25 @@ const selectByType = () => {
   document.getElementById(
     "attackPoints"
   ).innerHTML = `The total <strong>Attack points</strong> of this group is: 
-  <strong>${allAttack}</strong>
+  <strong>${attackSum}</strong>
   points, with a porcentage of: 
-  <strong>${AttackOfPokemons}</strong>  points
+  <strong>${attackPorcentagePoint}</strong>  points
     <br> The total <strong>Defense points</strong> of this group is: 
-    <strong>${allDefense}</strong> 
+    <strong>${defenseSum}</strong> 
      points,  with a porcentage of: 
-     <strong>${defenseOfPokemons}</strong>  points
+     <strong>${defensePorcentagePoint}</strong>  points
     <br> The total <strong>Stamina points</strong> of this group is: 
-    <strong>${allStamina}</strong> 
+    <strong>${staminaSum}</strong> 
      points,  with a porcentage of: 
-     <strong>${staminaOfPokemons}</strong>  points 
+     <strong>${staminaPorcentagePoint}</strong>  points 
     <br> The total <strong>Combat points</strong> of this group is: 
-    <strong>${maxCpOfPokemons[1]}</strong> 
+    <strong>${cpSum}</strong> 
      points,  with a porcentage of:
-    <strong>${maxCpOfPokemons[0]}</strong>  points 
+    <strong>${cpPorcentagePoint}</strong>  points 
     <br> The total <strong>Health points</strong> of this group is: 
-    <strong>${maxHpPokemons[1]}</strong> 
+    <strong>${hpSum}</strong> 
      points,  with a porcentage of: 
-     <strong>${maxHpPokemons[0]}</strong> points`;
+     <strong>${hpPorcentagePoint}</strong> points`;
 };
 
 document.getElementById("type").addEventListener("change", selectByType);
