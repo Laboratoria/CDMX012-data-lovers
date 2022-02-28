@@ -19,27 +19,38 @@ export function order251_1() {
 export function orderByAz() {
   const allPokemons = findAllPokemons();
   const finalOrderAZ = allPokemons.sort((a, b) => {
-    if (a.name == b.name) {
+    a = a.name;
+    b = b.name;
+    return a.localeCompare(b);
+  });
+  /*{if (a.name == b.name) {
       return 0;
     }
     if (a.name < b.name) {
       return -1;
     }
-  });
+  }*/
+
+  console.log(finalOrderAZ);
   return finalOrderAZ;
 }
 
 export function orderByZa() {
   const allPokemons = findAllPokemons();
   const finalOrderZA = allPokemons.sort((a, b) => {
-    if (a.name == b.name) {
-      return 0;
-    }
-    if (a.name > b.name) {
+    a = a.name;
+    b = b.name;
+    return a.localeCompare(b);
+  });
+  /*(a, b) => {
+    if (a.name < b.name) {
+      return 1;
+    } else if (a.name > b.name) {
       return -1;
     }
-  });
-  return finalOrderZA;
+  });*/
+  console.log(finalOrderZA);
+  return finalOrderZA.reverse();
 }
 
 export function filterByTypes(type) {
@@ -69,7 +80,7 @@ export function getTotalAndAverange(pokemons, property) {
     parseInt(pokemon.stats[property])
   );
   let totalNumOfPokemons = allBaseAttack.length;
-  let sum= allBaseAttack.reduce((a, b) => a + b, 0);
+  let sum = allBaseAttack.reduce((a, b) => a + b, 0);
   let porcentagePoint = parseFloat((sum / totalNumOfPokemons).toFixed(2)); //toFixed disminuye el numero de decimales al valor introducido en los parentesis
   let allResult = {
     sum: sum,

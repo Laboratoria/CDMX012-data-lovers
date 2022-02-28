@@ -84,6 +84,7 @@ describe("orderByAz", () => {
     ];
     jest.spyOn(pokemonRepo, "findAllPokemons").mockReturnValueOnce(exampleAZ);
     const response = orderByAz();
+    console.log(response);
 
     expect(response).toEqual(dataOrdenada);
   });
@@ -237,35 +238,35 @@ describe("getTotalAndAverange", () => {
 
   it("should return the base-attack object", () => {
     expect(getTotalAndAverange(searchExample, "base-attack")).toEqual({
-      suma: 467,
+      sum: 467,
       porcentagePoint: 155.67,
     });
   });
 
   it("should return the base-defense object", () => {
     expect(getTotalAndAverange(searchExample, "base-defense")).toEqual({
-      suma: 443,
+      sum: 443,
       porcentagePoint: 147.67,
     });
   });
 
   it("should return the base-stamina object", () => {
     expect(getTotalAndAverange(searchExample, "base-stamina")).toEqual({
-      suma: 473,
+      sum: 473,
       porcentagePoint: 157.67,
     });
   });
 
   it("should return the max-cp object", () => {
     expect(getTotalAndAverange(searchExample, "max-cp")).toEqual({
-      suma: 5534,
+      sum: 5534,
       porcentagePoint: 1844.67,
     });
   });
 
   it("should return the max-hp object", () => {
     expect(getTotalAndAverange(searchExample, "max-hp")).toEqual({
-      suma: 409,
+      sum: 409,
       porcentagePoint: 136.33,
     });
   });
