@@ -1,12 +1,94 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
+    <meta charset="utf-8" />
+    <title>Data Lovers Pokémon</title>
+    <link rel="shortcut icon" href="resources/favicon.png" />
     <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
-  <body>
-    <div id="root"></div>
+  <header>
+    <img class="Logo" src="./resources/poke-image.png" />
+    <img class="Lente" src="./resources/lente.png" />
+    <nav>
+      <ul>
+        <input
+          type="search"
+          id="searchText"
+          class="searchText"
+          placeholder="Write your Pokémon..."
+        />
+        <button class="button" type="button" id="search">Search</button>
+        <li class="ButtonRed">Us</li>
+        <li class="ButtonYellow">Us</li>
+        <li id="Us">Us</li>
+      </ul>
+    </nav>
+  </header>
+  <body class="welcomePage">
+    <main>
+      <section class="welcomeBox">
+        <h1>Welcome <strong>Pokémon</strong> trainners!</h1>
+        <img
+          class="imgPokeBola"
+          src="./resources/Poké_Ball_icon.svg.png"
+          width="50%"
+          height="50%"
+        />
+      </section>
+      <section class="menu">
+        <select name="orderBy" id="orderBy" onchange="orderPokemons()">
+          <option value="Pokedex" id="Pokedex">Order by...</option>
+          <option value="1-251" id="1-251">From lowest to higher</option>
+          <option value="251-1" id="251-1">From higher to lowest</option>
+          <option value="AZ" id="AZ">From letter A to Z</option>
+          <option value="ZA" id="ZA">From letter Z to A</option>
+        </select>
+
+        <button value="Legendary" id="clasifyLegendary">
+          Pokémon Legendary
+        </button>
+
+        <select name="type" id="type">
+          <option value="types">Types....</option>
+          <option value="bug" id="bug">Bug</option>
+          <option value="dragon" id="dragon">Dragon</option>
+          <option value="fairy" id="fairy">Fairy</option>
+          <option value="fire" id="fire">Fire</option>
+          <option value="ghost" id="ghost">Ghost</option>
+          <option value="ground" id="ground">Ground</option>
+          <option value="psychic" id="psychic">Psychic</option>
+          <option value="steel" id="steel">Steel</option>
+          <option value="dark" id="dark">Dark</option>
+          <option value="electric" id="electric">Electric</option>
+          <option value="fighting" id="fighting">Fighting</option>
+          <option value="flying" id="flying">Flying</option>
+          <option value="grass" id="grass">Grass</option>
+          <option value="ice" id="ice">Ice</option>
+          <option value="poison" id="poison">Poison</option>
+          <option value="water" id="water">Water</option>
+          <option value="rock" id="rock">Rock</option>
+          <option value="normal" id="normal">Normal</option>
+        </select>
+      </section>
+      <section style="display: none" id="statsSpace">
+        <h2 id="totalPokemons">Esto</h2>
+        <br />
+        <p id="attackPoints">Esto</p>
+      </section>
+      <section id="showData"></section>
+    </main>
+    <footer>
+      <p>©Copyright</p>
+      <p>
+        Elaborated by Monzerrat Bañuelos
+        <img id="gitHub1" src="./resources/Githup.png" alt="GitHup" />
+      </p>
+      <p>
+        and Atenas Villalba
+        <img id="gitHub2" src="./resources/Githup.png" alt="GitHub" />
+      </p>
+    </footer>
     <script src="main.js" type="module"></script>
   </body>
 </html>

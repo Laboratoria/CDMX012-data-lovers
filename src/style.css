@@ -1,0 +1,385 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+html {
+  margin: 0%;
+  padding: 0%;
+}
+body {
+  margin: 0%;
+  height: fit-content;
+}
+header {
+  padding: 3.5%;
+  align-items: flex-end;
+  align-content: flex-end;
+  background-color: rgb(29, 53, 87, 0.95);
+}
+nav {
+  padding: 0;
+  margin-bottom: 0%;
+}
+
+.Logo {
+  display: inline-block;
+  width: 15%;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  margin-left: 2%;
+  top: 0;
+  padding: 0;
+  left: 0;
+}
+
+.Lente {
+  display: inline-block;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  top: 1%;
+  width: 9%;
+  left: 20%;
+}
+
+ul {
+  color: white;
+  text-align: right;
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+li {
+  display: inline-block;
+  padding: 1% 2.5%;
+  margin: 0;
+  align-items: flex-end;
+  justify-content: space-between;
+  border-radius: 10%;
+  font-size: 1vw;
+}
+
+button {
+  padding: 1% 2%;
+  margin-right: 5%;
+  font-size: 1.5vw;
+  border-radius: 10%;
+}
+
+input {
+  padding: 1% 2%;
+  font-size: 1.5vw;
+  border-radius: 10%;
+  text-transform: lowercase;
+}
+
+.ButtonRed {
+  background-color: red;
+  color: red;
+  margin-right: 3%;
+  font-size: 1.5vw;
+}
+
+.ButtonYellow {
+  background-color: rgb(238, 203, 5);
+  color: rgb(238, 203, 5);
+  margin-right: 3%;
+
+  font-size: 1.5vw;
+}
+
+#Us {
+  background-color: green;
+  color: black;
+  font-size: 1.5vw;
+}
+
+.welcomePage {
+  /*background-image: url(https://a-static.besthdwallpaper.com/pokemon-go-video-game-papel-pintado-1024x576-41559_44.jpg);*/
+  background-image: url("./resources/background_2.jpg");
+  background-size: 100%;
+  background-attachment: fixed;
+}
+.welcomeBox {
+  display: flex;
+  background-color: rgba(70, 123, 157, 0.7);
+  margin: 5% 20%;
+  padding: 0;
+  align-items: center;
+  border-radius: 40px;
+  flex-direction: column;
+}
+
+h1 {
+  padding: 2%;
+  color: black;
+  font-size: 2.5vw;
+}
+
+.imgPokeBola {
+  display: flex;
+  margin: 1% auto;
+  align-items: center;
+  justify-content: center;
+}
+.imgPokeBola:hover {
+  transform: rotateY(360deg);
+  transition: transform 0.8s;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2%;
+  width: 100%;
+}
+
+#orderBy {
+  margin-right: 4%;
+  margin-left: 8%;
+  padding: 1%;
+  border-radius: 10%;
+  background-color: #f1faee;
+  height: auto;
+  width: 20%;
+  font-size: x-large;
+}
+#clasifyLegendary {
+  padding: 1%;
+  border-radius: 10%;
+  background-color: #f1faee;
+  width: 20%;
+  margin-right: 4%;
+  margin-left: 4%;
+  height: auto;
+  font-size: x-large;
+}
+#type {
+  padding: 1%;
+  border-radius: 10%;
+  background-color: #f1faee;
+  width: 20%;
+  margin-right: 8%;
+  margin-left: 4%;
+  height: auto;
+  font-size: x-large;
+}
+#statsSpace {
+  display: flex;
+  background-color: rgba(70, 123, 157, 0.9);
+  margin: 5% 10%;
+  padding: 2.5% 0%;
+  align-items: center;
+  border-radius: 20px;
+  flex-direction: column;
+  padding: 2%;
+  text-align: center;
+}
+#statsSpace p {
+  font-size: large;
+}
+#showData {
+  display: flex;
+  background-color: rgba(70, 123, 157, 0.7);
+  margin: 5% 10%;
+  padding: 0;
+  align-items: center;
+  border-radius: 40px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.pokeCards {
+  background-color: #f1faee;
+  text-align: center;
+  display: block;
+  margin: 2%;
+  width: 90%;
+  border-radius: 5px;
+  padding-bottom: 10%;
+}
+
+.classTypeNumber {
+  padding-top: 10%;
+  font-weight: 900;
+}
+.pokeCards img {
+  width: 90%;
+}
+
+#showData a {
+  text-decoration: none;
+  width: 16%;
+  margin: 1%;
+  color: #606061;
+  font-weight: 700;
+  font-family: sans-serif;
+  text-transform: capitalize;
+}
+
+.contentAboutPokemon {
+  text-transform: capitalize;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 99999;
+  opacity: 0;
+  transition: opacity 400ms ease-in;
+  pointer-events: none;
+}
+
+.modal:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modalDialog {
+  margin: auto;
+  margin-top: 15%;
+  position: relative;
+  width: 70%;
+  padding: 4em 5em;
+  display: flex;
+  border-radius: 4px;
+  background: #fff;
+  justify-content: center;
+  align-items: center;
+  transition: all 500ms ease-in;
+}
+
+.modalDialog a {
+  margin: 2%;
+  background-color: #457b9d;
+}
+.closeModal {
+  background: #606061;
+  color: #ffffff;
+  line-height: 25px;
+  position: absolute;
+  right: 1px;
+  text-align: center;
+  top: 1px;
+  width: 24px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 3px;
+}
+
+.closeModal:hover {
+  background: #f1b418;
+  color: #457b9d;
+}
+
+footer {
+  background-color: #1d3557;
+  text-align: center;
+  color: #f1faee;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+#gitHub1,
+#gitHub2 {
+  height: 1em;
+}
+p {
+  font-size: 1vw;
+}
+
+@media all and (max-width: 720px) {
+  .Logo {
+    width: 20%;
+  }
+  .Lente,
+  .ButtonRed,
+  .ButtonYellow {
+    display: none;
+  }
+  #Us {
+    font-size: x-small;
+  }
+  input,
+  button {
+    margin: auto;
+    font-size: x-small;
+  }
+  .welcomeBox {
+    display: flex;
+    background-color: rgba(70, 123, 157, 0.7);
+    margin: 7% 10% 5%;
+    padding: 0;
+    align-items: center;
+    border-radius: 10px;
+    flex-direction: column;
+  }
+  h1 {
+    font-size: medium;
+  }
+  .menu {
+    flex-direction: column;
+  }
+  #clasifyLegendary,
+  #type,
+  #orderBy {
+    width: 40%;
+    justify-content: center;
+    margin: 2%;
+  }
+  #showData a {
+    text-decoration: none;
+    width: 28%;
+    margin: 1%;
+    color: #606061;
+    font-weight: 400;
+    font-family: sans-serif;
+    text-transform: capitalize;
+    justify-content: center;
+  }
+  #showData a p {
+    font-size: xx-small;
+  }
+  .pokeCards {
+    width: fit-content;
+  }
+  #showData {
+    border-radius: 10px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .modalDialog {
+    margin: auto;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    position: relative;
+    width: 90%;
+    height: fit-content;
+    padding: 2em 2.5em;
+    display: flex;
+    border-radius: 4px;
+    background: #fff;
+    justify-content: center;
+    align-items: center;
+    transition: all 500ms ease-in;
+    flex-wrap: wrap;
+  }
+  .contentAboutPokemon {
+    text-transform: capitalize;
+    font-size: small;
+    width: fit-content;
+  }
+  footer p {
+    font-size: x-small;
+  }
+}
