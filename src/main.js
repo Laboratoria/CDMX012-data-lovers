@@ -42,20 +42,25 @@ const selectByType = () => {
   let typesToMath = filterByTypes(type);
   let totalPokemonsByType = typesToMath.length;
   //************ESTA FUNCION NOS DA LOS VALORES DE BASE-ATTACK */
-  let { suma: attackSum, porcentagePoint: attackPorcentagePoint } =
+  let { sum: attackSum, porcentagePoint: attackPorcentagePoint } =
     getTotalAndAverange(typesToMath, "base-attack");
 
-  let { suma: defenseSum, porcentagePoint: defensePorcentagePoint } =
+  let { sum: defenseSum, porcentagePoint: defensePorcentagePoint } =
     getTotalAndAverange(typesToMath, "base-defense"); //suma es el nombre del objeto en return y su propiedad es una variable
 
-  let { suma: staminaSum, porcentagePoint: staminaPorcentagePoint } =
+  let { sum: staminaSum, porcentagePoint: staminaPorcentagePoint } =
     getTotalAndAverange(typesToMath, "base-stamina");
 
+  /*
   let { suma: cpSum, porcentagePoint: cpPorcentagePoint } = getTotalAndAverange(
     typesToMath,
     "max-cp"
-  );
-  let { suma: hpSum, porcentagePoint: hpPorcentagePoint } = getTotalAndAverange(
+  );*/
+
+  let sumCp = getTotalAndAverange(typesToMath, "max-cp").sum; //esta es otra forma de accder al objeto retornado
+  let porcentageCp = getTotalAndAverange(typesToMath, "max-cp").porcentagePoint;
+
+  let { sum: hpSum, porcentagePoint: hpPorcentagePoint } = getTotalAndAverange(
     typesToMath,
     "max-hp"
   );
@@ -78,9 +83,9 @@ const selectByType = () => {
      points,  with a porcentage of: 
      <strong>${staminaPorcentagePoint}</strong>  points 
     <br> The total <strong>Combat points</strong> of this group is: 
-    <strong>${cpSum}</strong> 
+    <strong>${sumCp}</strong> 
      points,  with a porcentage of:
-    <strong>${cpPorcentagePoint}</strong>  points 
+    <strong>${porcentageCp}</strong>  points 
     <br> The total <strong>Health points</strong> of this group is: 
     <strong>${hpSum}</strong> 
      points,  with a porcentage of: 

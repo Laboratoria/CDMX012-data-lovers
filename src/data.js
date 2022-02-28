@@ -69,11 +69,11 @@ export function getTotalAndAverange(pokemons, property) {
     parseInt(pokemon.stats[property])
   );
   let totalNumOfPokemons = allBaseAttack.length;
-  let suma = allBaseAttack.reduce((a, b) => a + b, 0);
-  let porcentagePoint = parseFloat((suma / totalNumOfPokemons).toFixed(2)); //toFixed disminuye el numero de decimales al valor introducido en los parentesis
+  let sum= allBaseAttack.reduce((a, b) => a + b, 0);
+  let porcentagePoint = parseFloat((sum / totalNumOfPokemons).toFixed(2)); //toFixed disminuye el numero de decimales al valor introducido en los parentesis
   let allResult = {
-    suma,
-    porcentagePoint,
+    sum: sum,
+    porcentagePoint: porcentagePoint,
   };
 
   return allResult;
