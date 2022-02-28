@@ -56,7 +56,7 @@ function filterProducer(film) {
 
 //Ordenado de films
 
-export function sortFilm(s, films) {
+export function sortFilm(s,films) {
   let sortedFilms;
   if (s === 'raiting-up') {
     sortedFilms = films.sort((a, b) => b['rt_score'] - a['rt_score']);
@@ -75,9 +75,9 @@ export function sortFilm(s, films) {
 }
 
 //Calculo Directores
-export function calculusDirector(films) {
+export function calculusDirector() {
   let res = [];
-  films.forEach((film) => {
+  data.films.forEach((film) => {
     if (film.director === 'Hayao Miyazaki') {
       hayao = hayao + 1;
     } else {
@@ -94,7 +94,7 @@ export function calculusDirector(films) {
   return res;
 }
 
-export function calculusProducer(films) {
+export function calculusProducer() {
   let producersChart = [];
   let isao = 0,
     isaoPercent = 0,
@@ -108,7 +108,7 @@ export function calculusProducer(films) {
     yoshiakiPercent = 0;
   let totalP;
 
-  films.forEach((film) => {
+  data.films.forEach((film) => {
     if (film.producer === 'Isao Takahata') {
       isao = isao + 1;
     } else if (film.producer === 'Hayao Miyazaki') {
@@ -139,14 +139,14 @@ export function calculusProducer(films) {
 
 //locations
 
-export function calculusTerrain(films) {
+export function calculusTerrain() {
   let arrayPercent = [];
   let terrainHill = 0,
     terrainsCount = 0;
   let porcentaje;
   let totalTerrain, percent;
 
-  films.forEach((film) => {
+  data.films.forEach((film) => {
     film.locations.forEach((location) => {
       if (location.terrain === 'Hill') {
         terrainHill = terrainHill + 1;
@@ -165,7 +165,7 @@ export function calculusTerrain(films) {
   return arrayPercent;
 }
 
-export function calculusClimate(films) {
+export function calculusClimate() {
   let arrayClimates = [];
   let cTodo = 0,
     cDry = 0,
@@ -186,7 +186,7 @@ export function calculusClimate(films) {
     totalClimate,
     totalPercent;
 
-  films.forEach((film) => {
+  data.films.forEach((film) => {
     film.locations.forEach((location) => {
       if (location.climate === 'TODO') {
         cTodo += 1;
@@ -316,11 +316,10 @@ export function listCharacters() {
       arrayChar.push(character);
     });
   });
-  console.log(arrayChar);
   return arrayChar;
 }
 
-//FILTRAR POR PELICULA
+//FILTRAR POR PELICULA basado en una lista de personajes  
 
 export function filterByMovie(title, list) {
   return list.filter((character) => character.film == title);
@@ -382,7 +381,6 @@ export function calculusGender() {
   let total = male + female;
   let percentMale = (male / total) * 100;
   let percentFemale = (female / total) * 100;
-  console.log(percentMale, percentFemale);
   return [percentMale, percentFemale];
 }
 
@@ -405,6 +403,5 @@ export function calculusAge() {
   let total = child + adult;
   let percentChild = (child / total) * 100;
   let percentAdult = (adult / total) * 100;
-  console.log(percentAdult, percentChild);
   return [percentChild, percentAdult];
 }

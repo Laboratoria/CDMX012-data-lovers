@@ -1,5 +1,7 @@
-//import { example } from './data.js';
 import data from './data/ghibli/ghibli.js';
+import Chart from '../node_modules/chart.js';
+
+
 import {
   filterFilm,
   datosBusqueda,
@@ -25,6 +27,7 @@ import {
   filterVehicles,
   sortVehicle,
 } from './data.js';
+
 //Variables
 //films
 const bodyContent = document.querySelector('body');
@@ -127,7 +130,6 @@ if (bodyContent.classList.contains('films')) {
 function loadFilm(films) {
   cleanHTML(containerFilm); //elimina el HTML previo
   films.forEach((film) => {
-    //console.log(film);
     const divMovie = document.createElement('div');
     divMovie.className = 'movie';
     const imgMovie = document.createElement('img');
@@ -268,7 +270,7 @@ function noResult() {
 
 // * * * * * * * * * * Characers * * * * * * * * * *
 
-let xValues = ['Adults', 'Children'];
+let ageValues = ['Adults', 'Children'];
 let yValues = calculusAge();
 let barColors2 = ['#e8c3b9', '#2b5797'];
 const ctcharacter = document.getElementById('funFactChartAge');
@@ -277,10 +279,11 @@ const ctchar = document.getElementById('funFactChartGen');
 let genderValues = ['Male', 'Female'];
 let percentageGenValues = calculusGender();
 let barColors = ['#b91d47', '#00aba9'];
-let containerChar = document.querySelector('.characters-content');
+
 // funcion para las tarjetas de presentacion de personajes
 
 function renderCharacters(list) {
+  let containerChar = document.querySelector('.characters-content');
   containerChar.innerHTML = '';
   list.forEach((character) => {
     const divCharacter = document.createElement('div');
@@ -332,8 +335,6 @@ if (bodyContent.classList.contains('charactersBody')) {
   btnChar.addEventListener('click', btn_filterGender);
 
   // realizar el chart de gender: cuántos personajes femeninos y masculinos hay en las pelis ghibli
-
-  //Chart.defaults.font.size = 16;
   new Chart(ctchar, {
     type: 'pie',
     data: {
@@ -341,7 +342,6 @@ if (bodyContent.classList.contains('charactersBody')) {
       datasets: [
         {
           backgroundColor: barColors,
-
           data: percentageGenValues,
         },
       ],
@@ -352,16 +352,13 @@ if (bodyContent.classList.contains('charactersBody')) {
   });
 
   // realizar el chart de age: cuántos personajes femeninos y masculinos hay en las pelis ghibli
-
-  //Chart.defaults.font.size = 16;
   new Chart(ctcharacter, {
     type: 'pie',
     data: {
-      labels: xValues,
+      labels: ageValues,
       datasets: [
         {
           backgroundColor: barColors2,
-
           data: yValues,
         },
       ],
@@ -502,7 +499,6 @@ if (bodyContent.classList.contains('bodyLocations')) {
 
     datosBusquedaLocations.filmName = e.target.value;
     films = filterMovie(films);
-    console.log(films);
   });
 
   // Clima
@@ -526,11 +522,9 @@ if (bodyContent.classList.contains('bodyLocations')) {
         datosBusquedaLocations.climate === '' &&
         datosBusquedaLocations.terrain === ''
       ) {
-        console.log(films);
         loadLocation(films);
       } else {
         // Load locations only
-        console.log(allLocations);
         loadPlaces(allLocations);
       }
     }
@@ -687,7 +681,6 @@ function loadChartsClimate() {
 }
 
 function cleanLocationHTML(container) {
-  console.log(container);
   while (container.firstChild) {
     container.removeChild(container.firstChild);
   }
@@ -858,4 +851,24 @@ function recibeAllVehicles() {
       allVehicles.push(vehicle);
     });
   });
+}
+
+//scroll to top button 
+let mybuttonScroll = document.getElementById("scrollbtn");
+// cuando el usuario baja 50px del top del documento, se muestra el boton
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20  || document.documentElement.scrollTop > 20) {
+    mybuttonScroll.style.display = "block";
+  } else {
+    mybuttonScroll.style.display = "none";
+  }
+}
+
+// cuando el usuario da click, lo lleva hacia el top del documento
+document.getElementById("scrollbtn").onclick = function () {topFunction()};
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
 }
