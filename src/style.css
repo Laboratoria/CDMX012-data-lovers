@@ -52,14 +52,14 @@ float:left;
   margin: auto;
 }
 
-#searchIcon{
+.searchIcon{
   color:white;
   font-size: 27px;
   margin-top: 28px;
   margin-left: auto;
-  margin-right: 350px;
+  margin-right: 270px;
 }
-#searchBar{
+.searchBar{
   position: absolute;
   margin: auto;
   right: 0px;
@@ -68,21 +68,22 @@ float:left;
   font-family: "Rowdies";
   font-size: 15px;
   letter-spacing: 1px;
-  padding: 5px 0px;
+  padding: 5px 10px;
 }
-.list{
-  margin-top: 20px;
+#list{
+  margin-top: 5px;
   font-family:'Rowdies'; 
   font-size: 15px;
   display:block;
-  margin-right: 50px;
-  
+  right:100px ;
+  position: absolute;
+  padding: 0px 10px;
  
 }
-.list{
+#list{
   float:right;
 }
-.list :hover{
+#list :hover{
   background-color:red ;
 
 }
@@ -660,4 +661,125 @@ th{
   font-size: 15px;
   margin-right: 20px;
   padding: 7px 5px 7px 5px;
+}
+
+#computePokeSearch{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  z-index: 1;
+  top: 130px;
+  visibility: hidden;
+  position: absolute;
+  width: 100%;
+}
+
+.pokeSearch{
+  position: relative;
+  font-family: "Rowdies";
+  font-size: 15px;
+  letter-spacing: 1px;
+  padding: 5px 0px;
+  text-align: center;
+}
+
+#pokeSearchText{
+  font-family: "Rowdies";
+  font-size: 20px;
+  letter-spacing: 1px;
+  text-align: center;
+  position: relative;
+  margin-bottom: 60px;
+}
+
+.pokeSearchBtn{
+  font-family: "Rowdies";
+  font-size: 17px;
+  letter-spacing: 1px;
+  text-align: center;
+  position: relative;
+  background-color: red;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  top: 10px;
+  right: 25%;
+  margin-bottom: 20px;
+}
+.pokeSearchBtn :hover{
+  background-color: tan; /*no sirve pero no sé por qué*/
+}
+
+
+#pokeSearch1{
+  padding: 5px 20px;
+  position: relative;
+  right: 25%;
+}
+
+#list1{
+  font-family:'Rowdies'; 
+  font-size: 15px;
+  display:block;
+  position: absolute;
+  left: 18%;
+  padding: 0px 10px;
+  top: 140px;
+ 
+}
+
+#list1 :hover{
+  background-color:red ;
+}
+
+.noResults{
+  font-family: "Rowdies";
+  font-size: 15px;
+  letter-spacing: 1px;
+  text-align: center;
+  position: relative;
+}
+
+#pokeResult{
+  position: absolute;
+  left: 42%;
+  top:80px;
+}
+#pokeResultEvolution{
+  position: absolute;
+  left: 57%;
+  top:80px;
+}
+
+.notFound{
+  color: #ffff ;
+  position:relative;
+  top: 70px;
+  background-color: #011464;
+  left: 30%;
+  padding: 10px 30px;
+  font-size: 18px;
+}
+.noEvolution{
+  color: #ffff ;
+  position:relative;
+  top: 70px;
+  background-color: #011464;
+  left: 20%;
+  padding: 10px 30px;
+  font-size: 16px;
+}
+
+.results{
+  color: black ;
+  position:relative;
+  background-color: white;
+  padding: 10px 30px;
+  font-size: 15px;
+  right: 32%;
+}
+
+button.pokeSearchBtn:hover{
+  background-color: tan;
 }
