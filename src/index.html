@@ -38,26 +38,27 @@
 
   <main>
     <section class="dropdown">
+        <select name="role" id="roles">
+          <option hidden selected> Classification by Role </option>
+          <option value="Assassin" id="assassin"> Assassins </option>
+          <option value="Fighter" id="figther"> Figthers </option>
+          <option value="Mage" id="mage"> Mages </option>
+          <option value="Marksman" id="marksman"> Marksmen </option>
+          <option value="Support" id="support"> Supports </option>
+          <option value="Tank" id="tank"> Tanks </option>
+        </select>
         <select name="alphabetical" id="alphabetical" class="alphaOrder">
-            <option value="0" id="etiqueta"> Order alphabetically </option>
+            <option hidden selected> Order alphabetically </option>
             <option value="1" id="atoz"> From letter A to Z </option>
             <option value="2" id="ztoa"> From letter Z to A </option>
           </select>
-          <select name="role" id="roles">
-            <option value="0" id="etiqueta"> Classification by Role </option>
-            <option value="Assassin" id="assassin"> Assassins </option>
-            <option value="Fighter" id="figther"> Figthers </option>
-            <option value="Mage" id="mage"> Mages </option>
-            <option value="Marksman" id="marksman"> Marksmen </option>
-            <option value="Support" id="support"> Supports </option>
-            <option value="Tank" id="tank"> Tanks </option>
-          </select>
           <select name="difficult" id="difficult">
-            <option value="0" id="etiqueta"> Difficulty level </option>
+            <option hidden selected> Difficulty level </option>
             <option value="1" id="low"> Low </option>
             <option value="2" id="media"> Media </option>
             <option value="3" id="high"> High </option>
           </select>
+          <button class="btnAll" id="btnAll">Ver Todos</button>
     </section>
     <section>
       <h3>Choose your champion</h3>
