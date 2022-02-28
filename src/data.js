@@ -102,13 +102,12 @@ export function staminaPoints(totalPokemonsbyType) {
 
 export function cpPoints(totalPokemonsbyType) {
   let porcentaje = totalPokemonsbyType.map((pokemon) =>
-  parseInt(pokemon.stats["max-cp"])
-);
-let pokemonsTypeAttackLength = porcentaje.length
-let cpTotalSum = porcentaje.reduce((a, b) => a + b, 0);
-let porcentageCp= cpTotalSum / pokemonsTypeAttackLength 
-return [porcentageCp.toFixed(2),cpTotalSum]
-
+    parseInt(pokemon.stats["max-cp"])
+  );
+  let pokemonsTypeAttackLength = porcentaje.length;
+  let cpTotalSum = porcentaje.reduce((a, b) => a + b, 0);
+  let porcentageCp = cpTotalSum / pokemonsTypeAttackLength;
+  return [porcentageCp.toFixed(2), cpTotalSum];
 }
 
 //otra forma de hacerlo
