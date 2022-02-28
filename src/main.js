@@ -37,6 +37,14 @@ selectionRoles.addEventListener('change', (e)=>{
     showCards.appendChild(cardsLegends(filterRole(all, e.target.value)))
   })
 
+//crear un botón que nos retorne todas las tarjetas
+const btnAll = document.getElementById('btnAll');
+btnAll.addEventListener('click', () => {
+  showCards.innerHTML = '';
+  showCards.appendChild(cardsLegends(all))
+});
+
+
 //Botón Toggle Responsive
 const toggleButton = document.getElementsByClassName('toggle-button')[0]
 const navLinks = document.getElementsByTagName('nav')[0]

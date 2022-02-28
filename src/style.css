@@ -138,6 +138,9 @@ p {
 
 figure img {
     width: 32rem;
+    border-style: solid;
+    border-color: #98783C;
+    border-width: 2px;
 
 }
 
@@ -149,6 +152,9 @@ figure figcaption{
     font-size: 2rem;
     justify-content: center;
     position: relative;
+    border-style: solid;
+    border-color: #98783C;
+    border-width: 2px;
    
 }
 
@@ -201,6 +207,23 @@ footer figure p{
     margin-bottom: 3rem;
 }
 
+.btnAll{
+    cursor: pointer;
+    margin:0%;
+    width: 20rem;
+    height: 4rem;
+    border: 2px solid #98783C;
+    border-radius: 0%;
+    background: transparent;
+    color: #98783C;
+    text-transform: uppercase;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: .8rem;
+    letter-spacing: 0.2rem;
+    text-align: center;
+}
+
+
 select {
     width: 20rem;
     height: 4rem;
@@ -213,9 +236,10 @@ select {
     border: 2px solid #98783C;
     box-sizing: border-box;
     margin: 1rem;
-    color: #fff;
+    color: #98783C;
     text-transform: uppercase;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
     font-size: .8rem;
     letter-spacing: 0.2rem;
     text-align: center;
@@ -349,7 +373,7 @@ section h3 {
     }
 
 
-   button {
+   ul button {
         border: none;
         display: none;
     }
