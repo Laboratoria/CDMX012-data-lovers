@@ -68,18 +68,7 @@ const dataPokemon = {
   },
 
 
-  //No supe cómo anclarla :c
-
- /* computeStats: (data) => {
-    let pokemon = data.pokemon;
-    let evolution = [];
-    for (let i = 0; i < pokemon.length; i++) {
-      let pokemonEvolution = pokemon[i].evolution;
-      evolution = pokemonEvolution;
-      
-    }
-    return evolution
-  },*/
+ 
 
 
 };
