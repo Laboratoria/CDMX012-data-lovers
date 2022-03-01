@@ -10,9 +10,11 @@ const showCards = document.getElementById('cardsChampions');
 const selectionRoles = document.getElementById('roles');
 const selectionOrder = document.getElementById('order');
 const selectionDifficult = document.getElementById('difficult');
+const showInfo = document.getElementById('backChampions');
 
 //Funcion para crear las tarjetas
 const cardsLegends = (champions) =>{
+
   const championsCards = document.createElement('div');
     for (let champion of champions) {
     const newCard = document.createElement('article');
@@ -25,11 +27,35 @@ const cardsLegends = (champions) =>{
     championsCards.appendChild(newCard);
     newCard.appendChild(newcardBody);
     newcardBody.appendChild(newcardImage);
-    newcardBody.appendChild(newcardName);  
+    newcardBody.appendChild(newcardName);
+
+      
  } 
  return championsCards
 }
 showCards.appendChild(cardsLegends(all))
+
+//función para mostrar el reverso de las tarjetas
+/*const cardsInfo = (champions) => {
+
+  const backCards = document.createElement('div');
+
+  for (let info of champions) {
+    const championsBack = document.createElement ('article')
+    const championsTitle = document.createElement ('h4')
+    championsTitle.textContent = info.title
+    const championsBlurb = document.createElement ('p')
+    championsBlurb.textContent = info.blurb
+    championsBack.className = "card-back";
+    backCards.appendChild(championsBack);
+    championsBack.appendChild(championsTitle);
+    championsBack.appendChild(championsBlurb);
+    
+  }
+  return backCards
+}
+showInfo.appendChild(cardsInfo(all))*/
+
 
 //evento para el selector de rol
 selectionRoles.addEventListener('change', (e)=>{

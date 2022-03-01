@@ -130,6 +130,52 @@ p {
     color:#fff;
 }
 
+.card-name div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.cardback article {
+    flex-direction: column;
+    background-color: transparent;
+    width: 32rem;
+    height: 20rem;
+    border-style: solid;
+    border-color: #98783C;
+    border-width: 2px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #fff;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+}
+
+.cardback h4 {
+    font-size: 1.2rem;
+    color: #fff;   
+}
+
+.cardback p {
+
+}
+
+.cardback ul {
+    font-size: .8rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    list-style-type: none;
+    padding: 1.5rem;
+}
+
+.cardback li {
+    text-decoration: none;
+    justify-content: center;
+}
+
 .cardbox div {
     display: flex;
     flex-wrap: wrap;
@@ -141,8 +187,22 @@ figure img {
     border-style: solid;
     border-color: #98783C;
     border-width: 2px;
-
+    cursor: pointer;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    background: #50b948;
+    opacity: 1;
+    -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
+
+figure img:hover {
+    opacity: 0.2;
+    transform: rotateY(180deg);
+    
+}
+
+
 
 figure figcaption{
     background-color: #98783C;
