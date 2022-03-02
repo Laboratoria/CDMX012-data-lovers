@@ -1,31 +1,43 @@
 //Traer los datos y funciones
-import {filterRole} from './data.js';
+import {filterRole, filterDifficulty} from './data.js';
 import legends from './lol/lol.js';
-
 //sacar los objetos del arreglo
 const all = Object.values(legends.data)
 
 //crear las constantes para manejar el dom
 const showCards = document.getElementById('cardsChampions');
 const selectionRoles = document.getElementById('roles');
-const selectionOrder = document.getElementById('order');
-const selectionDifficult = document.getElementById('difficult');
+const selectionDifficult = document.getElementById('difficulty');
+//const showInfo = document.getElementById('backChampions');
 
 //Funcion para crear las tarjetas
 const cardsLegends = (champions) =>{
+
   const championsCards = document.createElement('div');
-    for (let champion of champions) {
+
+  for (let champion of champions) {
+
     const newCard = document.createElement('article');
     const newcardBody = document.createElement('figure');
     const newcardImage = document.createElement('img');
     newcardImage.src = champion.splash
     const newcardName = document.createElement('figcaption');
+    const newcardTitle = document.createElement('p');
+    const newcardInfo = document.createElement('div');
     newcardName.textContent = champion.name
+    newcardTitle.textContent = champion.title
+
     newcardName.className = "card-name";
+    newcardTitle.className = "card-name";
+    newcardInfo.className = "box-info"
+    
     championsCards.appendChild(newCard);
     newCard.appendChild(newcardBody);
     newcardBody.appendChild(newcardImage);
-    newcardBody.appendChild(newcardName);  
+    newcardBody.appendChild(newcardName);
+    newcardBody.appendChild(newcardTitle);
+    newcardBody.appendChild(newcardInfo);
+
  } 
  return championsCards
 }
@@ -35,7 +47,7 @@ showCards.appendChild(cardsLegends(all))
 selectionRoles.addEventListener('change', (e)=>{
     showCards.innerHTML = '';
     showCards.appendChild(cardsLegends(filterRole(all, e.target.value)))
-  })
+  });
 
 //crear un botón que nos retorne todas las tarjetas
 const btnAll = document.getElementById('btnAll');
@@ -44,6 +56,11 @@ btnAll.addEventListener('click', () => {
   showCards.appendChild(cardsLegends(all))
 });
 
+//evento para el selector de dificultad
+selectionDifficult.addEventListener('change', (e)=>{
+  showCards.innerHTML = '';
+  showCards.appendChild(cardsLegends(filterDifficulty(all,e.target.value)))
+});
 
 //Botón Toggle Responsive
 const toggleButton = document.getElementsByClassName('toggle-button')[0]

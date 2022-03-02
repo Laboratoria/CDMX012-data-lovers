@@ -5,12 +5,18 @@ export const filterRole = (champions, roles) =>{
 
 };
 
-//Funcion para ordenar alfabeticamente
-export const sortAtoZ = (champions) =>{
-   champions.sort()
-}
 
+//Saca la dificultad de todos los campeones
+export const filterDifficulty = (champions) =>{
+   for (const info of champions) {
+      const getDifficulty = info.info.difficulty
+      console.log (getDifficulty)
+      /*if (getDifficulty > 4) {
+         return filterDifficulty
+      }*/
+      } 
+   }
 
-/*export const sortZa = all.sort((a, b) => (a.id < b.id ? 1 : -1));
-export const sortId = all.sort((a, b) => (a.id < b.id ? 1 : -1));*/
+   //sacar la dificultad baja
+
 
