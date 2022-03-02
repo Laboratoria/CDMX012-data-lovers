@@ -5,18 +5,24 @@ export const filterRole = (champions, roles) =>{
 
 };
 
+//Función para ordenar
+export const orderAlpha = (champions) => {
+   const championsOrder = champions.reverse() 
+   return championsOrder
+}  
 
-//Saca la dificultad de todos los campeones
+/*//Saca la dificultad de todos los campeones
 export const filterDifficulty = (champions) =>{
-   for (const info of champions) {
+   for (let info of champions) {
       const getDifficulty = info.info.difficulty
-      console.log (getDifficulty)
+      return getDifficulty
       /*if (getDifficulty > 4) {
          return filterDifficulty
-      }*/
+      }
       } 
    }
 
-   //sacar la dificultad baja
+   //sacar la dificultad baja*/
+
 
 
