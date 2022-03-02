@@ -2,36 +2,47 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Data Lovers Ghibli Studio</title>
+    <title>Ghiblipedia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined"
+      rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="./img/favicon2.png">
   </head>
   <body>
     <header>
-        <a href="index.html">
-        <img src="./img/StudioGhibliLogo.png" alt="Logo" class="pic" width=500px height=250px>
-        </a>
+      <div class="logo"><a href="index.html"> <img src="./img/StudioGhibliLogo.png" width="100px" height="75%" alt="Logo"></a></div>
+      <!-- <h1>GHIBLIPEDIA</h1> -->
+      <img src="./img/backgroundHeader.jpg" alt="ghibliCollage" class="backgroundHeader">
     </header>
 
-    <nav id="nav"> <!-- barra de navegación que muestra los botones de secciones de la página, de filtrado y ordenado-->
+    <nav class="nav"> <!-- barra de navegación que muestra los botones de secciones de la página, de filtrado y ordenado-->
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Featured Works</a></li>
-            <li></li><input type="text" placeholder="Search"></li>
-            <!-- <li>Filter</li> -->
+            <li><input type="text" placeholder=" Search"></li>
+            <li><label for="sortButton">Sort by:</label>
+              <select id="sortFilms">
+                <option value="az">A-Z</option>
+                <option value="za">Z-A</option>
+                <option value="newest">Newest</option>
+                <option value="oldest">Oldest</option>
+            </select></li>
         </ul>
     </nav>
 
-    <main>
-    <!-- cards de las películas -->
-    <section class="containerCards" id="containerCards"></section>
+    <main class="main">
+      <!-- cards de las películas -->
+      <!-- <img src="./img/backgroundBody.png" alt="homeGhibli" class=""backgroundMain"> -->
+      <div id="root"></div>
     </main>
 
-    <footer>
+
+    <footer class="footer">
       <p>All rights reserved &copy;</p>
     </footer>
 
-    <div id="root"></div>
     <script src="main.js" type="module"></script>
   </body>
+
 </html>
