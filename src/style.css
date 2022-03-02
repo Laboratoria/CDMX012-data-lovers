@@ -126,6 +126,15 @@ h4{
     color:#98783C;
 }
 
+h6{
+    color:#98783C;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: .8rem;
+    font-weight: 100;
+
+
+}
+
 p {
     color:#fff;
 }
@@ -133,33 +142,8 @@ p {
 .card-name div {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-}
-
-
-.cardback article {
-    flex-direction: column;
-    background-color: transparent;
-    width: 32rem;
-    height: 20rem;
-    border-style: solid;
-    border-color: #98783C;
-    border-width: 2px;
-    text-align: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: #fff;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-
-}
-
-.cardback h4 {
-    font-size: 1.2rem;
-    color: #fff;   
-}
-
-.cardback p {
-
+    position: relative;
+    
 }
 
 .cardback ul {
@@ -182,45 +166,56 @@ p {
     justify-content: center;
 }
 
-figure img {
+.boxInfo {
+    margin:0%;
+    padding:0%;
+}
+
+figure {
+    margin:2rem;
+}
+
+section figure img {
     width: 32rem;
     border-style: solid;
     border-color: #98783C;
     border-width: 2px;
-    cursor: pointer;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-    background: #50b948;
-    opacity: 1;
-    -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
 }
 
-figure img:hover {
-    opacity: 0.2;
-    transform: rotateY(180deg);
-    
-}
-
-
-
-figure figcaption{
+section figure figcaption{
     background-color: #98783C;
     width: 32rem;
-    height: 3rem;
+    height: 2rem;
     text-align: center;
     font-size: 2rem;
-    justify-content: center;
-    position: relative;
     border-style: solid;
     border-color: #98783C;
     border-width: 2px;
+    color:#071022;
+    
    
 }
 
+section figure p {
+    width: 32rem;
+    height: 3rem;
+    align-items: flex-start;
+    text-align: center;
+    font-size: 2rem;
+    border-style: solid;
+    border-color: #98783C;
+    border-width: 2px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:#98783C;
+    font-size: 1rem;
+    
+}
+
 .card-name {
-    padding-top: 2rem;
-    margin-bottom: 3.5rem;
+    margin-top: 0%;
+    padding-top: 0%;
+    padding-top: .5rem;
+    
 }
 
 footer{
