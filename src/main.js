@@ -1,4 +1,5 @@
 import { orderAZ, orderZA, orderLowest, orderHighest, fillterType, inputPokemon } from "./data.js";
+//import { Chart } from "./chart.js";
 
 let pokemonContainer = document.getElementById("root");
 
@@ -27,6 +28,7 @@ function buildCards(pokemonArray) {
 
     let pokemonImg = document.createElement("img");
     pokemonImg.setAttribute("src", `${pokemon.img}`);
+    pokemonImg.setAttribute("alt", `Imagen de ${pokemon.name}`);
     pokemonImg.className = "property img";
 
     let barrita = document.createElement("div");
@@ -164,8 +166,85 @@ modalInfo.appendChild(modalClose);
     divType.appendChild(textType);
     generalInfo.appendChild(divType); //agrega los divs a la card
   }
-  //////////////////////////////////////////////BOTONES
 
+  const description = document.createElement("p");
+  description.className = "description";
+  const descriptionText = document.createTextNode(`${pokemon.about}`)
+  description.appendChild(descriptionText);
+  modalInfoContainer.appendChild(description);
+
+//GRÁFICAS
+
+const defense = document.createElement("div");
+defense.className = "defense-section";
+
+const resistantTitle = document.createElement("div");
+const resistantText = document.createTextNode("Resistant:");
+resistantTitle.className = "label";
+resistantTitle.appendChild(resistantText);
+defense.appendChild(resistantTitle);
+for (let resistant of pokemon.resistant) {
+  const pokemonResistant = document.createElement("figure"); // separa los tipos en divs
+  pokemonResistant.id = "divType"; //agrega clase a los divs
+  pokemonResistant.className = `general-info ${resistant}` ; //agrega clase background por tipo
+  const textResistant = document.createTextNode(resistant); //crea el texto del tipo
+  pokemonResistant.appendChild(textResistant);
+  defense.appendChild(pokemonResistant); //agrega los divs a la card
+}
+
+const weaknessesTitle = document.createElement("div");
+const weaknessesText = document.createTextNode("Weaknesses:");
+weaknessesTitle.className = "label";
+weaknessesTitle.appendChild(weaknessesText);
+defense.appendChild(weaknessesTitle);
+for (let weaknesses of pokemon.weaknesses) {
+  const pokemonWeaknesses = document.createElement("figure"); // separa los tipos en divs
+  pokemonWeaknesses.id = "divType"; //agrega clase a los divs
+  pokemonWeaknesses.className = `general-info ${weaknesses}` ; //agrega clase background por tipo
+  const textWeaknesses = document.createTextNode(weaknesses); //crea el texto del tipo
+  pokemonWeaknesses.appendChild(textWeaknesses);
+  defense.appendChild(pokemonWeaknesses); //agrega los divs a la card
+}
+
+modalInfoContainer.appendChild(defense);
+
+const graphics = document.createElement("canvas");
+graphics.id = "myChart";
+const canvas = document.getElementById("myChart");
+/*
+const chart = new Chart(canvas, {
+    type: 'bar',
+    labels: ["Attack", "Defense", "Stamina"],
+  datasets: [{
+    axis: 'y',
+    data: [10, 45, 80],
+    backgroundColor: [
+      'rgba(255, 152, 152, 1)',
+        'rgba(188, 250, 139, 1)',
+        'rgba(88, 217, 250, 1)'
+    ],
+    borderColor: [
+      'rgb(244, 54, 54)',
+        'rgb(138, 244, 54)',
+        'rgb(54, 244, 244)'
+    ],
+    hoverBorderColor: [
+          'rgb(244, 54, 54)',
+        'rgb(138, 244, 54)',
+        'rgb(54, 244, 244)'
+    ],
+    borderRadius: 75,
+    borderWidth: 1
+  }],
+    options: {
+      indexAxis: 'y',
+    }
+  });*/
+
+//graphics.appendChild(chart);
+  modalInfoContainer.appendChild(graphics);
+  //////////////////////////////////////////////BOTONES
+/*
   let modalSelectedButtons = document.getElementById("modalSelectButtons");
   modalSelectedButtons.className = "modButtons";
   modalInfoContainer.appendChild(modalSelectedButtons);
@@ -209,7 +288,7 @@ modalInfo.appendChild(modalClose);
   // // contMaxCP.appendChild(maxCp);
   // // modalInfoPokemon.appendChild(contMaxCP);
 
-  console.log(pokemon);
+  console.log(pokemon);*/
 }
 
 ////////////// CONSTRUCTORES DE CARDS
@@ -245,3 +324,4 @@ document.getElementById("filter").addEventListener(
 );
 
 buildCards(orderLowest()); // callback funcion lowest para mostrar en pag iniciada
+

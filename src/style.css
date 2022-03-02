@@ -185,7 +185,6 @@ main {
   border-color: white;
   box-shadow: 0px 0.25rem 0.2rem rgba(0, 0, 0, 0.30);
   border-radius: 1rem;
-  
   color: #44696c;
   list-style-type: none;
   text-transform: capitalize;
@@ -212,6 +211,7 @@ main {
   font-weight: bold;
   font-size: 2em;
   margin: 1rem auto;
+  
 }
 
 .barrita {
@@ -260,6 +260,18 @@ main {
   top: 3rem;
 }
 
+#modalClose {
+  position: absolute;
+  left: 69rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50px;
+  border-color: #ffffff;
+  font-size: 2rem;
+  color: #44696c;
+
+}
+
 .modalStructure{
   
   position: sticky;
@@ -281,9 +293,10 @@ main {
   position: relative;
   top: 7rem;
   width: 72rem;
-  height: 31.25rem;
+  height: 40rem;
   border-radius: 45px;
   margin: 30px, auto;
+  box-shadow: 0px 10px 25px 0px rgb(0 0 0 / 53%);
 }
 
 #modalPokemon{
@@ -313,6 +326,47 @@ main {
   color: #44696c;
   text-align: center;
 }
+
+.graphics {
+  position: absolute;
+  top: 15rem;
+  width: 30rem;
+  height: 15rem;
+  margin: auto;
+}
+
+.description {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
+  color: #44696c;
+  position: absolute;
+  top: 10rem;
+}
+
+.defense-section {
+  position: absolute;
+  top: 15rem;
+  left: 50%;
+  width: 30rem;
+  height: 15rem;
+  margin: auto;
+}
+
+.label {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1rem;
+  color: #44696c;
+}
+
+#myChart {
+  position: fixed;
+  top: 15rem;
+  width: 30rem;
+  height: auto;
+}
+
 
 .modButtons{
   background-color: #3ab0df;

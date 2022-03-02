@@ -120,9 +120,7 @@ export const fillterType = () => {
 /////////////////////// BUSQUEDA
 
 export const inputPokemon = () => {
-  let inputPokemonSearch = document
-    .getElementById("inputSearch")
-    .value.toLowerCase();
+  let inputPokemonSearch = document.getElementById("inputSearch").value.toLowerCase();
   let pokemonSelected = new Array();
 
   for (const pokemon of pokemonList) {
