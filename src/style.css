@@ -257,7 +257,7 @@ main {
 
 #modal-container {
   position: relative;
-  top: 3rem;
+  top: 2rem;
 }
 
 #modalClose {
@@ -320,20 +320,13 @@ main {
   object-position: center;
 }
 
-.m-maxCp {
+.text {
   font-family: 'Roboto', sans-serif;
   font-size: 1em;
   color: #44696c;
   text-align: center;
 }
 
-.graphics {
-  position: absolute;
-  top: 15rem;
-  width: 30rem;
-  height: 15rem;
-  margin: auto;
-}
 
 .description {
   font-family: 'Roboto', sans-serif;
@@ -345,7 +338,7 @@ main {
 
 .defense-section {
   position: absolute;
-  top: 15rem;
+  top: 17rem;
   left: 50%;
   width: 30rem;
   height: 15rem;
@@ -360,29 +353,21 @@ main {
   color: #44696c;
 }
 
-#myChart {
-  position: fixed;
-  top: 15rem;
+.stats-chart {
+  position: absolute;
+  top: 15em;
+  left: 2rem;
   width: 30rem;
   height: auto;
 }
 
-
-.modButtons{
-  background-color: #3ab0df;
-  position: relative;
-  width: 200px;
-  height: 50px;
+.barrita2 {
+  background-color: #c4c4c4;
+  width: 90%;
   border-radius: 15px;
-
-}
-
-.modGene{
-  background-color: #df3a79;
-  opacity: 0.5;
-  position: relative;
-  width: 200px;
-  height: 50px;
-  border-radius: 15px;
-
+  position: absolute;
+  top: 30rem;
+  left: 5%;
+  height: 0.3rem;
+  margin: 0.5rem auto;
 }
