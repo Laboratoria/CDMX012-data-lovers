@@ -1,5 +1,5 @@
 //Traer los datos y funciones
-import {filterRole, orderAlpha} from './data.js';
+import {filterRole, orderAlpha, filterDifficulty} from './data.js';
 import legends from './lol/lol.js';
 //sacar los objetos del arreglo
 const all = Object.values(legends.data)
@@ -8,13 +8,14 @@ const all = Object.values(legends.data)
 const showCards = document.getElementById('cardsChampions');
 const selectionRoles = document.getElementById('roles');
 const selectionOrder = document.getElementById('alpha');
-const selectionDifficult = document.getElementById('difficulty');
-const showInfo = document.getElementById('backChampions');
+//const selectionDifficult = document.getElementById('difficulty');
+ 
 
 //Funcion para crear las tarjetas
-const cardsLegends = (champions) =>{
+const cardsLegends = (champions) => {
+  console.log (champions)
   const championsCards = document.createElement('div');
-  for (let champion of champions) {
+  champions.forEach (champion => {
     const newCard = document.createElement('article');
     const newcardBody = document.createElement('figure');
     const newcardImage = document.createElement('img');
@@ -36,7 +37,7 @@ const cardsLegends = (champions) =>{
     newcardBody.appendChild(newcardTitle);
     newcardBody.appendChild(newcardInfo);
 
- } 
+ });
  return championsCards
 }
 showCards.appendChild(cardsLegends(all))
@@ -58,14 +59,14 @@ btnAll.addEventListener('click', () => {
 selectionOrder.addEventListener('change', (e)=>{
   showCards.innerHTML = '';
   showCards.appendChild(cardsLegends(orderAlpha(all, e.target.value)))
-  })
+  });
 
-/*//evento para el selector de dificultad
-selectionDifficult.addEventListener('change', (e)=>{
+////////evento para el selector de dificultad que no funciona
+document.getElementById('difficulty').addEventListener('change', (e) => {
+  showCards.innerHTML = '';
+  showCards.appendChild(cardsLegends(filterDifficulty(all, e.target.value)))
+});
 
-  console.log (filterDifficulty(cardsLegends(all, e.target.value)))
-})*/
-  
 //Botón Toggle Responsive
 const toggleButton = document.getElementsByClassName('toggle-button')[0]
 const navLinks = document.getElementsByTagName('nav')[0]

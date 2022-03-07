@@ -1,23 +1,16 @@
-import { example, anotherExample } from '../src/data.js';
+import legends from './mockLol.js' 
+import { filterRole } from '../src/data.js';
 
+describe('test del filtro por rol', () => {
+  test('Comprobar que es una funcion', () => {
+    expect(typeof filterRole).toBe('function');
+  }),
 
-describe('example', () => {
-  it('is a function', () => {
-    expect(typeof example).toBe('function');
-  });
+  test('Filtrando los campeones', () => {
+    console.log (filterRole('Tank', legends));
+  })
 
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
-  });
 });
 
 
-describe('anotherExample', () => {
-  it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
-  });
 
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
-  });
-});
