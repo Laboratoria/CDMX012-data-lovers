@@ -1,0 +1,706 @@
+body {
+  background-color: #fffdf9;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.mySlides {
+  display: none;
+}
+img {
+  vertical-align: middle;
+}
+
+header,
+footer {
+  background-color: #1572a1;
+  letter-spacing: 1.5px;
+}
+
+.logo-g {
+  width: 300px;
+  height: 140px;
+  margin-left: 60px;
+}
+
+.footer-nav {
+  color: #fffdf9;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 100px;
+  padding: 20px 0 20px 0;
+}
+
+.enlaces a {
+  position: relative;
+}
+
+.enlaces a::after {
+  content: '';
+  position: absolute;
+  background-color: #91e2f4;
+  height: 4px;
+  width: 0;
+  left: 0;
+  bottom: -10px;
+  transition: 0.3s;
+}
+
+.enlaces a:hover {
+  color: #ffffff;
+}
+
+.enlaces a:hover:after,
+a.active-page:after {
+  width: 100%;
+}
+
+.autors {
+  text-align: center;
+}
+
+.menus a {
+  text-decoration: none;
+  color: rgb(233, 225, 225);
+  font-weight: bold;
+  font-size: 18px;
+}
+
+ul {
+  list-style-type: none;
+  width: 60%;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.enlaces {
+  padding-top: 15px;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1200px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: #1572a1;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 8px 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #1572a1;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/*About Seccion*/
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-text {
+  background-color: #1572a1;
+  color: #fffdf9;
+  text-align: center;
+  padding: 30px 30px;
+}
+
+.about-text h1 {
+  margin-bottom: 20px;
+  color: #ffffff;
+  margin-top: 5px;
+}
+
+.films-filter {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.films-filter label,
+.films-sort label {
+  margin: 15px 0 15px 0;
+}
+
+.filters {
+  font-size: 18px;
+  font-weight: 600;
+  padding: 60px 0 75px 0;
+}
+
+.films-filter-sort {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.films-sort {
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.films-filter-items {
+  border-radius: 5px;
+  border-color: #1572a1;
+  color: #1572a1;
+  font-size: 20px;
+}
+
+.films-filter-items:hover {
+  background-color: #1572a1;
+  color: #fffdf9;
+}
+
+.button {
+  font-size: 20px;
+  border-radius: 20px;
+  margin-top: 25px;
+  width: 190px;
+  height: 40px;
+  align-self: flex-end;
+  border-color: #1572a1;
+  background-color: #fffdf9;
+  color: #1572a1;
+  box-shadow: 0 4px 3px #91e2f4;
+}
+
+.button:hover {
+  background-color: #1572a1;
+  color: #fffdf9;
+}
+
+.label-films {
+  margin: 10px;
+  font-size: 24px;
+  margin: 0 0 5px 2px;
+}
+
+.movies-content {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 66px;
+}
+
+.movie img {
+  width: 250px;
+  height: 350px;
+  border-radius: 25px;
+}
+
+.movie {
+  position: relative;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  margin-top: -15px;
+  background-color: #1572a1;
+  color: #fffdf9;
+  font-size: 20px;
+  text-align: center;
+  width: 250px;
+  margin: auto;
+  position: absolute;
+  bottom: 0px;
+  box-shadow: 0 4px 3px #91e2f4;
+  min-height: 50px;
+}
+
+.title p {
+  line-height: 1.5;
+  width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.error {
+  width: 100%;
+  height: 75px;
+  background-color: red;
+  padding: 15px;
+}
+
+.alert {
+  font-size: 35px;
+  color: white;
+  text-align: center;
+}
+
+h1 {
+  font-size: 50px;
+  margin-top: 30px;
+  margin-bottom: 0px;
+  text-align: center;
+  color: #1572a1;
+  font-weight: 400;
+}
+
+.filters h1 {
+  font-size: 35px;
+  color: black;
+  margin-top: 0;
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+
+.locations-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 100px;
+}
+
+.location {
+  background-color: #efdad7;
+  width: 420px;
+  height: 570px;
+  position: relative;
+}
+
+.location img {
+  width: 369px;
+  height: 333px;
+
+  position: absolute;
+  top: 40px;
+  left: 25px;
+}
+
+.info {
+  text-align: center;
+  position: relative;
+  bottom: 0px;
+  top: 395px;
+}
+
+.locations-title {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.info-loc {
+  font-size: 20px;
+  margin-top: 7px;
+}
+
+.movie-title {
+  font-size: 25px;
+  font-style: italic;
+  font-weight: 400;
+}
+/* .vehicles-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+.vehicles-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.vehicle {
+  background-color: rgba(230, 204, 169, 0.6);
+  width: 80%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: rgba(0, 0, 0, 0.7);
+  margin: 60px 0;
+}
+
+.vehicle-img img {
+  border-radius: 15px;
+  height: 400px;
+  width: 670px;
+  margin: 35px;
+}
+.vehicle-info {
+  max-width: 650px;
+}
+
+.vehicle-name {
+  font-size: 45px;
+  font-weight: 600;
+  padding: 10px 0;
+}
+
+.pilots-name,
+.vehicle-class {
+  font-size: 30px;
+  padding: 0 0 0 15px;
+  font-style: italic;
+}
+
+.name-class-bold {
+  font-weight: 600;
+  font-style: normal;
+  font-size: 30px;
+}
+
+.info-vehicle {
+  font-size: 25px;
+  margin: 20px 5px 30px 5px;
+}
+
+.div-pilot,
+.div-class {
+  display: flex;
+  flex-direction: row;
+  margin: 10px 0;
+}
+
+.background {
+  padding: 80px 0 40px;
+  position: relative;
+}
+
+.facts h1 {
+  margin-bottom: 30px;
+}
+
+.factsImg {
+  position: absolute;
+
+  bottom: 1px;
+  z-index: -2;
+}
+
+.fun-facts {
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+}
+
+.graph {
+  margin: 25px 10px 25px 10px;
+  width: 40%;
+  height: 40%;
+}
+
+#funText {
+  font-weight: 400;
+  font-size: 25px;
+}
+
+.white-box {
+  background-image: linear-gradient(
+    #ffffff 0,
+    rgba(255, 255, 255, 0.4),
+    rgba(255, 255, 255, 0.25)
+  );
+
+  position: absolute;
+  z-index: 1;
+  width: 1286px;
+  height: 693px;
+  top: 180px;
+  left: -36px;
+}
+
+.graph h3 {
+  margin: 20px 0;
+}
+
+/*Sara*/
+
+.film-title {
+  width: 710px;
+  height: 162px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 64px;
+  line-height: 78px;
+  color: #22577e;
+  margin-top: 5%;
+  margin-left: 33%;
+}
+
+.film-characters {
+  margin-top: 10%;
+  margin-left: 30%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.film-characters h1 {
+  width: 710px;
+  height: 100px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 64px;
+  line-height: 50px;
+  color: #22577e;
+}
+
+.film-characters .filmTitle {
+  margin-left: -18%;
+}
+
+.filter-filmCharacters {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 5%;
+  gap: 30px;
+}
+
+/* .filter-filmCharacters label {
+  margin-left: 2%;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  color: black;
+} */
+/* 
+.filter-filmCharacters select {
+  margin-left: 10px;
+  border: 1px solid #22577e;
+  cursor: pointer;
+  border-radius: 12px;
+  color: #1572a1;
+  font-size: 16px;
+} */
+
+.filter-filmCharacters select:hover {
+  background-color: #1572a1;
+  color: #f2f2f2;
+}
+
+.input-filterChar {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+/* .input-filterChar input {
+  background-color: #fffdf9;
+  font-size: 14px;
+  font-weight: bold;
+  color: #1572a1;
+  cursor: pointer;
+  width: 180px;
+  height: 45px;
+  text-align: center;
+  border-color: #1572a1;
+  border-radius: 12px;
+}
+
+.input-filterChar input:hover {
+  background-color: #1572a1;
+  color: #f2f2f2;
+  font-weight: bolder;
+} */
+
+.characters-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.character {
+  background-color: rgba(154, 208, 236, 0.28);
+  border-color: rgba(154, 208, 236, 1);
+  border-style: solid;
+  border-radius: 20px;
+  width: 580px;
+  height: 220px;
+  font-size: 18px;
+  color: #414142;
+  margin-top: 8%;
+  padding-top: 2%;
+  padding-left: 1.5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.character-desc {
+  padding-left: 2%;
+}
+
+.genderCharacter,
+.ageCharacter,
+.specieCharacter {
+  line-height: 25px;
+}
+
+.nameCharacter p {
+  margin-bottom: 5%;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.imgCharacter {
+  width: 155px;
+  height: 160px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/*seccion de characters al click de characters*/
+.filmCharacters,
+.characters-container {
+  display: block;
+}
+
+/* .genFactsTitle {
+  color: #1572a1;
+  font-size: 26px;
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+  font-weight: bold;
+}
+.charts-characters {
+  display: flex;
+  justify-content: space-between;
+  margin: 5% 0 0 5%;
+  width: 1200px;
+  color: #1572a1;
+}
+
+.funFactGender-content {
+  padding-right: 30px;
+  text-align: center;
+}
+
+.funFactAge-content {
+  padding-left: 30px;
+  text-align: center;
+} */
+
+#scrollbtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#scrollbtn:hover {
+  background-color: grey;
+  color:white;
+  font-weight: bold;
+}
