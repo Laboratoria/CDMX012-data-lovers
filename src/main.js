@@ -17,28 +17,28 @@ function buildCards(pokemonArray) {
   // crea las cards de pokemones
 
   for (const pokemon of pokemonArray) {
-    const card = document.createElement("div");
+    const card = document.createElement("section");
     card.className = "card";
     card.addEventListener(
       "click",
       () => {
-        // agrega el lissener a la card
+        // agrega el listener a la card
         buildModalInfo(pokemon);
       },
       false
     );
 
-    const pokemonNum = document.createElement("div");
+    const pokemonNum = document.createElement("p");
     pokemonNum.className = "property num";
 
-    const pokemonName = document.createElement("div");
+    const pokemonName = document.createElement("h3");
     pokemonName.className = "property name";
 
     const pokemonImg = document.createElement("img");
     pokemonImg.setAttribute("src", `${pokemon.img}`);
     pokemonImg.className = "property img";
 
-    const barrita = document.createElement("div");
+    const barrita = document.createElement("span");
     barrita.className = "barrita";
 
     const num = document.createTextNode(`${pokemon.num}`);
@@ -53,9 +53,8 @@ function buildCards(pokemonArray) {
     pokemonContainer.appendChild(card);
 
     for (const type of pokemon.type) {
-      const divType = document.createElement("div"); // separa los tipos en divs
-      divType.id = "divType"; //agrega clase a los divs
-      divType.className = type; //agrega clase background por tipo
+      const divType = document.createElement("p"); // separa los tipos en divs
+      divType.className = `${type} divType`; //agrega clase background por tipo
       const textType = document.createTextNode(type); //crea el texto del tipo
       divType.appendChild(textType);
       card.appendChild(divType); //agrega los divs a la card
@@ -99,14 +98,13 @@ function buildModalInfo(pokemon) {
   const modalPokemonInfo = document.getElementById("modal-container");
 
   //VENTANA DATOS
-  const modalInfo = document.createElement("div");
+  const modalInfo = document.createElement("section");
   modalInfo.className = "modalStructure";
   modalPokemonInfo.appendChild(modalInfo);
 
   //BOTÓN CERRAR VENTANA
   const modalClose = document.createElement("button");
-  modalClose.className = "m-ButtonClose";
-  modalClose.id = "modalClose";
+  modalClose.className = "modalClose";
   const btnClose = document.createTextNode("X");
   modalClose.appendChild(btnClose);
   modalClose.addEventListener("click", () => {
@@ -123,39 +121,35 @@ function buildModalInfo(pokemon) {
   modalInfo.appendChild(modalInfoContainer);
 
   ////////////////////// general info
-  const generalInfo = document.createElement("div");
-  generalInfo.id = "modalPokemon";
+  const generalInfo = document.createElement("article");
+  generalInfo.className = "modalPokemon";
   modalInfoContainer.appendChild(generalInfo);
 
-  const pokemonNum = document.createElement("div");
-  pokemonNum.id = "ModPokeNum";
+  const pokemonNum = document.createElement("p");
   pokemonNum.className = "text";
   const num = document.createTextNode(`${pokemon.num}`);
   pokemonNum.appendChild(num);
   generalInfo.appendChild(pokemonNum);
 
   const pokemonImg = document.createElement("img");
-  pokemonImg.id = "modImgPokemon";
   pokemonImg.className = "general-info";
   pokemonImg.setAttribute("src", `${pokemon.img}`);
   generalInfo.appendChild(pokemonImg);
 
-  const pokemonName = document.createElement("div");
+  const pokemonName = document.createElement("p");
   pokemonName.className = "m-Name general-info";
   const name = document.createTextNode(`${pokemon.name}`);
   pokemonName.appendChild(name);
   generalInfo.appendChild(pokemonName);
 
-  const barrita = document.createElement("div");
-  barrita.id = "modBarrita";
+  const barrita = document.createElement("span");
   barrita.className = "barrita";
   generalInfo.appendChild(barrita);
 
-  const contMaxCP = document.createElement("div");
-  contMaxCP.id = "maxCP"; //contenedor
+  const contMaxCP = document.createElement("p");
   contMaxCP.className = "text"; // agrega class
   const maxCp = document.createTextNode(`${pokemon.stats["max-cp"]}`); // agrega objeto
-  const atribute = document.createElement("div");
+  const atribute = document.createElement("p");
   atribute.className = "m-maxCp negritas";
   const atributs = document.createTextNode("Máx CP: ");
   contMaxCP.appendChild(atributs);
@@ -164,9 +158,8 @@ function buildModalInfo(pokemon) {
   generalInfo.appendChild(contMaxCP);
 
   for (const type of pokemon.type) {
-    const divType = document.createElement("div"); // separa los tipos en divs
-    divType.id = "divType"; //agrega clase a los divs
-    divType.className = `general-info ${type}`; //agrega clase background por tipo
+    const divType = document.createElement("p"); // separa los tipos en divs
+    divType.className = `divType ${type}`; //agrega clase background por tipo
     const textType = document.createTextNode(type); //crea el texto del tipo
     divType.appendChild(textType);
     generalInfo.appendChild(divType); //agrega los divs a la card
@@ -183,29 +176,27 @@ function buildModalInfo(pokemon) {
   const defense = document.createElement("div");
   defense.className = "defense-section";
 
-  const resistantTitle = document.createElement("div");
+  const resistantTitle = document.createElement("article");
   const resistantText = document.createTextNode("Resistant:");
   resistantTitle.className = "label";
   resistantTitle.appendChild(resistantText);
   defense.appendChild(resistantTitle);
   for (const resistant of pokemon.resistant) {
-    const pokemonResistant = document.createElement("figure"); // separa los tipos en divs
-    pokemonResistant.id = "divType"; //agrega clase a los divs
-    pokemonResistant.className = `general-info ${resistant}`; //agrega clase background por tipo
+    const pokemonResistant = document.createElement("p"); // separa los tipos en divs
+    pokemonResistant.className = ` divType ${resistant}`; //agrega clase background por tipo
     const textResistant = document.createTextNode(resistant); //crea el texto del tipo
     pokemonResistant.appendChild(textResistant);
     defense.appendChild(pokemonResistant); //agrega los divs a la card
   }
 
-  const weaknessesTitle = document.createElement("div");
+  const weaknessesTitle = document.createElement("article");
   const weaknessesText = document.createTextNode("Weaknesses:");
   weaknessesTitle.className = "label";
   weaknessesTitle.appendChild(weaknessesText);
   defense.appendChild(weaknessesTitle);
   for (const weaknesses of pokemon.weaknesses) {
-    const pokemonWeaknesses = document.createElement("figure"); // separa los tipos en divs
-    pokemonWeaknesses.id = "divType"; //agrega clase a los divs
-    pokemonWeaknesses.className = `general-info ${weaknesses}`; //agrega clase background por tipo
+    const pokemonWeaknesses = document.createElement("p"); // separa los tipos en divs
+    pokemonWeaknesses.className = `divType ${weaknesses}`; //agrega clase background por tipo
     const textWeaknesses = document.createTextNode(weaknesses); //crea el texto del tipo
     pokemonWeaknesses.appendChild(textWeaknesses);
     defense.appendChild(pokemonWeaknesses); //agrega los divs a la card
@@ -213,7 +204,7 @@ function buildModalInfo(pokemon) {
 
   modalInfoContainer.appendChild(defense);
 
-  const stats = document.createElement("div");
+  const stats = document.createElement("figure");
   stats.className = "stats-chart";
   const graphics = document.createElement("canvas");
   graphics.id = "myChart";
@@ -259,20 +250,21 @@ function buildModalInfo(pokemon) {
     },
   });
 
-  const barrita2 = document.createElement("div");
+  const barrita2 = document.createElement("span");
   barrita2.className = "barrita2";
   modalInfoContainer.appendChild(barrita2);
 }
 
 ////CONSTRUCTOR BUSQUEDA
+
+
 document.getElementById("inputSearch").addEventListener(
   "keypress",
   () => {
     pokemonContainer.innerHTML = "";
     const pokemonSearchByName = inputPokemonName();
     buildCards(searchByName(pokemonSearchByName, pokemonList));
-  },
-  false
+  }, false
 );
 
 ////CONSTRUCTOR ORDENADO

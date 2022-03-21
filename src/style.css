@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,100&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,100&display=swap");
 
 body {
   max-width: 100%;
 }
 
 header {
-  background: white;
+  background: #ffffff;
   width: 100%;
   height: 15%;
   left: 0;
@@ -15,8 +15,8 @@ header {
 }
 
 h1 {
-  font-family: 'Roboto-black', sans-serif;
-  color: #44696C;
+  font-family: "Roboto-black", sans-serif;
+  color: #44696c;
   font-size: 3em;
   padding: 0px 27%;
   position: fixed;
@@ -26,8 +26,8 @@ h1 {
 .selectPokemon {
   width: 12rem;
   height: 2.5rem;
-  background-color: #E5E5E5;
-  font-family: 'Roboto', sans-serif;
+  background-color: #e5e5e5;
+  font-family: "Roboto", sans-serif;
   padding: 0 1.5rem;
   outline: none;
   border-style: none;
@@ -49,8 +49,8 @@ h1 {
 .searchPokemon {
   width: 15rem;
   height: 2.5rem;
-  background-color: #E5E5E5;
-  font-family: 'Roboto', sans-serif;
+  background-color: #e5e5e5;
+  font-family: "Roboto", sans-serif;
   padding: 0 1.5rem;
   outline: none;
   border-style: none;
@@ -63,23 +63,21 @@ h1 {
 .searchPokemon input {
   width: 15rem;
   height: 2.5rem;
-  background-color: #E5E5E5;
-  font-family: 'Roboto', sans-serif;
+  background-color: #e5e5e5;
+  font-family: "Roboto", sans-serif;
   padding: 0 1.5rem;
   outline: none;
-  border-inline: none;
   border-style: none;
   border-radius: 15px;
 }
 
-#botonSearch{
+#botonSearch {
   width: 5rem;
   height: 2.5rem;
   position: fixed;
   left: 90%;
   top: 7%;
-  color:#14528F
-
+  color: #14528f;
 }
 
 aside {
@@ -88,12 +86,10 @@ aside {
   position: fixed;
   width: 25%;
   height: 100%;
-  left: 0;
-  top: 0;
   top: 0px;
   left: 0px;
-  background-color: #14528F;
-  font-family: 'Roboto-black', sans-serif;
+  background-color: #14528f;
+  font-family: "Roboto-black", sans-serif;
   text-align: center;
   color: white;
 }
@@ -116,26 +112,14 @@ aside {
 }
 
 h2 {
-  font-family: 'Roboto-black', sans-serif;
-  color: #C4C4C4;
+  font-family: "Roboto-black", sans-serif;
+  color: #c4c4c4;
   font-size: 3em;
   margin: 1rem;
 }
 
-h4 {
-  font-family: 'Roboto-black', sans-serif;
-  font-size: 2em;
-  display: left;
-  margin: 0%;
-}
-
-p{
-  display: right;
-  margin: 2rem;
-}
-
 #barraNivel {
-  background-color: #18EFE9;
+  background-color: #18efe9;
   width: 60%;
   border-radius: 15px;
   display: inline-flex;
@@ -149,7 +133,7 @@ p{
 }
 
 .pags {
-  font-family: 'Roboto-black', sans-serif;
+  font-family: "Roboto-black", sans-serif;
   color: white;
   font-size: 2em;
   text-align: left;
@@ -157,7 +141,7 @@ p{
 }
 
 .pags:hover {
-  color: #C4C4C4;
+  color: #c4c4c4;
 }
 
 main {
@@ -168,11 +152,10 @@ main {
 
 #root {
   display: flex;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   flex-flow: row wrap;
   gap: 2rem;
   margin-top: 8rem;
-  font-family: 'Roboto', sans-serif;
 }
 
 .card {
@@ -181,9 +164,8 @@ main {
   width: 14rem;
   height: 17rem;
   text-align: center;
-  justify-content: center;
   border-color: white;
-  box-shadow: 0px 0.25rem 0.2rem rgba(0, 0, 0, 0.30);
+  box-shadow: 0px 0.25rem 0.2rem rgba(0, 0, 0, 0.3);
   border-radius: 1rem;
   color: #44696c;
   list-style-type: none;
@@ -191,7 +173,7 @@ main {
 }
 
 .card:hover {
-  background-color: #14528F;
+  background-color: #14528f;
   color: whitesmoke;
 }
 
@@ -207,15 +189,14 @@ main {
 }
 
 .name {
-  font-family: 'Roboto-black', sans-serif;
+  font-family: "Roboto-black", sans-serif;
   font-weight: bold;
   font-size: 2em;
-  margin: 1rem auto;
-  
+  margin: auto;
 }
 
 .barrita {
-  background-color: #6DEDB7;
+  background-color: #6dedb7;
   width: 80%;
   border-radius: 15px;
   display: block;
@@ -223,44 +204,76 @@ main {
   margin: 0.5rem auto;
 }
 
-#divType {
+.divType {
   border-radius: 15px;
+  font-family: "Roboto", sans-serif;
   font-size: 1.1rem;
   color: white;
   text-align: center;
+  text-transform: capitalize;
   width: 5rem;
   height: 1.9rem;
   margin: 1rem 0.5rem 1rem;
   justify-content: center;
   display: inline-flex;
-  
 }
 
-.normal { background-color: #A9A878;}
-.fire { background-color: #C03028;}
-.water { background-color: #6890F0;}
-.grass { background-color: #78C84F;}
-.electric { background-color: #F8D030;}
-.ice { background-color: #18EFE9;}
-.fighting { background-color: #F07F2F;}
-.poison { background-color: #A040A1;}
-.ground {background-color: #995205;}
-.flying {background-color: #A890F0;}
-.psychic { background-color: #F85888;}
-.bug { background-color: #A8B821;}
-.rock { background-color: #A0935F;}
-.ghost { background-color: #5932A5;}
-.dragon { background-color: #1A578E;}
-.dark { background-color: #3D3D3D;}
-.steel { background-color: #8E8E8E;}
-.fairy { background-color: #FF69C6;}
-
-#modal-container {
-  position: relative;
-  top: 2rem;
+.normal {
+  background-color: #a9a878;
+}
+.fire {
+  background-color: #c03028;
+}
+.water {
+  background-color: #6890f0;
+}
+.grass {
+  background-color: #78c84f;
+}
+.electric {
+  background-color: #f8d030;
+}
+.ice {
+  background-color: #18efe9;
+}
+.fighting {
+  background-color: #f07f2f;
+}
+.poison {
+  background-color: #a040a1;
+}
+.ground {
+  background-color: #995205;
+}
+.flying {
+  background-color: #a890f0;
+}
+.psychic {
+  background-color: #f85888;
+}
+.bug {
+  background-color: #a8b821;
+}
+.rock {
+  background-color: #a0935f;
+}
+.ghost {
+  background-color: #5932a5;
+}
+.dragon {
+  background-color: #1a578e;
+}
+.dark {
+  background-color: #3d3d3d;
+}
+.steel {
+  background-color: #8e8e8e;
+}
+.fairy {
+  background-color: #ff69c6;
 }
 
-#modalClose {
+.modalClose {
   position: absolute;
   left: 69rem;
   width: 3rem;
@@ -269,48 +282,48 @@ main {
   border-color: #ffffff;
   font-size: 2rem;
   color: #44696c;
-
 }
 
-.modalStructure{
-  
-  position: sticky;
+.modalStructure {
+  position: relative;
+  top: 5rem;
+  right: 2rem;
   margin: auto;
   width: 72rem;
   height: 42rem;
   background-image: url(images/fondo-modal.jpg);
   background-size: cover;
   object-position: center;
-   border-radius: 45px;
-   box-shadow: 0px 0px 25px 0px rgb(0 0 0 / 53%);
-   justify-content: center;
-   margin: auto;
+  border-radius: 45px;
+  box-shadow: 0px 0px 25px 0px rgb(0 0 0 / 53%);
+  justify-content: center;
 }
 
-.modalBackground{
-  
+.modalBackground {
   background-color: #fafafa;
   position: relative;
   top: 7rem;
   width: 72rem;
   height: 40rem;
   border-radius: 45px;
-  margin: 30px, auto;
+  text-align: center;
   box-shadow: 0px 10px 25px 0px rgb(0 0 0 / 53%);
 }
 
-#modalPokemon{
+.modalPokemon {
   display: inline-block;
   background-color: hsla(0, 0%, 100%, 0);
   position: absolute;
-  top: -15%; left: 38%;
+  text-align: center;
+  top: -15%;
+  left: 38%;
   width: 200px;
   height: 250px;
   border-radius: 15px;
 }
 
 .general-info {
-  font-family: 'Roboto-black', sans-serif;
+  font-family: "Roboto-black", sans-serif;
   font-weight: bold;
   font-size: 2em;
   color: #44696c;
@@ -321,24 +334,25 @@ main {
 }
 
 .text {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1em;
   color: #44696c;
   text-align: center;
 }
 
-
 .description {
-  font-family: 'Roboto', sans-serif;
+  margin: 0 2rem;
+  font-family: "Roboto", sans-serif;
   font-size: 1em;
   color: #44696c;
   position: absolute;
-  top: 10rem;
+  top: 17rem;
+  text-align: left;
 }
 
 .defense-section {
   position: absolute;
-  top: 17rem;
+  top: 23rem;
   left: 50%;
   width: 30rem;
   height: 15rem;
@@ -346,7 +360,7 @@ main {
 }
 
 .label {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: bold;
   text-align: center;
   font-size: 1rem;
@@ -355,7 +369,7 @@ main {
 
 .stats-chart {
   position: absolute;
-  top: 15em;
+  top: 20em;
   left: 2rem;
   width: 30rem;
   height: auto;
@@ -366,8 +380,96 @@ main {
   width: 90%;
   border-radius: 15px;
   position: absolute;
-  top: 30rem;
+  top: 15rem;
   left: 5%;
   height: 0.3rem;
   margin: 0.5rem auto;
+}
+
+@media only screen and (max-width: 780px) {
+  /* /////////////////HEADER */
+  header {
+    width: 100%;
+    height: 25%;
+    background-color: #18efe9;
+  }
+
+  h1 {
+    visibility: hidden;
+  }
+
+  #root {
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto", sans-serif;
+  flex-flow: row wrap;
+  gap: 2rem;
+  margin-top: 8rem;
+}
+
+  /* ////////filters */
+ #order {
+    position: fixed;
+    left: 10%;
+    top: 17%;
+  }
+
+  #filter {
+    position: fixed;
+    left: 40%;
+    top: 17%;
+  }
+
+  .searchPokemon {
+    position: fixed;
+    left: 70%;
+    top: 17%;
+  }
+
+  /* ////////ASIDE */
+
+  aside {
+    margin: 0px;
+    position: fixed;
+    width: 100%;
+    height: 10%;
+    top: 0px;
+    left: 0px;
+    background-color: #14528f;
+    font-family: "Roboto-black", sans-serif;
+    text-align: center;
+    color: white;
+  }
+
+  #Entrenador {
+    visibility: hidden;
+  }
+
+  #EntrenadorMovil {
+    width: 205;
+    height: 4rem;
+    visibility: visible;
+    display: block;
+  }
+
+  .player{
+    margin-top: -4rem;
+  }
+
+  #userName {
+    font-size:2em;
+    background-color: #c0cc1b;
+    width:10rem;
+    height: 3rem;
+    left: 60%;
+    position: relative;
+ 
+  }
+
+  /* ////////cards */
+  main {
+    float: none;
+    width: 100%;
+    padding: 3rem;
+  }
 }
