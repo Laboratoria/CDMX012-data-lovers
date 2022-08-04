@@ -2,41 +2,37 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Ghiblipedia</title>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined"
-      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/x-icon" href="./img/favicon2.png">
+    <title>Studio Ghibli</title>
   </head>
   <body>
+
     <header>
-      <div class="logo"><a href="index.html"> <img src="./img/StudioGhibliLogo.png" width="100px" height="75%" alt="Logo"></a></div>
-      <!-- <h1>GHIBLIPEDIA</h1> -->
-      <img src="./img/backgroundHeader.jpg" alt="ghibliCollage" class="backgroundHeader">
+      <a class="logo" href="index.html"> <img src="./img/StudioGhibliLogo.png" alt="Ghibli Logo"></a>
     </header>
 
-    <nav class="nav"> <!-- barra de navegación que muestra los botones de secciones de la página, de filtrado y ordenado-->
+    <nav class="nav">
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Featured Works</a></li>
-            <li><input type="text" placeholder=" Search"></li>
+            <li><a href="index.html">Movies</a></li>
+            <li><a href="#">Location</a></li>
+            <li><a href="#">Vehicles</a></li>
             <li><label for="sortButton">Sort by:</label>
               <select id="sortFilms">
                 <option value="az">A-Z</option>
                 <option value="za">Z-A</option>
                 <option value="newest">Newest</option>
                 <option value="oldest">Oldest</option>
-            </select></li>
+              </select></li>
+            <li><input type="text" placeholder=" Search" class="search-bar"></li>
         </ul>
     </nav>
 
     <main class="main">
-      <!-- cards de las películas -->
-      <!-- <img src="./img/backgroundBody.png" alt="homeGhibli" class=""backgroundMain"> -->
+      <!-- <img src="./img/backgroundImage.jpg" class="backgroundMain"> -->
       <div id="root"></div>
     </main>
-
 
     <footer class="footer">
       <p>All rights reserved &copy;</p>
@@ -44,5 +40,4 @@
 
     <script src="main.js" type="module"></script>
   </body>
-
 </html>
